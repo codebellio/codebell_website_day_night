@@ -733,7 +733,7 @@ section, .nav-content, .hero, .links-footers{
 }
 
 .our-latest-product {
-    padding-top: 4.3em;
+    padding-top: 4.5em;
    
 }
 
@@ -825,7 +825,7 @@ section, .nav-content, .hero, .links-footers{
 
 
 .download-app-today,.subscribe-content {
-    padding-top: 4.5em;
+  
     padding-bottom: 4.5em;
     display: flex;
     justify-content: space-between;
@@ -1521,10 +1521,7 @@ hr{
 /* =====footer===== */
 
 .footer-container {
-    width: 100%;
-    margin: auto;
-    background-color: var(--bg-box);
-    padding-top: 2.5em;
+   
     padding-bottom: 2.5em;
     display: flex;
     flex-direction: column;
@@ -1619,6 +1616,7 @@ hr{
     .footer-content {
         flex-direction: column;
         gap: 2em;
+        
     }
 
     .btn-f {
