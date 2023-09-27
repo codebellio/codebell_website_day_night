@@ -15,7 +15,7 @@
     --bg-box: #f3f3f3;
     --nav: #fff;
     --border-color: rgb(182, 178, 178);
-    --box-shadow: rgb(0, 0, 0, 0.09);
+    --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
     --bg-box-faq: #f3f3f3c4;
     --feeback-color: RGB(107, 107, 132);
     --transition: 0.5s;
@@ -28,7 +28,7 @@
     --sub-text-color: #cfcfcf;
     --nav: #141718;
     --border-color: rgb(77, 75, 75);
-    --box-shadow: rgb(255, 255, 255, 0.01);
+    --box-shadow: 0 2px 28px 0  rgb(255, 255, 255, 0.01);
     --message-text-bg: rgba(160, 159, 161, 0.1);
     --bg-box-faq: #000000;
     --feeback-color: #ffffff;
@@ -93,7 +93,7 @@ a {
 }
 .sticky-nav{
     position: fixed;
-    box-shadow: 0 2px 28px 0 var(--box-shadow);
+    box-shadow: var(--box-shadow);
   
 }
 
@@ -1494,6 +1494,14 @@ hr{
 .contact-forms textarea:focus {
     outline: none;
     border: 0.5px solid var(--primary-color);
+}
+.submit-btn{
+    background-color: var(--primary-color);
+    padding: 12px 45px;
+    border-radius: 2em;
+    color: #ffffff;
+    font-size: 1em;
+    align-self: start;
 }
 
 .contact-forms textarea::placeholder {
