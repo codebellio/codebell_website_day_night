@@ -168,8 +168,11 @@ section, .nav-content, .hero, .links-footers{
 }
 
 .mobile-view-menu-icon svg {
-    color: var(--primary-color);
+    color: var(--text-color);
 
+}
+.mobile-view-menu-icon svg:hover{
+    color: var(--primary-color);
 }
 
 /* test================================== */
@@ -637,9 +640,7 @@ section, .nav-content, .hero, .links-footers{
 }
 
 .why-choose-headings {
-    width: 100%;
-    margin: auto;
-    padding-top: 4.5em;
+   
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -989,8 +990,7 @@ section, .nav-content, .hero, .links-footers{
 
 /* ==============asked-question-container======= */
 .asked-content {
-    padding-top: 4.5em;
-
+    
     padding-bottom: 4.5em;
     display: flex;
     flex-direction: column;
