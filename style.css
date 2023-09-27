@@ -556,10 +556,9 @@ section, .nav-content, .hero, .links-footers{
 
 /* about the product page */
 .about-the-product {
-    padding-top: 7em;
     display: flex;
     align-items: flex-start;
-    padding-bottom: 7em;
+    padding-bottom: 4.5em;
     justify-content: space-between;
 }
 
@@ -633,11 +632,12 @@ section, .nav-content, .hero, .links-footers{
 /* ====why choose product==== */
 
 .why-choose-products-container {
- 
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+
+
 
 .why-choose-headings {
    
