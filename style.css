@@ -130,6 +130,13 @@ section, .nav-content, .hero, .links-footers{
     font-size: 2.2em;
     font-weight: 700;
     color: var(--text-color);
+    display: flex;
+    align-items:center;
+   
+}
+.logo-text img{
+    width: 45px;
+    height: 45px;
 }
 
 .links a {
@@ -1641,3 +1648,9 @@ hr{
     flex-wrap: wrap;
 }
 
+.logo-codebell{
+
+    display: flex;
+    align-items: center;
+    
+}
