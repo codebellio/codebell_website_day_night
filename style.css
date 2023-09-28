@@ -138,7 +138,6 @@ section, .nav-content, .hero, .links-footers{
     width: 45px;
     height: 45px;
 }
-
 .links a {
     transition: var(--transition);
 }
