@@ -19,6 +19,8 @@
     --bg-box-faq: #f3f3f3c4;
     --feeback-color: RGB(107, 107, 132);
     --transition: 0.5s;
+    --logo-shadow: 2px 2px 1px rgb(0, 0, 0,0.09)
+
 }
 
 .dark {
@@ -28,11 +30,13 @@
     --sub-text-color: #cfcfcf;
     --nav: #141718;
     --border-color: rgb(77, 75, 75);
-    --box-shadow: 0 2px 28px 0  rgb(255, 255, 255, 0.01);
+    --box-shadow: 0 2px 28px 0 rgb(255, 255, 255, 0.01);
     --message-text-bg: rgba(160, 159, 161, 0.1);
     --bg-box-faq: #000000;
     --feeback-color: #ffffff;
     --transition: 0.5s;
+    --logo-shadow: 2px 2px 1px rgb(255, 255, 255,.09)
+
 
 }
 
@@ -43,13 +47,13 @@ body {
     margin: auto;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-    
+
 }
 
 
 body {
     background-color: var(--bg-color);
- 
+
     overflow-x: hidden;
 }
 
@@ -81,33 +85,38 @@ a {
 
 /*============================================ Navbar======================================= */
 .nav {
-   
+
     margin: auto;
     width: 100%;
     background-color: var(--bg-color);
     top: 0;
     z-index: 5;
     transition: var(--transition);
-    
+
 
 }
-.sticky-nav{
+
+.sticky-nav {
     position: fixed;
     box-shadow: var(--box-shadow);
-  
+
 }
 
-section, .nav-content, .hero, .links-footers{ 
+section,
+.nav-content,
+.hero,
+.links-footers {
     width: 85%;
     margin: auto;
     max-width: 1320px;
     padding-top: 4.5em;
 }
+
 .grey-section {
     width: 100%;
     margin: auto;
     background-color: var(--bg-box) !important;
- 
+
 
 
 }
@@ -126,18 +135,23 @@ section, .nav-content, .hero, .links-footers{
 
 }
 
-.logo-text{
+.logo-text {
     font-size: 2.2em;
     font-weight: 700;
     color: var(--text-color);
     display: flex;
-    align-items:center;
-   
+    align-items: center;
+    width: auto;
+    height: 1em;
+    filter: drop-shadow(--logo-shadow);
+
 }
-.logo-text img{
+
+.logo-text img {
     width: 45px;
     height: 45px;
 }
+
 .links a {
     transition: var(--transition);
 }
@@ -177,7 +191,8 @@ section, .nav-content, .hero, .links-footers{
     color: var(--text-color);
 
 }
-.mobile-view-menu-icon svg:hover{
+
+.mobile-view-menu-icon svg:hover {
     color: var(--primary-color);
 }
 
@@ -383,7 +398,7 @@ section, .nav-content, .hero, .links-footers{
         margin-top: 2em;
     }
 
-    .logo-text{
+    .logo-text {
         font-size: 1.5em;
     }
 
@@ -646,7 +661,7 @@ section, .nav-content, .hero, .links-footers{
 
 
 .why-choose-headings {
-   
+
     display: flex;
     flex-direction: column;
     gap: 1em;
@@ -740,7 +755,7 @@ section, .nav-content, .hero, .links-footers{
 
 .our-latest-product {
     padding-top: 4.5em;
-   
+
 }
 
 .products-lists {
@@ -830,29 +845,33 @@ section, .nav-content, .hero, .links-footers{
 /*============== download app=================== */
 
 
-.download-app-today,.subscribe-content {
-  
+.download-app-today,
+.subscribe-content {
+
     padding-bottom: 4.5em;
     display: flex;
     justify-content: space-between;
 }
 
 
-.download-left,.subscribe-left {
+.download-left,
+.subscribe-left {
     display: flex;
     align-items: center;
     justify-content: start;
     flex: 1;
 }
 
-.download-right,.subscribe-right {
+.download-right,
+.subscribe-right {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
     flex: 1;
 }
 
-.subscribe-right  p , .download-right p{
+.subscribe-right p,
+.download-right p {
     color: var(--text-color);
     line-height: 1.5em;
 }
@@ -879,7 +898,9 @@ section, .nav-content, .hero, .links-footers{
 }
 
 @media screen and (max-width: 990px) {
-    .download-app-today,.subscribe-content  {
+
+    .download-app-today,
+    .subscribe-content {
         flex-direction: column;
         align-items: center;
         gap: 2em;
@@ -901,13 +922,15 @@ section, .nav-content, .hero, .links-footers{
         justify-content: center;
     }
 
-    .download-left img,.subscribe-left img {
+    .download-left img,
+    .subscribe-left img {
 
         max-width: 90%;
         height: auto;
-        
+
     }
-    .subscribe{
+
+    .subscribe {
         width: 90%;
         margin: auto;
 
@@ -935,7 +958,7 @@ section, .nav-content, .hero, .links-footers{
 }
 
 .video-content {
-   
+
     text-align: center;
     background-image: url(https://templates.hibootstrap.com/zebu/default/assets/img/video-bg.jpg);
     background-size: cover;
@@ -982,8 +1005,8 @@ section, .nav-content, .hero, .links-footers{
 
 @media screen and (max-width: 990px) {
     .video-content {
-       width: 95%;
-       margin: auto;
+        width: 95%;
+        margin: auto;
         padding-top: 6em;
         padding-bottom: 6em;
 
@@ -996,7 +1019,7 @@ section, .nav-content, .hero, .links-footers{
 
 /* ==============asked-question-container======= */
 .asked-content {
-    
+
     padding-bottom: 4.5em;
     display: flex;
     flex-direction: column;
@@ -1017,14 +1040,14 @@ section, .nav-content, .hero, .links-footers{
 
     align-items: center;
     color: var(--text-color);
-    
+
 
 
 
 }
 
 .question-wraper,
-.ans { 
+.ans {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1040,8 +1063,9 @@ section, .nav-content, .hero, .links-footers{
 .ans {
     width: calc(100% - 3em);
     border-top: none;
-   
+
 }
+
 .ans {
     display: none;
 }
@@ -1059,7 +1083,7 @@ section, .nav-content, .hero, .links-footers{
 .question-box.active .ans {
     display: flex;
 
-  
+
 }
 
 .customer-feedback {
@@ -1252,7 +1276,7 @@ section, .nav-content, .hero, .links-footers{
 
 
 .our-blog-content {
-   
+
     padding-bottom: 4.5em;
 
     display: flex;
@@ -1362,7 +1386,7 @@ section, .nav-content, .hero, .links-footers{
     max-width: 100%;
 }
 
-hr{
+hr {
     border: 1px solid var(--bg-box)
 }
 
@@ -1409,9 +1433,9 @@ hr{
 }
 
 .get-in-touch {
-    
+
     padding-bottom: 4.5em;
-  
+
 }
 
 .get-in-touch-bottom {
@@ -1494,7 +1518,8 @@ hr{
     outline: none;
     border: 0.5px solid var(--primary-color);
 }
-.submit-btn{
+
+.submit-btn {
     background-color: var(--primary-color);
     padding: 12px 45px;
     border-radius: 2em;
@@ -1504,7 +1529,8 @@ hr{
     transition: var(--transition);
     cursor: pointer;
 }
-.submit-btn:hover{
+
+.submit-btn:hover {
     scale: 1.1;
 }
 
@@ -1533,7 +1559,7 @@ hr{
 /* =====footer===== */
 
 .footer-container {
-   
+
     padding-bottom: 2.5em;
     display: flex;
     flex-direction: column;
@@ -1628,7 +1654,7 @@ hr{
     .footer-content {
         flex-direction: column;
         gap: 2em;
-        
+
     }
 
     .btn-f {
@@ -1639,7 +1665,7 @@ hr{
 
 
 .links-footers {
- 
+
     display: flex;
     color: var(--sub-text-color);
     font-size: 0.7em;
@@ -1647,9 +1673,9 @@ hr{
     flex-wrap: wrap;
 }
 
-.logo-codebell{
+.logo-codebell {
 
     display: flex;
     align-items: center;
-    
+
 }
