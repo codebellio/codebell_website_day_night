@@ -16,6 +16,18 @@
 // nav.style.backgroundColor = `rgba(255, 255, 255, ${0})`;
 // nav.style.backdropFilter = `blur(${20}px)`;
 // });
+// ---------------------hamburger---------------------
+const toggleBtn = document.querySelector('.mobile-view-menu-icon');
+const toggleBtnIcon = toggleBtn.querySelector('i');
+const dropDownMenu = document.querySelector('.dropdown-menu');
+
+toggleBtn.onclick = function () {
+
+    dropDownMenu.classList.toggle('open');
+    const isOpen = dropDownMenu.classList.contains('open');
+    toggleBtnIcon.classList.toggle('fa-bars', !isOpen);
+    toggleBtnIcon.classList.toggle('fa-xmark', isOpen);
+};
 
 document.addEventListener("DOMContentLoaded", function () {
     const questionBoxes = document.querySelectorAll(".question-box");
