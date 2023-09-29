@@ -687,6 +687,8 @@ height: auto;
     display: flex;
     align-items: center;
     padding-bottom: 4.3em;
+    justify-content: space-between;
+    gap: 4em;
 }
 
 .why-left {
@@ -694,7 +696,7 @@ height: auto;
 }
 
 .why-left img {
-    max-width: 70%;
+    max-width: 60%;
     height: auto;
 }
 
@@ -785,7 +787,7 @@ height: auto;
 }
 
 .products {
-    width: 439.99px;
+    width: 400px;
     height: 524.39px;
     display: flex;
     flex-direction: column;
@@ -820,10 +822,18 @@ height: auto;
     transition: var(--transition);
 
 }
-
+.image-product{
+    width: 350.99px;
+    height: 350.39px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-self:  center;
+}
 .image-product img {
     width: 100%;
     height: 100%;
+   margin: auto;
     transition: var(--transition);
 
 }
@@ -1440,7 +1450,7 @@ hr {
 }
 
 .get-in-touch {
-
+   
     padding-bottom: 4.5em;
 
 }
@@ -1461,7 +1471,7 @@ hr {
 }
 
 .contact-forms {
-    padding-top: 0.5em;
+    padding-top: 2em;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -1656,6 +1666,7 @@ hr {
     color: rgb(255, 253, 255);
 }
 
+
 @media screen and (max-width: 768px) {
 
     .footer-content {
@@ -1685,4 +1696,63 @@ hr {
     display: flex;
     align-items: center;
 
+}
+
+.privacy-contents{
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 4.5em;
+    gap: 2em;
+}
+.p-title{
+    width: 100%;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    font-size: 2.5em;
+  
+}
+.all-content{
+    width: 100%;
+    display: flex;
+    align-items: start;
+    flex-direction: column;
+    color: var(--text-color);
+    gap: 2em;
+    line-height: 1.55em;
+    max-width: 80%;
+    margin: auto;
+}
+
+.all-content h4{
+    margin-top: 0em;
+    margin-bottom: 0em;
+    color:var(--text-color);
+    font-size: 2em;
+    line-height: 1.18em;
+    font-weight: 700;
+}
+.bullet{
+    color: var(--text-color);
+    display: flex;
+    align-items: start;
+    gap: 0.5em;
+   
+    font-weight: 400;
+}
+.under-sub{
+    width: 90%;
+    margin: auto;
+}
+@media screen and (max-width: 768px){
+    .all-content{
+        max-width: 100%;
+    }
+    .p-title{
+        font-size: 1.5em;
+text-align: center;
+    }
+    .all-content h4{
+        font-size: 1.2em;
+    }
 }
