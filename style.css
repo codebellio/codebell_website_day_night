@@ -467,7 +467,8 @@ section,
 }
 
 .cards {
-
+    width: 250px;
+    height: 250px;
     background-color: var(--bg-box);
     padding: 2em;
     border-radius: 0.5em;
@@ -480,6 +481,7 @@ section,
     overflow: hidden;
     cursor: pointer;
     color: var(--text-color);
+   
 }
 
 .cards:hover {
@@ -526,13 +528,13 @@ section,
 }
 
 .card-text {
-
     font-size: 1.25em;
     font-weight: 700;
 }
 
 
 .cards p {
+  
     line-height: 1.6;
     color: var(--sub-text-color);
 
@@ -596,6 +598,7 @@ section,
 }
 
 .about-right {
+   
     display: flex;
     align-items: center;
     justify-content: end;
@@ -610,8 +613,12 @@ section,
 }
 
 .about-right img {
-    max-width: 90%;
-    height: auto;
+    border-radius: 2em;
+    width: 340px;
+height: 640px;
+max-width: 100%;
+height: auto;
+ 
 }
 
 .abouts-feature-list {
