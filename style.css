@@ -1649,16 +1649,23 @@ hr {
 }
 
 .btn-f {
+   
+    max-width: 40%;
     cursor: pointer;
-    padding: 1em 2em;
+    padding: 1em 1em;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.5em;
     color: #ffffff;
     background-color: var(--primary-color);
     border-radius: 2em;
+    transition: var(--transition);
 
 
+}
+.btn-f:hover{
+    scale: 1.1;
 }
 
 .btn-f svg {
