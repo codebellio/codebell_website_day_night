@@ -787,7 +787,7 @@ height: auto;
 }
 
 .products {
-    width: 400px;
+    width: 350px;
     height: 524.39px;
     display: flex;
     flex-direction: column;
@@ -820,19 +820,22 @@ height: auto;
     overflow: hidden;
     cursor: pointer;
     transition: var(--transition);
+    box-shadow: 0 0 110px 10px #7f7f7f8f inset;
 
 }
 .image-product{
-    width: 350.99px;
-    height: 350.39px;
+    width: 350px;
+    
     display: flex;
     align-items: center;
     justify-content: center;
     align-self:  center;
 }
 .image-product img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
    margin: auto;
     transition: var(--transition);
 
