@@ -613,11 +613,8 @@ section,
 }
 
 .about-right img {
-    border-radius: 2em;
-    width: 340px;
-height: 640px;
-max-width: 100%;
-height: auto;
+    max-width: 50%;
+
  
 }
 
@@ -736,7 +733,7 @@ height: auto;
         flex-direction: column;
         align-items: center;
     }
-
+  
     .cards-first .cards:first-child {
         margin-top: 0em;
     }
@@ -749,6 +746,11 @@ height: auto;
         width: 100%;
         margin: auto;
     }
+    .why-left{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
 }
 
@@ -757,9 +759,7 @@ height: auto;
         flex-direction: column;
     }
 
-    .why-left img {
-        max-width: 100%;
-    }
+    
 }
 
 .our-latest-product {
@@ -832,9 +832,8 @@ height: auto;
     align-self:  center;
 }
 .image-product img {
-   
    margin: auto;
-    transition: var(--transition);
+   transition: var(--transition);
 
 }
 img{
@@ -847,6 +846,12 @@ img{
 
 .image-product:hover img {
     scale: 1.1;
+}
+
+@media screen and (max-width: 1024px) {
+    .product-row-1 {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -871,7 +876,6 @@ img{
 
 .download-app-today,
 .subscribe-content {
-
     padding-bottom: 4.5em;
     display: flex;
     justify-content: space-between;
@@ -901,20 +905,19 @@ img{
 }
 
 .google-appstore {
-
+    
     cursor: pointer;
     display: flex;
     align-items: center;
+    max-width: 50%;
     justify-content: start;
     gap: 1em;
+    /* margin: auto; */
 }
 
 .google-appstore img {
-    max-width: 30%;
-    height: auto;
+    /* width: 35%; */
     transition: var(--transition);
-
-
 }
 
 .google-appstore img:hover {
@@ -942,23 +945,11 @@ img{
     }
 
     .google-appstore {
-
+       
         justify-content: center;
-    }
-
-    .download-left img,
-    .subscribe-left img {
-
-        max-width: 90%;
-        height: auto;
-
-    }
-
-    .subscribe {
-        width: 90%;
         margin: auto;
-
     }
+
 
 }
 
