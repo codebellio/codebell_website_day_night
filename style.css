@@ -1175,6 +1175,8 @@ img{
     color: var(--sub-text-color);
     text-align: center;
    justify-content: space-between;
+   overflow-x: scroll;
+   
    overflow-x: hidden;
    gap: 0.5em;
 }
@@ -1207,6 +1209,7 @@ img{
 }
 
 .reviews-feedback {
+
     overflow: hidden;
 }
 .test-desc{
@@ -1256,6 +1259,9 @@ img{
     align-items: center;
     justify-content: center;
     z-index: 2;
+}
+.f-icon svg{
+    color: #ffffff;
 }
 .test-info{
 
@@ -1331,11 +1337,12 @@ img{
     overflow: hidden;
     text-align: center;
     cursor: pointer;
+    border-radius: 0.5em;
 }
 
 .gallery-image img {
-    width: 415px;
-    height: 346px;
+    width: 400px;
+    height: 350px;
     transition: var(--transition);
 
 }
@@ -1398,7 +1405,7 @@ img{
 
 @media screen and (max-width: 768px) {
     .gallery-image img {
-        width: 388px;
+        width: 350px;
         height: 323px;
     }
 }
