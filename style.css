@@ -1158,8 +1158,6 @@ img{
 
 .question-box.active .ans {
     display: flex;
-
-
 }
 
 .customer-feedback {
@@ -1171,28 +1169,20 @@ img{
 }
 
 .r-wraper {
-   
     width: 100%;
-  
     display: flex;
    margin: auto;
     color: var(--sub-text-color);
     text-align: center;
-  
    justify-content: space-between;
    overflow-x: hidden;
-   
-   
    gap: 0.5em;
-    
 }
 
 .single-feedback p {
-    
     font-style: italic;
     font-weight: 400;
     text-align: center;
-   
     color: var(--feeback-color);
 }
 
@@ -1232,7 +1222,6 @@ img{
 }
 
 .test-desc::before{
-    
     content: '';
     position: absolute;
     left: 35px;
@@ -1254,7 +1243,6 @@ img{
 }
 .f-icon{
     position: absolute;
-  
     width: 100%;
     top: -10%;
     left: 0;
@@ -1311,7 +1299,6 @@ img{
 
 @media screen and (max-width: 768px) {
     .single-feedback{
-    
         width: 350px;
     }
 }
