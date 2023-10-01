@@ -1032,6 +1032,67 @@ img{
     }
 }
 
+/* app ss css */
+.app-ss-container{
+   
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    background-image: url(https://economictimes.indiatimes.com/thumb/msid-70587073,width-1600,height-900,resizemode-4/magazines/panache/how-to-wipe-secure-your-android-phone-before-selling.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-bottom: 4.5em;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    opacity: 0.9;
+    
+}
+.app-ss-cont.app-ss-container{
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.1);
+    opacity: 0.6;
+}
+.app-ss-content{
+  
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+}
+.app-ss-content  .title-2, .app-ss-content .title-1{
+
+    color: #ffffff;
+}
+.app-ss-container .image-cards{
+    padding-top: 2.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    overflow-x: auto; 
+    overflow: hidden;
+    white-space: nowrap;
+    cursor: pointer;
+    
+   
+}
+
+.app-ss-container .image-cards img{
+    border-radius: 1em;
+}
+
 /* ==============asked-question-container======= */
 .asked-content {
 
@@ -1106,45 +1167,114 @@ img{
     display: flex;
     flex-direction: column;
     gap: 2em;
+  
 }
 
 .r-wraper {
+   
     width: 100%;
+  
     display: flex;
+   margin: auto;
     color: var(--sub-text-color);
+    text-align: center;
+  
+   justify-content: space-between;
+   overflow-x: hidden;
+   
+   
+   gap: 0.5em;
+    
 }
 
 .single-feedback p {
+    
     font-style: italic;
     font-weight: 400;
     text-align: center;
-    font-size: 1.5em;
-    line-height: 2em;
+   
     color: var(--feeback-color);
 }
 
 .single-feedback {
-    width: 100%;
+    margin-top: 2em;
+    flex: 0 0 auto;
+    display: flex;
+    width: 400px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: start;
+    justify-content: center;
+    cursor: pointer;
+    transition: var(--transition);
+    
+   
+}
+.single-feedback:hover{
+    transform: translateY(-5px);
 }
 
 .reviews-feedback {
     overflow: hidden;
 }
+.test-desc{
+   position: relative;
+    background-color: var(--bg-box);
+    border-radius: 0.5em;
+    padding-top: 3.5em;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 1.5em;
+    
 
-.single-feedback {
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-    align-items: center;
 }
+
+.test-desc::before{
+    
+    content: '';
+    position: absolute;
+    left: 35px;
+    bottom: -12px;
+    width: 25px;
+    height: 25px;
+    z-index: -1;
+    background: var(--bg-box);
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
 
 .single-feedback .title {
     display: flex;
     flex-direction: column;
-    gap: 1em;
+    gap: 0.2em;
     align-items: center;
 }
+.f-icon{
+    position: absolute;
+  
+    width: 100%;
+    top: -10%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.test-info{
 
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
 .single-feedback .title h3 {
     font-weight: 600;
     color: var(--text-color);
@@ -1152,11 +1282,13 @@ img{
 
 .single-feedback .title span {
     color: var(--primary-color);
+    font-size: 0.8em;
+    align-self: start;
 }
 
 .single-feedback img {
-    width: 80px;
-    height: 80px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
 }
 
@@ -1177,12 +1309,10 @@ img{
     top: 4.5em;
 }
 
-@media screen and (max-width: 990px) {
-    .single-feedback p {
-
-        font-size: 1.2em;
-        line-height: 1.5em;
-        color: var(--feeback-color);
+@media screen and (max-width: 768px) {
+    .single-feedback{
+    
+        width: 350px;
     }
 }
 
