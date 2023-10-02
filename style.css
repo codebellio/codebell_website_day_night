@@ -1920,6 +1920,12 @@ align-items: center;
         
     }
 }
+@media screen and (max-width:768px) {
+    .blogs-desc,.desc1{
+       font-size: 0.8em;
+       justify-content: space-between;
+    }
+}
 .blogs-main-left{
     flex: 2;
     display: flex;
@@ -1949,6 +1955,7 @@ align-items: center;
     display: flex;
     align-items: center;
     gap: .5em;
+    
 }
 
 .blogs-box-content{
