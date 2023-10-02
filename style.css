@@ -1885,3 +1885,16 @@ text-align: center;
         font-size: 1.2em;
     }
 }
+
+/* blog css */
+.blog-content{
+    padding-bottom: 4.5em;
+}
+.blog-content .section-title .title-2{
+display: flex;
+align-items: center;
+
+}
+.blog-content .section-title .title-2 h4,.blog-content .section-title .title-2 svg {
+    color: var(--primary-color);
+}
