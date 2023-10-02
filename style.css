@@ -1223,8 +1223,6 @@ img{
     padding-left: 1.5em;
     padding-right: 1.5em;
     padding-bottom: 1.5em;
-    
-
 }
 
 .test-desc::before{
@@ -1436,18 +1434,23 @@ img{
 }
 
 .blog-cards {
-    width: 100%;
+   
     margin: auto;
     display: flex;
     flex-direction: column;
     gap: 1em;
     width: 415px;
-    height: 550px;
+    height: 570px;
     background-color: var(--bg-color);
     cursor: pointer;
     transition: var(--transition);
 
 
+}
+
+.blog-cards img{
+    margin: 0;
+   
 }
 
 .blog-cards:hover {
@@ -1464,6 +1467,7 @@ img{
 .blogger-details {
     padding-left: 1em;
     padding-right: 1em;
+    padding-bottom: 1em;
     display: flex;
     flex-direction: column;
 
@@ -1478,6 +1482,7 @@ img{
 .post-detail {
     font-size: 1.5em;
     font-weight: 700;
+   
 }
 
 .blogger-name img {
