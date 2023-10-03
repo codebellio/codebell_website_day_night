@@ -911,8 +911,8 @@
     </section>
 
     <!------user-gallery------>
-    <hr>
-    <!-- <section class="user-gallery">
+     <!--<hr>
+    <section class="user-gallery">
         <div class="section-title">
             <div class="title-1">User Gallery</div>
             <div class="title-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
@@ -969,28 +969,11 @@
 
     </section> -->
 
-<!-- 
-    <script>
-    var userFeed = new Instafeed({
-        get: 'user',
-        target: "gallery-image-1", // Use the ID of the first gallery-image div
-        resolution: 'low_resolution',
-        accessToken: 'IGQWRQelhsUXBvZAXBzOVRxYWlMWU9pQ19XNG5DQ1pZAMVVvczRiMFdMMVpxNTRHeGIzRi04M2hBNW9QZA05QcEljRVlMT2N2UC10eHM2SzZAxczBsdXVrei03OTcwMm5OZATVkcHpwM2RVWTBmSW5OcWJ4dHM2VG9BRncZD',
-        after: function () {
-            var images = document.querySelectorAll('.gallery-image img');
-        
-            // Loop through the fetched Instagram images and set them as the src attribute of your gallery images.
-            for (var i = 0; i < images.length; i++) {
-                images[i].src = this._result[i].images.low_resolution.url;
-            }
-        }
-    });
-    userFeed.run();
-</script> -->
+
     
     
     <!------instagram-feed------>
-    <!-- <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 	<script type="text/javascript">
 	var userFeed = new Instafeed({
 		get: 'user',
@@ -999,7 +982,7 @@
 		accessToken: 'IGQWRQelhsUXBvZAXBzOVRxYWlMWU9pQ19XNG5DQ1pZAMVVvczRiMFdMMVpxNTRHeGIzRi04M2hBNW9QZA05QcEljRVlMT2N2UC10eHM2SzZAxczBsdXVrei03OTcwMm5OZATVkcHpwM2RVWTBmSW5OcWJ4dHM2VG9BRncZD'
     });
 	userFeed.run();
-	</script> -->
+	</script>
 
 
 
@@ -1014,21 +997,17 @@
         </div>
         <div class="insta-images" id="gallery-image-1"></div>
     </section>
-    <!-- Include the Instafeed.js script -->
+
     <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 
     <script type="text/javascript">
-        // Initialize Instafeed.js with your configuration
         var userFeed = new Instafeed({
             get: 'user',
             resolution: 'low_resolution',
             target: "gallery-image-1",
-            accessToken: 'IGQWRQelhsUXBvZAXBzOVRxYWlMWU9pQ19XNG5DQ1pZAMVVvczRiMFdMMVpxNTRHeGIzRi04M2hBNW9QZA05QcEljRVlMT2N2UC10eHM2SzZAxczBsdXVrei03OTcwMm5OZATVkcHpwM2RVWTBmSW5OcWJ4dHM2VG9BRncZD', // Replace with your Instagram access token
-            limit: 6, // Adjust the limit based on the number of images you want to display
-          
-        });
-
-        // Run the Instafeed instance
+            accessToken: 'IGQWRQelhsUXBvZAXBzOVRxYWlMWU9pQ19XNG5DQ1pZAMVVvczRiMFdMMVpxNTRHeGIzRi04M2hBNW9QZA05QcEljRVlMT2N2UC10eHM2SzZAxczBsdXVrei03OTcwMm5OZATVkcHpwM2RVWTBmSW5OcWJ4dHM2VG9BRncZD', 
+            limit: 6, 
+        });        
         userFeed.run();
     </script>
 
@@ -1044,7 +1023,6 @@
        
         #gallery-image-1 a{
             width: 30%;
-          
             max-width: 100%; 
             transition: var(--transition);
         }
