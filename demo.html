@@ -968,27 +968,6 @@
         </div>
 
     </section> -->
-
-
-    
-    
-    <!------instagram-feed------>
-    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
-	<script type="text/javascript">
-	var userFeed = new Instafeed({
-		get: 'user',
-		target: "gallery-image-1",
-    	resolution: 'low_resolution',
-		accessToken: 'IGQWRQelhsUXBvZAXBzOVRxYWlMWU9pQ19XNG5DQ1pZAMVVvczRiMFdMMVpxNTRHeGIzRi04M2hBNW9QZA05QcEljRVlMT2N2UC10eHM2SzZAxczBsdXVrei03OTcwMm5OZATVkcHpwM2RVWTBmSW5OcWJ4dHM2VG9BRncZD'
-    });
-	userFeed.run();
-	</script>
-
-
-
-
-    
-
     <section class="user-gallery">
         <div class="section-title">
             <div class="title-1">User Gallery</div>
@@ -998,7 +977,7 @@
         <div class="insta-images" id="gallery-image-1"></div>
     </section>
 
-    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 
     <script type="text/javascript">
         var userFeed = new Instafeed({
@@ -1009,7 +988,19 @@
             limit: 6, 
         });        
         userFeed.run();
-    </script>
+    </script> -->
+
+    <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
+	<script type="text/javascript">
+	var userFeed = new Instafeed({
+		get: 'user',
+		target: "gallery-image-1",
+    	resolution: 'low_resolution',
+		accessToken: 'IGQWRNSFJaWHp0Ym0wVTV4VHoySG1Uck51RENxMTRDLWJxS3BTblhXSm15NVo4bC16ZAUd5TVRmcE42VWtEQjFzdnZARYmEzMVYwNEJjR0kzeHB5Q0UyaW91TE9zamJuNkVXY3JtRGFYM242VTN4aVZAZAaklHaUdSTEUZD',
+        limit: 6, 
+    });
+	userFeed.run();
+	</script>
 
     <style>
         #gallery-image-1 {
