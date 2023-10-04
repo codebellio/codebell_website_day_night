@@ -996,11 +996,42 @@
 		get: 'user',
 		target: "gallery-image-1",
     	resolution: 'low_resolution',
-		accessToken: 'IGQWRNSFJaWHp0Ym0wVTV4VHoySG1Uck51RENxMTRDLWJxS3BTblhXSm15NVo4bC16ZAUd5TVRmcE42VWtEQjFzdnZARYmEzMVYwNEJjR0kzeHB5Q0UyaW91TE9zamJuNkVXY3JtRGFYM242VTN4aVZAZAaklHaUdSTEUZD',
+		accessToken: 'IGQWRNZA25aLWU1bDg5VG14cW9qbkJ1ZAVRSa2pYYWNTU3lFUlRQMXFGT2g5WE5kWHBvc1NvbXpUNFdzLXA3MWtNY3BBTzc0ZA2JHOHBnTnF2UTBPMmNzS290eG10MHcybzNWa1BJQm45NHdvbmxmaUJwMEh5MkJ2bG8ZD',
         limit: 6, 
     });
 	userFeed.run();
 	</script>
+    
+    <!-- <script>
+        // Replace with your App ID, User Token, and Instagram User ID
+        const appId = '1441816183031496';
+        const userToken = 'IGQWRNZA25aLWU1bDg5VG14cW9qbkJ1ZAVRSa2pYYWNTU3lFUlRQMXFGT2g5WE5kWHBvc1NvbXpUNFdzLXA3MWtNY3BBTzc0ZA2JHOHBnTnF2UTBPMmNzS290eG10MHcybzNWa1BJQm45NHdvbmxmaUJwMEh5MkJ2bG8ZD';
+        const userId = '62080218721';
+
+        // Fetch Instagram posts
+        fetch(`https://graph.instagram.com/v12.0/${userId}/media?fields=id,media_type,media_url,thumbnail_url,caption,permalink,timestamp&access_token=${userToken}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.error) {
+                    throw new Error(data.error.message);
+                }
+
+                const posts = data.data;
+                const galleryElement = document.getElementById('gallery-image-1');
+
+                posts.forEach(post => {
+                    if (post.media_type === 'IMAGE') {
+                        const imageElement = document.createElement('img');
+                        imageElement.src = post.media_url;
+                        galleryElement.appendChild(imageElement);
+                    }
+                });
+            })
+            .catch(error => {
+                console.error('Error fetching Instagram posts:', error);
+            });
+    </script> -->
+
 
     <style>
         #gallery-image-1 {
@@ -1265,7 +1296,6 @@
 
     <script src="main.js"></script>
     <script src="darkmode.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.2.0/swiper-bundle.min.js"></script>
 
 </body>
 
