@@ -979,14 +979,14 @@
 
 
 
-    <script src="config.js"></script>
+    <script src="https://device.codebell.io/js/image-token.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/stevenschobert/instafeed.js@2.0.0rc1/src/instafeed.min.js"></script>
 	<script type="text/javascript">
 	var userFeed = new Instafeed({
 		get: 'user',
 		target: "gallery-image-1",
     	resolution: 'low_resolution',
-		accessToken: 'IGQWRQVi00RXpXREVvQUlKVkd6V05LUmxCTzdkcEhxYlJDN3RxV21DVHo3Wl9ra2JkSzIyeEs1TWV6UEYtcmNoN2dNWERJRUNoWHdNSnBnT1JNZAFk0NURwS0UtNWlOZAUhJdmpic25vX19JRkswbEVEMEFFZAUROS3MZD',
+		accessToken: accessToken,
         limit: 6, 
     });
 	userFeed.run();
