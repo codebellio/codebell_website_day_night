@@ -467,7 +467,7 @@ section,
 }
 
 .cards {
-    width: 250px;
+    width: 280px;
     height: 250px;
     background-color: var(--bg-box);
     padding: 2em;
@@ -1409,6 +1409,7 @@ img{
 @media screen and (max-width: 860px) {
     .gallery-cards-row {
         flex-direction: column;
+      
     }
 
 }
@@ -1524,7 +1525,7 @@ img{
 @media screen and (max-width: 1500px) {
     .blog-cards {
         width: 388px;
-        height: 505.31px;
+        height: 535.31px;
     }
 
 }
@@ -1532,7 +1533,7 @@ img{
 @media screen and (max-width: 1500px) {
     .blog-cards-container {
         flex-wrap: wrap;
-        gap: 2em;
+        gap: 3em;
     }
 }
 
