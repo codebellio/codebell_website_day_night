@@ -1094,6 +1094,7 @@ img{
   
     white-space: nowrap;
     cursor: pointer;
+    padding-bottom: 2.5em;
     
    
 }
@@ -1220,9 +1221,12 @@ img{
 .reviews-feedback {
 
     overflow: hidden;
+   
 }
 .r-wraper{
     overflow-x: auto;
+    padding-bottom: 2.5em;
+    
 }
 .test-desc{
    position: relative;
