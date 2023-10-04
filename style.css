@@ -2169,3 +2169,30 @@ table {
         font-size: 0.6em;
     }
   }
+
+  /* insta images css */
+
+  #gallery-image-1 {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#gallery-image-1 a{
+    width: 30%;
+    max-width: 100%; 
+    transition: var(--transition);
+}
+#gallery-image-1 a:hover{
+    scale:1.1;
+}
+
+@media (max-width: 767px) {
+   
+    #gallery-image-1 a {
+        width: 100%; 
+    }
+}
