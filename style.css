@@ -2187,27 +2187,35 @@ table {
   /* insta images css */
 
   #gallery-image-1 {
-    width: 100%;
+    
+    background-color: var(--bg-box);
+    padding: 4em;
+    border-radius: 4em;
+    width: calc(100% - 8em);
     display: flex;
     align-items: center;
-    gap: 1em;
-    justify-content: space-between;
+    gap: 2em;
     flex-wrap: wrap;
+    justify-content: center;
+
 }
 
-#gallery-image-1 a{
-    width: 30%;
-    height: 20%;
+#gallery-image-1 img{
+    width: 330px;
+    height: 300px;
+  
     max-width: 100%; 
     transition: var(--transition);
 }
-#gallery-image-1 a:hover{
+#gallery-image-1 img:hover{
     scale:1.1;
 }
 
 @media (max-width: 767px) {
    
-    #gallery-image-1 a {
-        width: 100%; 
+    #gallery-image-1 img {
+       width: 250px;
+       height: 250px;
+
     }
 }
