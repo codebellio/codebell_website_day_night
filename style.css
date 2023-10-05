@@ -2212,9 +2212,13 @@ table {
 }
 
 @media (max-width: 767px) {
-   
+   #gallery-image-1{
+ 
+    padding: 2em;
+    width: calc(100% - 4em);
+   }
     #gallery-image-1 img {
-       width: 250px;
+       width: 270px;
        height: 250px;
 
     }
