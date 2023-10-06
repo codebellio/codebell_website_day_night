@@ -676,6 +676,7 @@ section,
 }
 
 .why-choose-headings .title-2 {
+  max-width: 100%;
     line-height: 1.5em;
 
 }
@@ -906,6 +907,9 @@ img{
     gap: 1.5em;
     flex: 1;
 }
+.download-left img{
+    max-width: 50%;
+}
 
 .subscribe-right p,
 .download-right p {
@@ -1074,12 +1078,13 @@ img{
 }
 .app-ss-content{
   
-    
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
+    overflow: hidden;
 }
 .app-ss-content  .title-2, .app-ss-content .title-1{
 
@@ -1090,8 +1095,6 @@ img{
     display: flex;
     align-items: center;
     gap: 1em;
-    overflow-x: auto; 
-  
     white-space: nowrap;
     cursor: pointer;
     padding-bottom: 2.5em;
@@ -1219,12 +1222,12 @@ img{
 }
 
 .reviews-feedback {
-
+position: relative;
     overflow: hidden;
    
 }
 .r-wraper{
-    overflow-x: auto;
+ 
     padding-bottom: 2.5em;
     
 }
@@ -1302,19 +1305,36 @@ img{
 
 .swiper-button-prev,
 .swiper-button-next {
+    position: absolute;
     cursor: pointer;
-    color: var(--text-color);
-    background-color: none;
+    
+    background-color: var(--primary-color);
+    padding: 0.5em;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    
+   
+}
+.swiper-button-prev svg,
+.swiper-button-next  svg
+{
+    color:  #ffffff;
 }
 
+
 .swiper-button-prev {
-    left: -1em;
-    top: 4.5em;
+    top: 50%;
+    left: 0;
 }
 
 .swiper-button-next {
-    right: -1em;
-    top: 4.5em;
+    top: 50%;
+    right: 0;
+  
+}
+.app-nxt,.app-prv{
+    top: 55%;
 }
 
 @media screen and (max-width: 768px) {
@@ -2223,3 +2243,114 @@ table {
 
     }
 }
+
+
+
+/* Styles for the popup modal */
+.modal {
+   
+    position: fixed;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    display: none;
+  }
+  
+  .modal-content {
+    
+    background-color: var(--bg-box);
+    margin: 10% auto;
+    padding: 1.5em;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    max-width: 60%;
+    position: relative;
+  }
+  
+  .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
+    display: flex;
+    align-items: center;
+    border-radius: 50%;
+    color:#ffffff;
+    transition: var(--transition);
+    background-color: var(--primary-color);
+  }
+  .close:hover{
+    scale: 1.1;
+  }
+  
+  .modal-body {
+   
+    display: flex;
+  
+    align-items: center;
+    gap: 2em;
+  }
+  .modal-image{
+    flex: 1;
+
+  }
+  .modal-image img {
+    max-width: 80%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+ 
+  }
+  
+  .modal-caption {
+   
+    text-align: center;
+    color: var(--text-color);
+    flex: 1;
+  }
+  
+  .modal-link {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 500;
+  }
+  .full-post-btn{
+    padding: 1em;
+    color: #ffffff;
+    background-color: var(--primary-color);
+    border-radius: 2em;
+    transition: var(--transition);
+
+  }
+  .full-post-btn:hover{
+    scale: 1.1;
+  }
+  
+  /* Make the modal responsive */
+  @media screen and (max-width: 768px) {
+   
+    .modal-caption {
+        font-size: 0.5em;
+    }
+    .full-post-btn{
+        font-size: 0.5em;
+    }
+    .modal-content{
+        max-width: 80%;
+       
+    }
+  }
