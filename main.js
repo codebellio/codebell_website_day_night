@@ -75,34 +75,33 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
 
 let appSSContainer = new Swiper(".app-ss-content", {
     spaceBetween: 5,
-    centeredSlides: true,
-    loop: true,
-    autoplay: {
-      delay: 2500,
-      disableOnInteraction: false,
-    },
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-      768: {
-        slidesPerView: 1,  // On screens with width 768px and above, show 1 slide
-        spaceBetween: 50,
-       
-      },
-      1200: {
-        slidesPerView:3,  // On screens with width 1200px and above, show 2 slides
-        spaceBetween: 10,
-      },
-      0: {
-        slidesPerView: 1,  // On screens with width below 768px, show 1 slide
-        spaceBetween: 5,  // Adjust the space as needed
-      },
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 2500,
+    disableOnInteraction: false,
   },
-  
-    navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  breakpoints: {
+    768: {
+      slidesPerView: 2, 
+      spaceBetween: 10,
     },
-  });
+    1200: {
+      slidesPerView: 4,  
+      spaceBetween: 10,
+    },
+    0: {
+      slidesPerView: 1,  
+      spaceBetween: 10, 
+    },
+},
+
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});

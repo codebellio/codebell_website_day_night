@@ -1053,7 +1053,7 @@ img {
 
 /* app ss css */
 .app-ss-container {
-
+    padding-top: 4.5em;
     width: 100%;
     margin: auto;
     text-align: center;
@@ -1085,14 +1085,13 @@ img {
 }
 
 .app-ss-content {
-
-    position: relative;
+   
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 1em;
-    overflow: hidden;
+   
 }
 
 .app-ss-content .title-2,
@@ -1103,24 +1102,14 @@ img {
 
 .app-ss-container .image-cards {
     padding-top: 2.5em;
-    display: flex;
-    align-items: center;
-    gap: 1em;
-    white-space: nowrap;
-    cursor: pointer;
-    padding-bottom: 2.5em;
   
-    
-   
+    padding-bottom: 2.5em;
 }
 
 .app-ss-container .image-cards img {
     border-radius: 1em;
-    height: 480px;
-   
-   
+  
 }
-
 
 
 
@@ -1200,16 +1189,10 @@ img {
 }
 
 .r-wraper {
-    width: 100%;
-    display: flex;
-    margin: auto;
+    
     color: var(--sub-text-color);
     text-align: center;
-    justify-content: space-between;
-    overflow-x: scroll;
-
-    overflow-x: hidden;
-    gap: 0.5em;
+  
 }
 
 .single-feedback p {
@@ -1328,11 +1311,9 @@ img {
     border-radius: 50%;
 }
 
-.swiper-button-prev,
-.swiper-button-next {
-    position: absolute;
-    cursor: pointer;
-    
+
+
+.swiper-button-next,.swiper-button-prev{
     background-color: var(--primary-color);
     border-radius: 50%;
     padding-left: 0.5em;
@@ -1340,30 +1321,19 @@ img {
     display: flex;
     justify-content: center;
     align-items: center;
-    
    
 }
-.swiper-button-prev svg,
-.swiper-button-next  svg
-{
-    color:  #ffffff;
+.swiper-button-next::after, .swiper-button-prev::after{
+    color: #ffffff;
+    font-size: 1em !important;
+    font-weight: 700;
 }
-
-
-.swiper-button-prev {
-    top: 50%;
-    left: 0;
+.swiper-pagination-bullet{
+    background-color: grey !important;
 }
-
-.swiper-button-next {
-    top: 50%;
-    right: 0;
-  
+.swiper-pagination-bullet-active {
+    background-color: var(--primary-color) !important;
 }
-.app-nxt,.app-prv{
-    top: 55%;
-}
-
 
 @media screen and (max-width: 768px) {
     .single-feedback {
