@@ -13,6 +13,7 @@ fetch(apiUrl)
       // Create an anchor element for each image 
       const anchorElement = document.createElement("a");
       anchorElement.href = "#";
+      media.caption = media.caption.split("#")[0]
       anchorElement.addEventListener("click", function (e) {
         e.preventDefault();
         openPopup(media.media_url, media.caption, media.permalink);

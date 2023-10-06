@@ -40,6 +40,9 @@
 .flex.between{
     justify-content: space-between;
 }
+.w-auto{
+    width: auto;
+}
 .gap-1 {
     gap: 1rem;
 }
