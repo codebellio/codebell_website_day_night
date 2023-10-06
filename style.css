@@ -2273,18 +2273,17 @@ table {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    display: none;
+    /* display: none; */
   }
   
   .modal-content {
     
     background-color: var(--bg-box);
-    margin: 10% auto;
-    padding: 1.5em;
+    padding: 2em;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
-    max-width: 60%;
     position: relative;
+  
   }
   
   .close {
@@ -2314,16 +2313,17 @@ table {
     height: 100%;
    display: flex;
    align-items: center;
+   gap: 1em;
   }
   .modal-image{
     flex: 1;
+    max-width: 450px;
+    min-width: 280px auto;
 
   }
+
   .modal-image img {
-    max-width: 80%;
-    height: auto;
-    display:flex;
-    margin:auto;
+    
     border-radius: 0.5em;
  
   }
@@ -2333,13 +2333,16 @@ table {
     display: flex;
     flex-direction: column; 
     justify-content: space-between;
+    flex: 1;
+    max-width: 400px;
+    min-width: 280px auto;
     
     
   
   }
   
   .modal-caption {
-    
+ 
     margin-top: 0.5em;
     text-align: center;
     color: var(--text-color);
@@ -2382,5 +2385,10 @@ table {
     .modal-content{
         max-width: 80%;
        
+    }
+  }
+  @media screen and (max-width: 450px){
+    .modal-caption {
+        font-size: 0.3em;
     }
   }
