@@ -1109,17 +1109,20 @@ img {
     white-space: nowrap;
     cursor: pointer;
     padding-bottom: 2.5em;
-
-
-
+  
+    
+   
 }
 
 .app-ss-container .image-cards img {
     border-radius: 1em;
     height: 480px;
-
-
+   
+   
 }
+
+
+
 
 /* ==============asked-question-container======= */
 .asked-content {
@@ -1329,19 +1332,21 @@ img {
 .swiper-button-next {
     position: absolute;
     cursor: pointer;
-
+    
     background-color: var(--primary-color);
-    padding: 0.5em;
     border-radius: 50%;
+    padding-left: 0.5em;
+    padding-right: 0.5em;
     display: flex;
+    justify-content: center;
     align-items: center;
-
-
+    
+   
 }
-
 .swiper-button-prev svg,
-.swiper-button-next svg {
-    color: #ffffff;
+.swiper-button-next  svg
+{
+    color:  #ffffff;
 }
 
 
@@ -1353,13 +1358,12 @@ img {
 .swiper-button-next {
     top: 50%;
     right: 0;
-
+  
 }
-
-.app-nxt,
-.app-prv {
+.app-nxt,.app-prv{
     top: 55%;
 }
+
 
 @media screen and (max-width: 768px) {
     .single-feedback {
