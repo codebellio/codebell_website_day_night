@@ -2273,7 +2273,7 @@ table {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    /* display: none; */
+    display: none;
   }
   
   .modal-content {
@@ -2323,9 +2323,7 @@ table {
   }
 
   .modal-image img {
-    
     border-radius: 0.5em;
- 
   }
   .caption-fullpost-container{
     height: 100%;
@@ -2336,8 +2334,6 @@ table {
     flex: 1;
     max-width: 400px;
     min-width: 280px auto;
-    
-    
   
   }
   
