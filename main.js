@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
     breakpoints: {
         768: {
             slidesPerView: 1, 
-            spaceBetween: 15,
+            spaceBetween: 5,
         },
         1200: {
             slidesPerView: 3, 
@@ -80,11 +80,11 @@ let appSSContainer = new Swiper(".app-ss-content", {
     breakpoints: {
         768: {
             slidesPerView: 1, 
-            spaceBetween: 15,
+            spaceBetween: 50,
         },
         1200: {
             slidesPerView: 4, 
-            spaceBetween: 15,
+            spaceBetween: 0,
         },
     },
 });
