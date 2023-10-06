@@ -34,15 +34,18 @@ fetch(apiUrl)
 function openPopup(imageUrl, caption, postLink) {
   const modal = document.getElementById("popupModal");
   const popupImage = document.getElementById("popupImage");
-  const popupCaption = document.getElementById("popupCaption");
+  // const popupCaption = document.getElementById("popupCaption");
+  const captionFullpostContainer = document.querySelector(".caption-fullpost-container");
+
   const fullPostLink = document.getElementById("fullPostLink");
 
   popupImage.src = imageUrl;
   popupImage.alt = caption; 
-  popupCaption.textContent = caption;
+  // Populate the caption and link in the caption-fullpost-container
+  captionFullpostContainer.querySelector(".modal-caption").textContent = caption;
   fullPostLink.href = postLink;
 
-  modal.style.display = "block";
+  modal.style.display = "flex";
 }
 
 //close pop up
@@ -54,3 +57,33 @@ function closePopup() {
 //close func
 const closeBtn = document.querySelector(".close");
 closeBtn.addEventListener("click", closePopup);
+
+
+// // Function to open the popup
+// function openPopup(imageUrl, caption, postLink) {
+//   const modal = document.getElementById("popupModal");
+//   const popupImage = document.getElementById("popupImage");
+//   const captionFullpostContainer = document.querySelector(".caption-fullpost-container");
+//   const fullPostLink = document.getElementById("fullPostLink");
+
+//   popupImage.src = imageUrl;
+//   popupImage.alt = caption;
+
+//   galleryImage.src = imageUrl; // Update the gallery image
+
+//   // Populate the caption and link in the caption-fullpost-container
+//   captionFullpostContainer.querySelector(".modal-caption").textContent = caption;
+//   fullPostLink.href = postLink;
+
+//   modal.style.display = "block";
+// }
+
+// // Function to close the popup
+// function closePopup() {
+//   const modal = document.getElementById("popupModal");
+//   modal.style.display = "none";
+// }
+
+// // Add click event listener to close button in the popup
+// const closeBtn = document.querySelector(".close");
+// closeBtn.addEventListener("click", closePopup);
