@@ -14,6 +14,9 @@ fetch(apiUrl)
       const anchorElement = document.createElement("a");
       anchorElement.href = "#";
       media.caption = media.caption.split("#")[0]
+      if(media.caption.length > 550){
+        media.caption = media.caption.substring(0,550) + "...";
+      }
       anchorElement.addEventListener("click", function (e) {
         e.preventDefault();
         openPopup(media.media_url, media.caption, media.permalink);
