@@ -79,7 +79,7 @@ a {
 .nav {
     margin: auto;
     width: 100%;
-    background-color: var(--bg-color);
+    background-color: var(--bg-box);
     top: 0;
     z-index: 5;
     transition: var(--transition);
@@ -91,6 +91,7 @@ a {
 .sticky-nav {
     position: fixed;
     box-shadow: var(--box-shadow);
+    background-color: var(--bg-color);
 }
 
 section,
