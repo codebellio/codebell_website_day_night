@@ -44,16 +44,12 @@ body {
     margin: auto;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
-
 }
-
 
 body {
     background-color: var(--bg-color);
     overflow-x: hidden;
 }
-
-
 
 
 ::selection {
@@ -66,12 +62,12 @@ body {
 }
 
 ::-webkit-scrollbar-thumb {
-    background-color: #727170;
+    background-color: var(--primary-color);
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-track {
-    background-color: #f0f0f0;
+    background-color: var(--bg-box);
 }
 
 a {
@@ -2477,8 +2473,8 @@ th.header {
     cursor: pointer;
     position: fixed;
     display: inline-block;
-    right: 3.5%;
-    top: 2.8%;
+    right: 3em;
+    top: 1.2em;
     z-index: 10;
    
   }
