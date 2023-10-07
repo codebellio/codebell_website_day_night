@@ -40,6 +40,8 @@ window.onscroll = function () {
   }
 };
 
+
+
 let reviewCustomer = new Swiper(".reviews-feedback", {
   spaceBetween: 5,
   grabCursor: true,
@@ -75,38 +77,7 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
   },
 });
 
-// let appSSContainer = new Swiper(".app-ss-content", {
-//     spaceBetween: 5,
-//   centeredSlides: true,
-//   loop: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
-//   },
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 10,
-//     },
-//     1200: {
-//       slidesPerView: 4,
-//       spaceBetween: 10,
-//     },
-//     0: {
-//       slidesPerView: 1,
-//       spaceBetween: 10,
-//     },
-// },
 
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
 
 let appSSContainer = new Swiper(".app-ss-content", {
   // effect: "coverflow",

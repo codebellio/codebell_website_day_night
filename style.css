@@ -50,7 +50,6 @@ body {
 
 body {
     background-color: var(--bg-color);
-
     overflow-x: hidden;
 }
 
@@ -82,13 +81,13 @@ a {
 
 /*============================================ Navbar======================================= */
 .nav {
-
     margin: auto;
     width: 100%;
     background-color: var(--bg-color);
     top: 0;
     z-index: 5;
     transition: var(--transition);
+   
 
 
 }
@@ -96,7 +95,6 @@ a {
 .sticky-nav {
     position: fixed;
     box-shadow: var(--box-shadow);
-
 }
 
 section,
@@ -133,7 +131,6 @@ section,
 }
 
 .logo-text {
-    
     color: var(--primary-color);
     display: flex;
     align-items: center;
