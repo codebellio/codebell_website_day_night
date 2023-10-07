@@ -1,0 +1,154 @@
+// Create the theme-dropdown container
+const themeDropdown = document.createElement("div");
+themeDropdown.classList.add("theme-dropdown");
+
+// Create the theme-changers container with an id
+const themeChangers = document.createElement("div");
+themeChangers.classList.add("theme-changers");
+themeChangers.id = "theme-button";
+
+// Create the themes-text container
+const themesText = document.createElement("div");
+themesText.classList.add("themes-text");
+
+// Create an SVG element
+const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+svg.setAttribute("width", "16");
+svg.setAttribute("height", "16");
+svg.setAttribute("fill", "currentColor");
+svg.classList.add("bi", "bi-palette-fill");
+svg.setAttribute("viewBox", "0 0 16 16");
+
+// Create the path element inside the SVG
+const path = document.createElementNS("http://www.w3.org/2000/svg", "path",);
+path.setAttribute("d","M12.433 10.07C14.133 10.585 16 11.15 16 8a8 8 0 1 0-8 8c1.996 0 1.826-1.504 1.649-3.08-.124-1.101-.252-2.237.351-2.92.465-.527 1.42-.237 2.433.07zM8 5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm4.5 3a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zM5 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0zm.5 6.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z");
+
+// Append the path to the SVG
+svg.appendChild(path);
+
+// Append the SVG to the themesText
+themesText.appendChild(svg);
+
+// Append the themesText to the theme-changers container
+themeChangers.appendChild(themesText);
+
+// Create the ul element with class "theme-list" and id "theme-list"
+const themeList = document.createElement("ul");
+themeList.classList.add("theme-list");
+themeList.id = "theme-list";
+
+// Array of theme data
+const themesData = [
+  { theme: "default", color: "hsl(207, 4%, 95%)" },
+  { theme: "orange", color: "RGB(255, 87, 64)" },
+  { theme: "blue", color: "#2156fa" },
+  { theme: "green", color: "#beef00" },
+  { theme: "teal", color: "teal" },
+];
+
+// Create list items with data-theme and style
+themesData.forEach((data) => {
+  const listItem = document.createElement("li");
+  listItem.setAttribute("data-theme", data.theme);
+
+  const themeCircle = document.createElement("div");
+  themeCircle.classList.add("theme-circle");
+  themeCircle.style.backgroundColor = data.color;
+
+  listItem.appendChild(themeCircle);
+  themeList.appendChild(listItem);
+});
+
+// Append the theme-changers and theme-list to the theme-dropdown container
+themeDropdown.appendChild(themeChangers);
+themeDropdown.appendChild(themeList);
+
+// Append the theme-dropdown container to the document body
+document.body.appendChild(themeDropdown);
+
+
+const themes = [
+    {
+        name: 'default',
+        colors: {
+            '--primary-color': 'hsl(207, 4%, 16%)',
+            
+        },
+    },
+    {
+        name: 'orange',
+        colors: {
+            '--primary-color': 'RGB(255, 87, 64)',
+            
+        },
+    },
+    {
+        name: 'blue',
+        colors: {
+            '--primary-color': '#2156fa',
+           
+        },
+    },
+    {
+        name: 'green',
+        colors: {
+            '--primary-color': '#beef00',
+           
+        },
+    },
+    {
+        name: 'teal',
+        colors: {
+            '--primary-color': '#18da8e',
+           
+        },
+    },
+   
+];
+
+let currentThemeIndex = 0;
+
+// Function to apply a selected theme
+function applyTheme(themeIndex) {
+    const root = document.documentElement;
+    currentThemeIndex = themeIndex;
+    const currentTheme = themes[currentThemeIndex];
+    
+    for (const [property, value] of Object.entries(currentTheme.colors)) {
+        root.style.setProperty(property, value);
+    }
+    const svgIcon = document.querySelector(".bi-palette-fill");
+    svgIcon.style.color = getComputedStyle(root).getPropertyValue("--primary-color");
+
+    // Save the selected theme index to localStorage
+    localStorage.setItem('selectedThemeIndex', themeIndex);
+}
+
+// Function to toggle the theme dropdown visibility
+function toggleDropdown() {
+    const themeList = document.getElementById('theme-list');
+    themeList.classList.toggle('show');
+}
+
+// Attach a click event listener to the theme button
+const themeButton = document.getElementById('theme-button');
+themeButton.addEventListener('click', toggleDropdown);
+
+// Attach click event listeners to the theme options in the dropdown
+const themeListItems = document.querySelectorAll('.theme-list li');
+themeListItems.forEach((item, index) => {
+    item.addEventListener('click', () => {
+        applyTheme(index);
+        toggleDropdown();
+    });
+});
+
+// Load the selected theme index from localStorage on page load
+const savedThemeIndex = localStorage.getItem('selectedThemeIndex');
+if (savedThemeIndex !== null) {
+    applyTheme(parseInt(savedThemeIndex));
+} else {
+    // Use the default theme if no selection is stored
+    applyTheme(currentThemeIndex);
+}

@@ -42,6 +42,7 @@ window.onscroll = function () {
 
 let reviewCustomer = new Swiper(".reviews-feedback", {
   spaceBetween: 5,
+  grabCursor: true,
   centeredSlides: true,
   loop: true,
   autoplay: {
@@ -51,21 +52,22 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+   
   },
   breakpoints: {
     768: {
-      slidesPerView: 1, 
+      slidesPerView: 1,
       spaceBetween: 1,
     },
     1200: {
-      slidesPerView: 3,  
+      slidesPerView: 3,
       spaceBetween: 10,
     },
     0: {
-      slidesPerView: 1,  
-      spaceBetween: 10, 
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
-},
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
@@ -73,32 +75,75 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
   },
 });
 
+// let appSSContainer = new Swiper(".app-ss-content", {
+//     spaceBetween: 5,
+//   centeredSlides: true,
+//   loop: true,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 2,
+//       spaceBetween: 10,
+//     },
+//     1200: {
+//       slidesPerView: 4,
+//       spaceBetween: 10,
+//     },
+//     0: {
+//       slidesPerView: 1,
+//       spaceBetween: 10,
+//     },
+// },
+
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
+
 let appSSContainer = new Swiper(".app-ss-content", {
-    spaceBetween: 5,
+  // effect: "coverflow",
+  grabCursor: true,
+  spaceBetween: 5,
   centeredSlides: true,
   loop: true,
   autoplay: {
     delay: 2500,
     disableOnInteraction: false,
   },
+  // coverflowEffect: {
+  //   rotate: 50,
+  //   stretch: 0,
+  //   depth: 100,
+  //   modifier: 1,
+  //   slideShadows: true,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
+
   },
   breakpoints: {
     768: {
-      slidesPerView: 2, 
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     1200: {
-      slidesPerView: 4,  
+      slidesPerView: 4,
       spaceBetween: 10,
     },
     0: {
-      slidesPerView: 1,  
-      spaceBetween: 10, 
+      slidesPerView: 1,
+      spaceBetween: 10,
     },
-},
+  },
 
   navigation: {
     nextEl: ".swiper-button-next",
