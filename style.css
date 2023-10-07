@@ -2454,11 +2454,14 @@ th.header {
 .blur-left{
     left: 0;
 }
+.footer-blur{
+    left: 50%;
+}
 @media screen and (max-width: 768px){
     .color-blur{
-        width: 250px;
-        height: 250px;
-        filter: blur(350px);
+        width: 150px;
+        height: 150px;
+        filter: blur(550px);
     }
 }
 
