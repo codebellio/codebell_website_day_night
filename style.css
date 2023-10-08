@@ -145,7 +145,11 @@ section,
     height: 3em;
     width: auto;
 }
-
+@media screen and (max-width:768px) {
+    .logo-text svg{
+        height: 1.2em;
+    }
+}
 .links a {
     transition: var(--transition);
 }
