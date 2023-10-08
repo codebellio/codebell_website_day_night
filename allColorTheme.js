@@ -38,11 +38,11 @@ themeList.id = "theme-list";
 
 // store the colors of circle icons
 const themesData = [
-  { theme: "default", color: "hsl(207, 4%, 95%)" },
-  { theme: "orange", color: "RGB(255, 87, 64)" },
-  { theme: "blue", color: "#2156fa" },
-  { theme: "green", color: "#beef00" },
-  { theme: "teal", color: "teal" },
+    { theme: "blue", color: "#0c87c9" },
+    { theme: "orange", color: "#ff5740" },
+  { theme: "purple", color: "#6B4EFF" },
+  { theme: "dim-blue", color: "#0a5b75" },
+  { theme: "teal-green", color: "#18da8e" },
 ];
 
 // Create list items with data-theme and style
@@ -67,35 +67,35 @@ document.body.appendChild(themeDropdown);
 
 const themes = [
     {
-        name: 'default',
+        name: 'blue',
         colors: {
-            '--primary-color': 'hsl(207, 4%, 16%)',
+            '--primary-color': '#0c87c9',
             
         },
     },
     {
         name: 'orange',
         colors: {
-            '--primary-color': 'RGB(255, 87, 64)',
+            '--primary-color': '#ff5740',
             
         },
     },
     {
-        name: 'blue',
+        name: 'purple',
         colors: {
-            '--primary-color': '#2156fa',
+            '--primary-color': '#6B4EFF',
            
         },
     },
     {
-        name: 'green',
+        name: 'dim-blue',
         colors: {
-            '--primary-color': '#beef00',
+            '--primary-color': '#0a5b75',
            
         },
     },
     {
-        name: 'teal',
+        name: 'teal-green',
         colors: {
             '--primary-color': '#18da8e',
            
