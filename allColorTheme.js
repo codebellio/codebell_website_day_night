@@ -13,8 +13,8 @@ themesText.classList.add("themes-text");
 // Create an SVG element which is fixed at right position
 const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
 svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
-svg.setAttribute("width", "16");
-svg.setAttribute("height", "16");
+svg.setAttribute("width", "20");
+svg.setAttribute("height", "20");
 svg.setAttribute("fill", "currentColor");
 svg.classList.add("bi", "bi-palette-fill");
 svg.setAttribute("viewBox", "0 0 16 16");
@@ -38,7 +38,7 @@ themeList.id = "theme-list";
 
 // store the colors of circle icons
 const themesData = [
-    { theme: "blue", color: "#0c87c9" },
+    { theme: "default", color: "#0c87c9" },
     { theme: "orange", color: "#ff5740" },
   { theme: "purple", color: "#6B4EFF" },
   { theme: "dim-blue", color: "#0a5b75" },
@@ -67,7 +67,7 @@ document.body.appendChild(themeDropdown);
 
 const themes = [
     {
-        name: 'blue',
+        name: 'default',
         colors: {
             '--primary-color': '#0c87c9',
             
