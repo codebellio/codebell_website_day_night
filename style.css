@@ -134,7 +134,6 @@ section,
     width: auto;
     height: 1em;
     filter: drop-shadow(--logo-shadow);
-
 }
 
 .logo-text img {
@@ -153,7 +152,6 @@ section,
 .links a {
     transition: var(--transition);
 }
-
 .links a:hover {
     color: var(--primary-color);
 }
