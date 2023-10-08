@@ -40,6 +40,23 @@ window.onscroll = function () {
   }
 };
 
+let heroSectionSlide = new Swiper(".container", {
+  
+  grabCursor: true,
+  centeredSlides: true,
+  loop: true,
+  autoplay: {
+    delay: 3000,
+    disableOnInteraction: false,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+   
+  },
+  
+});
+
 
 
 let reviewCustomer = new Swiper(".reviews-feedback", {
@@ -107,7 +124,7 @@ let appSSContainer = new Swiper(".app-ss-content", {
       spaceBetween: 10,
     },
     1200: {
-      slidesPerView: 4,
+      slidesPerView: 3,
       spaceBetween: 10,
     },
     0: {

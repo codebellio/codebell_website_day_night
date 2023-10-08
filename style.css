@@ -487,6 +487,9 @@ section,
 
 }
 
+.cards:hover p {
+    color: #ffffff;
+}
 .cards::before {
     width: 0%;
     transform: translate(-50%, -50%);
@@ -527,6 +530,7 @@ section,
     font-size: 1.25em;
     font-weight: 700;
 }
+
 
 
 .cards p {
@@ -1068,7 +1072,7 @@ img {
     align-items: center;
     justify-content: center;
     gap: 1em;
-    opacity: 0.8;
+
 
 }
 
@@ -1100,6 +1104,9 @@ img {
 }
 
 .app-ss-container .image-cards {
+    display: flex;
+    justify-content: space-between;
+
     padding-top: 2.5em;
  
     padding-bottom: 2.5em;
@@ -1107,6 +1114,7 @@ img {
 
 .app-ss-container .image-cards img {
     border-radius: 1em;
+    width: 60%;
    
    
   
@@ -2442,14 +2450,19 @@ th.header {
 
 
 /* blur css */
+
+.blur-color-holder{
+    position: relative;
+    z-index: 1;
+}
 .color-blur{
     right: 0;
     position: absolute;
     width: 250px;
-    height: 500px;
-    z-index: 1;
+    height: 200px;
+    border-radius: 50%;
     background-color: var(--primary-color);
-    filter: blur(450px);
+    filter: blur(500px);
 }
 .blur-left{
     left: 0;
