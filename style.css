@@ -2488,13 +2488,13 @@ th.header {
 
 .blur-color-holder{
     position: relative;
-    z-index: 1;
+    z-index: -1;
 }
 .color-blur{
     right: 0;
     position: absolute;
     width: 250px;
-    height: 200px;
+    height: 350px;
     border-radius: 50%;
     background-color: var(--primary-color);
     filter: blur(400px);
@@ -2512,7 +2512,7 @@ th.header {
     .color-blur{
         width: 150px;
         height: 150px;
-        filter: blur(550px);
+        filter: blur(400px);
     }
 }
 
