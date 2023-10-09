@@ -823,7 +823,7 @@ section,
     cursor: pointer;
     transition: var(--transition);
     /* box-shadow: 0 0 110px 10px #7f7f7f8f inset; */
-    
+
     box-shadow: 0 4px 10px -1px  var(--primary-color), inset 0 0px 10px -1px  var(--primary-color);
     /* box-shadow: var(--primary-color) 0px 0px 0px 2px, var(--primary-color) 0px 4px 6px -1px,var(--primary-color) 0px 1px 0px inset; */
 
