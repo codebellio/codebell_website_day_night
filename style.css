@@ -288,6 +288,7 @@ section,
 
     .mobile-view-menu-icon {
         display: flex !important;
+        margin-right: 2em;
     }
 }
 
