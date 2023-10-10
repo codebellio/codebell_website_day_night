@@ -130,7 +130,7 @@ section,
 .nav-content {
     align-items: center;
     padding: 1em;
-    width: calc(85% - 2em);
+    width: calc(100% - 2em);
     margin: auto;
     position: relative;
 
