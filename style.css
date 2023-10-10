@@ -489,9 +489,9 @@ section,
     cursor: pointer;
     color: var(--text-color);
 }
-.dark .image-product, .dark .cards{
+/* .dark .image-product, .dark .cards{
     box-shadow: 0 5px 20px -2px var(--primary-color)
-}
+} */
 .cards:hover {
     color: #ffffff;
     transform: translateY(-1em);
