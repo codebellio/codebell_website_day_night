@@ -538,6 +538,7 @@ section,
 .cards p {
     line-height: 1.6;
     color: var(--sub-text-color);
+    display: flex;
 }
 
 
@@ -624,6 +625,11 @@ section,
     align-items: start;
     gap: 0.5em;
     line-height: 1.5em;
+}
+.list-cont p{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 @media screen and (max-width: 990px) {
