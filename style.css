@@ -362,29 +362,29 @@ section,
 .button:hover {
     scale: 1.05;
 }
-
+#car-heading{
+  font-size: 3.5em !important;
+}
 @media screen and (max-width: 986px) {
     .hero {
         flex-direction: column;
         text-align: center;
         justify-content: center;
     }
-
     .left {
         justify-content: center;
 
     }
-
-
     .left h1 {
-        font-size: 3.5em !important;
+        font-size: 2.5em !important;
     }
-
+    #car-heading{
+        font-size: 2.5em !important;
+      }
     .btn {
         display: flex;
         justify-content: center;
     }
-
     .right {
         justify-content: center;
     }
@@ -392,10 +392,7 @@ section,
 }
 
 @media screen and (max-width: 768px) {
-
-
     .hero {
-
         width: 90%;
         padding: 1.5em 0em;
     }
@@ -404,13 +401,17 @@ section,
         margin-top: 2em;
     }
 
+    .left h1 {
+        font-size: 2em !important;
+    }
+    #car-heading{
+        font-size: 2em !important;
+      }
     .logo-text {
         font-size: 1.5em;
     }
 
-    .left h1 {
-        font-size: 2.5em !important;
-    }
+   
 
     .left .sub-text {
         font-size: 0.9em !important;
@@ -1976,6 +1977,7 @@ hr {
 /* blog css */
 .blog-content {
     padding-bottom: 4.5em;
+   padding-top: 9em;
 }
 
 .blog-content .section-title .title-2 {
@@ -2023,6 +2025,11 @@ hr {
         font-size: 0.8em;
         justify-content: space-between;
     }
+    .blogs-box-content{
+        padding: 1em;
+        width: calc(100% - 4em);
+    }
+    
 }
 
 .blogs-main-left {
@@ -2071,6 +2078,16 @@ hr {
     border-left: 2px solid var(--primary-color);
 }
 
+@media screen and (max-width:768px) {
+
+    
+    .blogs-box-content{
+        padding: 1.5em;
+        width: calc(100% - 3em);
+    }
+   
+    
+}
 .blogs-box-content {
     font-size: 1.1em;
     font-style: italic;
