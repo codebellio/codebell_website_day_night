@@ -557,14 +557,9 @@ section,
 
 /* Media query for medium-sized screens */
 @media screen and (max-width: 1024px) {
-    .card-row-1 {
-        flex-direction: column;
-    }
-
     .title-1 {
         font-size: 1.875em;
     }
-
     .title-2 {
         max-width: 100%;
         font-size: 0.938em;
@@ -573,8 +568,6 @@ section,
 }
 
 @media screen and (max-width: 768px) {
-    
-
     .card-container,
     .product-feature {
         width: 95%;
@@ -611,21 +604,21 @@ section,
     flex: 1
 }
 
-.about-headings {
+/* .about-headings {
     display: flex;
     flex-direction: column;
     gap: 1em;
-}
+} */
 
 .about-right img {
     max-width: 60%;
 }
 
-.abouts-feature-list {
+/* .abouts-feature-list {
     display: flex;
     flex-direction: column;
     gap: 1em;
-}
+} */
 
 .list-cont svg {
     color: var(--primary-color);

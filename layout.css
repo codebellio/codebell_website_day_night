@@ -40,11 +40,17 @@
 .flex.between{
     justify-content: space-between;
 }
+.flex.flex-1{
+    flex: 1;
+}
 .w-auto{
     width: auto;
 }
 .gap-1 {
     gap: 1rem;
+}
+.gap-2{
+    gap: 2em;
 }
 
 .text-center{
