@@ -1480,7 +1480,6 @@ width:90%;
 }
 
 .blog-cards {
-
     margin: auto;
     display: flex;
     flex-direction: column;
@@ -1490,8 +1489,6 @@ width:90%;
     background-color: var(--bg-color);
     cursor: pointer;
     transition: var(--transition);
-
-
 }
 
 .blog-cards img {
