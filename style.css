@@ -1224,9 +1224,7 @@ width:90%;
 
 .single-feedback {
     margin-top: 2em;
-    
     display: flex;
-    /* width: 400px; */
     position: relative;
     display: flex;
     flex-direction: column;
