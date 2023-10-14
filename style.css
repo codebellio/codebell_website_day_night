@@ -822,7 +822,6 @@ section,
     max-height: 80%;
     margin: auto;
     transition: var(--transition);
-
 }
 
 img {
@@ -833,15 +832,13 @@ img {
     margin: auto;
 }
 
+
 .image-product:hover img {
     scale: 1.1;
 }
 
 
-
 @media screen and (max-width: 768px) {
-    
-
     .products {
         width: 350px;
         height: 480px;
@@ -1046,11 +1043,8 @@ img {
     align-items: center;
     justify-content: center;
     gap: 1em;
-
-    
-
-
 } */
+
 .app-ss-container {
     position: relative;
     width: 100%;
@@ -1125,7 +1119,6 @@ img {
 
 /* ==============asked-question-container======= */
 .asked-content {
-
     padding-bottom: 4.5em;
     display: flex;
     flex-direction: column;
@@ -1140,7 +1133,6 @@ img {
 }
 
 .question-box {
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1149,9 +1141,6 @@ img {
     background-color: var(--bg-box-faq);
     border: 0.1px solid var(--sub-text-color);
     border-radius: 0.5em;
-  
-
-
 }
 
 .question-wraper{
