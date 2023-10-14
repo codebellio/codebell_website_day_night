@@ -96,45 +96,45 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
 
 
 
-let appSSContainer = new Swiper(".app-ss-content", {
-  // effect: "coverflow",
-  grabCursor: true,
-  spaceBetween: 5,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false,
-  },
-  // coverflowEffect: {
-  //   rotate: 50,
-  //   stretch: 0,
-  //   depth: 100,
-  //   modifier: 1,
-  //   slideShadows: true,
-  // },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+// let appSSContainer = new Swiper(".app-ss-content", {
+//   // effect: "coverflow",
+//   grabCursor: true,
+//   spaceBetween: 5,
+//   centeredSlides: true,
+//   loop: true,
+//   autoplay: {
+//     delay: 2500,
+//     disableOnInteraction: false,
+//   },
+//   // coverflowEffect: {
+//   //   rotate: 50,
+//   //   stretch: 0,
+//   //   depth: 100,
+//   //   modifier: 1,
+//   //   slideShadows: true,
+//   // },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
 
-  },
-  breakpoints: {
-    768: {
-      slidesPerView: 2,
-      spaceBetween: 10,
-    },
-    1200: {
-      slidesPerView: 3,
-      spaceBetween: 10,
-    },
-    0: {
-      slidesPerView: 1,
-      spaceBetween: 10,
-    },
-  },
+//   },
+//   breakpoints: {
+//     768: {
+//       slidesPerView: 2,
+//       spaceBetween: 10,
+//     },
+//     1200: {
+//       slidesPerView: 3,
+//       spaceBetween: 10,
+//     },
+//     0: {
+//       slidesPerView: 1,
+//       spaceBetween: 10,
+//     },
+//   },
 
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
-  },
-});
+//   navigation: {
+//     nextEl: ".swiper-button-next",
+//     prevEl: ".swiper-button-prev",
+//   },
+// });
