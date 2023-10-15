@@ -17,7 +17,7 @@
     --border-color: rgb(182, 178, 178);
     --product-card-shadow:hsla(0,0%,0%,0.14);
     --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
-    --bg-box-faq: #f3f3f3c4;
+    --bg-box-faq: #f3f3f3;
     --feeback-color: RGB(107, 107, 132);
     --transition: 0.5s;
     --logo-shadow: 2px 2px 1px rgb(0, 0, 0, 0.09)
@@ -1185,9 +1185,9 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--text-color);
-    background-color: var(--bg-box-faq);
+    background-color: var(--bg-color);
     border: 0.1px solid var(--sub-text-color);
-    border-radius: 0.5em;
+   
 }
 
 .question-wraper{
@@ -1879,8 +1879,7 @@ hr {
     text-decoration: underline;
 }
 
-.btn-f {
-
+.follow-button {
     max-width: 40%;
     cursor: pointer;
     padding: 1em 1em;
@@ -1892,15 +1891,14 @@ hr {
     background-color: var(--primary-color);
     border-radius: 2em;
     transition: var(--transition);
-
-
+    white-space: nowrap;
 }
 
-.btn-f:hover {
+.follow-button:hover {
     scale: 1.1;
 }
 
-.btn-f svg {
+.follow-button svg {
 
     color: rgb(255, 253, 255);
 }
@@ -1914,7 +1912,7 @@ hr {
 
     }
 
-    .btn-f {
+    .follow-button {
         cursor: pointer;
         padding: 1em 1em;
     }
