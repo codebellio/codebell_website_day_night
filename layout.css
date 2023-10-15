@@ -57,6 +57,12 @@
 .text-center{
     text-align: center;
 }
+.pdt{
+    padding-top: 4.5em;
+}
+.pdb{
+    padding-bottom: 4.5em;
+}
 
 .pbf{
     padding-bottom: 5em !important;
