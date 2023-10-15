@@ -778,17 +778,28 @@ color: var(--primary-color);
     gap: 0.5em;
 }
 .know-more a{
-    padding: 0.5em;
-    border: 0.1px solid var(--text-color);
+    border: none;
+    font-size: 0.9em;
+    line-height: 1.1em;
+    text-decoration: underline;
+    color: var(--primary-color);
+    font-weight: 500;
+}
+.know-more .km-a{
+   text-decoration: none;
+    padding: 0.8em; 
+    padding-left: 1em;
+    padding-right: 1em; 
+    border: 0.1px solid var(--primary-color);
     border-radius: 0.5em;
-    color: var(--text-color);
+    color: #ffffff;
     font-weight: 500;
     transition: var(--transition);
-
+    background-color: var(--primary-color);
+    transition: var(--transition);
 }
-.know-more a:hover{
-    border-color: var(--primary-color);
-    color: var(--primary-color);
+.know-more .km-a:hover{
+scale: 1.1;
 }
 .price-start {
     display: flex;

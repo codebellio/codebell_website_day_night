@@ -54,9 +54,11 @@ let heroSectionSlide = new Swiper(".container", {
     clickable: true,
    
   },
-  pauseOnMouseEnter: true,
+ 
   
 });
+
+
 
 
 
