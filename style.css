@@ -447,15 +447,6 @@ color: var(--primary-color);
 /* ======main========== */
 
 
-/* .product-feature {
-    padding-top: 4.3em;
-    width: 85%;
-    margin: auto;
-
-
-
-} */
-
 .section-title {
     width: 100%;
     margin: auto;
@@ -492,13 +483,6 @@ color: var(--primary-color);
     padding-bottom: 4.5em;
 }
 
-/* .cards-main-container{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 1em;
-} */
 .cards {
     width: 250px;
     height: 250px;
