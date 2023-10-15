@@ -591,7 +591,7 @@ color: var(--primary-color);
 /* about the product page */
 .about-the-product {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     padding-bottom: 4.5em;
     justify-content: space-between;
 }
@@ -638,16 +638,12 @@ color: var(--primary-color);
         gap: 2.5em;
         align-items: center;
     }
-
-    .about-the-product {
-
-        width: 90%;
-        margin: auto;
-    }
-
     .about-right {
         /* align-items: center; */
         justify-content: center;
+    }
+    .about-right img {
+        max-width: 80%;
     }
 }
 
@@ -679,9 +675,14 @@ color: var(--primary-color);
     flex: 1;
 }
 
+
 .why-left img {
     max-width: 80%;
     height: auto;
+}
+.why-left-car img{
+    max-width: 100%;
+
 }
 
 .why-right {
@@ -1197,8 +1198,9 @@ img {
     align-items: center;
     justify-content: center;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background-color: var(--bg-box);
     border: 0.1px solid var(--sub-text-color);
+    border-radius: 2.5px;
    
 }
 
@@ -1222,9 +1224,12 @@ img {
    transition: var(--transition);
 }
 .ans p{
-    padding: 0em 1.5em 1.5em;
+    border-top: 1px solid var(--primary-color);
+    padding: 1.5em 1.5em 1.5em;
     width: calc(100% - 3em);
     line-height: 1.3em;
+    font-weight: 500;
+    color: var(--sub-text-color);
 }
 .question-box .minus{
     display: none;
@@ -1241,7 +1246,7 @@ img {
 
 .question {
 width:90%;
-    font-size: 1.25em;
+    font-size: 1.2em;
     font-weight: 600;
 
 }
@@ -1843,6 +1848,11 @@ hr {
     flex: 1;
     color: var(--text-color);
 }
+.footer-column img{
+    
+max-width: 70%;
+
+}
 .logo-codebell svg{
     color: var(--primary-color);
 }
@@ -1886,17 +1896,14 @@ hr {
     cursor: pointer;
     font-weight: 500;
 }
-.footer-column img{
-  height: 40px;
-  width: auto;
-}
+
 
 .footer-column p:hover {
     text-decoration: underline;
 }
 
 .follow-button {
-    /* max-width: 40%; */
+    max-width: 70%;
     cursor: pointer;
     padding: 1em 1em;
     display: flex;
@@ -1944,6 +1951,7 @@ hr {
     font-size: 0.7em;
     gap: 1em;
     flex-wrap: wrap;
+    padding-top: 0;
 }
 
 .logo-codebell {
