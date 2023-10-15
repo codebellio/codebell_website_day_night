@@ -872,7 +872,6 @@ img {
     margin: auto;
 }
 
-
 .image-product:hover img {
     scale: 1.1;
 }
@@ -939,6 +938,7 @@ img {
 }
 .plan-card p{
     color: var(--sub-text-color);
+    flex: 1;
 }
 .plan-btn .button{
     padding: 0.8em 0.5em;
