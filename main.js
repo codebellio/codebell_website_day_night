@@ -40,23 +40,23 @@ window.onscroll = function () {
   }
 };
 
-let heroSectionSlide = new Swiper(".container", {
+// let heroSectionSlide = new Swiper(".container", {
   
-  grabCursor: true,
-  centeredSlides: true,
-  loop: true,
-  autoplay: {
-    delay: 6000,
-    disableOnInteraction: false,
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true,
+//   grabCursor: true,
+//   centeredSlides: true,
+//   loop: true,
+//   autoplay: {
+//     delay: 6000,
+//     disableOnInteraction: false,
+//   },
+//   pagination: {
+//     el: ".swiper-pagination",
+//     clickable: true,
    
-  },
+//   },
  
   
-});
+// });
 
 
 
