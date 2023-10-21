@@ -2594,7 +2594,7 @@ th.header {
     gap: 0.5em;
     padding: 1em;
     padding-right: 2em;
-    background-color: var(--bg-grey-color);
+    background-color: var(--bg-box-color);
     border-radius: 2em;
  
   }
@@ -2635,7 +2635,7 @@ th.header {
     color: var(--text-color);
     display: none;
     position: absolute;
-    background-color: var(--bg-box);
+    background-color: var(--bg-box-color);
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 10;
     transition: 1s;
