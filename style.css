@@ -307,9 +307,9 @@ section,
 .hero {
     display: flex;
     align-items: center;
-    padding: 4em 0em;
     height: 100%;
-    /* width: calc(85% - 8em); */
+  
+    /* width: calc(100% - 8em); */
     margin: auto;
     justify-content: space-between;
 
@@ -339,7 +339,10 @@ section,
     max-width: 80%;
     height: auto;
 }
-
+.right .home-img{
+    max-width: 70%;
+    height: auto;
+}
 .sub-text {
     color: var(--sub-text-color);
     font-weight: 500;
@@ -390,6 +393,7 @@ section,
     .right {
         justify-content: center;
     }
+  
 
 }
 
@@ -397,6 +401,7 @@ section,
     .hero {
         width: 90%;
         padding: 1.5em 0em;
+        
     }
 
     .left {
