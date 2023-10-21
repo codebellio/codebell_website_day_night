@@ -11,9 +11,10 @@
     --primary-color: RGB(255, 87, 64);
     --text-color: RGB(3, 21, 33);
     --sub-text-color: RGB(107, 107, 132);
-    --bg-color: #fafafa;
-    --bg-box: #f3f3f3;
-    --nav: #fff;
+    --bg-color: #FFFFFF;
+    --bg-grey-color: #fafafa;
+    --bg-box-color:#f3f3f3;
+    --nav: #ffffff;
     --border-color: rgb(182, 178, 178);
     --product-card-shadow:hsla(0,0%,0%,0.14);
     --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
@@ -25,10 +26,11 @@
 
 .dark {
     --bg-color: #000000;
-    --bg-box: #0e0e0e;
+    --bg-grey-color: #0e0e0e;
+    --bg-box-color:#000000;
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
-    --nav: #141718;
+    --nav: #2A2A2A;
     --border-color: rgb(77, 75, 75);
     --box-shadow: 0 2px 28px 0 rgb(255, 255, 255, 0.01);
     --product-card-shadow:var(--primary-color);
@@ -69,7 +71,7 @@ body {
 }
 
 ::-webkit-scrollbar-track {
-    background-color: var(--bg-box);
+    background-color: var(--bg-box-color);
 }
 
 a {
@@ -90,17 +92,18 @@ a {
 
 } */
 .nav{
-    position: fixed;
+    position: relative;
     top: 0;
     width: 100%;
     z-index: 5;
     transition: var(--transition);
+    background-color: var(--nav);
 }
 
 .sticky-nav {
     position: fixed;
     box-shadow: var(--box-shadow);
-    background-color: var(--bg-color);
+    background-color: var(--nav);
 }
 
 section,
@@ -116,7 +119,7 @@ section,
 .grey-section {
     width: 100%;
     margin: auto;
-    background-color: var(--bg-box) !important;
+    background-color: var(--bg-grey-color) !important;
 
 
 
@@ -186,7 +189,7 @@ section,
     border-radius: 1em;
     display: flex;
     align-items: center;
-    background-color: var(--bg-box);
+    background-color: var(--bg-box-color);
     padding: 0.7em;
     cursor: pointer;
 
@@ -214,7 +217,7 @@ section,
     top: 60px;
     width: 250px;
     height: 0;
-    background: var(--bg-box);
+    background: var(--bg-box-color);
     backdrop-filter: blur(15px);
     border-radius: 10px;
     overflow: hidden;
@@ -298,9 +301,9 @@ section,
 /* ======hero===== */
 .container {
     width: 100%;
+    height: calc(100% - 74.5px);
     margin: auto;
-    height: 100%;
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     align-items: center;
 }
 
@@ -308,11 +311,8 @@ section,
     display: flex;
     align-items: center;
     height: 100%;
-  
-    /* width: calc(100% - 8em); */
     margin: auto;
     justify-content: space-between;
-
 }
 .hero h1{
     font-size: 4em !important;
@@ -327,7 +327,6 @@ section,
 
 .right {
     flex: 1;
-    height: auto;
     margin: auto;
     display: flex;
     align-items: end;
@@ -337,11 +336,10 @@ section,
 
 .right img {
     max-width: 80%;
-    height: auto;
 }
 .right .home-img{
-    max-width: 70%;
-    height: auto;
+    max-width: 60%;
+
 }
 .sub-text {
     color: var(--sub-text-color);
@@ -492,7 +490,7 @@ color: var(--primary-color);
 .cards {
     width: 250px;
     height: 250px;
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     padding: 2em;
     border-radius: 0.5em;
     display: flex;
@@ -773,11 +771,11 @@ color: var(--primary-color);
   
 }
 .products-lists p{
-    font-size: 0.8em;
+    font-size: 1em;
 }
 
 .products {
-    width: 300px;
+    width: 400px;
     height: 524.39px;
     display: flex;
     flex-direction: column;
@@ -789,7 +787,7 @@ color: var(--primary-color);
 }
 .know-more a{
     border: none;
-    font-size: 0.9em;
+    font-size: 1em;
     line-height: 1.1em;
     text-decoration: underline;
     color: var(--primary-color);
@@ -837,7 +835,7 @@ scale: 1.1;
     cursor: pointer;
     border-radius: 1em;
     transition: var(--transition);
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     /* background-color: hsla(0, 100%, 100%, 0.07); */
   
 	box-shadow:
@@ -855,8 +853,8 @@ scale: 1.1;
 }
 
 .image-product {
-    width: 300px;
-     height: 300px;
+    width: 400px;
+     height: 400px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -1198,19 +1196,15 @@ img {
 }
 
 .question-box {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     color: var(--text-color);
-    background-color: var(--bg-box);
-    border: 0.1px solid var(--sub-text-color);
-    border-radius: 2.5px;
+    background: var(--bg-box-color);
+    border: 0.1px solid #D5D5D5;
+    border-radius: 2px;
    
 }
 
+
 .question-wraper{
-   
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1646,7 +1640,7 @@ width:90%;
 }
 
 hr {
-    border: 1px solid var(--bg-box)
+    border: 1px solid rgb(128, 128, 128,0.2);
 }
 
 .mail-detail {
@@ -2131,7 +2125,7 @@ max-width: 70%;
 .blogs-box-content {
     padding: 3em;
     width: calc(100% - 6em);
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     text-align: center;
     border-left: 2px solid var(--primary-color);
 }
@@ -2176,7 +2170,7 @@ max-width: 70%;
 .offers-list .rows .iwrap,
 .shares .iwrap {
     display: flex;
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     padding: 0.5em;
     align-items: center;
     justify-content: center;
@@ -2364,7 +2358,7 @@ td {
 }
 
 th.header {
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
 
 }
 
@@ -2435,7 +2429,7 @@ th.header {
 }
 
 .modal-content {
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     padding: 1em;
     border-radius: 8px;
     box-shadow: var(--box-shadow);
@@ -2600,7 +2594,7 @@ th.header {
     gap: 0.5em;
     padding: 1em;
     padding-right: 2em;
-    background-color: var(--bg-box);
+    background-color: var(--bg-grey-color);
     border-radius: 2em;
  
   }

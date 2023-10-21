@@ -36,6 +36,7 @@
 }
 .flex.eq>*, .flex-1{
     flex: 1;
+    /* min-width: 1px; */
     width: 1px;
 }
 .flex.between{
