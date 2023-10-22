@@ -1009,6 +1009,10 @@ img {
    width: auto;
    flex: 1;
    cursor: pointer;
+
+}
+.app_download .qr_code img{
+    background: #fafafa;
 }
 
 .google-appstore img {
