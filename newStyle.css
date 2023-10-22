@@ -588,7 +588,22 @@ video{
         color: var(--sub-text-color);
         flex: 1;
     }
-
+    /* download */
+    .app_download{
+        border: 0.5px solid var(--border-color);
+        border-radius: 1em;
+        padding: 1.5em;
+        width: calc(100% - 3em);
+    }
+    .app_download .qr_code{
+       height: 150px;
+       width: auto;
+    }
+    @media screen and (max-width:768px) {
+        .download{
+            text-align: center;
+        }
+    }
     /* FAQ  */
     .question-box {
         color: var(--text-color);
