@@ -113,7 +113,8 @@ section,
     width: 85%;
     margin: auto;
     max-width: 1320px;
-    padding-top: 4.5em;
+    padding-top: 100px;
+    padding-bottom: 70px;
 }
 
 .grey-section {
@@ -132,8 +133,8 @@ section,
 
 .nav-content {
     align-items: center;
-    padding: 1em;
-    width: calc(100% - 2em);
+    padding: 20px;
+    width: calc(100% - 40px);
     margin: auto;
     position: relative;
 
@@ -311,6 +312,7 @@ section,
  
     height: 750px;
     padding-top: 0;
+    padding-bottom: 0;
    
 }
 .hero h1{
@@ -470,6 +472,7 @@ color: var(--primary-color);
     align-items: center;
     text-align: center;
     gap: 1em;
+    margin-bottom: 45px;
 }
 
 .title-1 {
