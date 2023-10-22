@@ -159,6 +159,7 @@ section {
     border-radius: 1em;
     background-color: var(--bg-box-color);
     cursor: pointer;
+    padding: 0.5em;
 
 }
 
@@ -226,9 +227,13 @@ section {
 
     }
 }
-
+@media screen and (max-width: 768px) {
+    .logo-text svg {
+        height: 2em;
+    }
+    
+}
 .button {
-
     position: relative;
     text-align: center;
     z-index: 1;
@@ -277,10 +282,9 @@ section {
     }
 
     .left h1 {
-        font-size: 2.5em !important;
+        font-size: 2em !important;
         text-align: center;
     }
-
     .left p {
         text-align: center;
     }
@@ -413,6 +417,7 @@ video{
 .image-product {
     width: 400px;
      height: 400px;
+  
     }
     .image-product img {
         max-width: 80%;
@@ -454,21 +459,21 @@ video{
     .image-product:hover img {
         scale: 1.1;
     }
+@media screen and (max-width:768px) {
+    .products,
+    .image-product {
+        width: 350px;
+        
+      
+        }
+}
 
-    /* .reviews-feedback {
-        position: relative;
-        overflow: hidden;
-    
-    } */
-   
     .single-feedback {
         margin-top: 2em;
         position: relative;
         cursor: pointer;
         transition: var(--transition);
         margin-bottom: 2em;
-    
-    
     }
     .single-feedback:hover {
         transform: translateY(-5px);
@@ -701,7 +706,9 @@ video{
 .mail-detail .button{
     border-radius: 0.5em;
     white-space: nowrap;
-    font-size: 1.2em;
+    font-size: 1em;
+    padding-right: 1em;
+    padding-left: 1em;
 }
 
 .footer img{
@@ -748,7 +755,12 @@ video{
     .follow-button svg {
     
         color: rgb(255, 253, 255);
-    }    
+    }   
+    @media screen and (max-width:768px) {
+        .footer-bottom p, .footer-bottom a{
+            font-size: 0.8em;
+        }
+    } 
 
 .change-theme {
     font-size: 1.25rem;
