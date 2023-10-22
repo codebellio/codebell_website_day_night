@@ -308,11 +308,10 @@ section,
 }
 
 .hero {
-    display: flex;
-    align-items: center;
+ 
     height: 750px;
-    margin: auto;
-    justify-content: space-between;
+    padding-top: 0;
+   
 }
 .hero h1{
     font-size: 4em !important;
