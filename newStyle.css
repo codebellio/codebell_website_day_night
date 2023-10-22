@@ -17,10 +17,7 @@
     --border-color: rgb(182, 178, 178);
     --product-card-shadow: hsla(0, 0%, 0%, 0.14);
     --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
-    --bg-box-faq: #f3f3f3;
-    --feeback-color: RGB(107, 107, 132);
     --transition: 0.5s;
-    --logo-shadow: 2px 2px 1px rgb(0, 0, 0, 0.09)
 }
 
 .dark {
@@ -34,10 +31,7 @@
     --box-shadow: 0 2px 28px 0 rgb(255, 255, 255, 0.01);
     --product-card-shadow: var(--primary-color);
     --message-text-bg: rgba(160, 159, 161, 0.1);
-    --bg-box-faq: #000000;
-    --feeback-color: #ffffff;
     --transition: 0.5s;
-    --logo-shadow: 2px 2px 1px rgb(255, 255, 255, .09)
 }
 
 html,
