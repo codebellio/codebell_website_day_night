@@ -2652,9 +2652,7 @@ th.header {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-  
   }
-  
   .theme-dropdown:hover .theme-list {
     display: flex;
   }
