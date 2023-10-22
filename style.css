@@ -365,6 +365,7 @@ section,
     padding-bottom: 12px;
     margin: auto;
     width: max-content;
+    font-size: 1em;
     
 }
 
@@ -501,8 +502,8 @@ color: var(--primary-color);
 }
 
 .cards {
-    width: 248px;
-    height: 248px;
+    width: 240px;
+    height: 240px;
     text-align: center;
     background-color: var(--bg-grey-color);
     padding: 2em;
