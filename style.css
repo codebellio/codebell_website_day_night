@@ -681,10 +681,7 @@ color: var(--primary-color);
 }
 
 
-.why-left img {
-    max-width: 80%;
-    height: auto;
-}
+
 .why-left-car img{
     max-width: 100%;
 
@@ -738,6 +735,9 @@ color: var(--primary-color);
     .why-choose-products-container {
         width: 100%;
         margin: auto;
+    }
+    .cards-first .cards {
+        align-items: center;
     }
 
     .why-left {
@@ -1814,8 +1814,6 @@ hr {
 /* =====footer===== */
 
 .footer-container {
-
-    padding-bottom: 2.5em;
     display: flex;
     flex-direction: column;
     align-items: center;
