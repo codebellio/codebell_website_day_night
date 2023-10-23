@@ -836,12 +836,10 @@ video {
 }
 
 @media screen and (max-width:768px) {
-
     .footer-bottom p,
     .footer-bottom a {
         font-size: 0.8em;
     }
-   
 }
 
 /* about product */
