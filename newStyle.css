@@ -290,6 +290,12 @@ section {
 
 .gets-now svg {
     color: var(--primary-color);
+    height: 2em;
+    width: auto;
+}
+.logo-codebell svg{
+    height: 1em;
+    width: auto;
 }
 
 .title-1 {
@@ -637,6 +643,11 @@ video {
     border-radius: 1em;
     padding: 1.5em;
     width: calc(100% - 3em);
+    transition: var(--transition);
+}
+
+.app_download a {
+    transition: var(--transition);
 }
 
 .app_download .qr_code {
@@ -644,9 +655,32 @@ video {
     width: auto;
 }
 
+.app_download a:hover {
+    scale: 1.05;
+}
+
+.qr_code svg {
+    width: 200px;
+    height: 200px
+}
+
 @media screen and (max-width:768px) {
     .download {
         text-align: center;
+    }
+
+    .qr_code svg {
+        width: 120px;
+        height: 120px;
+    }
+
+    .app_download {
+        padding: 1em;
+        width: calc(100% - 2em);
+    }
+
+    .app_download a {
+        max-width: 80%;
     }
 }
 
@@ -666,11 +700,13 @@ video {
     font-weight: 600;
 
 }
+
 @media screen and (max-width: 768px) {
     .question {
         font-size: 1em;
     }
 }
+
 .ans {
     width: 100%;
     max-height: 0;
@@ -836,6 +872,7 @@ video {
 }
 
 @media screen and (max-width:768px) {
+
     .footer-bottom p,
     .footer-bottom a {
         font-size: 0.8em;
@@ -856,7 +893,8 @@ video {
     .about-product img {
         max-width: 80%;
     }
-    .subscribe{
+
+    .subscribe {
         text-align: center;
     }
 }
