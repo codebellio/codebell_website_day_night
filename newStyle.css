@@ -868,3 +868,55 @@ video{
         max-width: 80%;
     }
 }
+.video-content::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    width: 100%;
+    background: rgb(0, 0, 0, 0.1);
+    opacity: 0.6;
+}
+
+.video-content {
+
+    text-align: center;
+    background-image: url(https://templates.hibootstrap.com/zebu/default/assets/img/video-bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 12em;
+    padding-bottom: 12em;
+    position: relative;
+    background-attachment: fixed;
+    z-index: 1; display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    background-position: center;
+}
+.play-button {
+    background-color: #ffffff;
+    border-radius: 3em;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.play-button:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+@media screen and (max-width: 990px) {
+    .video-content {
+        width: 100%;
+        margin: auto;
+        padding-top: 3em;
+        padding-bottom: 3em;
+
+    }
+
+    .video-content::before {
+        height: 100%;
+    }
+}
