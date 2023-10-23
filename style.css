@@ -2387,7 +2387,6 @@ th.header {
 #gallery-image-1 img {
     width: 330px;
     height: 300px;
-
     max-width: 100%;
     transition: var(--transition);
 }
@@ -2398,7 +2397,6 @@ th.header {
 
 @media (max-width: 767px) {
     #gallery-image-1 {
-
         padding: 2em;
         width: calc(100% - 4em);
     }
