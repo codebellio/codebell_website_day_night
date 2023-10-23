@@ -847,7 +847,6 @@ video {
     max-width: 70%;
     cursor: pointer;
     padding: 1em 1em;
-
     gap: 0.5em;
     color: #ffffff;
     background-color: var(--primary-color);
@@ -869,6 +868,11 @@ video {
 .follow-button svg {
 
     color: rgb(255, 253, 255);
+}
+.footer-bottom p, .footer-bottom a{
+    font-size: 0.8em;
+    color: var(--sub-text-color);
+   
 }
 
 @media screen and (max-width:768px) {
