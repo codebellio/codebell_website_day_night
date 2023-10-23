@@ -820,6 +820,10 @@ video {
     padding-right: 1em;
     padding-left: 1em;
 }
+.footer{
+    padding-top: 70px;
+    padding-bottom: 35px;
+}
 .footer img {
     max-width: 70%;
 }
