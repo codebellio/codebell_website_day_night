@@ -121,7 +121,7 @@ section {
 }
 
 .logo-text svg {
-    height: 3em;
+    height: 1.8em;
     width: auto;
 }
 
@@ -223,7 +223,7 @@ section {
 }
 @media screen and (max-width: 768px) {
     .logo-text svg {
-        height: 2em;
+        height: 1.5em;
     }
     
 }
@@ -853,4 +853,18 @@ video{
 
 .theme-dropdown:hover .theme-list {
     display: flex;
+}
+
+/* about product */
+#about-img img{
+        max-width: 60%;
+    
+}
+.about-product svg {
+    color: var(--primary-color);
+}
+@media screen and (max-width: 990px) {
+    .about-product img {
+        max-width: 80%;
+    }
 }
