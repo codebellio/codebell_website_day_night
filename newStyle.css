@@ -881,7 +881,6 @@ video {
 /* about product */
 #about-img img {
     max-width: 60%;
-
 }
 
 .about-product svg {
@@ -944,7 +943,6 @@ video {
         margin: auto;
         padding-top: 3em;
         padding-bottom: 3em;
-
     }
 
     .video-content::before {
@@ -1050,24 +1048,20 @@ video {
     .all-content {
         max-width: 100%;
     }
-
     .p-title {
         font-size: 1.5em;
         text-align: center;
     }
-
     .all-content h4 {
         font-size: 1.2em;
     }
 }
-
 .change-theme {
     font-size: 1.25rem;
     color: var(--primary-color);
     cursor: pointer;
     transition: color .3s;
 }
-
 .theme-dropdown {
     cursor: pointer;
     position: fixed;
@@ -1260,51 +1254,30 @@ video {
     }
 }
 
-@media screen and (max-width: 990px) {
-   
-    .shares {
-        flex-direction: column;
-
-    }
-}
 
 @media screen and (max-width:768px) {
-
-    .blogs-desc,
-    .desc1 {
-        font-size: 0.8em;
-        justify-content: space-between;
-    }
     .blogs-box-content{
         padding: 1em;
         width: calc(100% - 4em);
     }
-    
 }
 
 .blogs-main-left {
     flex: 2;
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
 }
 
 .blogs-main-left img {
     width: 100%;
-
 }
-
 .blogs-main-left p {
     color: var(--sub-text-color);
     line-height: 1.563em;
     font-weight: 400;
 }
-
 .blogs-main-left h2,
 .blogs-main-right h2 {
     color: var(--text-color);
 }
-
 .blogs-main-right {
     flex: 1;
     
@@ -1328,36 +1301,25 @@ video {
     font-style: italic;
     color: var(--sub-text-color);
 }
-.blogs-images,
-.offers-list .rows {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    gap: 0.5em;
-}
+
 .blogs-images img {
     width: 280px;
     height: 220px;
     max-width: 100%;
 }
- .rows .iwrap,
-.shares .iwrap {
+  .iwrap {
     display: flex;
     background-color: var(--bg-grey-color);
     padding: 0.5em;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
     color: var(--primary-color);
     transition: var(--transition);
     cursor: pointer;
 }
-
- .rows .iwrap:hover {
+ .iwrap:hover {
     background-color: var(--primary-color);
     color: #ffffff;
 }
-
 .shares .iwrap:hover {
     background-color: var(--primary-color);
     color: #ffffff;
@@ -1414,25 +1376,21 @@ video {
     color: var(--text-color);
 }
 .tag-container p {
-
     color: var(--text-color);
     padding: 0.5em;
     border: 1px dotted var(--text-color);
     transition: var(--transition);
     cursor: pointer;
 }
-
 .tag-container p:hover {
     color: #ffffff;
     background-color: var(--primary-color);
 }
-
 table {
     width: 100%;
     border-collapse: collapse;
     color: var(--text-color);
 }
-
 th,
 td {
     border: 0.5px solid var(--sub-text-color);
@@ -1442,9 +1400,7 @@ td {
 
 th.header {
     background-color: var(--bg-grey-color);
-
 }
-
 @media screen and (max-width:768px) {
     table {
         font-size: 0.6em;
