@@ -846,7 +846,7 @@ video {
 }
 
 .follow-button {
-    max-width: 70%;
+    max-width: 200px;
     cursor: pointer;
     padding: 1em 1em;
     gap: 0.5em;
