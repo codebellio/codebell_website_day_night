@@ -150,7 +150,7 @@ section {
 }
 
 .mobile-view-menu-icon {
-    border-radius: 1em;
+    border-radius: 1.5em;
     background-color: var(--bg-box-color);
     cursor: pointer;
     padding: 0.5em;
@@ -176,7 +176,6 @@ section {
     border-radius: 10px;
     overflow: hidden;
     z-index: 1;
-    box-shadow: var(--box-shadow);
     transition: var(--transition);
     max-width: 85%;
     margin: auto;
@@ -234,7 +233,7 @@ li{
 
 @media screen and (max-width: 768px) {
     .logo-text svg {
-        height: 1.5em;
+        height: 1.2em;
     }
 
 }
@@ -288,17 +287,14 @@ li{
     .left {
         align-items: center;
     }
-
     .left h1 {
         font-size: 2em !important;
         text-align: center;
     }
-
     .left p {
         text-align: center;
     }
 }
-
 .gets-now svg {
     color: var(--primary-color);
     height: 2em;
