@@ -245,6 +245,7 @@ section {
     margin: auto;
     width: max-content;
     font-size: 1em;
+    cursor: pointer;
 }
 
 .button:hover {
