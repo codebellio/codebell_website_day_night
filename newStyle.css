@@ -256,6 +256,10 @@ li{
     cursor: pointer;
 }
 
+.hero-button:hover {
+    background-color: #252626ec;
+    color: var(--primary-color);
+}
 .button:hover {
     scale: 1.1;
 
