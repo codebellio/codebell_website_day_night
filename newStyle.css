@@ -171,12 +171,20 @@ section {
     gap: 1em;
     top: 60px;
     background: var(--bg-box-color);
-    height: 0;
+   top: -500%;
+   height: auto;
     border-radius: 10px;
     overflow: hidden;
     z-index: 1;
     box-shadow: var(--box-shadow);
     transition: var(--transition);
+    max-width: 85%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    padding: 2em;
+    width: calc(100% - 4em);
+    
 }
 
 .dropdown-menu a:hover {
@@ -184,13 +192,9 @@ section {
 }
 
 .dropdown-menu.open {
-    padding: 2em;
-    width: calc(100% - 4em);
-    height: auto;
-    max-width: 85%;
-    margin: auto;
-    left: 0;
-    right: 0;
+   
+    top: 100%;
+    
 }
 
 .social-icons-mob {
@@ -204,6 +208,12 @@ section {
 .social-icons-mob:hover {
     color: var(--primary-color);
 
+}
+li{
+    list-style: none;
+}
+.dropdown-menu li{
+    font-weight: 600;
 }
 
 /* social links hide on table and mobile view */
