@@ -117,10 +117,12 @@ section {
 }
 
 .logo-text {
+   
     color: var(--primary-color);
 }
 
 .logo-text svg {
+   
     height: 1.8em;
     width: auto;
 }
@@ -183,7 +185,6 @@ section {
     right: 0;
     padding: 2em;
     width: calc(100% - 4em);
-    
 }
 
 .dropdown-menu a:hover {
@@ -191,9 +192,7 @@ section {
 }
 
 .dropdown-menu.open {
-   
     top: 100%;
-    
 }
 
 .social-icons-mob {
@@ -429,7 +428,12 @@ video {
 
 @media screen and (max-width:1024px) {
     .video-header {
+        
         text-align: center;
+        align-items: center;
+    }
+    .video-header h1{
+        font-size: 2.2em !important;
     }
 }
 
