@@ -8,7 +8,7 @@ document.getElementById("subscribeBtn").addEventListener("click", function() {
     };
 
     fetch("https://api.codebell.io/api/join_wishlist", {
-        method: 'POST',
+        method: 'post',
         headers: {
             "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
         },
