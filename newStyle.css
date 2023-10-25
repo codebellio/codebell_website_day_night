@@ -421,7 +421,12 @@ hr {
 .why-choose .card:last-child {
     margin-top: -1.5em;
 }
-
+@media screen and (max-width: 1024px) {
+    .why-choose .card:first-child,
+    .why-choose .card:last-child {
+        margin-top: 0;
+    }
+}
 video {
     max-width: 100%;
     max-height: 100%;
@@ -499,11 +504,12 @@ video {
 }
 
 @media screen and (max-width:768px) {
-
+    .product-list{
+        gap: 4em !important;
+    }
     .products,
     .image-product {
         width: 350px;
-
 
     }
 }
