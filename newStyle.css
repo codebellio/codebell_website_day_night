@@ -512,6 +512,14 @@ video {
         width: 350px;
 
     }
+    .products .button{
+        padding-left: 25px;
+        padding-right: 25px;
+        font-size: 0.8em !important;
+    }
+    .products p{
+        font-size: 0.9em;
+    }
 }
 
 .single-feedback {
