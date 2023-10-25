@@ -721,6 +721,9 @@ video {
     font-weight: 600;
 
 }
+.question-box:hover{
+    color: var(--primary-color);
+}
 
 @media screen and (max-width: 768px) {
     .question {
@@ -801,6 +804,9 @@ video {
     font-size: 1.5em;
     font-weight: 700;
 
+}
+.post-detail:hover{
+    color: var(--primary-color);
 }
 
 .img-name p {
