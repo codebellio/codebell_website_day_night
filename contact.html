@@ -116,7 +116,6 @@
     </div>
 
     <section class="flex column" id="Contact">
-        
         <div class="section-title">
             <div class="title-1">Get In Touch With Us</div>
             <div class="title-2">We'll try to deliver the answers you're hungry for.</div>
@@ -127,17 +126,78 @@
             </div>
             <div class="contact-forms flex column middle gap" style="min-width: 300px;">
                 <div class="name-email flex middle gap">
-                    <input type="text" placeholder="Your Name">
-                    <input type="email" placeholder="Your Email">
-    
+                    <input type="text" id="name" placeholder="Your Name">
+                    <input type="email" id="email" placeholder="Your Email">
                 </div>
-                <input type="text" placeholder="Your Phone">
-                <input type="text" placeholder="Your Subject">
-                <textarea name="message" id="" cols="20" rows="10" placeholder="Your Message"></textarea>
-                <div class="submit-btn">Submit</div>
+                <input type="text" id="mobile" placeholder="Your Phone">
+                <input type="text" id="subject" placeholder="Your Subject">
+                <textarea id="msg"  name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
+                <div class="submit-btn" id="submitBtn">Submit</div>
             </div>
         </div>
     </section>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var data = {
+                loading: false
+            };
+        
+            var submitBtn = document.getElementById("submitBtn");
+            var nameInput = document.getElementById("name");
+            var emailInput = document.getElementById("email");
+            var mobileInput = document.getElementById("mobile");
+            var msgInput = document.getElementById("msg");
+        
+            submitBtn.addEventListener("click", function() {
+                if (data.loading) {
+                    return;
+                }
+        
+                data.loading = true;
+                submitBtn.innerHTML = "Submitting..."; // Change button text
+        
+                var request_data = {
+                    Name: nameInput.value,
+                    Email: emailInput.value,
+                    Mobile: mobileInput.value,
+                    Message: msgInput.value
+                };
+        
+                fetch("https://api.codebell.io/api/contact", {
+                    method: 'post',
+                    headers: {
+                        "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
+                    },
+                    body: JSON.stringify(request_data)
+                })
+                .then(response => response.json())
+                .then(data => {
+                    console.log(data);
+                    if (data.Message && data.Message != this.last_message) {
+                        this.last_message = data.Message;
+                        setTimeout(() => {
+                            this.last_message = "";
+                        }, 1000);
+                        if (data.Status == 2) {
+                            window.show_success(data.Message);
+                        } else {
+                            window.show_error(data.Message);
+                        }
+                    }
+                    return data;
+                })
+                .catch(error => {
+                    window.show_error("Unable to complete the current action. " + error.message);
+                })
+                .finally(() => {
+                    data.loading = false;
+                    submitBtn.innerHTML = "Submit"; // Restore the button text
+                });
+            });
+        });
+        
+        
+    </script>
 
 
 
@@ -200,17 +260,17 @@
                 <h3>Pages</h3>
                 <p><a href="about_us.html">About Us</a></p>
                 <p><a href="user_gallery.html">Press Release</a></p>
-                <p><a href="">Become a stockist</a></p>
-                <p><a href="">Join the affiliate programme</a></p>
+                <p><a href="#">Become a stockist</a></p>
+                <p><a href="#">Join the affiliate programme</a></p>
             </div>
             <div class="flex column gap" style="color: var(--text-color); min-width:300px">
                 <h3>Get in touch</h3>
                 <div class="flex column" style="gap: 0;">
-                    <a href="">
-                        <img src="/assets/img/support_gmail.png" alt="">
+                    <a href="#">
+                        <img src="/assets/img/support_gmail.webp" alt="">
                     </a>
-                    <a href="">
-                        <img src="/assets/img/business.png" alt="">
+                    <a href="#">
+                        <img src="/assets/img/business.webp" alt="">
                     </a>
                 </div>
                 <a class="follow-button flex center middle" href="https://www.instagram.com/codebell.io/">
@@ -260,7 +320,6 @@
         </div>
 
     </div>
-
     <script src="allColorTheme.js"></script>
     <script src="main.js"></script>
     <script src="darkmode.js"></script>
