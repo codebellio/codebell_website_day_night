@@ -24,7 +24,6 @@ document.getElementById("subscribeBtn").addEventListener("click", function() {
             }, 1000);
             if (data.Status == 2) {
                 document.getElementById("subscribe_form").innerHTML = data.Message
-                document.getElementsByClassName("mail-detail").style.border = "none"
 
 
             } else {
