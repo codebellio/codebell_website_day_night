@@ -99,45 +99,14 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
 
 
 
-// let appSSContainer = new Swiper(".app-ss-content", {
-//   // effect: "coverflow",
-//   grabCursor: true,
-//   spaceBetween: 5,
-//   centeredSlides: true,
-//   loop: true,
-//   autoplay: {
-//     delay: 2500,
-//     disableOnInteraction: false,
-//   },
-//   // coverflowEffect: {
-//   //   rotate: 50,
-//   //   stretch: 0,
-//   //   depth: 100,
-//   //   modifier: 1,
-//   //   slideShadows: true,
-//   // },
-//   pagination: {
-//     el: ".swiper-pagination",
-//     clickable: true,
+// video script
 
-//   },
-//   breakpoints: {
-//     768: {
-//       slidesPerView: 2,
-//       spaceBetween: 10,
-//     },
-//     1200: {
-//       slidesPerView: 3,
-//       spaceBetween: 10,
-//     },
-//     0: {
-//       slidesPerView: 1,
-//       spaceBetween: 10,
-//     },
-//   },
+function showVideoPopup() {
+  var videoPopupContainer = document.getElementById('videoPopupContainer');
+  videoPopupContainer.style.display = 'block';
+}
 
-//   navigation: {
-//     nextEl: ".swiper-button-next",
-//     prevEl: ".swiper-button-prev",
-//   },
-// });
+function hideVideoPopup() {
+  var videoPopupContainer = document.getElementById('videoPopupContainer');
+  videoPopupContainer.style.display = 'none';
+}
