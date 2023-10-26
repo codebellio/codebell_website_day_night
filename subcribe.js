@@ -6,7 +6,7 @@ document.getElementById("subscribeBtn").addEventListener("click", function() {
     var request_data = {
         email: document.getElementById("newsletterEmail").value
     };
-
+    document.getElementById("subscribe_err").innerHTML = ""
     fetch("https://api.codebell.io/api/join_wishlist", {
         method: 'post',
         headers: {
@@ -23,15 +23,15 @@ document.getElementById("subscribeBtn").addEventListener("click", function() {
                 this.last_message = "";
             }, 1000);
             if (data.Status == 2) {
-                window.show_success(data.Message);
+                document.getElementById("subscribe_form").innerHTML = data.Message
             } else {
-                window.show_error(data.Message);
+                document.getElementById("subscribe_err").innerHTML = data.Message
             }
         }
         return data;
     })
     .catch(error => {
-        window.show_error("Unable to complete the current action. " + error.message);
+        document.getElementById("subscribe_err").innerHTML = "Unable to complete the current action. " + error.message
     })
     .finally(() => {
         // Re-enable the button and reset the text
