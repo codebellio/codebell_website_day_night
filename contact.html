@@ -124,7 +124,7 @@
             <div class="get-in-touch-left" style="min-width: 300px;">
                 <img src="/assets/img/contact.webp" alt="">
             </div>
-            <div class="contact-forms flex column middle gap" style="min-width: 300px;">
+            <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact__form">
                 <div class="name-email flex middle gap">
                     <input type="text" id="name" placeholder="Your Name">
                     <input type="email" id="email" placeholder="Your Email">
@@ -182,7 +182,7 @@
                         }, 1000);
                         if (data.Status == 2) {
                             document.getElementById("contact_success").innerHTML =  "Thank you for contacting us! We'll be in touch with you shortly."
-                            document.getElementsByClassName("contact-forms").style.display = "none"
+                            document.getElementById("contact__form").style.display = "none"
                         } else {
                             document.getElementById("contact_err").innerHTML = data.Message
                         }
