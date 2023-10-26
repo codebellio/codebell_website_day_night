@@ -989,7 +989,13 @@ video {
         height: 100%;
     }
 }
-
+#subscribe_err, #contact_err {
+    color: rgba(225, 9, 9, 0.947);;
+}
+#subscribe_form, #contact_success{
+    color: var(--text-color);
+    font-weight: 600;
+}
 /* contact */
 .name-email{
     width: 100%;

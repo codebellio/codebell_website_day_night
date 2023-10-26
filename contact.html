@@ -133,6 +133,10 @@
                 <input type="text" id="subject" placeholder="Your Subject">
                 <textarea id="msg"  name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
                 <div class="submit-btn" id="submitBtn">Submit</div>
+                <div id="contact_success"></div>
+                <div id="contact_err"></div>
+
+
             </div>
         </div>
     </section>
@@ -179,15 +183,15 @@
                             this.last_message = "";
                         }, 1000);
                         if (data.Status == 2) {
-                            window.show_success(data.Message);
+                            document.getElementById("contact_success").innerHTML = data.Message
                         } else {
-                            window.show_error(data.Message);
+                            document.getElementById("contact_err").innerHTML = data.Message
                         }
                     }
                     return data;
                 })
                 .catch(error => {
-                    window.show_error("Unable to complete the current action. " + error.message);
+                    document.getElementById("contact_err").innerHTML = "Unable to complete the current action. " + error.message
                 })
                 .finally(() => {
                     data.loading = false;
