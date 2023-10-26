@@ -994,7 +994,7 @@ video {
 }
 #subscribe_form, #contact_success{
     color: var(--text-color);
-    font-weight: 600;
+    font-weight: 500;
 }
 /* contact */
 .name-email{
