@@ -209,6 +209,13 @@ section {
 }
 li{
     list-style: none;
+   
+}
+.all-content{
+    letter-spacing: 0.1px;
+}
+.terms li{
+    list-style:disc;
 }
 .dropdown-menu li{
     font-weight: 600;
