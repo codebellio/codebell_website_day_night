@@ -109,4 +109,7 @@ function showVideoPopup() {
 function hideVideoPopup() {
   var videoPopupContainer = document.getElementById('videoPopupContainer');
   videoPopupContainer.style.display = 'none';
+  var videoElement = document.querySelector('.video-popup');
+    videoElement.pause();
+
 }
