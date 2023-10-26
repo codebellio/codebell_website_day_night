@@ -183,7 +183,7 @@
                             this.last_message = "";
                         }, 1000);
                         if (data.Status == 2) {
-                            document.getElementById("contact_success").innerHTML = "Thank you for contacting us! We'll be in touch with you shortly."
+                            document.getElementById("contact_success").innerHTML =  data.Message
                         } else {
                             document.getElementById("contact_err").innerHTML = data.Message
                         }
