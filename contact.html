@@ -135,8 +135,6 @@
                 <div class="submit-btn" id="submitBtn">Submit</div>
                 <div id="contact_success"></div>
                 <div id="contact_err"></div>
-
-
             </div>
         </div>
     </section>
@@ -183,7 +181,7 @@
                             this.last_message = "";
                         }, 1000);
                         if (data.Status == 2) {
-                            document.getElementById("contact_success").innerHTML =  data.Message
+                            document.getElementById("contact_success").innerHTML =  "Thank you for contacting us! We'll be in touch with you shortly."
                         } else {
                             document.getElementById("contact_err").innerHTML = data.Message
                         }
