@@ -402,7 +402,12 @@ li{
     cursor: pointer;
     color: var(--text-color);
 }
-
+@media  screen and (max-width: 768px) {
+    .card {
+        width: 280px;
+    }
+          
+}
 .card:hover {
     color: #ffffff;
     transform: translateY(-1em);
@@ -726,7 +731,6 @@ video {
 }
 
 .app_download .qr_code {
-    height: 150px;
     width: auto;
 }
 
@@ -755,7 +759,7 @@ video {
     }
 
     .app_download a {
-        max-width: 80%;
+        max-width: 75%;
     }
 }
 
