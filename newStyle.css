@@ -1,11 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;800;900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
 }
-
-
 :root {
     --primary-color: #0c87c9;
     --text-color: RGB(3, 21, 33);
@@ -47,27 +44,21 @@ body {
     background-color: var(--bg-color);
     overflow-x: hidden;
 }
-
-
 ::selection {
     background-color: var(--primary-color);
     color: #ffffff;
 }
-
 ::-webkit-scrollbar {
     width: 5px;
 }
-
 ::-webkit-scrollbar-thumb {
     background-color: var(--primary-color);
     border-radius: 5px;
 }
-
 ::-webkit-scrollbar-track {
     background-color: var(--bg-box-color);
 }
-
-a {
+a{
     text-decoration: none;
     color: var(--text-color);
 }
@@ -84,18 +75,15 @@ section,
     margin: auto;
     max-width: 1320px;
 }
-
 section {
     padding-top: 100px;
     padding-bottom: 70px;
 }
-
 .grey-section {
     width: 100%;
     margin: auto;
     background-color: var(--bg-grey-color);
 }
-
 .nav {
     position: relative;
     top: 0;
@@ -104,13 +92,11 @@ section {
     transition: var(--transition);
     background-color: var(--nav);
 }
-
 .sticky-nav {
     position: fixed;
     box-shadow: var(--box-shadow);
     background-color: var(--nav);
 }
-
 .nav-content {
     padding: 20px;
     width: calc(100% - 40px);
@@ -831,7 +817,6 @@ video {
     cursor: pointer;
     transition: var(--transition);
 }
-
 .blog-cards img {
     margin: 0;
 
