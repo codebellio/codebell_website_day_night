@@ -262,11 +262,45 @@ li{
     font-size: 1em;
     cursor: pointer;
 }
-
-.hero-button:hover {
+/* .hero-button:hover {
     background-color: #252626ec;
     color: var(--primary-color);
+    
+} */
+.hero-button {
+    overflow: hidden; 
+    transition:  0.5s; 
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 100%;
+        bottom: 100%;
+        background-color: #031521; 
+        transform-origin: calc((100% * var(--x)) + 0%) calc((100% * var(--y)) + 0%);       
+         transform: scaleX(0) scaleY(0); 
+        transition: transform 0.5s ease;
+        z-index: -1;
+        pointer-events: none;
+    }
 }
+
+.hero-button:hover {
+    color: var(--primary-color); 
+    &::before {
+        right: 0;
+        bottom: 0;
+        transform-origin: calc((100% * var(--x)) + 0%) calc((100% * var(--y)) + 0%);        
+        transform: scaleX(1) scaleY(1); 
+    }
+}
+
+
+
+
+    
+
 .button:hover {
     scale: 1.1;
 
@@ -292,17 +326,22 @@ li{
     color: var(--sub-text-color);
     font-weight: 500;
 }
-
+@media screen and (max-width: 768px){
+    p{
+        font-size: 15px;
+    }
+}
 @media screen and (max-width: 986px) {
     .left {
         align-items: center;
     }
     .left h1 {
-        font-size: 2em !important;
+        font-size: 30px !important;
         text-align: center;
     }
     .left p {
         text-align: center;
+        
     }
 }
 .gets-now svg {
