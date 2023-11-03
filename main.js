@@ -1,14 +1,4 @@
-// const nav = document.querySelector('.nav');
 
-// window.addEventListener('scroll', () => {
-// const scrollY = window.scrollY;
-
-// const opacity = Math.min(0.8, scrollY / 200); // Adjust 200 to control when the effect starts
-// const blur = Math.min(5, scrollY / 10);
-
-// nav.style.backgroundColor = `rgba(255, 255, 255, ${0})`;
-// nav.style.backdropFilter = `blur(${20}px)`;
-// });
 // ---------------------hamburger---------------------
 const toggleBtn = document.getElementById("mobile-menu-icon");
 const toggleBtnIcons = toggleBtn.querySelectorAll("svg");
@@ -20,7 +10,7 @@ toggleBtn.onclick = function () {
   toggleBtnIcons[0].style.display = isOpen ? "none" : "flex";
   toggleBtnIcons[1].style.display = isOpen ? "flex" : "none";
 };
-
+// ---------------------FAQ----------------------------
 document.addEventListener("DOMContentLoaded", function () {
   const questionBoxes = document.querySelectorAll(".question-box");
 
@@ -31,7 +21,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
-
+// ------------nav on scrollbar------------
 window.onscroll = function () {
   let scroll = document.documentElement.scrollTop || document.body.scrollTop;
   if (scroll > 200) {
@@ -101,7 +91,6 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
 
 
 // video script
-
 function showVideoPopup() {
   var videoPopupContainer = document.getElementById('videoPopupContainer');
   videoPopupContainer.style.display = 'block';
