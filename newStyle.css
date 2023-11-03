@@ -677,6 +677,7 @@ cursor: pointer;
     border-radius: 1em;
     width: 270px;
     height: 540px;
+    /* height: auto; */
     line-height: 1.8em;
     background-color: var(--bg-color);
     box-shadow:
