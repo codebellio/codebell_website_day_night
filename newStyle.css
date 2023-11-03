@@ -164,8 +164,9 @@ section {
     margin: auto;
     left: 0;
     right: 0;
-    padding: 1em;
-    width: calc(100% - 2em);
+    padding: 20px;
+    padding-top: 0px;
+    width: calc(100% - 40px);
 }
 
 
