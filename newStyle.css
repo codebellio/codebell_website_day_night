@@ -159,7 +159,7 @@ section {
     gap: 1em;
     top: 60px;
     background: var(--bg-box-color);
-   top: -500%;
+   top: -800%;
    height: auto;
     border-radius: 10px;
     overflow: hidden;
