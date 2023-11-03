@@ -675,8 +675,8 @@ cursor: pointer;
 .plan-card {
     padding: 2em;
     border-radius: 1em;
-    width: 250px;
-    height: 430px;
+    width: 270px;
+    height: 540px;
     line-height: 1.8em;
     background-color: var(--bg-color);
     box-shadow:
@@ -686,6 +686,18 @@ cursor: pointer;
     cursor: pointer;
     transition: var(--transition);
 
+}
+.plan-card svg{
+   
+    color: #ffffff;
+}
+.plan-card .svg-wrapper{
+    padding: 0.2em;
+    background-color: var(--primary-color);
+    border-radius: 50%;
+}
+.plan-card p{
+    font-weight: 600;
 }
 
 .plan-card:hover {
