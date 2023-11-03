@@ -159,8 +159,8 @@ section {
     gap: 1em;
     top: 60px;
     background: var(--bg-box-color);
-   top: -800%;
-   height: auto;
+    top: -800%;
+    height: auto;
     border-radius: 10px;
     overflow: hidden;
     z-index: 1;
@@ -281,12 +281,6 @@ li{
         transform: scaleX(1) scaleY(1); 
     }
 }
-
-
-
-
-    
-
 .button:hover {
     scale: 1.1;
 
@@ -299,7 +293,6 @@ li{
     padding-bottom: 0;
     margin: auto;
 }
-
 .hero img {
     max-width: 75%;
   
@@ -530,6 +523,10 @@ video {
     text-decoration: line-through;
     color: RGB(153, 153, 153);
 }
+.price-start span, .price-start p{
+    font-size: 18px !important;
+    font-weight: 500;
+}
 .product-name:hover{
 color: var(--primary-color);
 cursor: pointer;
@@ -570,9 +567,7 @@ cursor: pointer;
         padding-right: 25px;
         font-size: 0.8em !important;
     }
-    .products p{
-        font-size: 0.9em;
-    }
+   
 }
 
 .single-feedback {
