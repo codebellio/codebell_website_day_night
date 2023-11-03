@@ -305,7 +305,7 @@ li{
   
 }
 .hero .right{
-    align-items: end;
+    text-align:right;
     
 }
 .left h1 {
@@ -321,6 +321,12 @@ p{
 @media screen and (max-width: 768px){
     p{
         font-size: 15px;
+    }
+    .hero .right{
+    display: flex;        
+    }
+    .hero img{
+        max-width: 80% !important;
     }
 }
 @media screen and (max-width: 986px) {
