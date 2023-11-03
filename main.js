@@ -113,3 +113,17 @@ function hideVideoPopup() {
     videoElement.pause();
 
 }
+
+//footer mail and phone redirect
+const supportLink = document.getElementById("supportLink");
+supportLink.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.location.href = "mailto:hello@codebell.io"; // email address
+});
+
+
+const businessLink = document.getElementById("businessLink");
+businessLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = "tel:+9101169650110"; //call
+});
