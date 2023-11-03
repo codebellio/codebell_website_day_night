@@ -16,7 +16,6 @@
     --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
     --transition: 0.5s;
 }
-
 .dark {
     --bg-color: #000000;
     --bg-grey-color: #0e0e0e;
@@ -30,7 +29,6 @@
     --message-text-bg: rgba(160, 159, 161, 0.1);
     --transition: 0.5s;
 }
-
 html,
 body {
     width: 100%;
@@ -39,7 +37,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
 }
-
 body {
     background-color: var(--bg-color);
     overflow-x: hidden;
@@ -62,11 +59,9 @@ a{
     text-decoration: none;
     color: var(--text-color);
 }
-
 button {
     border: none;
 }
-
 section,
 .nav-content,
 .hero,
@@ -91,6 +86,7 @@ section {
     z-index: 5;
     transition: var(--transition);
     background-color: var(--nav);
+   
 }
 .sticky-nav {
     position: fixed;
@@ -98,6 +94,7 @@ section {
     background-color: var(--nav);
 }
 .nav-content {
+    position: relative;
     padding: 20px;
     width: calc(100% - 40px);
 }
@@ -148,37 +145,38 @@ section {
 .mobile-view-menu-icon svg {
     color: var(--text-color);
 }
-
+.mobile-view-menu-icon .close-btn{
+    display: none;
+}
 .mobile-view-menu-icon svg:hover {
     color: var(--primary-color);
 }
 
 .dropdown-menu {
-    padding-left: 1em;
     position: absolute;
     gap: 1em;
-    top: 60px;
-    background: var(--bg-box-color);
+    background: var(--nav);
     top: -800%;
     height: auto;
-    border-radius: 10px;
     overflow: hidden;
-    z-index: 1;
+    z-index: -1;
     transition: var(--transition);
-    max-width: 85%;
     margin: auto;
     left: 0;
     right: 0;
-    padding: 2em;
-    width: calc(100% - 4em);
+    padding: 1em;
+    width: calc(100% - 2em);
 }
+
 
 .dropdown-menu a:hover {
     color: var(--primary-color);
 }
-
+.dropdown-menu svg{
+    transition: all  0.5s;
+}
 .dropdown-menu.open {
-    top: 100%;
+ top: 100%;
 }
 
 .social-icons-mob {

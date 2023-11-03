@@ -10,15 +10,15 @@
 // nav.style.backdropFilter = `blur(${20}px)`;
 // });
 // ---------------------hamburger---------------------
-const toggleBtn = document.querySelector(".mobile-view-menu-icon");
-const toggleBtnIcon = toggleBtn.querySelector("i");
+const toggleBtn = document.getElementById("mobile-menu-icon");
+const toggleBtnIcons = toggleBtn.querySelectorAll("svg");
 const dropDownMenu = document.querySelector(".dropdown-menu");
 
 toggleBtn.onclick = function () {
   dropDownMenu.classList.toggle("open");
   const isOpen = dropDownMenu.classList.contains("open");
-  toggleBtnIcon.classList.toggle("fa-bars", !isOpen);
-  toggleBtnIcon.classList.toggle("fa-xmark", isOpen);
+  toggleBtnIcons[0].style.display = isOpen ? "none" : "flex";
+  toggleBtnIcons[1].style.display = isOpen ? "flex" : "none";
 };
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
   questionBoxes.forEach(function (box) {
     box.addEventListener("click", function () {
       this.classList.toggle("active");
+      
     });
   });
 });
