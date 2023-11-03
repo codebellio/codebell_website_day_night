@@ -806,7 +806,6 @@ cursor: pointer;
     position: relative;
     transition: var(--transition);
 }
-
 .ans p {
     border-top: 1px solid var(--primary-color);
     padding: 1.5em 1.5em 1.5em;
@@ -814,11 +813,9 @@ cursor: pointer;
     font-weight: 500;
     color: var(--sub-text-color);
 }
-
 .question-box .minus {
     display: none;
 }
-
 .question-box.active .ans {
     max-height: 30em;
 }
@@ -826,11 +823,9 @@ cursor: pointer;
 .question-box.active .minus {
     display: flex;
 }
-
 .question-box.active .plus {
     display: none;
 }
-
 .blog-cards {
     margin: auto;
     width: 415px;
@@ -841,9 +836,7 @@ cursor: pointer;
 }
 .blog-cards img {
     margin: 0;
-
 }
-
 .blog-cards:hover {
     scale: 1.01;
     box-shadow: var(--box-shadow);
