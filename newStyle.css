@@ -811,7 +811,6 @@ cursor: pointer;
     border-top: 1px solid var(--primary-color);
     padding: 1.5em 1.5em 1.5em;
     width: calc(100% - 3em);
-    
     font-weight: 500;
     color: var(--sub-text-color);
 }
@@ -821,7 +820,7 @@ cursor: pointer;
 }
 
 .question-box.active .ans {
-    max-height: 20em;
+    max-height: 30em;
 }
 
 .question-box.active .minus {
