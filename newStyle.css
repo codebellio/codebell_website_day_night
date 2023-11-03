@@ -243,7 +243,7 @@ li{
     padding-right: 35px;
     padding-top: 12px;
     padding-bottom: 12px;
-    margin: auto;
+   
     width: max-content;
     font-size: 1em;
     cursor: pointer;
@@ -301,13 +301,19 @@ li{
 }
 
 .hero img {
-    max-width: 80%;
+    max-width: 75%;
+  
 }
-
+.hero .right{
+    align-items: end;
+    
+}
 .left h1 {
     color: var(--text-color);
 }
-
+p{
+    line-height: 25.6px;
+}
 .left p {
     color: var(--sub-text-color);
     font-weight: 500;
@@ -343,7 +349,7 @@ li{
 .title-1 {
     color: var(--text-color);
     font-stretch: 100%;
-    font-size: 2.8em;
+    font-size: 45px;
     font-weight: 700;
 }
 
@@ -353,6 +359,7 @@ li{
     font-size: 1em;
     font-weight: 400;
     margin: auto;
+    line-height: 25.6px;
 }
 
 @media screen and (max-width: 1024px) {
@@ -363,7 +370,6 @@ li{
     .title-2 {
         max-width: 100%;
         font-size: 0.938em;
-        line-height: 1.6em;
     }
 }
 
@@ -439,7 +445,7 @@ li{
 }
 
 .card p {
-    line-height: 1.6;
+    font-size: 15px;
     color: var(--sub-text-color);
 }
 
@@ -507,6 +513,7 @@ video {
 .product-name {
     font-size: 1.375em;
     font-weight: 700;
+    transition: var(--transition);
 }
 
 .price-start .stars {
@@ -517,7 +524,10 @@ video {
     text-decoration: line-through;
     color: RGB(153, 153, 153);
 }
-
+.product-name:hover{
+color: var(--primary-color);
+cursor: pointer;
+}
 .image-product {
 
     overflow: hidden;
@@ -788,7 +798,7 @@ video {
     border-top: 1px solid var(--primary-color);
     padding: 1.5em 1.5em 1.5em;
     width: calc(100% - 3em);
-    line-height: 1.3em;
+    
     font-weight: 500;
     color: var(--sub-text-color);
 }
