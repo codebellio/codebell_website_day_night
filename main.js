@@ -53,6 +53,38 @@ window.onscroll = function () {
 
 
 
+
+
+
+// video script
+function showVideoPopup() {
+  var videoPopupContainer = document.getElementById('videoPopupContainer');
+  videoPopupContainer.style.display = 'block';
+}
+
+function hideVideoPopup() {
+  var videoPopupContainer = document.getElementById('videoPopupContainer');
+  videoPopupContainer.style.display = 'none';
+  var videoElement = document.querySelector('.video-popup');
+    videoElement.pause();
+
+}
+
+//footer mail and phone redirect
+const supportLink = document.getElementById("supportLink");
+supportLink.addEventListener("click", function(event) {
+    event.preventDefault(); 
+    window.location.href = "mailto:hello@codebell.io"; // email address
+});
+
+
+const businessLink = document.getElementById("businessLink");
+businessLink.addEventListener("click", function(event) {
+    event.preventDefault();
+    window.location.href = "tel:+9101169650110"; //call
+});
+
+
 let reviewCustomer = new Swiper(".reviews-feedback", {
   spaceBetween: 5,
   grabCursor: true,
@@ -86,34 +118,4 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-
-
-
-// video script
-function showVideoPopup() {
-  var videoPopupContainer = document.getElementById('videoPopupContainer');
-  videoPopupContainer.style.display = 'block';
-}
-
-function hideVideoPopup() {
-  var videoPopupContainer = document.getElementById('videoPopupContainer');
-  videoPopupContainer.style.display = 'none';
-  var videoElement = document.querySelector('.video-popup');
-    videoElement.pause();
-
-}
-
-//footer mail and phone redirect
-const supportLink = document.getElementById("supportLink");
-supportLink.addEventListener("click", function(event) {
-    event.preventDefault(); 
-    window.location.href = "mailto:hello@codebell.io"; // email address
-});
-
-
-const businessLink = document.getElementById("businessLink");
-businessLink.addEventListener("click", function(event) {
-    event.preventDefault();
-    window.location.href = "tel:+9101169650110"; //call
 });
