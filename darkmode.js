@@ -26,6 +26,7 @@ toggleButton.addEventListener('click', (event) => {
   }
 });
 var current_theme = localStorage.getItem("theme_name")
+
 function setTheme(theme_name) {
   current_theme = theme_name
   localStorage.setItem("theme_name", theme_name)
@@ -59,6 +60,7 @@ window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', eve
   if (current_theme == "system") {
     if (event.matches) {
       document.body.classList.add('dark');
+      
     } else {
       document.body.classList.remove('dark');
     }

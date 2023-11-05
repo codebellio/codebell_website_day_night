@@ -916,6 +916,11 @@ cursor: pointer;
 .logo-codebell svg {
     color: var(--primary-color);
 }
+.dark #supportLink img ,.dark #businessLink img{
+    filter: invert(1);
+}
+
+
 
 .social-links-company {
     display: flex;
