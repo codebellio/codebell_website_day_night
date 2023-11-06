@@ -68,7 +68,7 @@ section,
 .links-footer {
     width: 85%;
     margin: auto;
-    max-width: 1320px;
+    max-width: 1300px;
 }
 section {
     padding-top: 100px;
@@ -919,8 +919,6 @@ cursor: pointer;
 .dark #supportLink img ,.dark #businessLink img{
     filter: invert(1);
 }
-
-
 
 .social-links-company {
     display: flex;
