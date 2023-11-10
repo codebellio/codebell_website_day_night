@@ -761,7 +761,7 @@ cursor: pointer;
     height: 160px;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:990px) {
     .download {
         text-align: center;
     }
