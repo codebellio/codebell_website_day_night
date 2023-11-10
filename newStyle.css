@@ -739,8 +739,8 @@ cursor: pointer;
 .app_download {
     border: 0.5px solid var(--border-color);
     border-radius: 1em;
-    padding: 1.5em;
-    width: calc(100% - 3em);
+    padding: 1em;
+    width: calc(100% - 2em);
     transition: var(--transition);
 }
 
@@ -757,8 +757,8 @@ cursor: pointer;
 }
 
 .qr_code svg {
-    width: 200px;
-    height: 200px
+    width: 160px;
+    height: 160px;
 }
 
 @media screen and (max-width:768px) {
