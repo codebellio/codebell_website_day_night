@@ -16,14 +16,15 @@
     <link rel="stylesheet" href="newStyle.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="/assets/swiper-bundle.css">
-    <script src="/assets/swiper-bundle.min.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="/assets/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <div class="nav">
-        <div class="nav-content flex between middle">
+        <div class="nav-content flex between middle" data-aos="fade-down">
             <a href="#">
-                <div class="logo-text"><svg width="407" height="73" viewBox="0 0 407 73" fill="currentColor"
+                <div class="logo-text animate__animated animate__fadeInDown"><svg width="407" height="73" viewBox="0 0 407 73" fill="currentColor"
                         xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M52.7832 45.3856V45.1941C52.7832 30.2612 64.9974 17.7598 81.8579 17.7598C98.7183 17.7598 110.753 30.0697 110.753 45.0026V45.1941C110.753 60.1265 98.5386 72.6282 81.6664 72.6282C64.7937 72.6282 52.7832 60.318 52.7832 45.3856ZM92.8149 45.3856V45.1941C92.8149 38.7995 88.1687 33.3628 81.6664 33.3628C74.9725 33.3628 70.7093 38.6917 70.7093 45.0026V45.1941C70.7093 51.5887 75.3678 57.0131 81.8579 57.0131C88.5639 57.0131 92.8267 51.6842 92.8267 45.3856H92.8149Z"
@@ -56,13 +57,13 @@
                 </div>
             </a>
             <div class="flex middle" style="gap: 3em;">
-                <div class="links flex " style="font-weight:600; gap:2em; ">
+                <div class="links flex" style="font-weight:600; gap:2em; ">
                     <a href="#Home">Home</a>
                     <a href="#Feature">Feature</a>
                     <a href="#Product">Product</a>
                     <a href="#Contact">Contact Us</a>
                 </div>
-                <div class="social-links flex" style="gap: 1em;">
+                <div class="social-links flex animate__animated animate__fadeInDown" style="gap: 1em;">
 
                     <a href="https://www.instagram.com/codebell.io/" class="social-icons">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -146,8 +147,8 @@
                     </button>
                 </a>
             </div>
-            <div class="right" style="min-width: 300px;">
-                <img src="/assets/products/Live_home.webp" alt="" style="max-width: 70%;">
+            <div class="right" style="min-width: 300px;" data-aos="fade-left">
+                <img  src="/assets/products/Live_home.webp" alt="" style="max-width: 70%;">
             </div>
         </section>
     </div>
@@ -184,14 +185,16 @@
                     fill="currentColor" />
             </svg>
             <div class="title-1">Beyond Wires and Numbers</div>
-            <div class="title-2">Discover the QR Intercom Revolution and Embrace the freedom of wireless technology with our intercoms. No cables, no clutter, just seamless, reliable communication wherever you choose to install. Experience unbound convenience and connectivity
+            <div class="title-2">Discover the QR Intercom Revolution and Embrace the freedom of wireless technology with
+                our intercoms. No cables, no clutter, just seamless, reliable communication wherever you choose to
+                install. Experience unbound convenience and connectivity
             </div>
-            <a href="https://api.codebell.io/install" target="_blank"><button class="button" >Get it Now</button></a>
+            <a href="https://api.codebell.io/install" target="_blank"><button class="button">Get it Now</button></a>
 
 
         </section>
     </div>
-   <hr>
+    <hr>
     <!-- product feature  -->
     <section id="Feature">
         <div class="section-title">
@@ -210,7 +213,7 @@
                     </svg>
                 </div>
                 <div class="card-text">Instant Video/Audio Alerts</div>
-                <p>  Connect easily using only a smartphone camera, no phone numbers.
+                <p> Connect easily using only a smartphone camera, no phone numbers.
                 </p>
             </div>
             <div class="card flex column middle center text-center gap">
@@ -315,8 +318,8 @@
             </div>
 
             <div class="why-choose-content flex middle center">
-                <div class="flex">
-                    <img src="/assets/img/codebell_qr_code_intercom.webp" alt="" >
+                <div class="flex" data-aos="zoom-in">
+                    <img src="/assets/img/codebell_qr_code_intercom.webp" alt="">
                 </div>
                 <div class="why-choose flex wrap middle center gap">
                     <div class="card flex column middle center text-center gap">
@@ -333,7 +336,8 @@
                             </svg>
                         </div>
                         <div class="card-text">Hassle-free</div>
-                        <p>Hassle-free, affordable communication with endless QR codes, better than traditional intercoms.</p>
+                        <p>Hassle-free, affordable communication with endless QR codes, better than traditional
+                            intercoms.</p>
                     </div>
                     <div class="card flex column middle center text-center gap">
                         <div class="c-icon flex middle center">
@@ -358,7 +362,8 @@
                             </svg>
                         </div>
                         <div class="card-text">Advanced features</div>
-                        <p>Offers video calling, real-time messaging, and more for versatile productivity enhancement.</p>
+                        <p>Offers video calling, real-time messaging, and more for versatile productivity enhancement.
+                        </p>
                     </div>
                     <div class="card flex column middle center text-center gap">
                         <div class="c-icon flex middle center">
@@ -371,7 +376,8 @@
                             </svg>
                         </div>
                         <div class="card-text">Unlimited Mobility</div>
-                        <p>Codebell enables limitless, internet-based communication anywhere, not restricting users to one location.</p>
+                        <p>Codebell enables limitless, internet-based communication anywhere, not restricting users to
+                            one location.</p>
                     </div>
                 </div>
 
@@ -434,7 +440,7 @@
                     </div>
                 </a>
                 <a href="car.html" class="product-name">Codebell Car</a>
-                <p >Codebell Car lets people contact with vehicle.</p>
+                <p>Codebell Car lets people contact with vehicle.</p>
                 <div class="price-start flex middle between">
                     <p><span>₹ 599 </span>₹ 450</p>
                     <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" class="button" style="font-size: 1em; white-space: nowrap;
@@ -713,9 +719,9 @@
             </div>
         </section>
     </div>
-   
 
-<hr>
+
+    <hr>
     <!-- faq -->
     <div class="grey-section" id="Faq">
         <section>
@@ -740,11 +746,12 @@
                         </svg>
                     </div>
                     <div class="ans">
-                        <p>You may order Codebell through any of the leading e-retailers such as Amazon, Flipkart as well as from our website.</p>
+                        <p>You may order Codebell through any of the leading e-retailers such as Amazon, Flipkart as
+                            well as from our website.</p>
                     </div>
 
                 </div>
-             
+
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
                         <div class="question">Is Codebell easy to use?</div>
@@ -877,7 +884,8 @@
                     </div>
                 </div>
                 <div class="flex center">
-                    <button class="button"> <a style="color: #ffffff;" href="faq.html" target="_blank">Read More</a></button>
+                    <button class="button"> <a style="color: #ffffff;" href="faq.html" target="_blank">Read
+                            More</a></button>
                 </div>
             </div>
 
@@ -951,29 +959,29 @@
 
     </section>
     <div class="grey-section">
-    <section class="flex column" id="Contact">
-        <div class="section-title">
-            <div class="title-1">Get In Touch With Us</div>
-            <div class="title-2">We'll try to deliver the answers you're hungry for.</div>
-        </div>
-        <div class="flex eq wrap gap-2">
-            <div class="get-in-touch-left" style="min-width: 300px;">
-                <img src="/assets/img/contact.webp" alt="">
+        <section class="flex column" id="Contact">
+            <div class="section-title">
+                <div class="title-1">Get In Touch With Us</div>
+                <div class="title-2">We'll try to deliver the answers you're hungry for.</div>
             </div>
-            <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
-                <div class="name-email flex eq wrap middle gap">
-                    <input type="text" id="name" placeholder="Your Name" style="min-width: 200px;">
-                    <input type="email" id="email" placeholder="Your Email" style="min-width: 200px;">
+            <div class="flex eq wrap gap-2">
+                <div class="get-in-touch-left" style="min-width: 300px;">
+                    <img src="/assets/img/contact.webp" alt="">
                 </div>
-                <input type="text" id="mobile" placeholder="Your Phone">
-                <input type="text" id="subject" placeholder="Your Subject">
-                <textarea id="msg" name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
-                <div class="submit-btn" id="submitBtn">Submit</div>
-                <div id="contact_err"></div>
+                <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
+                    <div class="name-email flex eq wrap middle gap">
+                        <input type="text" id="name" placeholder="Your Name" style="min-width: 200px;">
+                        <input type="email" id="email" placeholder="Your Email" style="min-width: 200px;">
+                    </div>
+                    <input type="text" id="mobile" placeholder="Your Phone">
+                    <input type="text" id="subject" placeholder="Your Subject">
+                    <textarea id="msg" name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
+                    <div class="submit-btn" id="submitBtn">Submit</div>
+                    <div id="contact_err"></div>
+                </div>
             </div>
-        </div>
-    </section>
-</div>
+        </section>
+    </div>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var data = {
@@ -1038,7 +1046,7 @@
     </script>
 
     <section class="flex eq middle center wrap download">
-        <div class="flex" style="min-width: 300px;">
+        <div class="flex" style="min-width: 300px;" data-aos="fade-up">
             <img src="/assets/img/download-img.webp" alt="" style="max-width: 80%;">
         </div>
         <div class="flex column gap-1 " style="min-width: 300px;">
@@ -1113,7 +1121,7 @@
                                 d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
                         </svg>
                     </a>
-                   
+
                     <a href="https://www.linkedin.com/company/codebell/"><svg xmlns="http://www.w3.org/2000/svg"
                             width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
                             <path
@@ -1169,9 +1177,10 @@
         </div>
 
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="allColorTheme.js"></script>
-    <script src="main.js"></script>
     <script src="darkmode.js"></script>
+    <script src="main.js"></script>
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
@@ -1183,6 +1192,7 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
+
 
 </body>
 
