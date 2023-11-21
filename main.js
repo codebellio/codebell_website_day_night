@@ -1,3 +1,9 @@
+// ---on scrol animation ----
+AOS.init( {
+  offset: 150, // offset (in px) from the original trigger point
+  delay: 0, // values from 0 to 3000, with step 50ms
+  duration: 500,// values from 0 to 3000, with step 50ms
+});
 
 // ---------------------hamburger---------------------
 const toggleBtn = document.getElementById("mobile-menu-icon");
@@ -118,10 +124,4 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-});
-// ---on scrol animation ----
-AOS.init( {
-  offset: 150, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 500,// values from 0 to 3000, with step 50ms
 });
