@@ -137,7 +137,7 @@
         </div>
         <div class="flex eq wrap gap-2">
             <div class="get-in-touch-left" style="min-width: 300px;" data-aos="zoom-in">
-                <img src="/assets/img/contact.webp" alt="">
+                <img data-src="/assets/img/contact.webp" alt="" class="lazyload">
             </div>
             <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
                 <div class="name-email flex eq wrap middle gap">
@@ -293,10 +293,10 @@
             <div class="flex column gap" style="color: var(--text-color); min-width:300px">
                 <h3>Get in touch</h3>
                 <p><a href="#" style="display: block;" id="supportLink">
-                    <img src="/assets/img/email_light.png" alt="" style="height: 25px;">
+                    <img data-src="/assets/img/email_light.png" alt="" style="height: 25px;" class="lazyload">
                 </a></p>
             <p><a href="#" id="businessLink" style="display: block;">
-                    <img src="/assets/img/phone_light.png" alt="" style="height: 25px;">
+                    <img data-src="/assets/img/phone_light.png" alt="" style="height: 25px;" class="lazyload">
                 </a>
             </div>
 
@@ -340,6 +340,8 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
+    <script src="lazysizes.min.js" async=""></script>
+
 </body>
 
 </html>
