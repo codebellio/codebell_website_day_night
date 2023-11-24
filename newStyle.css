@@ -346,7 +346,7 @@ animation: shining 2.5s infinite linear;
 .shop img{
  
     border-radius: 0.5em;
-    max-width: 25%;
+    height: 60px;
     margin: 0;
     transition: var(--transition);
     cursor: pointer;
@@ -373,8 +373,17 @@ animation: shining 2.5s infinite linear;
     p{
         font-size: 15px;
     }
+    .available-on{
+        padding: 0.3em 0.8em 0.3em 0.8em;
+
+        font-size: 12px;
+    }
     .hero .right{
     display: flex;        
+    }
+    .shop img{
+ 
+        height: 50px;
     }
     .hero img{
         max-width: 80% !important;
@@ -391,6 +400,9 @@ animation: shining 2.5s infinite linear;
     .left p {
         text-align: center;
         
+    }
+    .shop{
+        justify-content: center;
     }
 }
 /* animation in hero section */
