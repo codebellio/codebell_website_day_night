@@ -56,12 +56,6 @@ window.onscroll = function () {
 // });
 
 
-
-
-
-
-
-
 // video script
 function showVideoPopup() {
   var videoPopupContainer = document.getElementById('videoPopupContainer');
