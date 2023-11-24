@@ -319,6 +319,8 @@ letter-spacing: 0.5px;
 color: var(--text-color) !important;
 position: relative;
 overflow: hidden;
+text-align: center;
+min-width: 227px;
 /* background-color: var(--primary-color); */
 
 }
@@ -343,15 +345,25 @@ animation: shining 2.5s infinite linear;
   left: 100%;
 }
 }
+.shop{
+    min-width:196px;
+}
 .shop img{
- 
-    border-radius: 0.5em;
+    max-width: 100%;
+}
+.shop a{
+display: flex;
+
     height: 60px;
-    margin: 0;
+   
+
     transition: var(--transition);
     cursor: pointer;
 }
-.shop img:hover{
+.shop img{
+    border-radius: 0.5em;
+}
+.shop a:hover{
    
    scale: 1.1;
 }
@@ -381,9 +393,9 @@ animation: shining 2.5s infinite linear;
     .hero .right{
     display: flex;        
     }
-    .shop img{
+    .shop a{
  
-        height: 50px;
+        height: 60px;
     }
     .hero img{
         max-width: 80% !important;
