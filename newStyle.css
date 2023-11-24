@@ -337,14 +337,14 @@ animation: shining 3.5s infinite linear;
 
 }
 
-@keyframes shining {
+/* @keyframes shining {
 0% {
   left: -100%;
 }
 100% {
   left: 100%;
 }
-}
+} */
 .shop{
     min-width:196px;
 }
