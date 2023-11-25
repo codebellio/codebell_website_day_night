@@ -397,7 +397,7 @@ p{
     width: fit-content;
     padding: 8px 8px 8px 0px;
   }
-  .animated-text-hero::before {
+  .animated-text-hero::before{
     content: '';
     position: absolute;
     top: 0;
@@ -406,6 +406,7 @@ p{
     height: 100%;
     background: linear-gradient(to right, transparent, var(--hero-text), transparent);
   }
+  
 
   
 .shop a{
