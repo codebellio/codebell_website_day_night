@@ -11,20 +11,22 @@
         content="Discover how QR code calling solutions streamline communication. Explore Codebell and unlock the benefits of QR calling for your business, home, cars, and pets."
         property="og:description">
     <meta property="og:type" content="website">
+    <meta property="og:image" content="https://codebell.io/assets/products/Live_home.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codebell - New-age Communication with QR Code Calling Solutions</title>
     <link rel="stylesheet" href="newStyle.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="/assets/swiper-bundle.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="/assets/swiper-bundle.min.js"></script>
 </head>
 
 <body>
     <div class="nav">
-        <div class="nav-content flex between middle">
+        <div class="nav-content flex between middle" data-aos="fade-down">
             <a href="#">
-                <div class="logo-text"><svg width="407" height="73" viewBox="0 0 407 73" fill="currentColor"
-                        xmlns="http://www.w3.org/2000/svg">
+                <div class="logo-text animate__animated animate__fadeInDown"><svg width="407" height="73"
+                        viewBox="0 0 407 73" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                         <path
                             d="M52.7832 45.3856V45.1941C52.7832 30.2612 64.9974 17.7598 81.8579 17.7598C98.7183 17.7598 110.753 30.0697 110.753 45.0026V45.1941C110.753 60.1265 98.5386 72.6282 81.6664 72.6282C64.7937 72.6282 52.7832 60.318 52.7832 45.3856ZM92.8149 45.3856V45.1941C92.8149 38.7995 88.1687 33.3628 81.6664 33.3628C74.9725 33.3628 70.7093 38.6917 70.7093 45.0026V45.1941C70.7093 51.5887 75.3678 57.0131 81.8579 57.0131C88.5639 57.0131 92.8267 51.6842 92.8267 45.3856H92.8149Z"
                             fill="currentColor" />
@@ -56,13 +58,13 @@
                 </div>
             </a>
             <div class="flex middle" style="gap: 3em;">
-                <div class="links flex " style="font-weight:600; gap:2em; ">
+                <div class="links flex" style="font-weight:600; gap:2em; ">
                     <a href="#Home">Home</a>
                     <a href="#Feature">Feature</a>
                     <a href="#Product">Product</a>
                     <a href="#Contact">Contact Us</a>
                 </div>
-                <div class="social-links flex" style="gap: 1em;">
+                <div class="social-links flex animate__animated animate__fadeInDown" style="gap: 1em;">
 
                     <a href="https://www.instagram.com/codebell.io/" class="social-icons">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -141,67 +143,47 @@
                 <h1 style="font-size: 60px;">Elevate to Smart, QR-Powered Wireless Intercoms</h1>
                 <p>Scan, Connect, Communicate—without sharing your number.
                 </p>
-                <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank">
-                    <button class="button hero-button" style="margin-top: 1em;">Buy Now
-                    </button>
-                </a>
+                <div class="flex shop">
+
+                <span style="font-size: 1em;">
+                    Available On
+                </span>
+                    <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank"><img src="/assets/img/flip.avif" alt="" ></a>
+                    <a href="https://amzn.eu/d/fSVT7hr" target="_blank"><img src="/assets/img/amazon.png" alt=""></a>
+
+                </div>
             </div>
-            <div class="right" style="min-width: 300px;">
+            <div class="right" style="min-width: 300px;" data-aos="fade-left">
                 <img src="/assets/products/Live_home.webp" alt="" style="max-width: 70%;">
             </div>
         </section>
     </div>
-
-    <style>
-        @keyframes moveUpAll {
-            from {
-                transform: translateY(50px);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes moveFromLeft {
-            from {
-                transform: translateX(-100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-
-        @keyframes moveFromRight {
-            from {
-                transform: translateX(100%);
-                opacity: 0;
-            }
-
-            to {
-                transform: translateX(0);
-                opacity: 1;
-            }
-        }
-        .left {
-            animation: moveFromLeft 1s ease-in-out;
-        }
-
-        .right {
-            animation: moveFromRight 1s ease-in-out;
-        }
-        .nav-content {
-            animation: moveUpAll 0.5s ease-in-out;
-        }
-      
+<style>
+    .shop{
+        align-items: end;
+        padding: 1em;
+        width: fit-content;
+        border-radius: 0.5em;
        
-
-    </style>
+        
+        }
+       
+    .shop a{
+        height: 70px;
+    }
+    @media screen and (max-width: 768px)
+{
+.shop{
+    padding: 0.5em;
+}
+.shop p{
+    font-size: 10px;
+}
+.shop a{
+    height: 50px;
+}
+}
+</style>
     <!-- get it now -->
     <div style="background: var(--bg-box-color);">
         <section class="flex column middle gap-1 text-center gets-now">
@@ -250,7 +232,7 @@
             <div class="title-1">Product Features</div>
             <div class="title-2">Explore the Advanced Features That Make Our Intercom System Exceptional.</div>
         </div>
-        <div class="allFeature flex center middle gap-1 wrap">
+        <div class="flex center middle gap-1 wrap">
             <div class="card flex column middle center text-center gap">
                 <div class="c-icon flex middle center">
                     <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
@@ -367,7 +349,7 @@
             </div>
 
             <div class="why-choose-content flex middle center">
-                <div class="flex">
+                <div class="flex" data-aos="zoom-in">
                     <img src="/assets/img/codebell_qr_code_intercom.webp" alt="">
                 </div>
                 <div class="why-choose flex wrap middle center gap">
@@ -950,12 +932,12 @@
         </div>
         <div class="flex wrap middle center gap">
             <div class="blog-cards flex column gap">
-                <img src="/assets/img/car_parking_issues.webp" alt="">
+                <img data-src="/assets/img/car_parking_issues.webp" alt="" class="lazyload">
                 <a href="codebell-car-safety.html">
                     <div class="blogger-details flex column gap">
                         <div class="flex middle between">
                             <div class="flex middle" style="gap:0.5em">
-                                <img src="/assets/img/user.webp" alt="">
+                                <img data-src="/assets/img/user.webp" alt="" class="lazyload">
                                 <p>Jean Auel</p>
                             </div>
                             <div class="flex middle" style="gap:0.5em">
@@ -978,12 +960,12 @@
                 </a>
             </div>
             <div class="blog-cards flex column gap">
-                <img src="/assets/img/intercome.webp" alt="">
+                <img data-src="/assets/img/intercome.webp" alt="" class="lazyload">
                 <a href="intercom-vs-codebell.html">
                     <div class="blogger-details flex column gap">
                         <div class="flex middle between">
                             <div class="flex middle" style="gap:0.5em">
-                                <img src="/assets/img/user.webp" alt="">
+                                <img data-src="/assets/img/user.webp" alt="" class="lazyload">
                                 <p>Jean Auel</p>
                             </div>
                             <div class="flex middle" style="gap:0.5em">
@@ -1014,7 +996,7 @@
                 <div class="title-2">We'll try to deliver the answers you're hungry for.</div>
             </div>
             <div class="flex eq wrap gap-2">
-                <div class="get-in-touch-left" style="min-width: 300px;">
+                <div class="get-in-touch-left" style="min-width: 300px;" data-aos="zoom-in">
                     <img src="/assets/img/contact.webp" alt="">
                 </div>
                 <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
@@ -1090,12 +1072,10 @@
                     });
             });
         });
-
-
     </script>
 
     <section class="flex eq middle center wrap download">
-        <div class="flex" style="min-width: 300px;">
+        <div class="flex" style="min-width: 300px;" data-aos="fade-up">
             <img src="/assets/img/download-img.webp" alt="" style="max-width: 80%;">
         </div>
         <div class="flex column gap-1 " style="min-width: 300px;">
@@ -1226,9 +1206,10 @@
         </div>
 
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="allColorTheme.js"></script>
-    <script src="main.js"></script>
     <script src="darkmode.js"></script>
+    <script src="main.js"></script>
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
@@ -1240,7 +1221,7 @@
             s0.parentNode.insertBefore(s1, s0);
         })();
     </script>
-
+    <script src="lazysizes.min.js" async=""></script>
 </body>
 
 </html>

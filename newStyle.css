@@ -36,6 +36,7 @@ body {
     margin: auto;
     font-family: 'Montserrat', sans-serif;
     scroll-behavior: smooth;
+    color: var(--text-color);
 }
 body {
     background-color: var(--bg-color);
@@ -346,6 +347,7 @@ animation: shining 3.5s infinite linear;
 }
 } */
 .shop{
+
     min-width:196px;
 }
 .shop img{
@@ -355,8 +357,6 @@ animation: shining 3.5s infinite linear;
 display: flex;
 
     height: 60px;
-   
-
     transition: var(--transition);
     cursor: pointer;
 }
