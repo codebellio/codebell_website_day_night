@@ -15,6 +15,7 @@
     --product-card-shadow: hsla(0, 0%, 0%, 0.14);
     --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
     --transition: 0.5s;
+    --hero-text:hsla(0, 0%, 0%, 0.09);
 }
 .dark {
     --bg-color: #000000;
@@ -28,6 +29,8 @@
     --product-card-shadow: var(--primary-color);
     --message-text-bg: rgba(160, 159, 161, 0.1);
     --transition: 0.5s;
+    --hero-text:rgba(255, 255, 255, 0.2);
+
 }
 html,
 body {
@@ -291,7 +294,7 @@ li{
 
 /* hero section */
 .hero {
-    height: 750px;
+    height: 700px;
     padding-top: 0;
     padding-bottom: 0;
     margin: auto;
@@ -346,27 +349,7 @@ animation: shining 3.5s infinite linear;
   left: 100%;
 }
 } */
-.shop{
 
-    min-width:196px;
-}
-.shop img{
-    max-width: 100%;
-}
-.shop a{
-display: flex;
-
-    height: 60px;
-    transition: var(--transition);
-    cursor: pointer;
-}
-.shop img{
-    border-radius: 0.5em;
-}
-.shop a:hover{
-   
-   scale: 1.1;
-}
 .left p {
     color: var(--sub-text-color);
     font-weight: 500;
@@ -416,6 +399,22 @@ display: flex;
     .shop{
         justify-content: center;
     }
+}
+.shop{
+    min-width:196px;
+}
+.shop img{
+    max-width: 100% !important;
+}
+.shop a{
+    display: flex;
+    height: 60px;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.shop a:hover{
+   scale: 1.1;
 }
 /* animation in hero section */
 

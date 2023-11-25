@@ -143,14 +143,17 @@
                 <h1 style="font-size: 60px;">Elevate to Smart, QR-Powered Wireless Intercoms</h1>
                 <p>Scan, Connect, Communicate—without sharing your number.
                 </p>
-                <div class="flex shop">
-
-                <span style="font-size: 1em;">
-                    Available On
-                </span>
-                    <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank"><img src="/assets/img/flip.avif" alt="" ></a>
-                    <a href="https://amzn.eu/d/fSVT7hr" target="_blank"><img src="/assets/img/amazon.png" alt=""></a>
-
+                <div class="flex column gap">
+                    <div class="animated-text-hero">
+                        <div>Available on trusted ecommerce platforms</div>
+                      
+                    </div>
+                    <div class="flex middle shop gap">
+                        <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank"><img
+                                src="/assets/img/Rectangle 1211.png" alt=""></a>
+                        <a href="https://amzn.eu/d/fSVT7hr" target="_blank"><img src="/assets/img/Rectangle 1212.png"
+                                alt=""></a>
+                    </div>
                 </div>
             </div>
             <div class="right" style="min-width: 300px;" data-aos="fade-left">
@@ -158,32 +161,43 @@
             </div>
         </section>
     </div>
-<style>
-    .shop{
-        align-items: end;
-        padding: 1em;
-        width: fit-content;
-        border-radius: 0.5em;
-       
-        
+    <style>
+        .animated-text-hero {
+            font-weight: 600;
+            font-size: 17px;
+            text-transform: uppercase;
+            position: relative;
+            overflow: hidden;
+            width: fit-content;
+            padding: 8px 8px 8px 0px;
+
+          }
+      
+          .animated-text-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to right, transparent, var(--hero-text), transparent);
+            animation: shining 3.5s infinite linear;
+          }
+      
+          
+        .shop a{
+            height: 80px;
+        }
+        @media  screen and (max-width:768px){
+            .animated-text-hero{
+                font-size: 10px;
+            }
+            .shop a{
+                height: 60px;
+            }
         }
        
-    .shop a{
-        height: 70px;
-    }
-    @media screen and (max-width: 768px)
-{
-.shop{
-    padding: 0.5em;
-}
-.shop p{
-    font-size: 10px;
-}
-.shop a{
-    height: 50px;
-}
-}
-</style>
+    </style>
     <!-- get it now -->
     <div style="background: var(--bg-box-color);">
         <section class="flex column middle gap-1 text-center gets-now">
