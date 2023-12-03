@@ -552,12 +552,7 @@ hr {
 .why-choose .card {
     background-color: var(--bg-color);
 }
-@media screen and (max-width:1484px) {
-    .why-choose .card{
-        width: 200px;
-    }
 
-}
 @media screen and (max-width:768px) {
     .why-choose .card{
         width: 280px;
