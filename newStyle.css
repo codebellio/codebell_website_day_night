@@ -327,7 +327,7 @@ p{
     color: var(--sub-text-color);
     font-weight: 500;
 }
-@media  screen and (max-width: 1400px) {
+@media  screen and (max-width: 1500px) {
     .left h1 {
         font-size: 50px !important;
     }
