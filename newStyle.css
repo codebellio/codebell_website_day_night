@@ -486,7 +486,7 @@ p{
     background-color: var(--bg-grey-color);
     padding: 2em;
     border-radius: 0.5em;
-    transition: var(--transition);
+    transition: 0.3s;
     overflow: hidden;
     cursor: pointer;
     color: var(--text-color);
@@ -501,14 +501,14 @@ p{
     color: #ffffff;
     transform: translateY(-1em);
     border-radius: 0.5em;
-
+    background-color: var(--primary-color);
 }
 
 .card:hover p {
     color: #ffffff;
 }
 
-.card::before {
+/* .card::before {
     width: 0%;
     transform: translate(-50%, -50%);
     content: "";
@@ -519,12 +519,13 @@ p{
     left: 50%;
     background-color: var(--primary-color);
     transition: var(--transition);
-}
+} */
 
-.card:hover::before {
+/* .card:hover::before {
     width: 100%;
     height: 100%;
-}
+} */
+
 
 .c-icon {
     background-color: #f3f3f3;
@@ -567,7 +568,9 @@ hr {
 .why-choose .card:first-child {
     margin-top: 1.5em;
 }
-
+.why-choose .card:hover{
+    background-color:var(--primary-color);
+}
 .why-choose .card:last-child {
     margin-top: -1.5em;
 }
