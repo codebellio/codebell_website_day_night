@@ -940,7 +940,7 @@ cursor: pointer;
 }
 .blog-cards {
     margin: auto;
-    width: 415px;
+    width: 430px;
     height: 570px;
     background-color: var(--bg-color);
     cursor: pointer;
