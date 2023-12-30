@@ -1512,7 +1512,6 @@ cursor: pointer;
     font-style: italic;
     color: var(--sub-text-color);
 }
-
 .blogs-images img {
     width: 280px;
     height: 220px;
@@ -1628,7 +1627,6 @@ th.header {
     z-index: 9999;
     text-align: center;
 }
-
 .video-popup {
     position: absolute;
     max-width: 60%;
