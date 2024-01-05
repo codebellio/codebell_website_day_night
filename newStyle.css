@@ -364,7 +364,6 @@ text-align: center;
 }
 
 #indexs-img img:nth-child(1){
-   
     max-width: 65%;
 }
 #indexs-img img:nth-child(2){
@@ -402,7 +401,31 @@ text-align: center;
 }
 /* car hero  */
 .car-banner{
+    position: relative;
     background-color: #7F52BB;
+}
+.cars-images{
+    position: relative;
+}
+#cars-images img:nth-child(2){
+    position: absolute;
+    top: 40%;
+    right: -7%;
+}
+#cars-images img:nth-child(3){
+    position: absolute;
+    bottom: -8%;
+    left: 51%;
+}
+#cars-images img:nth-child(4){
+    position: absolute;
+    left: 10%;
+    bottom: 0;
+}
+#cars-images img:nth-child(5){
+    position: absolute;
+    top: 5%;
+    left: 20%;
 }
 
 
@@ -446,9 +469,9 @@ p{
 
         font-size: 12px;
     }
-    .hero .right{
+    /* .hero .right{
     display: flex;        
-    }
+    } */
     .shop a{
  
         height: 60px;
