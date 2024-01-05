@@ -306,16 +306,31 @@ li{
 .hero .right{
     position: relative;
     text-align:right;
+    
 
     
 }
 .hero #homes-img{
     align-self: end ;
 }
-#home-img{
+#Home{
+    background-color: #303BAE;
+   position: relative;
+}
+
+#homes-img img{
+    z-index: 5;
+}
+#home-img  {
     position: relative;
-    
     max-width:70%;   
+    
+}
+#Home .circle{
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 0;
 }
 #homes-img img:nth-child(2){
     position: absolute;
@@ -394,6 +409,11 @@ p{
     }
     .shop{
         justify-content: center;
+    }
+    #Home .circle{
+        max-width: 50%;
+        bottom: 0;
+        top: 60%;
     }
 }
 .shop{
