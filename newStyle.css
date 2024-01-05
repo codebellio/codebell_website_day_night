@@ -318,20 +318,23 @@ li{
    position: relative;
 }
 
-#homes-img img{
+#homes-img img, #indexs-img img{
     z-index: 5;
 }
-#home-img  {
-    position: relative;
-    max-width:70%;   
-    
-}
-.home-banner .circle{
+#Home .circle{
     position: absolute;
     z-index: 1;
     right: 0;
     top: 0;
 }
+/* home images */
+#home-img  {
+    position: relative;
+    max-width:70%;   
+    
+}
+
+
 #homes-img img:nth-child(2){
     position: absolute;
     top: 39%;
@@ -346,6 +349,63 @@ li{
     max-width:30%;
     
 }
+
+.index-img {
+    position: relative;
+}
+/* index banner design css */
+.index-banner{
+    background: linear-gradient(180deg, #25C1B1 0%, #156A62 100%);
+
+
+
+}
+.index-banner .right{
+    
+text-align: center;
+
+}
+#indexs-img img:nth-child(1){
+   
+    max-width: 60%;
+}
+#indexs-img img:nth-child(2){
+    position: absolute;
+    bottom: -5%;
+    left: 10%;   
+}
+#indexs-img img:nth-child(3){
+    position: absolute;
+    top: 5%;
+    right: 6%;  
+}
+#indexs-img img:nth-child(4){
+    position: absolute;
+    top: 50%;
+    right: 8%; 
+}
+#indexs-img img:nth-child(5){
+    position: absolute;
+    bottom: -22%;
+    right: 40%; 
+    
+}
+#indexs-img img:nth-child(6){
+    position: absolute;
+    left: -8%;
+    bottom: -15%;
+      
+}
+#indexs-img img:nth-child(7){
+    position: absolute;
+    left: 0;
+    top: 25%;
+      
+}
+
+
+
+
 .left h1 {
     color: var(--text-color);
 }
@@ -410,7 +470,7 @@ p{
     .shop{
         justify-content: center;
     }
-    .home-banner .circle{
+    #Home .circle{
         max-width: 50%;
         bottom: 0;
         top: 60%;
