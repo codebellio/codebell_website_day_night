@@ -19,6 +19,16 @@
     <link rel="stylesheet" href="/assets/swiper-bundle.css">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="/assets/swiper-bundle.min.js"></script>
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MGCL4TN4');</script>
+    <!-- End Google Tag Manager -->
 </head>
 
 <body>
@@ -61,7 +71,7 @@
                 <div class="links flex" style="font-weight:600; gap:2em; ">
                     <a href="#Home">Home</a>
                     <a href="#Feature">Feature</a>
-                    <a href="#Product">Product</a>
+                    <a href="#Products">Products</a>
                     <a href="#Contact">Contact Us</a>
                 </div>
                 <div class="social-links flex animate__animated animate__fadeInDown" style="gap: 1em;">
@@ -137,31 +147,39 @@
     </div>
 
     <!-- hero section -->
-    <div class="grey-section" id="Home">
+    <div class="grey-section index-banner" id="Home">
         <section class="hero flex eq wrap middle center between">
             <div class="left flex column gap" style="min-width: 300px;">
-                <h1 style="font-size: 60px;">Elevate to Smart, QR-Powered Wireless Intercoms</h1>
-                <p>Scan, Connect, Communicate—without sharing your number.
+                <h1 style="font-size: 60px; color:#ffffff">Elevate to Smart, QR-<span style="color: #FFC839;"> Powered
+                        Wireless</span> Intercoms</h1>
+                <p style="color: #FFF;">Scan, Connect, Communicate—without sharing your number.
                 </p>
-                <div class="flex column gap">
-                    <div class="animated-text-hero">
-                        <div>Available on trusted ecommerce platforms</div>
-                      
-                    </div>
-                    <div class="flex middle shop gap">
-                        <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank"><img
-                                src="/assets/img/Rectangle 1211.png" alt=""></a>
-                        <a href="https://amzn.eu/d/fSVT7hr" target="_blank"><img src="/assets/img/Rectangle 1212.png"
-                                alt=""></a>
-                    </div>
-                </div>
+                <a href="https://api.codebell.io/install" target="_blank"><button class="button hero-button"
+                        style="margin-top: 1em;">Get Now</button></a>
+
             </div>
-            <div class="right" style="min-width: 300px;" data-aos="fade-left">
-                <img src="/assets/products/Live_home.webp" alt="" style="max-width: 70%;">
+            <div class="right" style="min-width: 300px;margin-bottom:7em;" id="indexs-img" >
+                <img class="car-img" src="/assets/img/index-img.png" alt="">
+
+                <img src="/assets/img/index-pipe.png" alt="" style="max-width: 80%;">
+                <img src="/assets/img/index-img1.png" alt="" style="max-width: 30%;" data-aos="zoom-in"
+                    data-aos-duration="200">
+                <img src="/assets/img/index-img2.png" alt="" style="max-width: 30%;" data-aos="zoom-in"
+                    data-aos-duration="250">
+                <img src="/assets/img/index-img3.png" alt="" style="max-width: 20%;" data-aos="zoom-in"
+                    data-aos-duration="300">
+                <img src="/assets/img/index-img4.png" alt="" style="max-width: 40%;" data-aos="zoom-in"
+                    data-aos-duration="350">
+                <img src="/assets/img/index-img5.png" alt="" style="max-width: 25%;" data-aos="zoom-in"
+                    data-aos-duration="400">
+
+
             </div>
         </section>
+        <img class="circle" src="/assets/img/circle.png" alt="" data-aos="zoom-in" data-aos-duration="600">
+
     </div>
-    
+
     <!-- get it now -->
     <div style="background: var(--bg-box-color);">
         <section class="flex column middle gap-1 text-center gets-now">
@@ -407,7 +425,7 @@
 
     <!-- latest product -->
     <hr>
-    <section id="Product">
+    <section id="Products">
         <div class="section-title">
             <div class="title-1">Our Latest Product</div>
             <div class="title-2">Experience Innovation with Codebell: Introducing Our Newest Product to Revolutionize
@@ -438,8 +456,18 @@
                 <p>Answer your door from anywhere, anytime.</p>
                 <div class="price-start flex middle between">
                     <p><span>₹ 499 </span>₹ 450</p>
-                    <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" class="button" style="font-size: 1em; white-space: nowrap;
-                " target="_blank">Buy Now</a>
+                    <div class="flex middle price-btns"
+                        style="gap: 0.5em;  padding:0.5em 1em 0.5em 1em; border-radius:1.5em">
+                        <div class="flex middle" style="font-size: 16px; font-weight:500;gap:0.5em">Buy Now </div>
+                        <a class="flex middle"
+                            style="background-color:var(--primary-color);padding:0.5em;border-radius:1.5em"
+                            href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank"><img
+                                src="/assets/img/flip-icon.png" alt=""></a>
+                        <a class="flex middle"
+                            style="background-color:var(--primary-color);padding:0.5em;border-radius:1.5em"
+                            href="https://amzn.eu/d/fSVT7hr" target="_blank"><img src="/assets/img/amazon-icon.png"
+                                alt=""></a>
+                    </div>
                 </div>
             </div>
             <div class="products flex column gap ">
@@ -452,12 +480,47 @@
                 <p>Codebell Car lets people contact with vehicle.</p>
                 <div class="price-start flex middle between">
                     <p><span>₹ 599 </span>₹ 450</p>
-                    <a href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" class="button" style="font-size: 1em; white-space: nowrap;
-                    " target="_blank">Buy Now</a>
+
+                    <div class="flex middle price-btns"
+                        style="gap: 0.5em;  padding:0.5em 1em 0.5em 1em; border-radius:1.5em">
+                        <div style="font-size: 16px; font-weight:500;gap:0.5em" class="flex middle ">Buy Now </div>
+                        <a class="flex middle"
+                            style="background-color:var(--primary-color);padding:0.5em;border-radius:1.5em"
+                            href="https://www.flipkart.com/product/p/itme?pid=VIPGVAYHDH2W4DDG" target="_blank"><img
+                                src="/assets/img/flip-icon.png" alt=""></a>
+                        <a class="flex middle"
+                            style="background-color:var(--primary-color);padding:0.5em;border-radius:1.5em"
+                            href="https://amzn.eu/d/fSVT7hr" target="_blank"><img src="/assets/img/amazon-icon.png"
+                                alt=""></a>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
+    <style>
+        .price-start {
+            cursor: pointer;
+
+        }
+
+        .price-start img {
+            width: 30px;
+        }
+
+        .price-start .bi-arrow-right-short {
+            transition: var(--transition);
+
+        }
+
+        .price-start a {
+            transition: var(--transition);
+        }
+
+        .price-start a:hover {
+            scale: 1.1;
+        }
+    </style>
     <hr>
     <section id="Testimonial">
         <div class="section-title">
@@ -592,7 +655,8 @@
             <div class="swiper-pagination"></div>
         </div>
     </section>
-    <div class="grey-section">
+
+    <!-- <div class="grey-section">
         <section class="flex column center text-center pdb">
             <div class="section-title">
                 <div class="title-1">Pricing Plans</div>
@@ -623,15 +687,13 @@
                             </div>
                             <p style="display:flex; ">Real Time Chat</p>
                         </div>
-
                     </div>
-
                     <a href="contact.html" class="button">Get Started</a>
 
                 </div>
                 <div class="plan-card flex column middle gap-2">
                     <h1>Premium</h1>
-                    <h3>₹ 365 <span>year</span></h3>
+                    <h3>₹ 499 <span>year</span></h3>
                     <div class="flex column gap" style="flex:1">
                         <div class="flex middle  gap">
                             <div class="flex middle svg-wrapper">
@@ -730,7 +792,7 @@
     </div>
 
 
-    <hr>
+    <hr> -->
     <!-- faq -->
     <div class="grey-section" id="Faq">
         <section>
@@ -911,12 +973,68 @@
         <div class="flex wrap middle center gap">
             <div class="blog-cards flex column gap">
                 <img data-src="/assets/img/car_parking_issues.webp" alt="" class="lazyload">
+                <a href="homelink-blog1.html">
+                    <div class="blogger-details flex column gap">
+                        <div class="flex middle between">
+                            <div class="flex middle" style="gap:0.5em">
+                                <img data-src="/assets/img/profile2.webp" alt="" class="lazyload">
+                                <p>Sudhanshu Shekhar</p>
+                            </div>
+                            <div class="flex middle" style="gap:0.5em">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-calendar3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                                    <path
+                                        d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                                <p>22 Dec, 2023</p>
+                            </div>
+
+                        </div>
+                        <div class="post-detail">The Future is Here: Introducing HomeLink, the Ultimate Smart Video
+                            Doorbell</div>
+                        <p>Discover the HomeLink smart video doorbell: a perfect blend of innovation and convenience for
+                            modern homes.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-cards flex column gap">
+                <img data-src="/assets/img/car_parking_issues.webp" alt="" class="lazyload">
+                <a href="homelink-blog2.html">
+                    <div class="blogger-details flex column gap">
+                        <div class="flex middle between">
+                            <div class="flex middle" style="gap:0.5em">
+                                <img data-src="/assets/img/profile1.webp" alt="" class="lazyload">
+                                <p>Vikram Mali</p>
+                            </div>
+                            <div class="flex middle" style="gap:0.5em">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-calendar3" viewBox="0 0 16 16">
+                                    <path
+                                        d="M14 0H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2zM1 3.857C1 3.384 1.448 3 2 3h12c.552 0 1 .384 1 .857v10.286c0 .473-.448.857-1 .857H2c-.552 0-1-.384-1-.857V3.857z" />
+                                    <path
+                                        d="M6.5 7a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm-9 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2zm3 0a1 1 0 1 0 0-2 1 1 0 0 0 0 2z" />
+                                </svg>
+                                <p>26 Dec, 2023</p>
+                            </div>
+
+                        </div>
+                        <div class="post-detail">Why HomeLink Beats Traditional Doorbells: A Comprehensive Comparison
+                        </div>
+                        <p>Explore the advantages of HomeLink over traditional doorbells in our comprehensive
+                            comparison.</p>
+                    </div>
+                </a>
+            </div>
+            <div class="blog-cards flex column gap">
+                <img data-src="/assets/img/car_parking_issues.webp" alt="" class="lazyload">
                 <a href="codebell-car-safety.html">
                     <div class="blogger-details flex column gap">
                         <div class="flex middle between">
                             <div class="flex middle" style="gap:0.5em">
-                                <img data-src="/assets/img/user.webp" alt="" class="lazyload">
-                                <p>Jean Auel</p>
+                                <img data-src="/assets/img/profile3.webp" alt="" class="lazyload">
+                                <p>Vishnu Sharma</p>
                             </div>
                             <div class="flex middle" style="gap:0.5em">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -985,7 +1103,7 @@
                     <input type="text" id="mobile" placeholder="Your Phone">
                     <input type="text" id="subject" placeholder="Your Subject">
                     <textarea id="msg" name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
-                    <div class="submit-btn" id="submitBtn">Submit</div>
+                    <div class="submit-btn button" id="submitBtn">Submit</div>
                     <div id="contact_err"></div>
                 </div>
             </div>
@@ -1142,14 +1260,16 @@
                 <p><a href="index.html">Codebell Connect</a></p>
                 <p><a href="home.html">Codebell Home</a></p>
                 <p><a href="car.html">Codebell Car</a></p>
-                <p><a href="codebell-tag.html">Codebell Tag</a></p>
+                <p><a href="#">Codebell Tag</a></p>
 
             </div>
             <div class="flex column gap" style="color: var(--text-color); min-width:300px">
                 <h3>Pages</h3>
+                <p><a href="blogs.html"> Blogs</a></p>
                 <p><a href="about_us.html">About Us</a></p>
                 <p><a href="user_gallery.html">Social Media</a></p>
                 <p><a href="terms_of_service.html">Terms of service</a></p>
+
             </div>
             <div class="flex column gap" style="color: var(--text-color); min-width:300px">
                 <h3>Get in touch</h3>
@@ -1190,6 +1310,10 @@
     <script src="allColorTheme.js"></script>
     <script src="darkmode.js"></script>
     <script src="main.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGCL4TN4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
     <script type="text/javascript">
         var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
         (function () {
