@@ -299,10 +299,10 @@ li{
     padding-bottom: 0;
     margin: auto;
 }
-.hero img {
+/* .hero img {
     max-width: 75%;
   
-}
+} */
 .hero .right{
     position: relative;
     text-align:right;
@@ -365,9 +365,10 @@ li{
 text-align: center;
 
 }
+
 #indexs-img img:nth-child(1){
    
-    max-width: 60%;
+    max-width: 65%;
 }
 #indexs-img img:nth-child(2){
     position: absolute;
@@ -381,7 +382,7 @@ text-align: center;
 }
 #indexs-img img:nth-child(4){
     position: absolute;
-    top: 50%;
+    top: 60%;
     right: 8%; 
 }
 #indexs-img img:nth-child(5){
@@ -452,6 +453,10 @@ p{
     .shop a{
  
         height: 60px;
+    }
+    #indexs-img img:nth-child(1){
+   
+        max-width: 60%;
     }
    
 }
