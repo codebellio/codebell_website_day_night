@@ -314,23 +314,22 @@ li{
 }
 #home-img{
     position: relative;
-    border-start-end-radius: 12em;
-    border-top-left-radius: 12em;
-    max-width:70%;
     
-
+    max-width:70%;   
+}
+#homes-img img:nth-child(2){
+    position: absolute;
+    top: 39%;
+    left: 60%;
+    max-width:40%;
     
 }
-.right img:nth-child(2){
+#homes-img img:nth-child(3){
     position: absolute;
-    top: 45%;
-    left: 65%;
+    top: 10%;
+    left: 78%;
     max-width:30%;
-    border: 0.2em solid white;
-    border-start-end-radius:50%;
-    border-top-left-radius: 0.1em;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
+    
 }
 .left h1 {
     color: var(--text-color);
@@ -379,15 +378,7 @@ p{
  
         height: 60px;
     }
-    .hero img{
-        max-width: 80% !important;
-    }
-    #homes-img {
-        max-width: 55% !important;
-    }
-    #homes-img img:nth-child(2) {
-        max-width: 30% !important;
-    }
+   
 }
 @media screen and (max-width: 986px) {
     .left {
