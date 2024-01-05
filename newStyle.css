@@ -313,7 +313,7 @@ li{
 .hero #homes-img{
     align-self: end ;
 }
-#Home{
+.home-banner{
     background-color: #303BAE;
    position: relative;
 }
@@ -326,7 +326,7 @@ li{
     max-width:70%;   
     
 }
-#Home .circle{
+.home-banner .circle{
     position: absolute;
     z-index: 1;
     right: 0;
@@ -410,7 +410,7 @@ p{
     .shop{
         justify-content: center;
     }
-    #Home .circle{
+    .home-banner .circle{
         max-width: 50%;
         bottom: 0;
         top: 60%;
