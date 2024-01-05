@@ -498,9 +498,9 @@ p{
         justify-content: center;
     }
     #Home .circle{
-        max-width: 50%;
+        max-width: 80%;
         bottom: 0;
-        top: 60%;
+        top: 40%;
     }
 }
 .shop{
