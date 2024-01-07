@@ -251,6 +251,10 @@ li{
     font-size: 1em;
     cursor: pointer;
 }
+.nav-content{
+    padding: 10px;
+    width: calc(100% - 20px);
+}
 /* .hero-button:hover {
     background-color: #252626ec;
     color: var(--primary-color);
