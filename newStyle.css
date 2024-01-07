@@ -252,8 +252,8 @@ li{
     cursor: pointer;
 }
 .nav-content{
-    padding: 10px;
-    width: calc(100% - 20px);
+    padding: 15px;
+    width: calc(100% - 30px);
 }
 /* .hero-button:hover {
     background-color: #252626ec;
