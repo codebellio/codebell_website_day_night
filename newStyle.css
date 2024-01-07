@@ -230,6 +230,10 @@ li{
     .logo-text svg {
         height: 1.2em;
     }
+    .nav-content{
+        padding: 5px;
+        width: calc(100% - 10px);
+    }
 
 }
 
@@ -251,10 +255,7 @@ li{
     font-size: 1em;
     cursor: pointer;
 }
-.nav-content{
-    padding: 15px;
-    width: calc(100% - 30px);
-}
+
 /* .hero-button:hover {
     background-color: #252626ec;
     color: var(--primary-color);
