@@ -1790,3 +1790,16 @@ th.header {
     cursor: pointer;
     color: white;
 }
+#cctv-vs-codebell h1{
+    font-size: 1.8em;
+    margin-top: 1.2em;
+    color: var(--primary-color);
+}
+@media screen and (max-width:768px) {
+    #cctv-vs-codebell h1{
+        font-size: 1.5em;
+    }
+    #cctv-vs-codebell h2{
+        font-size: 1.2em;
+    }
+    }
