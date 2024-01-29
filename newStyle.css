@@ -343,15 +343,15 @@ li{
 
 #homes-img img:nth-child(2){
     position: absolute;
-    top: 39%;
-    left: 60%;
+    top: 38.8%;
+    left: 60.5%;
     max-width:40%;
     
 }
 #homes-img img:nth-child(3){
     position: absolute;
-    top: 10%;
-    left: 78%;
+    top: 12.5%;
+    left: 76%;
     max-width:30%;
     
 }
