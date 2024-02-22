@@ -5,6 +5,7 @@ AOS.init( {
   duration: 500,// values from 0 to 3000, with step 50ms
 });
 
+
 // ---------------------hamburger---------------------
 const toggleBtn = document.getElementById("mobile-menu-icon");
 const toggleBtnIcons = toggleBtn.querySelectorAll("svg");
@@ -118,4 +119,52 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    // Function to get visitor's country based on IP address
+    function getCountry(callback) {
+      fetch('https://ipapi.co/json/')
+          .then(response => response.json())
+          .then(data => {
+              callback(data.country);
+          })
+          .catch(error => {
+              console.error('Error fetching country:', error);
+              callback(null);
+          });
+  }
+
+  // Function to load appropriate product images based on country
+  function loadCountryImages(countryCode) {
+      if (countryCode === 'IN') {
+          document.getElementById('codebellImage').src = '/assets/img/codebell_standard.webp';
+          document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_india1.png';
+          document.getElementById('codebellCar').src = '/assets/newimage/car_connect_india1.png';
+
+
+         //update more
+      } else {
+          document.getElementById('codebellImage').src = '/assets/img/codebell_standard.webp';
+          document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_global1.png';
+          document.getElementById('codebellCar').src = '/assets/newimage/car_connect_world1.png';
+          // Update image sources for others
+      }
+     
+      // we can update more here
+  }
+
+
+// document.getElementById('codebellCarabout').src = '/assets/newimage/car_connect_world1.png';
+
+  // When the page loads, get visitor's country and load appropriate product images
+  window.onload = function() {
+      getCountry(function(countryCode) {
+          if (countryCode) {
+              loadCountryImages(countryCode);
+          } else {
+              console.error('Unable to determine visitor\'s country.');
+          }
+      });
+  };
 });
