@@ -431,7 +431,7 @@
                 Your World.</div>
         </div>
         <div class="flex center middle wrap gap-2  product-list ">
-            <div class="products flex column gap ">
+            <!-- <div class="products flex column gap ">
                 <a href="#">
                     <div class="image-product flex middle center">
                         <img id="codebellImage" alt="">
@@ -444,7 +444,7 @@
                     <a href="https://api.codebell.io/install" class="button" style="font-size: 1em; white-space: nowrap;
                     " target="_blank">Get Now</a>
                 </div>
-            </div>
+            </div> -->
             <div class="products flex column gap ">
                 <a href="home.html">
                     <div class="image-product flex middle center">
@@ -512,14 +512,14 @@
     // Function to load appropriate product images based on country
     function loadCountryImages(countryCode) {
         if (countryCode === 'IN') {
-            document.getElementById('codebellImage').src = '/assets/img/codebell_standard.webp';
+            
             document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_india1.png';
             document.getElementById('codebellCar').src = '/assets/newimage/car_connect_india1.png';
   
   
            //update more
         } else {
-            document.getElementById('codebellImage').src = '/assets/img/codebell_standard.webp';
+            
             document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_global1.png';
             document.getElementById('codebellCar').src = '/assets/newimage/car_connect_world1.png';
             // Update image sources for others
