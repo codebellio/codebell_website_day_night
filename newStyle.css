@@ -1802,4 +1802,15 @@ th.header {
     #cctv-vs-codebell h2{
         font-size: 1.2em;
     }
-    }
+}
+@media screen and (max-width:768px) {
+
+.store-product h1{
+    font-size: 1.2em !important;
+
+}
+.store-prod-name p{
+    top: -58% !important;
+}
+ }
+
