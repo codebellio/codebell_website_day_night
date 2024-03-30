@@ -1,5 +1,5 @@
 // ---on scroll animation ----
-AOS.init( {
+AOS.init({
   offset: 50, // offset (in px) from the original trigger point
   delay: 0, // values from 0 to 3000, with step 50ms
   duration: 500,// values from 0 to 3000, with step 50ms
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   questionBoxes.forEach(function (box) {
     box.addEventListener("click", function () {
       this.classList.toggle("active");
-      
+
     });
   });
 });
@@ -39,7 +39,7 @@ window.onscroll = function () {
 };
 
 // let heroSectionSlide = new Swiper(".container", {
-  
+
 //   grabCursor: true,
 //   centeredSlides: true,
 //   loop: true,
@@ -50,10 +50,10 @@ window.onscroll = function () {
 //   pagination: {
 //     el: ".swiper-pagination",
 //     clickable: true,
-   
+
 //   },
- 
-  
+
+
 // });
 
 
@@ -67,22 +67,22 @@ function hideVideoPopup() {
   var videoPopupContainer = document.getElementById('videoPopupContainer');
   videoPopupContainer.style.display = 'none';
   var videoElement = document.querySelector('.video-popup');
-    videoElement.pause();
+  videoElement.pause();
 
 }
 
 //footer mail and phone redirect
 const supportLink = document.getElementById("supportLink");
-supportLink.addEventListener("click", function(event) {
-    event.preventDefault(); 
-    window.location.href = "mailto:hello@codebell.io"; // email address
+supportLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "mailto:hello@codebell.io"; // email address
 });
 
 
 const businessLink = document.getElementById("businessLink");
-businessLink.addEventListener("click", function(event) {
-    event.preventDefault();
-    window.location.href = "tel:+9101169650110"; //call
+businessLink.addEventListener("click", function (event) {
+  event.preventDefault();
+  window.location.href = "tel:+9101169650110"; //call
 });
 
 
@@ -98,7 +98,7 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-   
+
   },
   breakpoints: {
     768: {
@@ -125,7 +125,7 @@ let reviewCustomer = new Swiper(".reviews-feedback", {
 let reviewCustomers = new Swiper(".swiper-container-store", {
   spaceBetween: 5,
   grabCursor: true,
-  slidesPerView:1,
+  slidesPerView: 1,
   overflow: 'hidden',
   loop: true,
   autoplay: {
@@ -135,13 +135,31 @@ let reviewCustomers = new Swiper(".swiper-container-store", {
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
-   
+
   },
- 
+
 
   navigation: {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
 });
+
+
+
+
+  var storeSwiper = new Swiper('.store-swiper', {
+    slidesPerView: 'auto', // or 1 for a single slide at a time
+    spaceBetween: 200,
   
+    autoplay: true,
+    centeredSlides:true,
+    loop: true,
+    navigation: {
+        nextEl: '.arrow1',
+        prevEl: '.arrow2',
+       
+    },
+
+});
+

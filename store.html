@@ -147,9 +147,38 @@
     </div>
     <section style="padding-top: 2.5em;">
         <div class="flex eq wrap gap-2 ">
-            <div style="min-width: 320px;">
-                <div class="flex center middle ">
-                    <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 60%;">
+            <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="width: 60%;">
+                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    </div>
+                    <div class="swiper-slide" style="width: 60%;">
+                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    </div>
+                    <div class="swiper-slide" style="width: 60%;">
+                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    </div>
+                    <div class="swiper-slide" style="width: 60%;">
+                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    </div>
+                </div>
+                <div class="flex between">
+                    <div class="arrow1 flex middle center"
+                        style="position:absolute;top:15.5em;left:0;cursor:pointer;z-index:10;padding:0.3em;background:var(--primary-color);border-radius:50%">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-left" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                        </svg>
+                    </div>
+                    <div class="arrow2 flex middle center"
+                        style="position:absolute;top:15.5em;right:0;cursor:pointer;z-index:10; padding:0.3em;background:var(--primary-color);border-radius:50%">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-chevron-right" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd"
+                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                        </svg>
+                    </div>
                 </div>
             </div>
 
@@ -275,21 +304,201 @@
                     </svg>
                 </button>
                 <div class="flex gap-s p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1.5em" height="1.5em" fill="currentColor" role="presentation"  class="r-1y7inbv"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"></path></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1.5em" height="1.5em"
+                        fill="currentColor" role="presentation" class="r-1y7inbv">
+                        <path
+                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                        </path>
+                    </svg>
                     <div class="flex column">
-                    <h4>15-Day Money Back Guarantee</h4>
-                    <p>Hassle-free returns & exchanges</p>
+                        <h4>15-Day Money Back Guarantee</h4>
+                        <p>Hassle-free returns & exchanges</p>
                     </div>
                 </div>
-                
+
             </div>
         </div>
     </section>
+    <style>
+        .card-store {
 
 
+            transition: all 0.2s;
+            position: relative;
+            cursor: pointer;
+            width: 400px;
+            height: auto;
+            border-radius: 1em;
+            padding: 1.5em;
+            height: 120px;
+            overflow: hidden;
+            background-color: var(--bg-color);
 
+        }
 
+        .card-inner {
+            padding: 1em;
+            height: 85px;
+            background: rgba(255, 255, 255, .05);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+            backdrop-filter: blur(10px);
+            border-radius: 8px;
+        }
 
+        .card-store:hover {
+            transform: scale(1.04) rotate(1deg);
+        }
+
+        .circle {
+            width: 80px;
+            height: 80px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            animation: move-up6 2s ease-in infinite alternate-reverse;
+        }
+
+        .circle:nth-child(1) {
+            top: -25px;
+            left: -25px;
+        }
+
+        .circle:nth-child(2) {
+            bottom: -25px;
+            right: -25px;
+            animation-name: move-down1;
+        }
+
+        @keyframes move-up6 {
+            to {
+                transform: translateY(-10px);
+            }
+        }
+
+        @keyframes move-down1 {
+            to {
+                transform: translateY(10px);
+            }
+        }
+    </style>
+    <div class="grey-section">
+        <section class="flex column center gap">
+            <div class="title-1 text-center">Wooried about your Car?</div>
+            <div class="flex gap-2 middle center wrap" style="margin-top: 2.5em;">
+                <div class="card-store">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="card-inner text-center flex middle" style="font-size:1em;font-weight:600">
+                        Wrong parking often leads to flat tires, scratches, broken mirror
+                    </div>
+                </div>
+                <div class="card-store">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="card-inner text-center flex middle" style="font-size:1em;font-weight:600">
+                        Road Rage – Wrong Parking have lead to unnecessary and avoidable disputes
+                    </div>
+                </div>
+                <div class="card-store">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="card-inner text-center flex middle" style="font-size:1em;font-weight:600">
+                        Traffic Angle : Traffic policemen tow vehicles leaving the car owner wondering as to where the
+                        vehicle was towed to.
+                    </div>
+                </div>
+                <div class="card-store">
+                    <div class="circle"></div>
+                    <div class="circle"></div>
+                    <div class="card-inner text-center flex middle" style="font-size:1em;font-weight:600">
+                        Community inconvenience – Wrong parking results in general inconvenience to entire community
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <style>
+        .card-unique {
+            border-radius: 0.5rem;
+            overflow: hidden;
+            position: relative;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            padding-bottom: 1em;
+        }
+
+        .card-unique:hover {
+            filter: brightness(90%);
+        }
+
+        .line {
+            height: 2px;
+            width: 100%;
+            background: linear-gradient(to right, var(--primary-color), transparent);
+            position: absolute;
+            bottom: 0;
+        }
+
+        .gradient-line {
+            height: 2px;
+            width: 70%;
+            background: linear-gradient(to right, var(--primary-color), #c5c4c4);
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: width 0.3s ease, background 0.3s ease;
+        }
+
+        .card-unique:hover .gradient-line {
+            width: 100%;
+            background: linear-gradient(to right, var(--primary-color), #c5c4c4);
+        }
+    </style>
+    <section class="about-product flex eq wrap between middle center gap-2" id="About">
+        <div class="flex column gap-1" style="min-width: 300px;">
+            <div class="title-1">Benifits of Car connect</div>
+            <div class="card-unique" style="font-size:1.2em; line-height:1.2em;">
+                <p>
+                    With CarConnect QR, passersby can send you a
+                    direct call or message if your car is parked incorrectly
+                    or in case of any issue with your car.
+                    Get alerts on your mobile and solve the issue immediately</p>
+                <div class="line"></div>
+                <div class="gradient-line"></div>
+            </div>
+            <button class="button" style="font-size: 0.8em;">Get CarConnect and park worry-free!"</button>
+        </div>
+        <div class="flex middle center" style="min-width: 300px;" data-aos="fade-up">
+            <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 50%;">
+        </div>
+    </section>
+    <hr>
+
+    <section class="flex column center gap-2">
+        <div class="title-1 text-center">How it works?</div>
+        <video src="/assets/img/sample1.mp4" autoplay muted loop></video>
+    </section>
+    <div class="grey-section">
+    <section class="about-product flex eq wrap between middle center gap-2" id="About">
+       
+        <div class="flex middle center" style="min-width: 300px;" data-aos="fade-up">
+            <img src="/assets/img/download-img.webp" alt="" style="max-width: 80%;">
+        </div>
+        <div class="flex column gap-1" style="min-width: 300px;">
+            <div class="title-1">EMERGENCY SOS CONTACT   </div>
+            <div class="card-unique flex column gap" style="font-size:1.2em; line-height:1.2em;">
+                <p>
+                    Direct Emergency Connection: With CarConnect, choose your emergency  contact in the app for critical situations. First Responders can call your emergency contact to inform them and mobilize the exact help you need without delay.</p>
+                    <p>Stay Safe, Stay Connected</p>
+                    <p>With CarConnect, safety is not just a feature; it's our promise. Activate your Emergency SOS Contact today and drive with confidence.</p>
+                <div class="line"></div>
+                <div class="gradient-line"></div>
+            </div>
+            <button class="button" style="font-size: 0.8em;">Set Up Your Emergency Contact Now</button>
+        </div>
+    </section>
+</div>
     <div class="grey-section flex column middle gap-2">
         <section class="footer flex between gap-2 eq wrap">
             <div class="flex column gap" style="color: var(--text-color); min-width:300px">

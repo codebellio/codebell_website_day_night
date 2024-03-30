@@ -129,3 +129,15 @@ var reviewCustomers = new Swiper(".swiper-container-store", {
     prevEl: ".swiper-button-prev"
   }
 });
+var storeSwiper = new Swiper('.store-swiper', {
+  slidesPerView: 'auto',
+  // or 1 for a single slide at a time
+  spaceBetween: 200,
+  autoplay: true,
+  centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: '.arrow1',
+    prevEl: '.arrow2'
+  }
+});
