@@ -2003,7 +2003,7 @@ th.header {
     }
 
     .store-button {
-        font-size: 1em;
+        font-size: 0.8em;
         font-weight: 700;
     }
 
@@ -2013,5 +2013,11 @@ th.header {
     }
     .column-reverse .w-full-sm{
         width: 100% !important;
+    }
+}
+@media screen and (max-width:1080px) {
+    .store-button {
+        font-size: 0.8em;
+        font-weight: 700;
     }
 }
