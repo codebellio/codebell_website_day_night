@@ -128,16 +128,56 @@ var reviewCustomers = new Swiper(".swiper-container-store", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev"
   }
-});
+}); //   var storeSwiper = new Swiper('.store-swiper', {
+//     slidesPerView: 'auto', // or 1 for a single slide at a time
+//     spaceBetween: 200,
+//     centeredSlides:true,
+//     loop: true,
+//     navigation: {
+//         nextEl: '.arrow1',
+//         prevEl: '.arrow2',
+//     },
+// });
+
 var storeSwiper = new Swiper('.store-swiper', {
   slidesPerView: 'auto',
-  // or 1 for a single slide at a time
   spaceBetween: 200,
-  autoplay: true,
   centeredSlides: true,
   loop: true,
   navigation: {
     nextEl: '.arrow1',
     prevEl: '.arrow2'
+  },
+  on: {
+    transitionStart: function transitionStart() {
+      var activeIndex = this.realIndex;
+      updateActiveMiniImage(activeIndex);
+      console.log(activeIndex);
+    }
   }
+}); // Add click event listener to mini-img elements
+
+document.querySelectorAll('.mini-img').forEach(function (el) {
+  el.addEventListener('click', function () {
+    var index = parseInt(this.getAttribute('data-index'));
+    storeSwiper.slideTo(index - 1);
+    updateActiveMiniImage(index);
+    console.log(index);
+  });
+}); // Add click event listener to arrow buttons
+
+document.querySelector('.arrow1').addEventListener('click', function () {
+  storeSwiper.slidePrev();
+  updateActiveMiniImage(storeSwiper.realIndex);
 });
+document.querySelector('.arrow2').addEventListener('click', function () {
+  storeSwiper.slideNext();
+  updateActiveMiniImage(storeSwiper.realIndex);
+}); // Function to update active mini-image
+
+function updateActiveMiniImage(index) {
+  document.querySelectorAll('.mini-img').forEach(function (el) {
+    el.classList.remove('active-img');
+  });
+  document.querySelector('.mini-img[data-index="' + index + '"]').classList.add('active-img');
+}

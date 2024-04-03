@@ -18,6 +18,7 @@
     --box-shadow: 0 2px 28px 0 rgb(0, 0, 0, 0.09);
     --transition: 0.5s;
     --hero-text: hsla(0, 0%, 0%, 0.09);
+    --sub-font:20px;
 }
 
 .dark {
@@ -33,6 +34,7 @@
     --message-text-bg: rgba(160, 159, 161, 0.1);
     --transition: 0.5s;
     --hero-text: rgba(255, 255, 255, 0.2);
+    
 
 }
 
@@ -326,7 +328,12 @@ li {
     scale: 1.1;
 
 }
-
+.button.outline{
+    background: none;
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+    
+}
 /* hero section */
 .hero {
     height: 720px;
@@ -1983,7 +1990,7 @@ th.header {
 }
 
 .store-button {
-    font-size: 1.5em;
+    font-size: 1.2em;
     font-weight: 700;
 }
 

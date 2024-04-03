@@ -147,21 +147,78 @@
             </div>
         </div>
     </div>
+    <style>
+        .main-wrapper {
+            height: 60%;
+        }
+        .main-img {
+            width: 50%;
+            display: flex;
+            align-self:center;
+        }
+        .main-img.main-video{
+            width: 80%;
+            height: 100%;
+            display: flex;
+            align-self:center;
+        }
+        .mini-img {
+            width: 80px;
+            height: 80px;
+            margin: 0;
+            padding: 0.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid var(--border-color);
+            border-radius: 0.5em;
+            opacity: 0.5;
+        }
+        .mini-img.active-img {
+            border: 2px solid var(--primary-color);
+            opacity: 1;
+        }
+
+        @media screen and (max-width:768px) {
+            .main-wrapper {
+                height: 100%;
+            }
+
+            .main-img {
+                width: 80%;
+            }
+            .main-img.main-video{
+                width: 100%;
+                height: 100%;
+                display: flex;
+                align-self:center;
+            }
+            .mini-img {
+                border-radius: 0.5em;
+                width: 60px;
+                height: 60px;
+                margin: 0;
+                cursor: pointer;
+                z-index: 10000;
+
+            }
+        }
+    </style>
     <section style="padding-top: 2.5em;">
         <div class="flex eq wrap gap-2 ">
             <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide" style="width: 60%;">
-                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                <div class="swiper-wrapper main-wrapper">
+                    <div class="swiper-slide main-img">
+                        <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 100%;height:auto">
                     </div>
-                    <div class="swiper-slide" style="width: 60%;">
-                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    <div class="swiper-slide main-img main-video flex middle center">
+                        <video autoplay loop muted controls src="/assets/img/sample.mp4"></video>
                     </div>
-                    <div class="swiper-slide" style="width: 60%;">
-                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    <div class="swiper-slide main-img">
+                        <img src="/assets/img/codebell_standard.webp" alt="" style="max-width: 100%;height:auto">
                     </div>
-                    <div class="swiper-slide" style="width: 60%;">
-                        <img src="/assets/newimage/car_connect_india1.png" alt="" style="max-width: 100%;height:auto">
+                    <div class="swiper-slide main-img">
+                        <img src="/assets/newimage/car_connect_world1.png" alt="" style="max-width: 100%;height:auto">
                     </div>
                 </div>
                 <div class="flex between">
@@ -182,143 +239,102 @@
                         </svg>
                     </div>
                 </div>
+                <div class="flex gap-1" style="margin-top: 1.5em;">
+                    <div class="mini-img active-img" data-index="0">
+                        <img src="/assets/newimage/doorbell_global1.png" alt="">
+                    </div>
+                    <div class="mini-img" data-index="1">
+                        <video src="/assets/img/sample.mp4"></video>
+                    </div>
+                    <div class="mini-img" data-index="2">
+                        <img src="/assets/img/codebell_standard.webp" alt="">
+                    </div>
+                    <div class="mini-img" data-index="3">
+                        <img src="/assets/newimage/car_connect_world1.png" alt="">
+                    </div>
+                </div>
             </div>
+       
 
-            <div class="flex column gap " style="min-width: 320px; ">
-                <div class="flex middle gap">
-                    <div class="flex middle">
-                        <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            width="1em" height="1em" fill="currentColor" role="presentation"
-                            style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                            </path>
-                        </svg>
-                        <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            width="1em" height="1em" fill="currentColor" role="presentation"
-                            style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                            </path>
-                        </svg>
-                        <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            width="1em" height="1em" fill="currentColor" role="presentation"
-                            style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                            </path>
-                        </svg>
-                        <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            width="1em" height="1em" fill="currentColor" role="presentation"
-                            style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                            </path>
-                        </svg>
-                        <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
-                            width="1em" height="1em" fill="currentColor" role="presentation"
-                            style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
-                            <path
-                                d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
-                            </path>
-                        </svg>
-                    </div>
-                    <p style="text-decoration: underline;">270+ Ratings & Reviews</p>
-                </div>
-                <div class="flex column">
-                    <div class="title-1">CarConnect Smart Car Intercom </div>
-                    <p>Stay in Touch with Your Vehicle from anywhere, anytime.</p>
-                </div>
-                <ul class="flex column gap"
-                    style="margin-left: 1em;border-bottom:1px solid var(--border-color); padding-bottom:1.5em; ">
-                    <li style="list-style:disc;">Receive Calls for your car related issues</li>
-                    <li style="list-style:disc;">Phone number not shared between parties</li>
-                    <li style="list-style:disc;">No App required by 3rd party for calling</li>
-                    <li style="list-style:disc;">Protects your car from unnecessary damages</li>
-                    <li style="list-style:disc;">Contribute to more organized, safer streets</li>
-                </ul>
-                <h4>Combo offer</h4>
-                <div class="p-1 border rounded ">
-                    <div class="flex between">
-                        <div class="flex column">
-                            <h4>Codebell Standard</h4>
-                            <p>3 PAIR</p>
-                        </div>
-                        <div class="flex column store-product">
-                            <h5
-                                style=" padding:0.5em 0.8em;background:var(--primary-color);border-radius:1em; font-size:0.65em; font-weight:700;color:#ffffff;width:fit-content;margin:auto">
-                                SAVING ₹100</h5>
-                            <div class="flex middle gap-s">
-                                <h4 style="text-decoration:line-through;color:rgb(198, 31, 31)">₹499</h4>
-                                <h1 style="font-size: 1.8em;">399 <span style="font-size: 0.7em;">/-</span></h1>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="p-1 border rounded ">
-                    <div class="flex between">
-                        <div class="flex column store-prod-name" style="position:relative">
-                            <p
-                                style="position: absolute; top:-50%; padding:0.1em 0.8em;background:var(--primary-color);border-radius:1em; font-size:0.65em; font-weight:700;color:#ffffff;">
-                                Most Popular</p>
-                            <h4>Codebell Business</h4>
-                            <p>2 PAIR</p>
-                        </div>
-                        <div class="flex column store-product">
-                            <h5
-                                style=" padding:0.5em 0.8em;background:var(--primary-color);border-radius:1em; font-size:0.65em; font-weight:700;color:#ffffff;width:fit-content;margin:auto">
-                                SAVING ₹150</h5>
-                            <div class="flex middle gap-s">
-                                <h4 style="text-decoration:line-through;color:rgb(198, 31, 31)">₹699</h4>
-                                <h1 style="font-size: 1.8em;">549 <span style="font-size: 0.7em;">/-</span></h1>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="p-1 border rounded ">
-                    <div class="flex between">
-                        <div class="flex column store-prod-name" style="position:relative">
-                            <p
-                                style="position: absolute; top:-50%; padding:0.1em 0.8em;background:var(--primary-color);border-radius:1em; font-size:0.65em; font-weight:700;color:#ffffff;">
-                                Best Value</p>
-                            <h4>Codebell Business</h4>
-                            <p>1 PAIR</p>
-                        </div>
-                        <div class="flex column store-product">
-                            <h5
-                                style=" padding:0.5em 0.8em;background:var(--primary-color);border-radius:1em; font-size:0.65em; font-weight:700;color:#ffffff;width:fit-content;margin:auto">
-                                SAVING ₹200</h5>
-                            <div class="flex middle gap-s">
-                                <h4 style="text-decoration:line-through;color:rgb(198, 31, 31)">₹899</h4>
-                                <h1 style="font-size: 1.8em;">699 <span style="font-size: 0.7em;">/-</span></h1>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-
-                <button class="button flex middle  gap-s store-button">ADD TO CART
-                    <svg class="flex middle center" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
-                        fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+        <div class="flex column gap " style="min-width: 320px; ">
+            <div class="flex middle gap">
+                <div class="flex middle">
+                    <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        width="1em" height="1em" fill="currentColor" role="presentation"
+                        style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
                         <path
-                            d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
-                    </svg>
-                </button>
-                <div class="flex gap-s p-1">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1.5em" height="1.5em"
-                        fill="currentColor" role="presentation" class="r-1y7inbv">
-                        <path
-                            d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
                         </path>
                     </svg>
-                    <div class="flex column">
-                        <h4>15-Day Money Back Guarantee</h4>
-                        <p>Hassle-free returns & exchanges</p>
-                    </div>
+                    <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        width="1em" height="1em" fill="currentColor" role="presentation"
+                        style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                        </path>
+                    </svg>
+                    <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        width="1em" height="1em" fill="currentColor" role="presentation"
+                        style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                        </path>
+                    </svg>
+                    <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        width="1em" height="1em" fill="currentColor" role="presentation"
+                        style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                        </path>
+                    </svg>
+                    <svg style="color: rgb(255, 200, 0);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"
+                        width="1em" height="1em" fill="currentColor" role="presentation"
+                        style="width:var(--rsw, 100%);height:100%" class="r-frlqt7">
+                        <path
+                            d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z">
+                        </path>
+                    </svg>
                 </div>
-
+                <p style="text-decoration: underline;">270+ Ratings & Reviews</p>
             </div>
+            <div class="flex column">
+                <div class="title-1">CarConnect Smart Car Intercom </div>
+                <p>Stay in Touch with Your Vehicle from anywhere, anytime.</p>
+            </div>
+            <ul class="flex column gap"
+                style="margin-left: 1em;border-bottom:1px solid var(--border-color); padding-bottom:1.5em; ">
+                <li style="list-style:disc;">Receive Calls for your car related issues</li>
+                <li style="list-style:disc;">Phone number not shared between parties</li>
+                <li style="list-style:disc;">No App required by 3rd party for calling</li>
+                <li style="list-style:disc;">Protects your car from unnecessary damages</li>
+                <li style="list-style:disc;">Contribute to more organized, safer streets</li>
+            </ul>
+            <h4>Select Size</h4>
+            <div class="flex middle gap-1">
+                <button class="button">Regular</button>
+                <button class="button outline">Small</button>
+            </div>
+            <button class="button flex middle  gap-s store-button">ADD TO CART
+                <svg class="flex middle center" xmlns="http://www.w3.org/2000/svg" width="22" height="22"
+                    fill="currentColor" class="bi bi-cart2" viewBox="0 0 16 16">
+                    <path
+                        d="M0 2.5A.5.5 0 0 1 .5 2H2a.5.5 0 0 1 .485.379L2.89 4H14.5a.5.5 0 0 1 .485.621l-1.5 6A.5.5 0 0 1 13 11H4a.5.5 0 0 1-.485-.379L1.61 3H.5a.5.5 0 0 1-.5-.5M3.14 5l1.25 5h8.22l1.25-5zM5 13a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0m9-1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m-2 1a2 2 0 1 1 4 0 2 2 0 0 1-4 0" />
+                </svg>
+            </button>
+            <div class="flex gap-s p-1">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1.5em" height="1.5em"
+                    fill="currentColor" role="presentation" class="r-1y7inbv">
+                    <path
+                        d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z">
+                    </path>
+                </svg>
+                <div class="flex column">
+                    <h4>15-Day Money Back Guarantee</h4>
+                    <p>Hassle-free returns & exchanges</p>
+                </div>
+            </div>
+
+        </div>
         </div>
     </section>
     <style>
@@ -389,41 +405,45 @@
                 <div class="card-store">
                     <div class="circle"></div>
                     <div class="circle"></div>
-                    
-                    <div class="card-inner text-center flex column gap middle" >
+
+                    <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/damage.png" alt="" style="max-width: 30%;">
-                        <p style="font-size:1.5em;font-weight:600">Car Damage</p>
-                        <p>Parking in the wrong spot can lead to nasty surprises like flat tires, scratches, and broken mirrors. Don't let a simple mistake end up costing you big time.
+                        <p style="font-size:var(--sub-font);font-weight:600">Car Damage</p>
+                        <p>Parking in the wrong spot can lead to nasty surprises like flat tires, scratches, and broken
+                            mirrors. Don't let a simple mistake end up costing you big time.
                         </p>
                     </div>
                 </div>
                 <div class="card-store">
                     <div class="circle"></div>
                     <div class="circle"></div>
-                    <div class="card-inner text-center flex column gap middle" >
+                    <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/drama-removebg-preview.png" alt="" style="max-width: 30%;">
-                        <p style="font-size:1.5em;font-weight:600"> Road Rage Drama</p>
-                        <p>Ever had a parking mishap turn into a shouting match? It happens more often than you'd think. Avoid unnecessary stress and keep the peace by parking right. </p>
+                        <p style="font-size:var(--sub-font);font-weight:600"> Road Rage Drama</p>
+                        <p>Ever had a parking mishap turn into a shouting match? It happens more often than you'd think.
+                            Avoid unnecessary stress and keep the peace by parking right. </p>
                     </div>
                 </div>
                 <div class="card-store">
                     <div class="circle"></div>
                     <div class="circle"></div>
-                    
-                    <div class="card-inner text-center flex column gap middle" >
+
+                    <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/towel.png" alt="" style="max-width: 30%;">
-                        <p style="font-size:1.5em;font-weight:600">Towing Troubles</p>
-                        <p>You know that sinking feeling when you realize your car's been towed? It's even worse not knowing where it's gone! Don't get left in the dark – stay in control of your wheels.  </p>
+                        <p style="font-size:var(--sub-font);font-weight:600">Towing Troubles</p>
+                        <p>You know that sinking feeling when you realize your car's been towed? It's even worse not
+                            knowing where it's gone! Don't get left in the dark – stay in control of your wheels. </p>
                     </div>
                 </div>
                 <div class="card-store">
                     <div class="circle"></div>
                     <div class="circle"></div>
-                    
-                    <div class="card-inner text-center flex column gap middle" >
+
+                    <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/chaos.png" alt="" style="max-width: 30%; border-radius:50%">
-                        <p style="font-size:1.5em;font-weight:600">Community Chaos</p>
-                        <p>Bad parking isn't just about you; it affects everyone around. Keep the streets flowing smoothly and neighbors happy by parking responsibly.
+                        <p style="font-size:var(--sub-font);font-weight:600">Community Chaos</p>
+                        <p>Bad parking isn't just about you; it affects everyone around. Keep the streets flowing
+                            smoothly and neighbors happy by parking responsibly.
                         </p>
                     </div>
                 </div>
@@ -471,7 +491,7 @@
     <section class="about-product flex eq wrap between middle center gap-2" id="About">
         <div class="flex column gap-1" style="min-width: 300px;">
             <div class="title-1">Benifits of Car connect</div>
-            <div class="card-unique" style="font-size:1.2em; line-height:1.2em;">
+            <div class="card-unique" style=" line-height:1.2em;">
                 <p>
                     With CarConnect QR, passersby can send you a
                     direct call or message if your car is parked incorrectly
@@ -507,7 +527,7 @@
             </div>
             <div class="flex column gap-1" style="min-width: 300px;">
                 <div class="title-1">EMERGENCY SOS CONTACT </div>
-                <div class="card-unique flex column gap" style="font-size:1.2em; line-height:1.2em;">
+                <div class="card-unique flex column gap" style=" line-height:1.2em;">
                     <p>
                         Direct Emergency Connection: With CarConnect, choose your emergency contact in the app for
                         critical situations. First Responders can call your emergency contact to inform them and
@@ -534,7 +554,7 @@
         <div class="title-1 text-center">Features</div>
         <div class="flex eq wrap between middle center gap-2" style="margin-top: 2.5em;">
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
-                <p style="font-size: 1.5em;font-weight:700">No App required by visitors
+                <p style="font-size:var(--sub-font);font-weight:700">No App required by visitors
                 </p>
                 <p>Forget about downloading yet another app. With CarConnect, simplicity is key. Visitors can use any QR
                     scanner or camera to access the features, making it hassle-free and accessible for everyone.
@@ -550,7 +570,7 @@
                 <img src="/assets/img/download-img.webp" alt="" style="max-width: 60%;">
             </div>
             <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
-                <p style="font-size: 1.5em;font-weight:700">Automatic Call Forwarding
+                <p style="font-size:var(--sub-font);font-weight:700">Automatic Call Forwarding
                 </p>
                 <p>Life doesn't stop when you're away from your phone. With CarConnect's call forwarding feature, you're
                     always connected. Calls are automatically redirected to pre-set devices, ensuring you never miss an
@@ -561,7 +581,7 @@
 
         <div class="flex eq wrap between middle center gap-2">
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
-                <p style="font-size: 1.5em;font-weight:700">Never Lose Your Car Again
+                <p style="font-size:var(--sub-font);font-weight:700">Never Lose Your Car Again
                 </p>
                 <p>We've all been there – wandering around aimlessly, trying to remember where we parked. With
                     CarConnect, those days are over. Simply scan the Codebell QR when you park your car, and voilà!
@@ -578,7 +598,7 @@
                 <img src="/assets/img/download-img.webp" alt="" style="max-width: 60%;">
             </div>
             <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
-                <p style="font-size: 1.5em;font-weight:700">Assign to Driver/Family Member
+                <p style="font-size:var(--sub-font);font-weight:700">Assign to Driver/Family Member
                 </p>
                 <p>Whether you have a trusted driver or rely on family members, CarConnect ensures seamless
                     communication with whoever is responsible for your vehicle. Easily assign the QR to your driver or
@@ -824,7 +844,7 @@
             <div class="flex column gap faq-store">
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             Is an app required by passerby, traffic police to use CarConnect?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -839,15 +859,17 @@
                     </div>
                     <div class="ans">
                         <p>
-                            No, an app is not required. CarConnect is designed to be user-friendly and accessible to everyone. You can use any QR scanner or camera-equipped device to interact with CarConnect.
+                            No, an app is not required. CarConnect is designed to be user-friendly and accessible to
+                            everyone. You can use any QR scanner or camera-equipped device to interact with CarConnect.
                         </p>
                     </div>
 
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
-                            Will I get notifications automatically if I have parked the vehicle in no parking or wrong parking?
+                        <div class="question">
+                            Will I get notifications automatically if I have parked the vehicle in no parking or wrong
+                            parking?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                             class="bi bi-plus-lg" viewBox="0 0 16 16">
@@ -861,14 +883,15 @@
                     </div>
                     <div class="ans">
                         <p>
-                            You will not be automatically notified of wrong parking. It is only when someone scans the CarConnect on your vehicle and calls you, you will be informed of the wrong parking.
+                            You will not be automatically notified of wrong parking. It is only when someone scans the
+                            CarConnect on your vehicle and calls you, you will be informed of the wrong parking.
                         </p>
                     </div>
 
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             Can I track the current location of my vehicle ?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -883,7 +906,8 @@
                     </div>
                     <div class="ans">
                         <p>
-                            No, you cannot track current location of your vehicle using CarConnect. Since it does not include a GPS tracker device, it cannot provide real time location updates.
+                            No, you cannot track current location of your vehicle using CarConnect. Since it does not
+                            include a GPS tracker device, it cannot provide real time location updates.
                         </p>
                     </div>
 
@@ -904,14 +928,16 @@
                     </div>
                     <div class="ans">
                         <p>
-                            With CarConnect's call forwarding feature, calls are automatically redirected to pre-set devices, ensuring you never miss an important call. Share your CarConnect QR with someone who can handle the issue in your absence.
+                            With CarConnect's call forwarding feature, calls are automatically redirected to pre-set
+                            devices, ensuring you never miss an important call. Share your CarConnect QR with someone
+                            who can handle the issue in your absence.
                         </p>
                     </div>
 
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             How does the Last Scan Location feature work?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -926,14 +952,16 @@
                     </div>
                     <div class="ans">
                         <p>
-                            The Last Scan Location feature helps you locate your parked car easily. Simply scan the Codebell QR when you park your car, and CarConnect will guide you back using live GPS location tracking.
+                            The Last Scan Location feature helps you locate your parked car easily. Simply scan the
+                            Codebell QR when you park your car, and CarConnect will guide you back using live GPS
+                            location tracking.
                         </p>
                     </div>
 
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
 
                             I don’t drive my Car, I have a driver. Can I assign CarConnect to my driver?
 
@@ -950,14 +978,16 @@
                     </div>
                     <div class="ans">
                         <p>
-                            Yes, absolutely! If you have a driver who handles your vehicle, you can easily assign the CarConnect QR to your driver’s mobile device. All calls related to your car will be directly received by the assigned driver.
+                            Yes, absolutely! If you have a driver who handles your vehicle, you can easily assign the
+                            CarConnect QR to your driver’s mobile device. All calls related to your car will be directly
+                            received by the assigned driver.
                         </p>
                     </div>
 
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             Is CarConnect compatible with all types of vehicles?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -972,13 +1002,15 @@
                     </div>
                     <div class="ans">
                         <p>
-                            Yes, CarConnect is compatible with all types of vehicles, regardless of make or model. Whether you drive a car, SUV, truck, or motorcycle, CarConnect offers seamless assistance and communication features.
+                            Yes, CarConnect is compatible with all types of vehicles, regardless of make or model.
+                            Whether you drive a car, SUV, truck, or motorcycle, CarConnect offers seamless assistance
+                            and communication features.
                         </p>
                     </div>
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             Is CarConnect secure?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -993,13 +1025,14 @@
                     </div>
                     <div class="ans">
                         <p>
-                            Yes, CarConnect prioritizes user security and privacy. Calls are encrypted, and no personal phone numbers are shared between the carowner and the caller.
+                            Yes, CarConnect prioritizes user security and privacy. Calls are encrypted, and no personal
+                            phone numbers are shared between the carowner and the caller.
                         </p>
                     </div>
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             I own multiple cars. Can I connect my phone to all my cars ?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -1014,13 +1047,14 @@
                     </div>
                     <div class="ans">
                         <p>
-                            Yes, you can connect as many CarConenct QRs to one single device. You will receive calls from different cars on your phone with distinct identifier for each call. 
+                            Yes, you can connect as many CarConenct QRs to one single device. You will receive calls
+                            from different cars on your phone with distinct identifier for each call.
                         </p>
                     </div>
                 </div>
                 <div class="question-box">
                     <div class="flex middle between " style="padding:1.5em; width: calc(100% - 3em);">
-                        <div class="question"> 
+                        <div class="question">
                             Is Geo-fencing applicable on CarConnect ?
                         </div>
                         <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
@@ -1035,12 +1069,13 @@
                     </div>
                     <div class="ans">
                         <p>
-                            No, geo-fencing is not applicable for CarConnect since car is a moving asset and keep changing location.                         </p>
+                            No, geo-fencing is not applicable for CarConnect since car is a moving asset and keep
+                            changing location. </p>
                     </div>
 
                 </div>
-         
-          
+
+
 
                 <div class="flex center">
                     <button class="button"> <a style="color: #ffffff;" href="faq.html" target="_blank">Read
