@@ -180,7 +180,10 @@
             border: 2px solid var(--primary-color);
             opacity: 1;
         }
+        .mini-img.mini-video video{
+            border-radius: 0.5em;
 
+        }
         @media screen and (max-width:768px) {
             .main-wrapper {
                 height: 100%;
@@ -212,16 +215,16 @@
         <div class="flex eq wrap gap-2 ">
             <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
                 <div class="swiper-wrapper main-wrapper">
-                    <div class="swiper-slide main-img" >
+                    <div class="swiper-slide main-img">
                         <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 100%;height:auto">
                     </div>
                     <div class="swiper-slide main-img main-video flex middle center" >
                         <video autoplay loop muted controls src="/assets/img/sample.mp4"></video>           
                              </div>
-                    <div class="swiper-slide main-img" >
+                    <div class="swiper-slide main-img">
                         <img src="/assets/img/codebell_standard.webp" alt="" style="max-width: 100%;height:auto">
                     </div>
-                    <div class="swiper-slide main-img" >
+                    <div class="swiper-slide main-img">
                         <img src="/assets/newimage/car_connect_world1.png" alt="" style="max-width: 100%;height:auto">
                     </div>
                 </div>
@@ -247,7 +250,7 @@
                     <div class="mini-img active-img" data-index="0">
                         <img src="/assets/newimage/doorbell_global1.png" alt="">
                     </div>
-                    <div class="mini-img" data-index="1">
+                    <div class="mini-img mini-video" data-index="1">
                         <video src="/assets/img/sample.mp4"></video>
                     </div>
                     <div class="mini-img" data-index="2">
@@ -258,7 +261,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="flex column gap " style="min-width: 320px; ">
                 <div class="flex middle gap">
                     <div class="flex middle">

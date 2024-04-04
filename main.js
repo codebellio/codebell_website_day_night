@@ -148,63 +148,41 @@ let reviewCustomers = new Swiper(".swiper-container-store", {
 
 
 
-//   var storeSwiper = new Swiper('.store-swiper', {
-//     slidesPerView: 'auto', // or 1 for a single slide at a time
-//     spaceBetween: 200,
-//     centeredSlides:true,
-//     loop: true,
-//     navigation: {
-//         nextEl: '.arrow1',
-//         prevEl: '.arrow2',
-       
-//     },
-
-// });
-
-var storeSwiper = new Swiper('.store-swiper', {
+var mainSwiper = new Swiper('.store-swiper', {
   slidesPerView: 'auto',
   spaceBetween: 200,
   centeredSlides: true,
-  loop: true,
-  navigation: {
-      nextEl: '.arrow1',
-      prevEl: '.arrow2',
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
   },
-  on: {
-      transitionStart: function() {
-          var activeIndex = this.realIndex;
-          updateActiveMiniImage(activeIndex);
-          console.log(activeIndex);
-      }
-  }
 });
 
-// Add click event listener to mini-img elements
-document.querySelectorAll('.mini-img').forEach(function(el) {
-  el.addEventListener('click', function() {
-      var index = parseInt(this.getAttribute('data-index'));
-      storeSwiper.slideTo(index - 1);
-      updateActiveMiniImage(index);
-      console.log(index);
+var miniImgs = document.querySelectorAll('.mini-img');
+miniImgs.forEach(function (miniImg, index) {
+  miniImg.addEventListener('click', function () {
+    mainSwiper.slideTo(index);
   });
 });
 
-// Add click event listener to arrow buttons
-document.querySelector('.arrow1').addEventListener('click', function() {
-  storeSwiper.slidePrev();
-  updateActiveMiniImage(storeSwiper.realIndex);
-});
-
-document.querySelector('.arrow2').addEventListener('click', function() {
-  storeSwiper.slideNext();
-  updateActiveMiniImage(storeSwiper.realIndex);
-});
-
-// Function to update active mini-image
-function updateActiveMiniImage(index) {
-  document.querySelectorAll('.mini-img').forEach(function(el) {
-      el.classList.remove('active-img');
+mainSwiper.on('slideChange', function () {
+  var activeIndex = mainSwiper.activeIndex;
+  miniImgs.forEach(function (miniImg, index) {
+    if (index === activeIndex) {
+      miniImg.classList.add('active-img');
+    } else {
+      miniImg.classList.remove('active-img');
+    }
   });
-  document.querySelector('.mini-img[data-index="' + index + '"]').classList.add('active-img');
-}
+});
 
+var arrow1 = document.querySelector('.arrow1');
+var arrow2 = document.querySelector('.arrow2');
+
+arrow1.addEventListener('click', function () {
+  mainSwiper.slidePrev();
+});
+
+arrow2.addEventListener('click', function () {
+  mainSwiper.slideNext();
+});
