@@ -157,35 +157,76 @@
             </div>
         </div>
     </div>
-<style>
-   
-  
-    @media screen and (max-width: 768px){
-        .hero .left p{
-            text-align: start;
-            font-size: 0.8em;
-            line-height: 1.2em;
+    <style>
+        @media screen and (max-width: 768px) {
+            .hero .left p {
+                text-align: start;
+                font-size: 0.8em;
+                line-height: 1.2em;
+            }
+
+            .hero .left h1 {
+                margin-top: 1em;
+                text-align: start;
+                line-height: 1.2em;
+            }
         }
-        .hero .left h1{
-            margin-top: 1em;
-            text-align: start;
-            line-height: 1.2em;
+        .hero {
+            height: 750px;
+            padding-top: 0;
+            padding-bottom: 0;
+            margin: auto;
         }
-    }
-</style>
+    </style>
     <!-- hero section -->
-    <div class="grey-section index-banner" id="Home">
+    <div class="grey-section index-banner" id="Home"> 
         <section class="hero flex eq wrap middle center between">
             <div class="left flex column gap" style="min-width: 300px;">
-                <h1 style="font-size:50px; color:#ffffff">Discover Codebell: Communication Beyond Numbers and Wires!
+                <h1 style="font-size:45px; color:#ffffff">Discover Codebell: Communication Beyond Numbers and Wires!
                 </h1>
-                <p style="color: #FFF;"> Keep Your Number Private: Stop sharing your personal number.</p>
-                <p style="color: #FFF;">Create and Customize Profiles for Anything: Business, personal, events.</p>
-                <p style="color: #FFF;">Profile-Specific Messaging: Receive messages in their specific profile.v
-                <p style="color: #FFF;">Your Personalized, Private Communication Platform</p>
+                <div class="flex column gap">
+                    <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
+                        <svg style="color:#fff" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-check2" viewBox="0 0 16 16">
+                            <path
+                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        <p style="max-width: 90%;color:#fff;font-weight:300;">Keep Your Number Private: Stop sharing your personal number.
+                        </p>
+                    </div>
+                    <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
+                        <svg style="color:#fff" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-check2" viewBox="0 0 16 16">
+                            <path
+                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        <p style="max-width: 90%; color:#fff;font-weight:300">Create and Customize Profiles for Anything: Business, personal, events.</p>
+                    </div>
+                    <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
+                        <svg style="color:#fff" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-check2" viewBox="0 0 16 16">
+                            <path
+                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        <p style="max-width: 90%;color:#fff;font-weight:300">Profile-Specific Messaging: Receive messages in their specific profile.
+                        </p>
+                    </div>
+                    <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
+                        <svg style="color:#fff;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
+                            class="bi bi-check2" viewBox="0 0 16 16">
+                            <path
+                                d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
+                        </svg>
+                        <p style="max-width: 90%;color:#fff;font-weight:300">Your Personalized, Private Communication Platform
+                        </p>
+                    </div>
+    
+                </div>
+
                 <a href="https://api.codebell.io/install" target="_blank"><button class="button hero-button"
                         style="margin-bottom: 1em;">Get Codebell Now </button></a>
             </div>
+
             <div class="right" style="min-width: 300px;margin-bottom:7em;z-index:5" id="indexs-img">
                 <img src="/assets/img/index-img.png" alt="">
                 <img src="/assets/img/index-pipe.png" alt="" style="max-width: 80%;">
@@ -201,9 +242,7 @@
                     data-aos-duration="300" data-aos-delay="700">
             </div>
         </section>
-        <img class="circle" src="/assets/img/circle.png" alt="" data-aos="zoom-in" data-aos-duration="800"
-            data-aos-delay="800">
-
+    
     </div>
 
     <style>
@@ -237,46 +276,50 @@
             z-index: -50;
         }
     </style>
-    <div style="position: relative;">
+    <div style="position: relative;padding-bottom:2em">
         <div class="pattern"></div>
         <div class="blur-container">
             <div class="blur-ball"></div>
         </div>
         <section class="flex column middle gap-1 text-center gets-now" style="z-index:5;">
 
-         <div class="title-1">Introducing Codebell</div>
+            <div class="title-1">Introducing Codebell</div>
             <div class="title-2" style="font-weight:600">The Next-Gen Communication Platform for an Always-On World.
 
             </div>
-            <p class="title-2">Codebell revolutionizes how we connect—without sharing your number. Text, call, or video chat across tailored profiles for work, play, and everything in between. Keep conversations perfectly organized and your privacy untouched. Simple, secure, and versatile communication is here. Welcome to the future of connection.</p>
+            <p class="title-2">Codebell revolutionizes how we connect—without sharing your number. Text, call, or video
+                chat across tailored profiles for work, play, and everything in between. Keep conversations perfectly
+                organized and your privacy untouched. Simple, secure, and versatile communication is here. Welcome to
+                the future of connection.</p>
         </section>
     </div>
     <hr>
     <div class="grey-section">
-    <section class="flex eq middle  wrap center gap-2">
+        <section class="flex eq middle  wrap center gap-2">
 
-        <div class=" flex column  gap-2" style="min-width:300px">
-            <div class="title-1">Quick Connect with Codebell</div>
-            <p>
-                Share your Codebell ID or show your QR code to connect instantly.
-                No personal numbers, just easy, secure communication.
-                Your connection, your control.
+            <div class=" flex column  gap-2" style="min-width:300px">
+                <div class="title-1">Quick Connect with Codebell</div>
+                <p>
+                    Share your Codebell ID or show your QR code to connect instantly.
+                    No personal numbers, just easy, secure communication.
+                    Your connection, your control.
 
-            </p>
-            <p>Anyone can communicate with you by scanning your QR using Smartphone Camera No need for downloading
-                Codebell App. Works wonder for one time communications needs while maintaining privacy.</p>
+                </p>
+                <p>Anyone can communicate with you by scanning your QR using Smartphone Camera No need for downloading
+                    Codebell App. Works wonder for one time communications needs while maintaining privacy.</p>
 
-        </div>
-        <div class="flex center middle" style="min-width:300px">
-            <!-- <video src="/assets/img/sample1.mp4" autoplay muted loop></video> -->
-            <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 50%;">
-        </div>
-    </section>
+            </div>
+            <div class="flex center middle" style="min-width:300px">
+                <!-- <video src="/assets/img/sample1.mp4" autoplay muted loop></video> -->
+                <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 50%;">
+            </div>
+        </section>
     </div>
     <!-- product feature  -->
     <section class="about-product flex column gap-2" id="About">
         <div class="title-1 text-center">Features</div>
-        <div class="title-2 text-center">Codebell brings your all your communication together in one place, making every interaction effortlessly clear and purposeful.
+        <div class="title-2 text-center">Codebell brings your all your communication together in one place, making every
+            interaction effortlessly clear and purposeful.
         </div>
         <div class="flex eq wrap between middle center gap-2" style="margin-top: 2.5em;">
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
@@ -297,7 +340,8 @@
             <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
                 <p style="font-size:var(--sub-font);;font-weight:700">Personalized for You
                 </p>
-                <p>Customize each profile to suit your style and requirements. Different profile pictures for different Codebells? Absolutely. You're unique, and your communication tools should be too.
+                <p>Customize each profile to suit your style and requirements. Different profile pictures for different
+                    Codebells? Absolutely. You're unique, and your communication tools should be too.
                 </p>
             </div>
         </div>
@@ -305,7 +349,8 @@
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
                 <p style="font-size:var(--sub-font);;font-weight:700">Seamlessly Switch
                 </p>
-                <p>Glide between profiles without missing a beat. Keeps your chats organized and your mind clear. With Codebell, you always know the context at a glance.
+                <p>Glide between profiles without missing a beat. Keeps your chats organized and your mind clear. With
+                    Codebell, you always know the context at a glance.
                 </p>
             </div>
             <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
@@ -321,14 +366,16 @@
             <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
                 <p style="font-size:var(--sub-font);;font-weight:700">No Limits
                 </p>
-                <p>Craft as many profiles as your life requires —there's no cap. Whether it's for a new project, hobby, or phase of life, generate unlimited Codebells.   </p>
+                <p>Craft as many profiles as your life requires —there's no cap. Whether it's for a new project, hobby,
+                    or phase of life, generate unlimited Codebells. </p>
             </div>
         </div>
         <div class="flex eq wrap between middle center gap-2">
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
                 <p style="font-size:var(--sub-font);;font-weight:700">Flexible Communication
                 </p>
-                <p>Done with dating or wrapping up an event? Delete that Codebell and move on. Or keep the ones that still fit your life. It's all about staying in sync with your current needs.   </p>
+                <p>Done with dating or wrapping up an event? Delete that Codebell and move on. Or keep the ones that
+                    still fit your life. It's all about staying in sync with your current needs. </p>
             </div>
             <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
                 <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
@@ -338,12 +385,13 @@
 
     <section class="about-product flex column gap-2" id="About">
         <div class="title-1 text-center">Codebell: Guarding Your Privacy</div>
-        <div class="title-2 text-center">Experience the privacy-first approach of Codebell, where your communication is both seamless and secure:  </div>
+        <div class="title-2 text-center">Experience the privacy-first approach of Codebell, where your communication is
+            both seamless and secure</div>
         <div class="flex eq wrap between middle center gap-2" style="margin-top: 2.5em;">
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
                 <p style="font-size:var(--sub-font);;font-weight:700">No Need for Phone Numbers
                 </p>
-                <p>Eliminate the risk by using Codebell IDs instead of personal numbers for every interaction.  </p>
+                <p>Eliminate the risk by using Codebell IDs instead of personal numbers for every interaction. </p>
             </div>
             <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
                 <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
@@ -357,14 +405,16 @@
             <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
                 <p style="font-size:var(--sub-font);;font-weight:700">Custom Profiles for Every Aspect
                 </p>
-                <p>Organize your life into distinct profiles—personal, work, dating, freelancing—keeping each aspect separate and secure.    </p>
+                <p>Organize your life into distinct profiles—personal, work, dating, freelancing—keeping each aspect
+                    separate and secure. </p>
             </div>
         </div>
         <div class="flex eq wrap between middle center gap-2">
             <div class="flex column gap-1 card-unique" style="min-width: 300px;">
                 <p style="font-size:var(--sub-font);;font-weight:700">Avoid Awkward Notifications
                 </p>
-                <p>With Codebell, notifications never reveal their context. Whether it’s for business or personal, only you know what each message means, keeping your communication as private as you are. </p>
+                <p>With Codebell, notifications never reveal their context. Whether it’s for business or personal, only
+                    you know what each message means, keeping your communication as private as you are. </p>
             </div>
             <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
                 <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
@@ -379,16 +429,69 @@
             <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
                 <p style="font-size:var(--sub-font);;font-weight:700">Codebell is more than a messaging app
                 </p>
-                <p>It's a commitment to your privacy and security, redefining how we think about digital communication. </p>
+                <p>It's a commitment to your privacy and security, redefining how we think about digital communication.
+                </p>
             </div>
         </div>
-      
+
+    </section>
+
+    <section class="about-product flex column gap-2" id="About">
+        <div class="title-1 text-center">Value-Added Features Enhancing Communication Efficiency</div>
+        <div class="title-2 text-center">Codebell not only provides secure and context-aware communication but also
+            enhances efficiency through value-added features that streamline interactions</div>
+        <div class="flex eq wrap between middle center gap-2" style="margin-top: 2.5em;">
+            <div class="flex column gap-1 card-unique" style="min-width: 300px;">
+                <p style="font-size:var(--sub-font);;font-weight:700">Live Preview
+                </p>
+                <p>With live preview, users can gain insights into who’s calling before answering, ensuring they're
+                    prepared for the conversation. </p>
+            </div>
+            <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
+                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
+            </div>
+        </div>
+        <div class="flex  between middle center gap-2 column-reverse">
+            <div class="flex middle center w-full-sm" id="about-img" style="min-width: 300px;width:50%"
+                data-aos="fade-up">
+                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
+            </div>
+            <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
+                <p style="font-size:var(--sub-font);;font-weight:700">Geofencing
+                </p>
+                <p>Users can set up geofencing for specific profiles, ensuring that interactions are initiated only when
+                    the caller is physically present at a designated location. </p>
+            </div>
+        </div>
+        <div class="flex eq wrap between middle center gap-2">
+            <div class="flex column gap-1 card-unique" style="min-width: 300px;">
+                <p style="font-size:var(--sub-font);;font-weight:700">Call Forwarding
+                </p>
+                <p>Codebell's call forwarding feature enables users to redirect calls to another number or device,
+                    ensuring that important conversations are never missed. </p>
+            </div>
+            <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
+                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
+            </div>
+        </div>
+
+        <div class="flex  between middle center gap-2 column-reverse">
+            <div class="flex middle center w-full-sm" id="about-img" style="min-width: 300px;width:50%"
+                data-aos="fade-up">
+                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
+            </div>
+            <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
+                <p style="font-size:var(--sub-font);;font-weight:700">Customizable Time Slots
+                </p>
+                <p>Users can customize their QR codes to be receptive to communication during specific time slots,
+                    ensuring work-life balance and privacy.</p>
+            </div>
+        </div>
+
     </section>
 
     <style>
         .card-store {
-
-
             transition: all 0.2s;
             position: relative;
             cursor: pointer;
@@ -455,7 +558,6 @@
                 <div class="card-store">
                     <div class="circle"></div>
                     <div class="circle"></div>
-
                     <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/damage.png" alt="" style="max-width: 30%;">
                         <p style="font-size:var(--sub-font);font-weight:600">Pick, Create, Share</p>
@@ -469,7 +571,8 @@
                     <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/drama-removebg-preview.png" alt="" style="max-width: 30%;">
                         <p style="font-size:var(--sub-font);font-weight:600"> Direct the Buzz</p>
-                        <p>Business calls? Straight to the front desk. Job chats? HR’s got it. Set up who gets what call, just like that. </p>
+                        <p>Business calls? Straight to the front desk. Job chats? HR’s got it. Set up who gets what
+                            call, just like that. </p>
                     </div>
                 </div>
                 <div class="card-store">
@@ -479,15 +582,17 @@
                     <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/towel.png" alt="" style="max-width: 30%;">
                         <p style="font-size:var(--sub-font);font-weight:600">No Call Left Behind</p>
-                        <p>Someone’s busy? No sweat. Calls bounce to the next in line till they hit the jackpot. It’s call tag, but better. </p>
+                        <p>Someone’s busy? No sweat. Calls bounce to the next in line till they hit the jackpot. It’s
+                            call tag, but better. </p>
                     </div>
                 </div>
-         
+
             </div>
-            <p style="font-size:var(--sub-font);margin-top:1em">"With Codebell, your team stays on the beat, making sure every call finds its home."</p>
+            <p style="font-size:var(--sub-font);margin-top:1em">"With Codebell, your team stays on the beat, making sure
+                every call finds its home."</p>
         </section>
     </div>
-  
+
 
     <!-- video section for standard page only -->
     <!-- <section class="flex eq wrap middle center gap-1">
@@ -503,19 +608,28 @@
     <!-- latest product -->
     <hr>
     <style>
-        .products{
-            width: 350px;
-            height: 580px;
+        .products {
+            width: 300px;
+            height: 430px;
             border-radius: 0.5em;
             box-shadow:
-            0px 2px 2px 0px var(--product-card-shadow),
-            0px 3px 1px -2px var(--product-card-shadow),
-            0px 1px 5px 0px var(--product-card-shadow);
-            padding: 1em;
+                0px 2px 2px 0px var(--product-card-shadow),
+                0px 3px 1px -2px var(--product-card-shadow),
+                0px 1px 5px 0px var(--product-card-shadow);
+
         }
-        .products .image-product{
-            width: 350px;
+
+        .products .image-product {
+            width: 250px;
+            height: 250px;
             box-shadow: none;
+        }
+
+        .image-product img {
+            max-width: 60%;
+            max-height: 60%;
+            margin: auto;
+            transition: var(--transition);
         }
     </style>
     <section id="Products">
@@ -525,53 +639,35 @@
                 Your World.</div>
         </div>
         <div class="flex center middle wrap gap-2  product-list ">
-           
-            <div class="products flex column gap ">
-                <a href="home-store.html">
-                    <div class="image-product flex middle center">
-                        <img src="/assets/newimage/doorbell_global1.png" alt="">
-                    </div>
+            <div class="products flex column">
+                <a href="home-store.html" class="flex middle center p-1"
+                    style="background-color: var(--bg-grey-color);">
+                    <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 50%;">
                 </a>
-                <a href="home-store.html" class="product-name">Home Link</a>
-                <p>Say goodbye to traditional doorbells. Greet visitors with video and chat without ever sharing your number. It's home security, upgraded.</p>
-              
+                <div class="flex column gap p-1">
+                    <a href="home-store.html" class="product-name text-center">Home Link</a>
+                    <p>Say goodbye to traditional doorbells. Greet visitors with video and chat without ever sharing
+                        your number. It's home security, upgraded.</p>
+                </div>
             </div>
-            <div class="products flex column gap ">
-                <a href="home-store.html">
-                    <div class="image-product flex middle center">
-                        <img src="/assets/newimage/car_connect_world1.png" alt="">
-                    </div>
+            <div class="products flex column">
+                <a href="home-store.html" class="flex middle center p-1"
+                    style="background-color: var(--bg-grey-color);">
+                    <img src="/assets/newimage/car_connect_world1.png" alt="" style="max-width: 50%;">
                 </a>
-                <a href="home-store.html" class="product-name">Codebell Car</a>
-                <p>Keep in touch with your ride. Receive alerts when your car needs attention—no more notes under windshield wipers.</p>
-            </div>
-            <div class="products flex column gap ">
-                <a href="store.html">
-                    <div class="image-product flex middle center">
-                        <img src="/assets/newimage/car_connect_world1.png" alt="">
-                    </div>
-                </a>
-                <a href="store.html" class="product-name">BagTags</a>
-                <p>Travel worry-free. Track your luggage or quickly connect with finders through a simple scan. Lost bags are a thing of the past.</p>
+                <div class="flex column gap p-1">
+                    <a href="home-store.html" class="product-name text-center">Codebell Car</a>
+                    <p>Keep in touch with your ride. Receive alerts when your car needs attention—no more notes under
+                        windshield wipers.</p>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- script for india, other countries -->
-
-
-
-
-
-
-
-
-
-
     <style>
         .price-start {
             cursor: pointer;
-
         }
 
         .price-start img {
@@ -580,7 +676,6 @@
 
         .price-start .bi-arrow-right-short {
             transition: var(--transition);
-
         }
 
         .price-start a {
@@ -592,7 +687,6 @@
         }
     </style>
     <hr>
-    
     <!-- faq -->
     <div class="grey-section" id="Faq">
         <section>
@@ -764,7 +858,7 @@
         </section>
 
     </div>
-  <hr>
+    <hr>
     <div class="grey-section">
         <section class="flex column" id="Contact">
             <div class="section-title">
@@ -850,7 +944,8 @@
         });
     </script>
 
-    <div class="grey-section" style="background: linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84)); background: -webkit-linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84)); ">
+    <div class="grey-section"
+        style="background: linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84)); background: -webkit-linear-gradient(to top right, rgb(7 16 45), rgb(58 60 84)); ">
         <section class="flex eq middle center wrap gap-1 download">
 
             <div class="flex column  gap-1 " style="min-width: 300px; max-width:60%">
@@ -860,22 +955,22 @@
                     encrypted conversations on the go.</p>
             </div>
             <div style="min-width: 300px;">
-            <div class="flex middle gap-2 center p-1" style="background-color: #2234ae;
+                <div class="flex middle gap-2 center p-1" style="background-color: #2234ae;
             background-image: linear-gradient(315deg, #2234ae 0%, #191714 74%);
              ; border-radius:2em; width:fit-content; margin:auto;gap:3.5em;">
-                <div class="flex column gap">
-                    <a href="https://play.google.com/store/apps/details?id=io.codebell.codebell_android"><img
-                            src="/assets/img/play_store.webp" alt=""></a>
-                    <a href="https://apps.apple.com/app/codebell/id6448067105"><img src="/assets/img/app_store.webp"
-                            alt=""></a>
-                </div>
-                <div class="qr_code flex middle center middle">
-                    <svg viewBox="0 0 1155 1155" style="color: #ffffff;">
-                        <use xlink:href="/assets/img/install.svg#install_qr"></use>
-                    </svg>
+                    <div class="flex column gap">
+                        <a href="https://play.google.com/store/apps/details?id=io.codebell.codebell_android"><img
+                                src="/assets/img/play_store.webp" alt=""></a>
+                        <a href="https://apps.apple.com/app/codebell/id6448067105"><img src="/assets/img/app_store.webp"
+                                alt=""></a>
+                    </div>
+                    <div class="qr_code flex middle center middle">
+                        <svg viewBox="0 0 1155 1155" style="color: #ffffff;">
+                            <use xlink:href="/assets/img/install.svg#install_qr"></use>
+                        </svg>
+                    </div>
                 </div>
             </div>
-        </div>
         </section>
     </div>
     <div class="grey-section flex column middle gap-2">
