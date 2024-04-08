@@ -171,56 +171,108 @@
                 line-height: 1.2em;
             }
         }
+
         .hero {
             height: 750px;
             padding-top: 0;
             padding-bottom: 0;
             margin: auto;
         }
+
+        .pattern {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            background-color: var(--bg-color);
+            opacity: 0.2;
+            background-image: radial-gradient(var(--primary-color) 0.9px, var(--bg-color) 0.9px);
+            background-size: 28px 28px;
+            z-index: -9999;
+            background-image: linear-gradient(var(--border-color) 0.9px, transparent 0.9px), linear-gradient(to right, var(--border-color) 0.9px, transparent 0.9px);
+            background-size: 58px 58px;
+        }
+
+        .blur-container {
+            position: absolute;
+            bottom: 20%;
+            left: 0;
+
+        }
+
+        .blur-container.top-right {
+            position: absolute;
+           
+        }
+
+        .blur-ball {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            position: absolute;
+            filter: blur(100px);
+            z-index: -50;
+        }
+
+        .index-banner {
+            background: transparent
+        }
     </style>
     <!-- hero section -->
-    <div class="grey-section index-banner" id="Home"> 
+    <div id="Home" class="index-banner">
+        <div class="pattern"></div>
+        <div class="blur-container">
+            <div class="blur-ball"></div>
+        </div>
+        <div class="blur-container top-right">
+            <div class="blur-ball"></div>
+        </div>
         <section class="hero flex eq wrap middle center between">
             <div class="left flex column gap" style="min-width: 300px;">
-                <h1 style="font-size:45px; color:#ffffff">Discover Codebell: Communication Beyond Numbers and Wires!
+                <h1 style="font-size:45px; color:var(--text-color);">Discover Codebell: Communication Beyond Numbers and
+                    Wires!
                 </h1>
                 <div class="flex column gap">
                     <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
-                        <svg style="color:#fff" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-check2" viewBox="0 0 16 16">
+                        <svg style="color:var(--text-color);" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                             <path
                                 d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                         </svg>
-                        <p style="max-width: 90%;color:#fff;font-weight:300;">Keep Your Number Private: Stop sharing your personal number.
+                        <p style="max-width: 90%;color:var(--text-color);;font-weight:300;">Keep Your Number Private:
+                            Stop sharing your personal number.
                         </p>
                     </div>
                     <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
-                        <svg style="color:#fff" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-check2" viewBox="0 0 16 16">
+                        <svg style="color:var(--text-color);" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                             <path
                                 d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                         </svg>
-                        <p style="max-width: 90%; color:#fff;font-weight:300">Create and Customize Profiles for Anything: Business, personal, events.</p>
+                        <p style="max-width: 90%; color:var(--text-color);font-weight:300">Create and Customize Profiles
+                            for Anything: Business, personal, events.</p>
                     </div>
                     <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
-                        <svg style="color:#fff" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-check2" viewBox="0 0 16 16">
+                        <svg style="color:var(--text-color);" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                             <path
                                 d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                         </svg>
-                        <p style="max-width: 90%;color:#fff;font-weight:300">Profile-Specific Messaging: Receive messages in their specific profile.
+                        <p style="max-width: 90%;color:var(--text-color);;font-weight:300">Profile-Specific Messaging:
+                            Receive messages in their specific profile.
                         </p>
                     </div>
                     <div class="flex middle top" style="gap: 0.5em; line-height: 1.5em;">
-                        <svg style="color:#fff;" xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor"
-                            class="bi bi-check2" viewBox="0 0 16 16">
+                        <svg style="color:var(--text-color);;" xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-check2" viewBox="0 0 16 16">
                             <path
                                 d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z" />
                         </svg>
-                        <p style="max-width: 90%;color:#fff;font-weight:300">Your Personalized, Private Communication Platform
+                        <p style="max-width: 90%;color:var(--text-color);;font-weight:300">Your Personalized, Private
+                            Communication Platform
                         </p>
                     </div>
-    
+
                 </div>
 
                 <a href="https://api.codebell.io/install" target="_blank"><button class="button hero-button"
@@ -242,45 +294,12 @@
                     data-aos-duration="300" data-aos-delay="700">
             </div>
         </section>
-    
+
     </div>
 
-    <style>
-        .pattern {
-            position: absolute;
-            height: 100%;
-            width: 100%;
-            background-color: var(--bg-color);
-            opacity: 0.2;
-            background-image: radial-gradient(var(--primary-color) 0.9px, var(--bg-color) 0.9px);
-            background-size: 28px 28px;
-            z-index: -9999;
-            background-image: linear-gradient(var(--border-color) 0.9px, transparent 0.9px), linear-gradient(to right, var(--border-color) 0.9px, transparent 0.9px);
-            background-size: 58px 58px;
-        }
 
-        .blur-container {
-            position: absolute;
-            bottom: 0;
-            left: 0;
+    <div class="grey-section" style="padding-bottom:2em">
 
-        }
-
-        .blur-ball {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            background-color: var(--primary-color);
-            position: absolute;
-            filter: blur(80px);
-            z-index: -50;
-        }
-    </style>
-    <div style="position: relative;padding-bottom:2em">
-        <div class="pattern"></div>
-        <div class="blur-container">
-            <div class="blur-ball"></div>
-        </div>
         <section class="flex column middle gap-1 text-center gets-now" style="z-index:5;">
 
             <div class="title-1">Introducing Codebell</div>
