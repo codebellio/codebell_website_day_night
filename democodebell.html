@@ -201,7 +201,7 @@
 
         .blur-container.top-right {
             position: absolute;
-           
+
         }
 
         .blur-ball {
@@ -217,7 +217,8 @@
         .index-banner {
             background: transparent
         }
-        .hero-button{
+
+        .hero-button {
             background-color: var(--primary-color);
             border: none;
         }
@@ -298,7 +299,6 @@
                     data-aos-duration="300" data-aos-delay="700">
             </div>
         </section>
-        <!-- <img class="circle" src="/assets/img/circle.png" alt="" data-aos="zoom-in" data-aos-duration="800"  data-aos-delay="800"> -->
 
     </div>
 
@@ -339,73 +339,122 @@
             </div>
         </section>
     </div>
-    <!-- product feature  -->
-    <section class="about-product flex column gap-2" id="About">
+
+    <!-- <section class="about-product flex column gap-2" id="About">
         <div class="title-1 text-center">Features</div>
-        <div class="title-2 text-center">Codebell brings your all your communication together in one place, making every
+        <div class="title-2 text-center">Codebell brings all your communication together in one place, making every
             interaction effortlessly clear and purposeful.
         </div>
         <div class="flex eq wrap between middle center gap-2" style="margin-top: 2.5em;">
-            <div class="flex column gap-1 card-unique" style="min-width: 300px;">
-                <p style="font-size:var(--sub-font);;font-weight:700">Profiles for Every Need
-                </p>
-                <p>Whether it’s for business dealings, dating, freelance , or an event—create a unique Codebell profile.
-                </p>
+            <div class="flex column gap-1 card-unique" style="min-width: 300px; overflow-y: hidden;">
+                <div class="left-wrapper" data-index="0">
+                    <p style="font-size: var(--sub-font); font-weight: 700;">Profiles for Every Need</p>
+                    <p>Whether it’s for business dealings, dating, freelance, or an event—create a unique Codebell
+                        profile.</p>
+                </div>
+                <div class="left-wrapper hidden" data-index="1">
+                    <p style="font-size: var(--sub-font); font-weight: 700;">Personalized for You</p>
+                    <p>Customize each profile to suit your style and requirements. Different profile pictures for
+                        different Codebells? Absolutely. You're unique, and your communication tools should be too.</p>
+                </div>
+                <div class="left-wrapper hidden" data-index="2">
+                    <p style="font-size: var(--sub-font); font-weight: 700;">Seamlessly Switch</p>
+                    <p>Glide between profiles without missing a beat. Keeps your chats organized and your mind clear.
+                        With Codebell, you always know the context at a glance.</p>
+                </div>
+                <div class="left-wrapper hidden" data-index="3">
+                    <p style="font-size: var(--sub-font); font-weight: 700;">No Limits</p>
+                    <p>Craft as many profiles as your life requires —there's no cap. Whether it's for a new project,
+                        hobby, or phase of life, generate unlimited Codebells.</p>
+                </div>
+                <div class="left-wrapper hidden" data-index="4">
+                    <p style="font-size: var(--sub-font); font-weight: 700;">Flexible Communication</p>
+                    <p>Done with dating or wrapping up an event? Delete that Codebell and move on. Or keep the ones that
+                        still fit your life. It's all about staying in sync with your current needs.</p>
+                </div>
             </div>
-            <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
-                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
-            </div>
-        </div>
-        <div class="flex  between middle center gap-2 column-reverse">
-            <div class="flex middle center w-full-sm" id="about-img" style="min-width: 300px;width:50%"
-                data-aos="fade-up">
-                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
-            </div>
-            <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
-                <p style="font-size:var(--sub-font);;font-weight:700">Personalized for You
-                </p>
-                <p>Customize each profile to suit your style and requirements. Different profile pictures for different
-                    Codebells? Absolutely. You're unique, and your communication tools should be too.
-                </p>
-            </div>
-        </div>
-        <div class="flex eq wrap between middle center gap-2">
-            <div class="flex column gap-1 card-unique" style="min-width: 300px;">
-                <p style="font-size:var(--sub-font);;font-weight:700">Seamlessly Switch
-                </p>
-                <p>Glide between profiles without missing a beat. Keeps your chats organized and your mind clear. With
-                    Codebell, you always know the context at a glance.
-                </p>
-            </div>
-            <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
-                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
-            </div>
-        </div>
-
-        <div class="flex  between middle center gap-2 column-reverse">
-            <div class="flex middle center w-full-sm" id="about-img" style="min-width: 300px;width:50%"
-                data-aos="fade-up">
-                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
-            </div>
-            <div class="flex column gap-1 card-unique w-full-sm" style="min-width: 300px;width:50%">
-                <p style="font-size:var(--sub-font);;font-weight:700">No Limits
-                </p>
-                <p>Craft as many profiles as your life requires —there's no cap. Whether it's for a new project, hobby,
-                    or phase of life, generate unlimited Codebells. </p>
+            <div class="flex middle center" id="about-img" style="min-width: 300px;">
+                <div class="flex column gap-1 middle" style="position: sticky;top:0">
+                    <img class="right-wrapper" data-index="0" src="/assets/products/Home_h.webp" alt=""
+                        style="max-width: 60%;">
+                    <img class="right-wrapper" data-index="1" src="/assets/products/Car_home.webp" alt=""
+                        style="max-width: 40%;">
+                    <img class="right-wrapper" data-index="2" src="/assets/products/Luggage_home.png" alt=""
+                        style="max-width: 60%;">
+                    <img class="right-wrapper" data-index="3" src="/assets/newimage/car_connect_world1.png" alt=""
+                        style="max-width: 40%;">
+                    <img class="right-wrapper" data-index="4" src="/assets/newimage/doorbell_global1.png" alt=""
+                        style="max-width: 40%;">
+                </div>
             </div>
         </div>
-        <div class="flex eq wrap between middle center gap-2">
-            <div class="flex column gap-1 card-unique" style="min-width: 300px;">
-                <p style="font-size:var(--sub-font);;font-weight:700">Flexible Communication
-                </p>
-                <p>Done with dating or wrapping up an event? Delete that Codebell and move on. Or keep the ones that
-                    still fit your life. It's all about staying in sync with your current needs. </p>
+    </section> -->
+    <section class="container flex eq wrap middle cenetr">
+        <div class="flex column gap-1">
+            <div class="left-wrapper">
+                <div class="txt-app-wrapper">
+                    <h3 data-w-id="ca11e478-86ee-addf-7940-40129eb3d361">Improve facial retouching with a single tap of
+                        <span class="lensa-orange-span">Magic Correction</span>.
+                    </h3>
+                </div>
             </div>
-            <div class="flex middle center" id="about-img" style="min-width: 300px;" data-aos="fade-up">
-                <img src="/assets/products/Home_h.webp" alt="" style="max-width: 60%;">
+            <div class="left-wrapper">
+                <div class="txt-app-wrapper">
+                    <h3 data-w-id="da524152-7982-6eff-0ee5-bf5f614a3523"><span>Perfect the facial imperfections</span>
+                        with <span class="lensa-orange-span">tons of cool tools</span>.</h3>
+                </div>
+            </div>
+            <div class="left-wrapper">
+                <div class="txt-app-wrapper">
+                    <h3 data-w-id="eba9a722-5b09-a12b-a9fb-27eef99c4824">Replace or <span class="lensa-orange-span">blur
+                            out the background</span> with a single touch.</h3>
+                </div>
+            </div>
+            <div class="left-wrapper">
+                <div class="txt-app-wrapper">
+                    <h3 data-w-id="2504c49b-6a05-9318-009d-e2f4a7977ae3">Tune both <span
+                            class="lensa-orange-span">foreground and background</span> to perfection separately.</h3>
+                </div>
+            </div>
+            <div class="left-wrapper">
+                <div class="txt-app-wrapper up">
+                    <h3 data-w-id="dbddc235-9969-d462-1b0a-98f309c98104">Apply <span class="lensa-orange-span">unique
+                            filters and special effects</span> to level up your photo editing game.</h3>
+                </div>
+            </div>
+            <div class="left-wrapper">
+                <div class="txt-app-wrapper up">
+                    <h3 data-w-id="78ef174c-c0d8-86d2-0996-e4b948a3cf3e"><span class="lensa-orange-span">Add an extra
+                            edge</span> to your photos by adding borders.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="right-wrapper">
+            <div class="iphone-wrapper product flex center column middle">
+                <div data-w-id="0a5fc807-5961-3eaa-9e49-7ed2128d173b" class="ui-wr" style="max-width: 50%;">
+                    <img src="/assets/newimage/car_connect_india1.png" loading="lazy" alt="" class="ui on" style="max-width: 50%;">
+                </div>
+                <div data-w-id="0a5fc807-5961-3eaa-9e49-7ed2128d173b" class="ui-wr" style="max-width: 50%;">
+                    <img src="/assets/newimage/car_connect_india1.png" loading="lazy" alt="" class="ui on" style="max-width: 50%;">
+                </div>
+                <div data-w-id="0a5fc807-5961-3eaa-9e49-7ed2128d173b" class="ui-wr" style="max-width: 50%;">
+                    <img src="/assets/newimage/car_connect_india1.png" loading="lazy" alt="" class="ui on" style="max-width: 50%;">
+                </div>
+                <div data-w-id="0a5fc807-5961-3eaa-9e49-7ed2128d173b" class="ui-wr" style="max-width: 50%;">
+                    <img src="/assets/newimage/car_connect_india1.png" loading="lazy" alt="" class="ui on" style="max-width: 50%;">
+                </div>
+                <div data-w-id="0a5fc807-5961-3eaa-9e49-7ed2128d173b" class="ui-wr" style="max-width: 50%;">
+                    <img src="/assets/newimage/car_connect_india1.png" loading="lazy" alt="" class="ui on" style="max-width: 50%;">
+                </div>
+                <div data-w-id="da524152-7982-6eff-0ee5-bf5f614a353c"
+                    style="transform: translate3d(0px, 0px, 0px) scale3d(0.6, 0.6, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;"
+                    class="video-blob product w-embed"><video autoplay="" loop="" muted="" playsinline=""
+                        src="https://prisma-ai.com/videos/orange-blob.mp4" type="video/mp4"
+                        style="width:100%; height:100%;"></video></div>
             </div>
         </div>
     </section>
+
 
     <section class="about-product flex column gap-2" id="About">
         <div class="title-1 text-center">Codebell: Guarding Your Privacy</div>
@@ -541,7 +590,7 @@
             transform: scale(1.04) rotate(1deg);
         }
 
-        .circle1 {
+        .circle {
             width: 80px;
             height: 80px;
             background: var(--primary-color);
@@ -550,12 +599,12 @@
             animation: move-up6 2s ease-in infinite alternate-reverse;
         }
 
-        .circle1:nth-child(1) {
+        .circle:nth-child(1) {
             top: -25px;
             left: -25px;
         }
 
-        .circle1:nth-child(2) {
+        .circle:nth-child(2) {
             bottom: -25px;
             right: -25px;
             animation-name: move-down1;
@@ -580,8 +629,8 @@
 
             <div class="flex gap-2 middle center wrap" style="margin-top: 2.5em;">
                 <div class="card-store">
-                    <div class="circle1"></div>
-                    <div class="circle1"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
                     <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/damage.png" alt="" style="max-width: 30%;">
                         <p style="font-size:var(--sub-font);font-weight:600">Pick, Create, Share</p>
@@ -590,8 +639,8 @@
                     </div>
                 </div>
                 <div class="card-store">
-                    <div class="circle1"></div>
-                    <div class="circle1"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
                     <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/drama-removebg-preview.png" alt="" style="max-width: 30%;">
                         <p style="font-size:var(--sub-font);font-weight:600"> Direct the Buzz</p>
@@ -600,8 +649,8 @@
                     </div>
                 </div>
                 <div class="card-store">
-                    <div class="circle1"></div>
-                    <div class="circle1"></div>
+                    <div class="circle"></div>
+                    <div class="circle"></div>
 
                     <div class="card-inner text-center flex column gap middle">
                         <img src="/assets/img/towel.png" alt="" style="max-width: 30%;">
