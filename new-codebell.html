@@ -406,6 +406,206 @@
             </div>
         </div>
     </section>
+    <style>
+        
+        .left-wrapper {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+
+        .txt-app-wrapper {
+            position: relative;
+        }
+
+        .txt-app-wrapper h3 {
+            font-size: 42px;
+        }
+        .txt-app-wrapper span{
+            color: var(--primary-color);
+        }
+
+        .right-wrapper {
+            position: sticky;
+            top: 2%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .iphone-wrapper {
+            position: sticky;
+            z-index: 1;
+            
+            width: 100%;
+            height: 100vh;
+            max-height: 1050px;
+            min-height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            position: relative;
+
+        }
+
+        .inner-image {
+            position: absolute;
+            z-index: 10;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .img-wrapper {
+            position: absolute;
+            z-index: 10;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .video-blob {
+            position: absolute;
+            top: 0%;
+            z-index: -1;
+            height: 100vh;
+            display: block;
+            max-height: 100%;
+            min-height: 300px;
+        }
+
+        @media screen and (max-width:768px) {
+            .container-lens .left-container {
+                order: 1;
+            }
+
+            .txt-app-wrapper h3 {
+                font-size: 32px;
+                text-align: center;
+                color: var(--text-color);
+            }
+
+            .container-lens .right-wrapper {
+                order: 0;
+                background-color: var(--bg-color);
+                height: fit-content;
+            }
+            .container-lens .iphone-wrapper{
+               height: 0;
+                
+            }
+           
+            .left-wrapper {
+                height: 50vh;
+            }
+            .container-lens .video-blob {
+                display: none;
+            }
+        }
+    </style>
+    <div class="wf-section">
+        <section class="container-lens flex eq wrap ">
+            <div class="left-container" style="min-width: 300px;">
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3><span>Profiles for Every Need:</span>	 Whether it’s for business dealings, dating, freelance , or an event—create a unique Codebell profile.</h3>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3><span>Perfect the facial
+                                imperfections</span> with <span class="lensa-orange-span">tons of cool tools</span>.
+                        </h3>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3>Replace or <span class="lensa-orange-span">blur out the background</span> with a single
+                            touch.</h3>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3>Tune both <span class="lensa-orange-span">foreground and background</span> to perfection
+                            separately.
+                        </h3>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper up">
+                        <h3>Apply <span class="lensa-orange-span">unique filters and special effects</span> to level up
+                            your
+                            photo editing game.</h3>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper up">
+                        <h3><span class="lensa-orange-span">Add an
+                                extra edge</span> to your photos by adding borders.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="right-wrapper" style="min-width: 300px;">
+                <div class="iphone-wrapper">
+                    <div class="img-wrapper">
+                        <img src="https://prisma-ai.com/images/lensa-1-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://prisma-ai.com/images/lensa-2-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://prisma-ai.com/images/lensa-3-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://prisma-ai.com/images/lensa-4-1-img.png" loading="lazy" alt=""
+                            class="inner-image on">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://prisma-ai.com/images/lensa-2-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
+                    </div>
+                    <div class="img-wrapper">
+                        <img src="https://prisma-ai.com/images/lensa-4-1-img.png" loading="lazy" alt=""
+                            class="inner-image on">
+                    </div>
+                    <img src="https://prisma-ai.com/images/yellow-iphone.png" loading="lazy" alt="" class="iphone">
+                    <div class="video-blob"
+                        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        <video autoplay="" loop="" muted="" playsinline=""
+                            src="https://prisma-ai.com/videos/orange-blob.mp4" type="video/mp4"
+                            style="width:100%; height:100%;"></video>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const imgs = document.querySelectorAll('.img-wrapper img');
+            const imgCount = imgs.length;
+            const sectionHeight = window.innerHeight;
+            console.log("height:" + sectionHeight);
+            window.addEventListener('scroll', function () {
+                const scrollPosition = window.scrollY;
+                console.log(scrollPosition);
+                const currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount;
+                // Hide all images and show only the current one
+                imgs.forEach((img, index) => {
+                    img.style.display = index === currentSectionIndex ? 'block' : 'none';
+                });
+            });
+        });
+    </script>
+
 
     <section class="about-product flex column gap-2" id="About">
         <div class="title-1 text-center">Codebell: Guarding Your Privacy</div>
@@ -459,6 +659,7 @@
         </div>
 
     </section>
+
 
     <section class="about-product flex column gap-2" id="About">
         <div class="title-1 text-center">Value-Added Features Enhancing Communication Efficiency</div>

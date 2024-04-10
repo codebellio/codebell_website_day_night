@@ -303,10 +303,7 @@
 
     </div>
     <style>
-        .items-container {
-            height: 100vh;
-        }
-
+        
         .left-wrapper {
             display: flex;
             height: 100vh;
@@ -333,19 +330,26 @@
         .iphone-wrapper {
             position: sticky;
             z-index: 1;
-            display: block;
+            
             width: 100%;
             height: 100vh;
             max-height: 1050px;
-            min-height: 600px;
+            min-height: 450px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
             position: relative;
-         
+
         }
 
         .inner-image {
             position: absolute;
             z-index: 10;
-        
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
         }
 
         .img-wrapper {
@@ -353,6 +357,9 @@
             z-index: 10;
             width: 100%;
             height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .video-blob {
@@ -370,9 +377,25 @@
                 order: 1;
             }
 
+            .txt-app-wrapper h3 {
+                font-size: 32px;
+                text-align: center;
+                color: var(--text-color);
+            }
+
             .container-lens .right-wrapper {
                 order: 0;
-                width: 50%;
+                background-color: var(--bg-color);
+                height: fit-content;
+            }
+            .container-lens .iphone-wrapper{
+               height: 0;
+                
+            }
+           
+
+            .container-lens .video-blob {
+                display: none;
             }
         }
     </style>
@@ -422,38 +445,48 @@
             <div class="right-wrapper" style="min-width: 300px;">
                 <div class="iphone-wrapper">
                     <div class="img-wrapper">
-                        <img src="https://prisma-ai.com/images/lensa-1-1-img.png" loading="lazy" alt="" class="inner-image">
+                        <img src="https://prisma-ai.com/images/lensa-1-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
                     </div>
                     <div class="img-wrapper">
-                        <img src="https://prisma-ai.com/images/lensa-2-1-img.png" loading="lazy" alt="" class="inner-image">
+                        <img src="https://prisma-ai.com/images/lensa-2-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
                     </div>
                     <div class="img-wrapper">
-                        <img src="https://prisma-ai.com/images/lensa-3-1-img.png" loading="lazy" alt="" class="inner-image">
+                        <img src="https://prisma-ai.com/images/lensa-3-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
                     </div>
                     <div class="img-wrapper">
-                        <img src="https://prisma-ai.com/images/lensa-4-1-img.png" loading="lazy" alt="" class="inner-image on">
+                        <img src="https://prisma-ai.com/images/lensa-4-1-img.png" loading="lazy" alt=""
+                            class="inner-image on">
                     </div>
                     <div class="img-wrapper">
-                        <img src="https://prisma-ai.com/images/lensa-2-1-img.png" loading="lazy" alt="" class="inner-image">
+                        <img src="https://prisma-ai.com/images/lensa-2-1-img.png" loading="lazy" alt=""
+                            class="inner-image">
                     </div>
                     <div class="img-wrapper">
-                        <img src="https://prisma-ai.com/images/lensa-4-1-img.png" loading="lazy" alt="" class="inner-image on">
+                        <img src="https://prisma-ai.com/images/lensa-4-1-img.png" loading="lazy" alt=""
+                            class="inner-image on">
                     </div>
                     <img src="https://prisma-ai.com/images/yellow-iphone.png" loading="lazy" alt="" class="iphone">
-                    <div class="video-blob" style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
-                        <video autoplay="" loop="" muted="" playsinline="" src="https://prisma-ai.com/videos/orange-blob.mp4" type="video/mp4"  style="width:100%; height:100%;"></video></div>
+                    <div class="video-blob"
+                        style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
+                        <video autoplay="" loop="" muted="" playsinline=""
+                            src="https://prisma-ai.com/videos/orange-blob.mp4" type="video/mp4"
+                            style="width:100%; height:100%;"></video>
+                    </div>
                 </div>
             </div>
         </section>
     </div>
 
     <script>
-        document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("DOMContentLoaded", function () {
             const imgs = document.querySelectorAll('.img-wrapper img');
             const imgCount = imgs.length;
             const sectionHeight = window.innerHeight;
-            console.log("height:"+sectionHeight);
-            window.addEventListener('scroll', function() {
+            console.log("height:" + sectionHeight);
+            window.addEventListener('scroll', function () {
                 const scrollPosition = window.scrollY;
                 console.log(scrollPosition);
                 const currentSectionIndex = Math.floor(scrollPosition / sectionHeight);
