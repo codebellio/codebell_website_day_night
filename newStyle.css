@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@500;600;700;800;900&display=swap');
 * {
     margin: 0;
@@ -21,6 +21,7 @@ body {
     height: 100%;
     margin: auto;
     font-family: "Poppins", sans-serif;
+    font-style: normal;
     scroll-behavior: smooth;
     color: var(--text-color);
     background-color: var(--bg-color);
@@ -30,11 +31,13 @@ section,
 nav{
     width: 85%;
     margin: auto;
-    max-width: 1180px;
+    max-width: 1200px;
 }
+/* =============Nav============== */
 .logo{
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 700;
+    color: var(--primary-color);
 }
 ul,li,a{
     list-style: none;
@@ -51,4 +54,35 @@ button{
     font-weight: 500;
     border-radius: 2em;
     letter-spacing: 0.5px;
+    white-space: nowrap;
+}
+.nav-container{
+    position: fixed;
+    width: 100%;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 10;
+    background: var(--bg-color);
+}
+.nav-container .menu{
+    display: none;
+}
+@media screen and (max-width: 990px){
+    .nav-container .menu{
+        display: flex;
+    }
+    .nav-container .nav-list , .nav-container .download-text{
+        display: none;
+    }
+    .nav-container button{
+        border-radius: 50%;
+        padding: 1em;
+    }
+}
+/* ============Hero section========== */
+.hero-container{
+    padding-top: 98.4px;
+}
+.hero{
+    height: calc(100vh - 98.4px);
+
 }

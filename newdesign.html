@@ -32,32 +32,70 @@
 </head>
 
 <body>
-    <nav class="flex between middle" style="padding: 1.5em;">
-        <div class="flex center middle" style="display: none;">
-            <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M12 17V15H30V17H12ZM12 22H30V20H12V22ZM12 27H30V25H12V27Z" fill="currentColor" />
-            </svg>
-        </div>
-        <div class="flex middle center logo" style="color:var(--primary-color);font-size:38px;">codebell</div>
-        <div class="flex middle gap-1">
-            <ul class="flex middle gap-1" style="font-size: 1em;font-weight:600;">
-                <li>Home</li>
-                <li>Features</li>
-                <li>Products</li>
-                <li>Contact Us</li>
-            </ul>
-            <button class="flex middle gap-s">
-                Download
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                        d="M14 11V14H2V11H0V14C0 15.1 0.9 16 2 16H14C15.1 16 16 15.1 16 14V11H14ZM13 7L11.59 5.59L9 8.17V0H7V8.17L4.41 5.59L3 7L8 12L13 7Z"
-                        fill="white" />
+    <div class="nav-container">
+        <nav class="flex between middle navbar" style="padding: 1.5em;">
+            <div class="flex center middle menu">
+                <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M12 17V15H30V17H12ZM12 22H30V20H12V22ZM12 27H30V25H12V27Z" fill="currentColor" />
                 </svg>
-            </button>
-        </div>
-    </nav>
-
+            </div>
+            <div class="flex middle center logo" style="color:var(--primary-color);font-size:38px;">codebell</div>
+            <div class="flex middle gap-2">
+                <ul class="flex middle gap-2 nav-list" style="font-size: 1em;font-weight:600;">
+                    <li>Home</li>
+                    <li>Features</li>
+                    <li>Products</li>
+                    <li>Contact Us</li>
+                </ul>
+                <button class="flex middle gap-s">
+                    <span class="download-text">Download</span>
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M14 11V14H2V11H0V14C0 15.1 0.9 16 2 16H14C15.1 16 16 15.1 16 14V11H14ZM13 7L11.59 5.59L9 8.17V0H7V8.17L4.41 5.59L3 7L8 12L13 7Z"
+                            fill="white" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+    </div>
+    <div class="hero-container">
+        <section class="flex eq wrap middle center hero">
+            <div class="flex column gap" style="min-width:300px">
+                <h1 style="font-size: 48px;font-weight:300;margin:0;color: var(--primary-color);letter-spacing:0.5px">
+                    Discover <span class="logo">codebell</span></h1>
+                <h2 style="font-size: 24px;font-weight:400;margin:0;">Communication Beyond Numbers
+                    and Wires! <br>Your Personalized, Private Communication Platform</h2>
+                <div class="flex middle gap-2">
+                    <button class="flex middle gap" style="border-radius: 1.5em;">
+                        <svg width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.653177 0.748396L15.228 15.5L0.653177 30.2516C0.582891 30.1793 0.51708 30.1025 0.456287 30.0215C1.44045e-07 29.4129 0 28.3674 0 26.2763V4.72373C0 2.63261 1.44045e-07 1.58704 0.456287 0.97858C0.51708 0.897505 0.582891 0.820675 0.653177 0.748396ZM2.44518 0L16.4938 14.2189L20.9267 9.73232L5.88643 1.503C4.14188 0.548529 3.19372 0.0297054 2.44518 0ZM22.5699 10.6313L17.7595 15.5L22.5699 20.3687L25.5817 18.7207C27.4927 17.6752 28.4482 17.1524 28.776 16.4736C29.0747 15.8554 29.0747 15.1446 28.776 14.5264C28.4482 13.8477 27.4927 13.3248 25.5817 12.2793L22.5699 10.6313ZM20.9267 21.2677L16.4938 16.7811L2.44518 31C3.19371 30.9703 4.14188 30.4515 5.88633 29.4971L20.9267 21.2677Z"
+                                fill="white" />
+                        </svg>
+                        <div class="flex column top" style="gap: 0.2em;">
+                            <span style="font-size: 12px;">Get it on</span>
+                            <p style="font-size: 18px;">Google Play</p>
+                        </div>
+                    </button>
+                    <button class="flex middle gap" style="border-radius: 1.5em;">
+                        <svg width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M0.653177 0.748396L15.228 15.5L0.653177 30.2516C0.582891 30.1793 0.51708 30.1025 0.456287 30.0215C1.44045e-07 29.4129 0 28.3674 0 26.2763V4.72373C0 2.63261 1.44045e-07 1.58704 0.456287 0.97858C0.51708 0.897505 0.582891 0.820675 0.653177 0.748396ZM2.44518 0L16.4938 14.2189L20.9267 9.73232L5.88643 1.503C4.14188 0.548529 3.19372 0.0297054 2.44518 0ZM22.5699 10.6313L17.7595 15.5L22.5699 20.3687L25.5817 18.7207C27.4927 17.6752 28.4482 17.1524 28.776 16.4736C29.0747 15.8554 29.0747 15.1446 28.776 14.5264C28.4482 13.8477 27.4927 13.3248 25.5817 12.2793L22.5699 10.6313ZM20.9267 21.2677L16.4938 16.7811L2.44518 31C3.19371 30.9703 4.14188 30.4515 5.88633 29.4971L20.9267 21.2677Z"
+                                fill="white" />
+                        </svg>
+                        <div class="flex column top" style="gap: 0.2em;">
+                            <span style="font-size: 12px;">Get it on</span>
+                            <p style="font-size: 18px;">Google Play</p>
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div style="min-width:300px">
+                <img src="/assets/svg/hero.png" alt="">
+            </div>
+        </section>
+    </div>
 
 
 
