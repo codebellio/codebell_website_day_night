@@ -83,17 +83,30 @@ button {
     z-index: 10;
     background: var(--bg-color);
 }
-.navbar{
-   padding: 1.5em;
+
+.navbar {
+    padding: 1.5em;
 }
+
 .nav-container .menu {
     display: none;
 }
+
 .logo-nav {
-    color:var(--primary-color);
-    font-size:38px;
+    color: var(--primary-color);
+    font-size: 38px;
 }
 
+.hero-txt {
+    font-size: 48px;
+   
+    margin: 0;
+    color: var(--primary-color);
+    letter-spacing: 0.5px
+}
+.hero h2{
+   font-size: 24px;font-weight:500;margin:0;
+}
 /* ============Hero section========== */
 .hero-container {
     padding-top: 98.4px;
@@ -104,6 +117,9 @@ button {
 
 }
 
+.btn-mobile button {
+    display: none;
+}
 
 @media screen and (max-width: 990px) {
     .nav-container .menu {
@@ -122,14 +138,53 @@ button {
 }
 
 @media screen and (max-width: 768px) {
+
+    section,
+    nav {
+        width: 90%;
+
+    }
+
     .logo-nav {
         font-size: 24px;
     }
-    .navbar{
+
+    .hero-txt {
+        font-size: 24px;
+    }
+    .hero h2{
+        font-size: 15px;
+        font-weight: 400;
+    }
+    .navbar {
         padding: 0.5em;
         width: calc(100% - 1em);
     }
+
     .hero-container {
-        padding-top: 64px;
+        padding-top: 80px;
+    }
+
+    .hero {
+        height: auto;
+
+    }
+
+    .btn-desktop button {
+        display: none;
+    }
+
+    .btn-mobile button {
+        display: flex;
+        padding:0.8em 0.8em;
+        border-radius: 0.5em !important;
+    }
+    .btn-mobile button svg{
+width: 25px;
+height: 25px;
+    }
+
+    .btn-mobile button p {
+        font-size: 14px !important;
     }
 }

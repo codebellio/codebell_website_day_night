@@ -33,7 +33,7 @@
 
 <body>
     <div class="nav-container">
-        <nav class="flex between middle navbar" >
+        <nav class="flex between middle navbar">
             <div class="flex center middle menu">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
@@ -60,13 +60,13 @@
         </nav>
     </div>
     <div class="hero-container">
-        <section class="flex eq wrap middle center hero">
+        <section class="flex eq wrap middle center hero gap-2">
             <div class="flex column gap" style="min-width:300px">
-                <h1 class="logo" style="font-size: 48px;font-weight:400;margin:0;color: var(--primary-color);letter-spacing:0.5px">
+                <h1 class="logo hero-text" style=" font-weight: 400;">
                     Discover <span class="logo">codebell</span></h1>
-                <h2 style="font-size: 24px;font-weight:500;margin:0;">Communication Beyond Numbers
+                <h2>Communication Beyond Numbers
                     and Wires! <br>Your Personalized, Private Communication Platform</h2>
-                <div class="flex middle gap-2">
+                <div class="flex middle  gap-2 btn-desktop">
                     <button class="flex middle gap button-hover" style="border-radius: 1.5em;">
                         <svg width="29" height="31" viewBox="0 0 29 31" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path fill-rule="evenodd" clip-rule="evenodd"
@@ -80,9 +80,11 @@
                     </button>
                     <button class="flex middle gap button-hover" style="border-radius: 1.5em;">
                         <svg width="24" height="31" viewBox="0 0 24 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M20.0476 16.5011C20.0093 12.5877 23.1046 10.678 23.2453 10.5838C21.493 7.90763 18.7941 7.54452 17.8348 7.50418C15.558 7.24866 13.358 8.9297 12.194 8.9297C11.0301 8.9297 9.22655 7.51762 7.30792 7.55797C4.83928 7.59832 2.52413 9.10453 1.24504 11.4445C-1.37708 16.2187 0.579922 23.2253 3.08693 27.0715C4.34044 28.9543 5.81139 31.0657 7.73002 30.9984C9.61028 30.9177 10.3138 29.7343 12.5778 29.7343C14.8417 29.7343 15.4813 30.9984 17.4383 30.9446C19.4592 30.9177 20.7255 29.0484 21.9407 27.1388C23.386 24.9736 23.9744 22.8487 24 22.7411C23.9488 22.7277 20.086 21.1677 20.0476 16.4742V16.5011ZM16.3511 4.97589C17.3615 3.6445 18.0522 1.84242 17.8604 0C16.4022 0.0672417 14.5731 1.06242 13.5115 2.36691C12.5778 3.51002 11.7463 5.39279 11.9638 7.15452C13.601 7.289 15.2894 6.28038 16.3511 4.97589Z" fill="currentColor"/>
-                            </svg>
-                            
+                            <path
+                                d="M20.0476 16.5011C20.0093 12.5877 23.1046 10.678 23.2453 10.5838C21.493 7.90763 18.7941 7.54452 17.8348 7.50418C15.558 7.24866 13.358 8.9297 12.194 8.9297C11.0301 8.9297 9.22655 7.51762 7.30792 7.55797C4.83928 7.59832 2.52413 9.10453 1.24504 11.4445C-1.37708 16.2187 0.579922 23.2253 3.08693 27.0715C4.34044 28.9543 5.81139 31.0657 7.73002 30.9984C9.61028 30.9177 10.3138 29.7343 12.5778 29.7343C14.8417 29.7343 15.4813 30.9984 17.4383 30.9446C19.4592 30.9177 20.7255 29.0484 21.9407 27.1388C23.386 24.9736 23.9744 22.8487 24 22.7411C23.9488 22.7277 20.086 21.1677 20.0476 16.4742V16.5011ZM16.3511 4.97589C17.3615 3.6445 18.0522 1.84242 17.8604 0C16.4022 0.0672417 14.5731 1.06242 13.5115 2.36691C12.5778 3.51002 11.7463 5.39279 11.9638 7.15452C13.601 7.289 15.2894 6.28038 16.3511 4.97589Z"
+                                fill="currentColor" />
+                        </svg>
+
                         <div class="flex column top" style="gap: 0.2em;">
                             <span style="font-size: 12px;font-weight:100">Download on the</span>
                             <p style="font-size: 18px;">App Store</p>
@@ -91,7 +93,36 @@
                 </div>
             </div>
             <div style="min-width:300px">
-                <img src="/assets/svg/hero.png" alt="">
+                <div class="flex column gap">
+                    <img src="/assets/svg/hero.png" alt="">
+                    <div class="flex middle center gap btn-mobile">
+                        <button class="flex middle center  button-hover" style="border-radius: 1.5em; gap:0.2em">
+                            <svg width="29" height="31" viewBox="0 0 29 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd"
+                                    d="M0.653177 0.748396L15.228 15.5L0.653177 30.2516C0.582891 30.1793 0.51708 30.1025 0.456287 30.0215C1.44045e-07 29.4129 0 28.3674 0 26.2763V4.72373C0 2.63261 1.44045e-07 1.58704 0.456287 0.97858C0.51708 0.897505 0.582891 0.820675 0.653177 0.748396ZM2.44518 0L16.4938 14.2189L20.9267 9.73232L5.88643 1.503C4.14188 0.548529 3.19372 0.0297054 2.44518 0ZM22.5699 10.6313L17.7595 15.5L22.5699 20.3687L25.5817 18.7207C27.4927 17.6752 28.4482 17.1524 28.776 16.4736C29.0747 15.8554 29.0747 15.1446 28.776 14.5264C28.4482 13.8477 27.4927 13.3248 25.5817 12.2793L22.5699 10.6313ZM20.9267 21.2677L16.4938 16.7811L2.44518 31C3.19371 30.9703 4.14188 30.4515 5.88633 29.4971L20.9267 21.2677Z"
+                                    fill="currentColor" />
+                            </svg>
+                            <div class="flex column top" style="gap: 0.2em;">
+                                <span style="font-size: 12px;">Get it on</span>
+                                <p style="font-size: 18px;">Google Play</p>
+                            </div>
+                        </button>
+                        <button class="flex middle button-hover" style="border-radius: 1.5em; gap:0.2em">
+                            <svg width="24" height="31" viewBox="0 0 24 31" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M20.0476 16.5011C20.0093 12.5877 23.1046 10.678 23.2453 10.5838C21.493 7.90763 18.7941 7.54452 17.8348 7.50418C15.558 7.24866 13.358 8.9297 12.194 8.9297C11.0301 8.9297 9.22655 7.51762 7.30792 7.55797C4.83928 7.59832 2.52413 9.10453 1.24504 11.4445C-1.37708 16.2187 0.579922 23.2253 3.08693 27.0715C4.34044 28.9543 5.81139 31.0657 7.73002 30.9984C9.61028 30.9177 10.3138 29.7343 12.5778 29.7343C14.8417 29.7343 15.4813 30.9984 17.4383 30.9446C19.4592 30.9177 20.7255 29.0484 21.9407 27.1388C23.386 24.9736 23.9744 22.8487 24 22.7411C23.9488 22.7277 20.086 21.1677 20.0476 16.4742V16.5011ZM16.3511 4.97589C17.3615 3.6445 18.0522 1.84242 17.8604 0C16.4022 0.0672417 14.5731 1.06242 13.5115 2.36691C12.5778 3.51002 11.7463 5.39279 11.9638 7.15452C13.601 7.289 15.2894 6.28038 16.3511 4.97589Z"
+                                    fill="currentColor" />
+                            </svg>
+
+                            <div class="flex column top" style="gap: 0.2em;">
+                                <span style="font-size: 12px;font-weight:100">Download on the</span>
+                                <p style="font-size: 18px;">App Store</p>
+                            </div>
+                        </button>
+                    </div>
+                </div>
             </div>
         </section>
     </div>
