@@ -97,15 +97,15 @@ button {
     font-size: 38px;
 }
 
-.hero-txt {
+.hero h1 {
     font-size: 48px;
-   
     margin: 0;
     color: var(--primary-color);
     letter-spacing: 0.5px
 }
 .hero h2{
-   font-size: 24px;font-weight:500;margin:0;
+   font-size: 24px;
+   font-weight:500;margin:0;
 }
 /* ============Hero section========== */
 .hero-container {
@@ -149,7 +149,7 @@ button {
         font-size: 24px;
     }
 
-    .hero-txt {
+    .hero h1 {
         font-size: 24px;
     }
     .hero h2{
