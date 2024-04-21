@@ -333,6 +333,22 @@ width: fixed;
     line-height: 175%;
     font-size:24px;
 }
+.head1{
+    font-size: 48px;
+    line-height: 135%;
+    font-weight: 600;
+    color: var(--primary-color);
+}
+.side-head{
+    font-size: 48px;
+    line-height: 135%;
+    font-weight: 600;
+    max-width: 644px;
+   
+}
+.side-head span{
+    color: var(--primary-color);
+}
 @media screen and (max-width: 768px) {
     .second-fold{
         margin-top: 2.563em;
