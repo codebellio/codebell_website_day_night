@@ -103,10 +103,13 @@ button {
     color: var(--primary-color);
     letter-spacing: 0.5px
 }
-.hero h2{
-   font-size: 24px;
-   font-weight:500;margin:0;
+
+.hero h2 {
+    font-size: 24px;
+    font-weight: 500;
+    margin: 0;
 }
+
 /* ============Hero section========== */
 .hero-container {
     padding-top: 98.4px;
@@ -146,23 +149,27 @@ button {
     }
 
     .logo-nav {
+        text-align: center;
         font-size: 24px;
     }
 
     .hero h1 {
         font-size: 24px;
     }
-    .hero h2{
-        font-size: 15px;
+
+    .hero h2 {
+        font-size: 13px;
+        text-align: center;
         font-weight: 400;
     }
+
     .navbar {
         padding: 0.5em;
         width: calc(100% - 1em);
     }
 
     .hero-container {
-        padding-top: 80px;
+        padding-top: 90px;
     }
 
     .hero {
@@ -176,12 +183,13 @@ button {
 
     .btn-mobile button {
         display: flex;
-        padding:0.8em 0.8em;
+        padding: 0.8em 0.8em;
         border-radius: 0.5em !important;
     }
-    .btn-mobile button svg{
-width: 25px;
-height: 25px;
+
+    .btn-mobile button svg {
+        width: 25px;
+        height: 25px;
     }
 
     .btn-mobile button p {
