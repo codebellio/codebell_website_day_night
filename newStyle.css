@@ -156,36 +156,27 @@ width: fixed;
 .img-mobile {
     display: none;
 }
-.line {
-    position: absolute;
-    bottom: 18%;
-    left: 20%;
-}
+
 
 .dot {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 5px;
-    height: 5px;
+    bottom: 20%;
+    left: 20%;
+    width: 8px;
+    height: 8px;
     border-radius: 50%;
     background-color: var(--primary-color);
-    animation: expand 1s infinite alternate; /* Add animation */
+    animation: expand 1s infinite alternate; 
 }
 
-@keyframes expand {
-    0% {
-        transform: scale(1);
-    }
-    100% {
-        transform: scale(2); /* Change the scale as needed */
-    }
-}
+
 
 .line-show {
     position: absolute;
+    bottom: 11%;
+    left: 21.15%;
     width: 2.5px;
-    height: 40px;
+    height: 50px;
     border-radius: 0.2em;
     z-index: 5;
     background-color: var(--primary-color);
@@ -294,6 +285,17 @@ width: fixed;
 
     .img-mobile {
         display: flex;
+    }
+
+ 
+    .dot {
+        position: absolute;
+        bottom: 30%;
+        left: 20%;
+    }
+    .line-show {
+        bottom: 18%;
+        left: 21.9%;
     }
 
 
