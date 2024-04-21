@@ -285,6 +285,7 @@ width: fixed;
 
     .img-mobile {
         display: flex;
+        min-height: 291px;
     }
 
  
