@@ -366,7 +366,16 @@ width: fixed;
         font-size:16px;
         text-align: center;
     }
+    .phone-wrapper{
+   flex-direction: column-reverse;
+    }
+    .head1{
+        font-size: 24px;
+    }
     .side-head{
+        font-size: 24px;
+        text-align: center;
         max-width: 100%;
+        margin-top: 30px;
     }
 }
