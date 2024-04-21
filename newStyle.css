@@ -366,4 +366,7 @@ width: fixed;
         font-size:16px;
         text-align: center;
     }
+    .side-head{
+        max-width: 100%;
+    }
 }
