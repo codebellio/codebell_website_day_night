@@ -486,10 +486,11 @@ width: fixed;
     height: 390px;
    }
     .left-wrapper {
-        height: 50vh;
+        height: 80vh;
     }
     .container-lens .video-blob {
         display: none;
     }
+
 }
 /* animated part css end */
