@@ -29,9 +29,10 @@ body {
     scroll-behavior: smooth;
     color: var(--text-color);
     background-color: var(--bg-color);
+}
+body{
     overflow-x: hidden;
 }
-
 section,
 nav {
     width: 85%;
@@ -379,3 +380,113 @@ width: fixed;
         margin-top: 30px;
     }
 }
+
+
+
+/* animated part css */
+.left-wrapper {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+}
+
+.txt-app-wrapper {
+    position: relative;
+}
+
+.txt-app-wrapper h3 {
+    font-size: 42px;
+}
+.txt-app-wrapper span{
+    color: var(--primary-color);
+}
+
+.right-wrapper {
+    position: sticky;
+    top: 2%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.iphone{
+    z-index: 100;
+}
+
+.iphone-wrapper {
+    position: sticky;
+    z-index: 10;
+    width: 100%;
+    height: 100vh;
+    max-height: 1050px;
+    min-height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: relative;
+
+}
+
+.inner-image {
+    position: absolute;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.img-wrapper {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-blob {
+    position: absolute;
+    top: 0%;
+    z-index: -1;
+    height: 100vh;
+    display: block;
+    max-height: 100%;
+    min-height: 300px;
+}
+
+@media screen and (max-width:768px) {
+    .container-lens .left-container {
+        order: 1;
+    }
+
+    .txt-app-wrapper h3 {
+        font-size: 32px;
+        text-align: center;
+        color: var(--text-color);
+    }
+  .container-lens .right-wrapper{
+    padding-top: 5em;
+  }
+    .container-lens .right-wrapper {
+        order: 0;
+        background-color: var(--bg-color);
+        height: fit-content;
+    }
+    .container-lens .iphone-wrapper{
+       height: 0;
+        
+    }
+   
+    .left-wrapper {
+        height: 50vh;
+    }
+    .container-lens .video-blob {
+        display: none;
+    }
+}
+/* animated part css end */

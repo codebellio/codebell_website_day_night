@@ -38,3 +38,5 @@ let heroPara = new Swiper(".hero-para-slide", {
         clickable: true,
     },
 });
+
+
