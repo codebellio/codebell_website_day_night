@@ -238,7 +238,8 @@
             <div class="left-container" style="min-width: 300px;">
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3>Share your <span> Codebell ID</span> or <span> show your QR code </span> to connect instantly.</h3>
+                        <h3>Share your <span> Codebell ID</span> or <span> show your QR code </span> to connect
+                            instantly.</h3>
                     </div>
                 </div>
                 <div class="left-wrapper">
@@ -252,23 +253,20 @@
                         <h3>Your <span>connection</span>, your control.</h3>
                     </div>
                 </div>
-              
+
             </div>
-            <div class="right-wrapper" style="min-width: 300px;">
+            <div class="right-wrapper flex column" style="min-width: 300px;">
                 <div class="iphone-wrapper">
                     <div class="img-wrapper">
-                        <img src="/assets/svg/animate-img-3.png" loading="lazy" alt=""
-                            class="inner-image">
+                        <img src="/assets/svg/animate-img-3.png" loading="lazy" alt="" class="inner-image">
                     </div>
                     <div class="img-wrapper">
-                        <img src="/assets/svg/animate-img-1.png" loading="lazy" alt=""
-                            class="inner-image">
+                        <img src="/assets/svg/animate-img-1.png" loading="lazy" alt="" class="inner-image">
                     </div>
                     <div class="img-wrapper">
-                        <img src="/assets/svg/animate-img-2.png" loading="lazy" alt=""
-                        class="inner-image">
+                        <img src="/assets/svg/animate-img-2.png" loading="lazy" alt="" class="inner-image">
                     </div>
-                   
+
                     <img src="/assets/svg/iphone.png" loading="lazy" alt="" class="iphone">
                     <div class="video-blob"
                         style="transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg); transform-style: preserve-3d;">
@@ -277,31 +275,41 @@
                             style="width:100%; height:100%;"></video>
                     </div>
                 </div>
+                <div class="blur-fold"></div>
             </div>
         </section>
     </div>
+    <section class="mid-section text-center" style="margin-top: 2em;margin-bottom:5em">
+        <h2>Codebell brings you all your communication together in one place, making every interaction effortlessly
+            clear and purposeful.</h2>
+    </section>
+    <section class="flex center wrap " style="gap: 2em;">
+        <div class="flex column middle text-center feature-box">
+            <h2>No Need for Phone Numbers</h2>
+            <div class="flex middle center" style="flex: 1;">
+                <img src="/assets/svg/feature-img-1.png" alt="">
+            </div>
+            <p>Eliminate risk by using Codebell instead of personal numbers for transactional and one time interactions
+            </p>
+        </div>
+        <div class="flex column middle text-center feature-box">
+            <h2>Custom Profiles for Every Aspect</h2>
+            <div class="flex middle center" style="flex: 1;">
+                <img src="/assets/svg/feature-img-2.png" alt="">
+            </div>
+            <p>Organize your life into distinct profiles—personal, work, dating, freelancing—keeping each aspect
+                separate and secure</p>
+        </div>
+        <div class="flex column middle text-center feature-box">
+            <h2>Avoid Awkward Notifications</h2>
+            <div class="flex middle center" style="flex: 1;">
+                <img src="/assets/svg/feature-img-3.png" alt="">
+            </div>
+            <p>Whether it’s for business or personal, only you know what each message means, keeping your communication
+                as private as you are</p>
+        </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            const imgs = document.querySelectorAll('.img-wrapper img');
-            const imgCount = imgs.length;
-            const sectionHeight = window.innerHeight;
-            console.log("height:" + sectionHeight);
-            window.addEventListener('scroll', function () {
-                const scrollPosition = window.scrollY;
-                console.log(scrollPosition);
-                const currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount;
-                // Hide all images and show only the current one
-                imgs.forEach((img, index) => {
-                    img.style.display = index === currentSectionIndex ? 'block' : 'none';
-                });
-            });
-        });
-    </script>
-
-
-
-
+    </section>
     <script src="newscript.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <!-- <script src="darkmode.js"></script> -->

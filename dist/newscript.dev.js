@@ -35,3 +35,18 @@ var heroPara = new Swiper(".hero-para-slide", {
     clickable: true
   }
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var imgs = document.querySelectorAll('.img-wrapper img');
+  var imgCount = imgs.length;
+  var sectionHeight = window.innerHeight;
+  console.log("height:" + sectionHeight);
+  window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    console.log(scrollPosition);
+    var currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount; // Hide all images and show only the current one
+
+    imgs.forEach(function (img, index) {
+      img.style.display = index === currentSectionIndex ? 'block' : 'none';
+    });
+  });
+});

@@ -40,3 +40,18 @@ let heroPara = new Swiper(".hero-para-slide", {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+    const imgs = document.querySelectorAll('.img-wrapper img');
+    const imgCount = imgs.length;
+    const sectionHeight = window.innerHeight;
+    console.log("height:" + sectionHeight);
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        console.log(scrollPosition);
+        const currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount;
+        // Hide all images and show only the current one
+        imgs.forEach((img, index) => {
+            img.style.display = index === currentSectionIndex ? 'block' : 'none';
+        });
+    });
+});
