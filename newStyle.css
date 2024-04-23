@@ -411,7 +411,8 @@ width: fixed;
 }
 .iphone{
     z-index: 100;
-    box-shadow: 107px 69px 36px 0px rgba(0, 0, 0, 1%);
+    /* box-shadow: 107px 100px 50px 0px rgb(255 255 255); */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
     border-radius: 2.4em;
   
 }
