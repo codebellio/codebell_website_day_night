@@ -520,6 +520,6 @@ width: fixed;
 @media screen and (max-width:768px) {
     .mid-section h2{
         font-size: 20px;
-        width: 100%;
+      width: inherit;
     }
 }
