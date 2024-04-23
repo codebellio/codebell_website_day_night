@@ -465,12 +465,13 @@ width: fixed;
     }
 
     .txt-app-wrapper h3 {
-        font-size: 32px;
+        font-size: 28px;
         text-align: center;
         color: var(--text-color);
     }
   .container-lens .right-wrapper{
     padding-top: 5em;
+    padding-bottom: 2em;
   }
     .container-lens .right-wrapper {
         order: 0;
@@ -481,7 +482,9 @@ width: fixed;
        height: 0;
         
     }
-   
+   .inner-image{
+    height: 390px;
+   }
     .left-wrapper {
         height: 50vh;
     }
