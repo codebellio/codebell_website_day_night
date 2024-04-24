@@ -148,8 +148,11 @@ button {
 }
 
 .img-desktop {
-width: fixed;
     display: flex;
+   width: 298px;
+   height: 461px;
+   min-width: fit-content;
+   min-height: fit-content;
 
 }
 
@@ -193,10 +196,10 @@ width: fixed;
     .nav-container .download-text {
         display: none;
     }
-
-    .nav-container button {
-        border-radius: 50%;
+    button{
+        padding: 12px;
     }
+   
 }
 
 @media screen and (max-width: 768px) {
@@ -212,18 +215,7 @@ width: fixed;
         font-size: 24px;
     }
 
-    .hero h1 {
-        font-size: 24px;
-        line-height: 160%;
-    }
-
-    .hero h2 {
-        font-size: 14px;
-        text-align: center;
-        font-weight: 400;
-        line-height: 160%;
-
-    }
+   
 
     .navbar {
         padding: 0.5em;
@@ -317,7 +309,20 @@ width: fixed;
     }
 
 }
+@media  screen and (max-width:680px) {
+    .hero h1 {
+        font-size: 24px;
+        line-height: 160%;
+    }
 
+    .hero h2 {
+        font-size: 14px;
+        text-align: center;
+        font-weight: 400;
+        line-height: 160%;
+
+    }
+}
 
 /* second fold */
 .second-fold{
