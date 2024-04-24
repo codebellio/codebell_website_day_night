@@ -50,3 +50,33 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+document.addEventListener("DOMContentLoaded", function () {
+  var imgs = document.querySelectorAll('.img-wrapper1 img');
+  var imgCount = imgs.length;
+  var sectionHeight = window.innerHeight;
+  console.log("height:" + sectionHeight);
+  window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    console.log(scrollPosition);
+    var currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount; // Hide all images and show only the current one
+
+    imgs.forEach(function (img, index) {
+      img.style.display = index === currentSectionIndex ? 'block' : 'none';
+    });
+  });
+});
+document.addEventListener("DOMContentLoaded", function () {
+  var imgs = document.querySelectorAll('.img-wrapper2 img');
+  var imgCount = imgs.length;
+  var sectionHeight = window.innerHeight;
+  console.log("height:" + sectionHeight);
+  window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    console.log(scrollPosition);
+    var currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount; // Hide all images and show only the current one
+
+    imgs.forEach(function (img, index) {
+      img.style.display = index === currentSectionIndex ? 'block' : 'none';
+    });
+  });
+});

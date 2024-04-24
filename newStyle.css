@@ -389,10 +389,14 @@ button {
 
 
 /* animated part css */
+
 .left-wrapper {
     display: flex;
     height: 100vh;
     align-items: center;
+  
+    
+   
 }
 
 .txt-app-wrapper {
@@ -416,9 +420,8 @@ button {
 }
 .iphone{
     z-index: 100;
-    /* box-shadow: 107px 100px 50px 0px rgb(255 255 255); */
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px;
-    border-radius: 2.4em;
+    box-shadow: rgba(23, 23, 23, 0) 0px 30px 60px -12px, rgba(0, 0, 0, 0) 0px 18px 36px -18px;
+
   
 }
 
@@ -443,7 +446,7 @@ button {
     justify-content: center;
     align-items: center;
 }
-.img-wrapper {
+.img-wrapper,.img-wrapper1,.img-wrapper2 {
     position: absolute;
     z-index: 2;
     width: 100%;
@@ -480,7 +483,7 @@ button {
         color: var(--text-color);
     }
   .container-lens .right-wrapper{
-    padding-top: 5em;
+    padding-top: 4em;
   }
     .container-lens .right-wrapper {
         order: 0;
@@ -491,7 +494,7 @@ button {
        height: 0;
     }
    .inner-image{
-    height: 390px;
+    height: 98%;
    }
     .left-wrapper {
         height: 80vh;
@@ -507,6 +510,7 @@ button {
         width: 100%;
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0% 0%, rgba(255, 255, 255, 0) 0% 50%);
     }
+   
 }
 /* animated part css end */
 .mid-section h2{
@@ -515,6 +519,13 @@ button {
     width: 80%;
     margin: auto;
     line-height: 160%;
+}
+.mid-section h3{
+    font-size: 24px;
+    line-height: 160%;
+    font-weight: normal;
+    max-width: 77%;
+    margin: auto;
 }
 .feature-box{
     width: 352px;
@@ -527,5 +538,9 @@ button {
     .mid-section h2{
         font-size: 20px;
       width: inherit;
+    }
+    .mid-section h3{
+        font-size: 16px;
+        max-width: 100%;
     }
 }

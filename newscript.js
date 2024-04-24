@@ -55,3 +55,35 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imgs = document.querySelectorAll('.img-wrapper1 img');
+    const imgCount = imgs.length;
+    const sectionHeight = window.innerHeight;
+    console.log("height:" + sectionHeight);
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        console.log(scrollPosition);
+        const currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount;
+        // Hide all images and show only the current one
+        imgs.forEach((img, index) => {
+            img.style.display = index === currentSectionIndex ? 'block' : 'none';
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const imgs = document.querySelectorAll('.img-wrapper2 img');
+    const imgCount = imgs.length;
+    const sectionHeight = window.innerHeight;
+    console.log("height:" + sectionHeight);
+    window.addEventListener('scroll', function () {
+        const scrollPosition = window.scrollY;
+        console.log(scrollPosition);
+        const currentSectionIndex = Math.floor(scrollPosition / sectionHeight) % imgCount;
+        // Hide all images and show only the current one
+        imgs.forEach((img, index) => {
+            img.style.display = index === currentSectionIndex ? 'block' : 'none';
+        });
+    });
+});
