@@ -390,7 +390,6 @@ button {
 
 /* animated part css */
 .container-lens{
-    margin-top: -40px;
 }
 .left-wrapper {
     display: flex;
@@ -527,7 +526,7 @@ button {
 .mid-section h2{
     font-size: 32px;
     color: var(--primary-color);
-    width: 1120px;
+    width: 90%;
     margin: auto;
     line-height: 160%;
 }
@@ -540,7 +539,7 @@ button {
 }
 .feature-box{
     width: 352px;
-    height: 484px;
+    height: 512px;
 }
 .feature-box img{
     max-width: 90%;
