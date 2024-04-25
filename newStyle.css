@@ -38,7 +38,9 @@ nav {
     width: 85%;
     margin: auto;
     max-width: 1200px;
+  
 }
+
 
 /* =============Nav============== */
 .logo {
@@ -325,9 +327,7 @@ button {
 }
 
 /* second fold */
-.second-fold{
-    margin-top: 50px;
-}
+
 .second-fold h1{
     line-height:135%;
     font-size:48px;
@@ -480,7 +480,7 @@ button {
         order: 1;
     }
     .txt-app-wrapper h3 {
-        font-size: 28px;
+        font-size: 24px;
         text-align: center;
         color: var(--text-color);
     }
@@ -558,4 +558,76 @@ button {
         font-size: 16px;
         max-width: 100%;
     }
+}
+
+/* footer */
+.footer {
+    padding-top: 70px;
+    padding-bottom: 35px;
+}
+.footer h3{
+    font-weight: 600;
+}
+.footer img {
+    max-width: 70%;
+}
+
+.logo-codebell svg {
+    color: var(--primary-color);
+}
+
+.dark #supportLink img,
+.dark #businessLink img {
+    filter: invert(1);
+}
+
+.footer p {
+    cursor: pointer;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.follow-button:hover {
+    scale: 1.1;
+}
+
+.follow-button svg {
+
+    color: rgb(255, 253, 255);
+}
+
+.social-links-company {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+}
+
+.social-links-company svg {
+    transition: var(--transition);
+}
+
+.social-links-company svg {
+    color: var(--primary-color);
+}
+a{
+    color: var(--text-color);
+}
+.footer-bottom p,
+.footer-bottom a {
+    font-size: 0.8em;
+    color: var(--text-color);
+}
+
+@media screen and (max-width:768px) {
+
+    .footer-bottom p,
+    .footer-bottom a {
+        font-size: 0.8em;
+    }
+}
+.top-padding{
+    padding-top: 6em;
+}
+.top-padding-section{
+    padding-top: 4em;
 }

@@ -1299,22 +1299,14 @@ video {
 .social-links-company svg:hover {
     color: var(--primary-color);
 }
-
-.follow-button {
-    max-width: 200px;
-    cursor: pointer;
-    padding: 1em 1em;
-    gap: 0.5em;
-    color: #ffffff;
-    background-color: var(--primary-color);
-    border-radius: 2em;
-    transition: var(--transition);
-    white-space: nowrap;
+a{
+    text-decoration: none;
 }
 
 .footer p {
     cursor: pointer;
     font-weight: 500;
+    color: var(--text-color);
 }
 
 .follow-button:hover {
@@ -1329,7 +1321,7 @@ video {
 .footer-bottom p,
 .footer-bottom a {
     font-size: 0.8em;
-    color: var(--sub-text-color);
+    color: var(--text-color);
 }
 
 @media screen and (max-width:768px) {
