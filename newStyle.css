@@ -478,7 +478,7 @@ button {
 .blur-fold{display: none;}
 @media screen and (max-width:768px) {
     .container-lens{
-        margin-top: -1em;
+        margin-top: 0em;
      }
     .container-lens .left-container {
         order: 1;
@@ -634,4 +634,12 @@ a{
 }
 .top-padding-section{
     padding-top: 4em;
+}
+@media screen and (max-width:768px) {
+    .top-padding{
+        padding-top: 4em;
+    }
+    .top-padding-section{
+        padding-top: 2em;
+    }
 }
