@@ -390,6 +390,7 @@ button {
 
 /* animated part css */
 .container-lens{
+   margin-top: -4em;
 }
 .left-wrapper {
     display: flex;
@@ -476,6 +477,9 @@ button {
 }
 .blur-fold{display: none;}
 @media screen and (max-width:768px) {
+    .container-lens{
+        margin-top: -1em;
+     }
     .container-lens .left-container {
         order: 1;
     }
