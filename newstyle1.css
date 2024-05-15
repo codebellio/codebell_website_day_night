@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -29,17 +30,20 @@ body {
     color: var(--text-color);
     background-color: var(--bg-color);
 }
-body{
+
+body {
     overflow-x: hidden;
 }
+
 /* ----------------common  css----------------- */
 section,
 nav {
     width: 85%;
     margin: auto;
     max-width: 1200px;
-  
+
 }
+
 ul,
 li,
 a {
@@ -47,10 +51,12 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-section{
+
+section {
     padding-top: 2.5em;
     padding-bottom: 2.5em;
 }
+
 button {
     gap: 1em;
     border: none;
@@ -66,20 +72,37 @@ button {
     white-space: nowrap;
     transition: 0.2s ease-in-out;
     cursor: pointer;
-    text-align:center;
+    text-align: center;
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 600;
 }
-.outline{
+
+.outline {
     background-color: white;
     border: 2px solid black;
     color: #000000;
 
 }
+
 button:hover {
     background: #FFFFFF;
     color: #000000;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.btn-mobile button {
+    display: none;
+}
+@media screen and (max-width: 768px) {
+    .btn-desktop button {
+        display: none;
+    }
+
+    .btn-mobile button {
+        display: flex;
+        height: 56px;
+        padding: 0.35em 2em;
+        border-radius: 0.5em !important;
+    }
 }
 
 /* -----------common css end----------------- */
@@ -117,11 +140,13 @@ button:hover {
     .nav-container .menu {
         display: flex;
     }
+
     .nav-container .nav-list,
     .nav-container .download-text {
         display: none;
     }
-    button{
+
+    button {
         padding: 12px;
     }
 }
@@ -132,10 +157,12 @@ button:hover {
     nav {
         width: 90%;
     }
+
     .logo-nav {
         text-align: center;
         font-size: 24px;
     }
+
     .navbar {
         padding: 0.5em;
         width: calc(100% - 1em);
@@ -152,6 +179,7 @@ video {
     height: auto;
     border-radius: 1em;
 }
+
 .swiper-button-next,
 .swiper-button-prev {
     background-color: var(--primary-color);
@@ -162,12 +190,14 @@ video {
     justify-content: center;
     align-items: center;
 }
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
     color: #ffffff;
     font-size: 1em !important;
     font-weight: 700;
 }
+
 .swiper-pagination-bullet {
     background-color: grey !important;
 }
@@ -178,39 +208,47 @@ video {
 
 
 /* ----------------------------section title-------------- */
-.section-title{
+.section-title {
     font-family: "Bricolage Grotesque", sans-serif;
     font-size: 40px;
     font-weight: bold;
     text-align: center;
 }
-.highlight-text{
+
+.highlight-text {
     position: relative;
     z-index: 2;
 }
-.highlight-text::after{
+
+.highlight-text::after {
     content: "";
     width: 100%;
     height: 25px;
-   background-image: url('/assets/svg/text.png');
-   background-position: center;
-   background-size: cover;
-   background-repeat: no-repeat;
+    background-image: url('/assets/svg/text.png');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
     position: absolute;
     bottom: -8px;
     left: 0;
     z-index: -1;
 }
+@media screen and (max-width: 768px) {
+    .section-title{
+        font-size: 26px;
+    }
+}
 /* ----------------------------section title end-------------- */
 
-.cards{
+.cards {
     display: flex;
     gap: 1em;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
-.cards .card{
+
+.cards .card {
     width: 352px;
     height: 374px;
     display: flex;
@@ -222,37 +260,174 @@ video {
     padding: 1em;
     min-width: 300px;
 }
-.cards .card .img-card{
+
+.cards .card .img-card {
     display: flex;
     justify-content: center;
     align-items: center;
     flex: 1;
 }
-.cards .card img{
+
+.cards .card img {
     max-width: 80%;
     margin: auto;
 }
-.cards .card h3{
- font-size: 20px;
-}.cards .card p{
-    margin-top: 16px;
-    line-height: 130%;
-    
+
+.cards .card h3 {
+    font-size: 20px;
 }
 
-.features p{
-line-height: 160%;
-max-width: 544px;
-font-size: 20px;
+.cards .card p {
+    margin-top: 16px;
+    line-height: 130%;
+
+}
+
+.features p {
+    line-height: 160%;
+    max-width: 544px;
+    font-size: 20px;
 }
 
 @media screen and (max-width:768px) {
-    .feature-order .feature-img{
+    .feature-order .feature-img {
         order: 1;
     }
-    .feature-order .feature-heading{
-order: 0;
+
+    .feature-order .feature-heading {
+        order: 0;
     }
 }
 
 
+/* -----------review cards -----------*/
+.review-cards {
+    display: flex;
+    gap: 1em;
+    text-align: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 3.5em;
+
+}
+
+.review-cards .review-card {
+    width: 290px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    padding: 30px;    
+    border-radius: 20px;
+}
+.review-cards .review-card h2 {
+    font-size: 21px;
+    font-weight:500;
+}
+.review-cards .review-card p {
+    font-size: 16px;
+    line-height: 150%;
+}
+.review-cards .review-card .review-star{
+    margin-top: 1em;
+}
+.review-cards .review-card .review-profile img{
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+}
+.review-cards .review-card .review-star img {
+    width: 24px;
+    height: 24px;
+
+}
+
+
+/* -------------faq-------------- */
+.question-box {
+    color: var(--text-color);
+    background: var(--bg-box-color);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+    box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 12px;
+
+}
+
+.question {
+    width: 90%;
+    font-size: 20px;
+    font-weight: 500;
+
+}
+
+.question-box:hover {
+    color: var(--primary-color);
+}
+
+@media screen and (max-width: 768px) {
+    .question {
+        font-size: 1em;
+    }
+}
+
+.ans {
+    width: 100%;
+    max-height: 0;
+    overflow: hidden;
+    position: relative;
+    transition: 0.5s ease-in-out;
+}
+
+.ans p {
+    padding: 0em 1.5em 1.5em 1.5em;
+    width: calc(100% - 3em);
+    font-weight: 400;
+    
+}
+
+.question-box .minus {
+    display: none;
+}
+
+.question-box.active .ans {
+    max-height: 30em;
+}
+
+.question-box.active .minus {
+    display: flex;
+}
+
+.question-box.active .plus {
+    display: none;
+}
+
+
+/* -----download section-------- */
+
+.download-section{
+    padding-top: 100px;
+    color: #ffffff;
+}
+.download-section h2{
+    font-size: 56px;
+}
+.download-section p{
+    font-size: 18px;
+    line-height: 110%;
+    max-width: 60%;
+    margin-top: 1.5em;
+    margin-bottom: 1.5em;
+}
+.download-section button{
+    background-color: white;
+    color: #000000;
+}
+
+@media screen and (max-width: 768px) {
+    .download-section h2{
+        font-size: 28px;
+    }
+    .download-section p{
+        max-width: 100%;
+        font-size: 16px;
+      
+    }
+}

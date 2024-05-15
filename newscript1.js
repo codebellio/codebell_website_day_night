@@ -1,3 +1,14 @@
+// ---------------------FAQ----------------------------
+document.addEventListener("DOMContentLoaded", function () {
+    const questionBoxes = document.querySelectorAll(".question-box");
+  
+    questionBoxes.forEach(function (box) {
+      box.addEventListener("click", function () {
+        this.classList.toggle("active");
+  
+      });
+    });
+  });
 let reviewCustomers = new Swiper(".swiper-container-store", {
     spaceBetween: 5,
     grabCursor: true,

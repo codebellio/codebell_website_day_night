@@ -1,5 +1,14 @@
 "use strict";
 
+// ---------------------FAQ----------------------------
+document.addEventListener("DOMContentLoaded", function () {
+  var questionBoxes = document.querySelectorAll(".question-box");
+  questionBoxes.forEach(function (box) {
+    box.addEventListener("click", function () {
+      this.classList.toggle("active");
+    });
+  });
+});
 var reviewCustomers = new Swiper(".swiper-container-store", {
   spaceBetween: 5,
   grabCursor: true,
