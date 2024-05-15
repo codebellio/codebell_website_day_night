@@ -240,8 +240,19 @@ video {
     
 }
 
+.features p{
+line-height: 160%;
+max-width: 544px;
+font-size: 20px;
+}
 
-
-
+@media screen and (max-width:768px) {
+    .feature-order .feature-img{
+        order: 1;
+    }
+    .feature-order .feature-heading{
+order: 0;
+    }
+}
 
 
