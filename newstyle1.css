@@ -7,7 +7,7 @@
 }
 
 :root {
-    --primary-color: #1111AD;
+    --primary-color: #1C61C0;
     --text-color: RGB(3, 21, 33);
     --sub-text-color: RGB(107, 107, 132);
     --bg-color: #FFFFFF;
@@ -83,6 +83,11 @@ button {
     color: #000000;
 
 }
+.outline.fill{
+    background-color: var(--primary-color);
+    border: none;
+    color: #ffffff;
+}
 
 button:hover {
     background: #FFFFFF;
@@ -135,7 +140,12 @@ button:hover {
     color: var(--primary-color);
     font-size: 38px;
 }
-
+#desktop-icons{
+    display: none;
+}
+#mobile-icons{
+    display: flex;
+}
 @media screen and (max-width: 990px) {
     .nav-container .menu {
         display: flex;
@@ -145,7 +155,12 @@ button:hover {
     .nav-container .download-text {
         display: none;
     }
-
+    #desktop-icons{
+        display: flex;
+    }
+    #mobile-icons{
+        display: none;
+    }
     button {
         padding: 12px;
     }
@@ -169,7 +184,10 @@ button:hover {
     }
 }
 
-
+.card-unique p{
+    font-size: 20px;
+    line-height: 160%;
+}
 
 /* ----------------swiper hero section--------------- */
 video {
@@ -206,6 +224,14 @@ video {
     background-color: var(--primary-color) !important;
 }
 
+#buy-now{
+    max-width: 65%;
+}
+@media  screen and (max-width:990px) {
+    #buy-now{
+        max-width: 100%;
+    }
+}
 
 /* ----------------------------section title-------------- */
 .section-title {
@@ -405,6 +431,8 @@ video {
 .download-section{
     padding-top: 100px;
     color: #ffffff;
+    font-family: "Bricolage Grotesque", sans-serif;
+
 }
 .download-section h2{
     font-size: 56px;

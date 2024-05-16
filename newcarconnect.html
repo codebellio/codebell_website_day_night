@@ -41,25 +41,25 @@
                 </svg>
             </div>
             <div class="flex middle center logo logo-nav">codebell</div>
-            <div class="flex middle gap-2">
+            <div class="flex middle">
                 <ul class="flex middle gap-2 nav-list" style="font-size: 1em;font-weight:600;">
                     <li>Home</li>
                     <li>Features</li>
                     <li>Products</li>
                     <li>Contact Us</li>
                 </ul>
-                <button class="flex middle center" style="gap: 0.75em;">
-                    <span class="download-text">Download</span>
-                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M14 11V14H2V11H0V14C0 15.1 0.9 16 2 16H14C15.1 16 16 15.1 16 14V11H14ZM13 7L11.59 5.59L9 8.17V0H7V8.17L4.41 5.59L3 7L8 12L13 7Z"
-                            fill="currentColor" />
-                    </svg>
-                </button>
+                <div class="flex middle gap" id="desktop-icons">
+                    <img src="/assets/svg/user.svg" alt="">
+                    <img src="/assets/svg/store.svg" alt="">
+                </div>
+            </div>
+            <div class="flex middle gap" id="mobile-icons">
+                <img src="/assets/svg/user.svg" alt="">
+                <img src="/assets/svg/store.svg" alt="">
             </div>
         </nav>
     </div>
-     <style>
+    <style>
         .main-wrapper {
             height: 60%;
         }
@@ -233,11 +233,15 @@
                     <li style="list-style:disc;">Contribute to more organized, safer streets</li>
                 </ul>
                 <h4>Select Language:</h4>
-                <div class="flex middle gap-1">
-                    <button>English</button>
-                    <button class="outline">Hindi</button>
+                <div class="flex column gap" id="buy-now">
+                    <div class="flex middle gap-1 eq">
+                        <button id="english-btn" class="outline">English</button>
+                        <button id="hindi-btn" class="outline">Hindi</button>
+                    </div>
+                    <button>BUY NOW</button>
                 </div>
-                <button>BUY NOW</button>
+               
+
             </div>
         </div>
     </section>
@@ -306,7 +310,7 @@
 
     <section class="flex eq wrap between middle center gap-2" id="About">
         <div class="flex middle center" style="min-width: 300px;">
-            <img src="/assets/svg/emergency.png" alt="" style="max-width: 100%;">
+            <img src="/assets/svg/emergency.png" alt="" style="max-width: 80%;">
         </div>
         <div class="flex column gap-1" style="min-width: 300px;">
             <div class="section-title" style="text-align: start;"><span class="highlight-text"> Emergency</span> SOS
@@ -354,7 +358,10 @@
         <div class="flex column gap-1" style="min-width: 300px;">
             <div class="section-title" style="text-align: start;">Never Lose Your Car <br> Again</div>
             <div class="card-unique" style=" line-height:160%;">
-                <p>We've all been there – wandering around aimlessly, trying to remember where we parked. With CarConnect, those days are over. Simply scan the Codebell QR when you park your car, and voilà! You'll be guided back to your vehicle using live GPS location tracking. No more wasting time searching for your car in crowded parking lots.</p>
+                <p>We've all been there – wandering around aimlessly, trying to remember where we parked. With
+                    CarConnect, those days are over. Simply scan the Codebell QR when you park your car, and voilà!
+                    You'll be guided back to your vehicle using live GPS location tracking. No more wasting time
+                    searching for your car in crowded parking lots.</p>
             </div>
         </div>
         <div class="flex middle center" style="min-width: 300px;">
@@ -368,14 +375,18 @@
         <div class="flex column gap-1 feature-heading" style="min-width: 300px;">
             <div class="section-title" style="text-align: start;">Assign to Driver / <br> Family Member</div>
             <div class="card-unique" style=" line-height:160%;">
-                <p>Whether you have a trusted driver or rely on family members, CarConnect ensures seamless communication with whoever is responsible for your vehicle. Easily assign the QR to your driver or family member, ensuring that all calls related to your car are directly received by them. This means that even if you're not behind the wheel, you're always in control, with your designated driver ready to handle any situation that arises.</p>
+                <p>Whether you have a trusted driver or rely on family members, CarConnect ensures seamless
+                    communication with whoever is responsible for your vehicle. Easily assign the QR to your driver or
+                    family member, ensuring that all calls related to your car are directly received by them. This means
+                    that even if you're not behind the wheel, you're always in control, with your designated driver
+                    ready to handle any situation that arises.</p>
             </div>
         </div>
     </section>
     <section class="flex column center gap-2">
         <div class="section-title" style="padding-bottom: 1em;"><span class="highlight-text"> How</span> it works?</div>
         <video src="/assets/img/sample1.mp4" autoplay muted loop></video>
-    </section> 
+    </section>
     <section style="padding-top: 150px;">
         <div class="section-title"><span class="highlight-text"> See </span>What Car owners have to Say</div>
         <p class="text-center" style="margin-top: 1em;">Insightful Customer Feedback: Your Thoughts Matter to Us</p>
@@ -529,7 +540,7 @@
         </div>
 
     </section>
-    <div style="background: #8437F9;" >
+    <div style="background: #8437F9;">
         <section class="download-section text-center flex middle column gap top-padding">
             <h2>Download the Codebell App Now</h2>
             <p>Elevate your communication with Codebell's QR-based calling solutions.
@@ -593,7 +604,20 @@
             </div>
         </section>
     </div>
+    <script>
+        const englishBtn = document.getElementById('english-btn');
+        const hindiBtn = document.getElementById('hindi-btn');
+        function toggleOutline(event) {
+            const clickedButton = event.target;
 
+            englishBtn.classList.remove('fill');
+            hindiBtn.classList.remove('fill');
+
+            clickedButton.classList.add('fill');
+        }
+        englishBtn.addEventListener('click', toggleOutline);
+        hindiBtn.addEventListener('click', toggleOutline);
+    </script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="darkmode.js"></script>
     <script src="newscript1.js"></script>

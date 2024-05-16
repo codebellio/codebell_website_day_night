@@ -79,4 +79,4 @@ document.addEventListener("DOMContentLoaded", function () {
       img.style.display = index === currentSectionIndex ? 'block' : 'none';
     });
   });
-});
+}); // Select the buttons
