@@ -40,8 +40,7 @@ section,
 nav {
     width: 85%;
     margin: auto;
-    max-width: 1200px;
-
+    max-width: 1120px;
 }
 
 ul,
@@ -66,7 +65,7 @@ button {
     background-color: var(--primary-color);
     color: #FFFFFF;
     font-size: 1em;
-    font-weight: 500;
+    font-weight: 700;
     border-radius: 12px;
     letter-spacing: 0.5px;
     white-space: nowrap;
@@ -76,7 +75,10 @@ button {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 600;
 }
+.highlight-font{
+    font-family: "Bricolage Grotesque", sans-serif;
 
+}
 .outline {
     background-color: white;
     border: 2px solid black;
@@ -84,16 +86,12 @@ button {
 
 }
 .outline.fill{
-    background-color: var(--primary-color);
+    background-color:#030319;
     border: none;
     color: #ffffff;
 }
 
-button:hover {
-    background: #FFFFFF;
-    color: #000000;
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
+
 .btn-mobile button {
     display: none;
 }
@@ -131,7 +129,10 @@ button:hover {
 .navbar {
     padding: 1.5em;
 }
-
+.navbar li{
+    font-weight: 500;
+    font-size: 16px;
+}
 .nav-container .menu {
     display: none;
 }
@@ -190,6 +191,13 @@ button:hover {
 }
 
 /* ----------------swiper hero section--------------- */
+
+#hero-title .title-1{
+    font-size: 40px;
+    font-weight: 700;
+    font-family: "Bricolage Grotesque", sans-serif;
+
+}
 video {
     max-width: 100%;
     max-height: 100%;
@@ -261,27 +269,27 @@ video {
 }
 @media screen and (max-width: 768px) {
     .section-title{
-        font-size: 26px;
+        font-size: 28px;
     }
 }
 /* ----------------------------section title end-------------- */
 
 .cards {
     display: flex;
-    gap: 1em;
+    gap: 2em;
     flex-wrap: wrap;
     justify-content: center;
     text-align: center;
 }
 
 .cards .card {
-    width: 352px;
+    width: 302px;
     height: 374px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    border: 2px solid var(--primary-color);
+    border: 4px solid var(--primary-color);
     border-radius: 12px;
     padding: 1em;
     min-width: 300px;
@@ -305,8 +313,8 @@ video {
 
 .cards .card p {
     margin-top: 16px;
+    margin-bottom: 20px;
     line-height: 130%;
-
 }
 
 .features p {
@@ -441,7 +449,7 @@ video {
     font-size: 18px;
     line-height: 110%;
     max-width: 60%;
-    margin-top: 1.5em;
+    margin-top: -0.8em;
     margin-bottom: 1.5em;
 }
 .download-section button{
@@ -450,6 +458,13 @@ video {
 }
 
 @media screen and (max-width: 768px) {
+    .section-title{
+        text-align: center;
+    }
+    
+    .download-section{
+        padding: 1em;
+    }
     .download-section h2{
         font-size: 28px;
     }
