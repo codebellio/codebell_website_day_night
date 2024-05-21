@@ -128,149 +128,159 @@
             }
         }
     </style>
-    <section style="padding-top: 140px;">
-        <div class="flex eq wrap gap-2 ">
-            <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
-                <div class="swiper-wrapper main-wrapper">
-                    <div class="swiper-slide main-img">
-                        <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 100%;height:auto">
+    <div id="hero-bg">
+        <section style="padding-top: 140px; ">
+            <div class="flex eq wrap gap-2 ">
+                <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
+                    <div class="swiper-wrapper main-wrapper">
+                        <div class="swiper-slide main-img">
+                            <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 100%;height:auto">
+                        </div>
+                        <div class="swiper-slide main-img main-video flex middle center">
+                            <video autoplay loop muted controls src="/assets/img/sample.mp4"></video>
+                        </div>
+                        <div class="swiper-slide main-img">
+                            <img src="/assets/img/codebell_standard.webp" alt="" style="max-width: 100%;height:auto">
+                        </div>
+                        <div class="swiper-slide main-img">
+                            <img src="/assets/newimage/car_connect_world1.png" alt=""
+                                style="max-width: 100%;height:auto">
+                        </div>
                     </div>
-                    <div class="swiper-slide main-img main-video flex middle center">
-                        <video autoplay loop muted controls src="/assets/img/sample.mp4"></video>
+                    <div class="flex between">
+                        <div class="arrow1 flex middle center"
+                            style="position:absolute;top:15.5em;left:0;cursor:pointer;z-index:10;padding:0.3em;background:var(--primary-color);border-radius:50%;color:#ffffff">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-left" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
+                            </svg>
+                        </div>
+                        <div class="arrow2 flex middle center"
+                            style="position:absolute;top:15.5em;right:0;cursor:pointer;z-index:10; padding:0.3em;background:var(--primary-color);border-radius:50%;color:#ffffff">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-chevron-right" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
+                            </svg>
+                        </div>
                     </div>
-                    <div class="swiper-slide main-img">
-                        <img src="/assets/img/codebell_standard.webp" alt="" style="max-width: 100%;height:auto">
-                    </div>
-                    <div class="swiper-slide main-img">
-                        <img src="/assets/newimage/car_connect_world1.png" alt="" style="max-width: 100%;height:auto">
+                    <div class="flex gap-1" style="margin-top: 1.5em;">
+                        <div class="mini-img active-img" data-index="0">
+                            <img src="/assets/newimage/doorbell_global1.png" alt="">
+                        </div>
+                        <div class="mini-img mini-video " data-index="1">
+                            <video src="/assets/img/sample.mp4"></video>
+                        </div>
+                        <div class="mini-img" data-index="2">
+                            <img src="/assets/img/codebell_standard.webp" alt="">
+                        </div>
+                        <div class="mini-img" data-index="3">
+                            <img src="/assets/newimage/car_connect_world1.png" alt="">
+                        </div>
                     </div>
                 </div>
-                <div class="flex between">
-                    <div class="arrow1 flex middle center"
-                        style="position:absolute;top:15.5em;left:0;cursor:pointer;z-index:10;padding:0.3em;background:var(--primary-color);border-radius:50%;color:#ffffff">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-left" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                        </svg>
+
+
+                <div class="flex column gap " style="min-width: 320px; ">
+                    <div class="flex middle gap">
+                        <div class="flex middle" style="gap: 0.1em;">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                    fill="#FFBC00" />
+                            </svg>
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                    fill="#FFBC00" />
+                            </svg>
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                    fill="#FFBC00" />
+                            </svg>
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                    fill="#FFBC00" />
+                            </svg>
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                    fill="#FFBC00" />
+                            </svg>
+                        </div>
+                        <p>270+ Ratings & Reviews</p>
                     </div>
-                    <div class="arrow2 flex middle center"
-                        style="position:absolute;top:15.5em;right:0;cursor:pointer;z-index:10; padding:0.3em;background:var(--primary-color);border-radius:50%;color:#ffffff">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                            class="bi bi-chevron-right" viewBox="0 0 16 16">
-                            <path fill-rule="evenodd"
-                                d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                        </svg>
+                    <div class="flex column gap" id="hero-title">
+                        <div class="title-1">CarConnect Smart Car Intercom </div>
+                        <p>Stay in Touch with Your Vehicle from anywhere, anytime.</p>
                     </div>
-                </div>
-                <div class="flex gap-1" style="margin-top: 1.5em;">
-                    <div class="mini-img active-img" data-index="0">
-                        <img src="/assets/newimage/doorbell_global1.png" alt="">
+                    <ul class="flex column gap" style="margin-left: 1em;">
+                        <li style="list-style:disc;">Receive Calls for your car related issues</li>
+                        <li style="list-style:disc;">Phone number not shared between parties</li>
+                        <li style="list-style:disc;">No App required by 3rd party for calling</li>
+                        <li style="list-style:disc;">Protects your car from unnecessary damages</li>
+                        <li style="list-style:disc;">Contribute to more organized, safer streets</li>
+                    </ul>
+                    <h4 class="highlight-font" style="border-top:1px solid #030319;padding-top:1.5em;">Select Language:
+                    </h4>
+                    <div class="flex column gap" id="buy-now">
+                        <div class="flex middle gap-1 eq">
+                            <button id="english-btn" class="outline">English</button>
+                            <button id="hindi-btn" class="outline">Hindi</button>
+                        </div>
+                        <button class="highlight-font">Buy Now</button>
                     </div>
-                    <div class="mini-img mini-video " data-index="1">
-                        <video src="/assets/img/sample.mp4"></video>
-                    </div>
-                    <div class="mini-img" data-index="2">
-                        <img src="/assets/img/codebell_standard.webp" alt="">
-                    </div>
-                    <div class="mini-img" data-index="3">
-                        <img src="/assets/newimage/car_connect_world1.png" alt="">
-                    </div>
+
+
                 </div>
             </div>
-
-
-            <div class="flex column gap " style="min-width: 320px; ">
-                <div class="flex middle gap">
-                    <div class="flex middle" style="gap: 0.1em;">
-                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
-                                fill="#FFBC00" />
-                        </svg>
-                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
-                                fill="#FFBC00" />
-                        </svg>
-                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
-                                fill="#FFBC00" />
-                        </svg>
-                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
-                                fill="#FFBC00" />
-                        </svg>
-                        <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
-                                fill="#FFBC00" />
-                        </svg>
-                    </div>
-                    <p>270+ Ratings & Reviews</p>
-                </div>
-                <div class="flex column gap" id="hero-title">
-                    <div class="title-1">CarConnect Smart Car Intercom </div>
-                    <p>Stay in Touch with Your Vehicle from anywhere, anytime.</p>
-                </div>
-                <ul class="flex column gap" style="margin-left: 1em;">
-                    <li style="list-style:disc;">Receive Calls for your car related issues</li>
-                    <li style="list-style:disc;">Phone number not shared between parties</li>
-                    <li style="list-style:disc;">No App required by 3rd party for calling</li>
-                    <li style="list-style:disc;">Protects your car from unnecessary damages</li>
-                    <li style="list-style:disc;">Contribute to more organized, safer streets</li>
-                </ul>
-                <h4 class="highlight-font" style="border-top:1px solid #030319;padding-top:1.5em;">Select Language:</h4>
-                <div class="flex column gap" id="buy-now">
-                    <div class="flex middle gap-1 eq">
-                        <button id="english-btn" class="outline">English</button>
-                        <button id="hindi-btn" class="outline">Hindi</button>
-                    </div>
-                    <button class="highlight-font">Buy Now</button>
-                </div>
-
-
-            </div>
-        </div>
-    </section>
-
-    <section>
-        <div class="section-title" style="padding-bottom: 2.5em;"><span class="highlight-text"> Wooried</span> about
-            your Car</div>
-        <div class="cards">
-            <div class="card">
-                <div class="img-card">
-                    <img src="/assets/svg/worried1.png" alt="">
-                </div>
-                <div>
+        </section>
+    </div>
+    <div id="blur-bg">
+        <section>
+            <div class="section-title" style="padding-bottom: 2.5em;"><span class="highlight-text"> Wooried</span> about
+                your Car</div>
+            <div class="cards">
+                <div class="card">
                     <h3 class="highlight-font">Car Damage</h3>
                     <p>Parking in the wrong spot can lead to nasty surprises like flat tires, scratches, and broken
                         mirrors. Don't let a simple mistake end up costing you big time.</p>
+                    <div class="img-card">
+                        <img src="/assets/svg/worriednew1.png" alt="">
+                    </div>
+                 
+                </div>
+                <div class="card">
+                    <h3 class="highlight-font">Road Rage Drama</h3>
+                    <p>Ever had a parking mishap turn into a shouting match? It happens more often than you'd think.
+                        Avoid
+                        unnecessary stress and keep the peace by parking right.</p>
+                    <div class="img-card">
+                        <img src="/assets/svg/worriednew2.png" alt="">
+                    </div>
+                   
+                </div>
+                <div class="card">
+                    <h3 class="highlight-font">Towing Troubles</h3>
+                    <p>You know that sinking feeling when you realize your car's been towed? It's even worse not knowing where it's gone! Don't get left in the dark – stay in control of your wheels</p>
+                    <div class="img-card">
+                        <img src="/assets/svg/worriednew3.png" alt="">
+                    </div>
+               
                 </div>
             </div>
-            <div class="card">
-                <div class="img-card">
-                    <img src="/assets/svg/worried2.png" alt="">
-                </div>
-                <h3 class="highlight-font">Road Rage Drama</h3>
-                <p>Ever had a parking mishap turn into a shouting match? It happens more often than you'd think. Avoid
-                    unnecessary stress and keep the peace by parking right.</p>
-            </div>
-            <div class="card">
-                <div class="img-card">
-                    <img src="/assets/svg/worried3.png" alt="">
-                </div>
-                <h3 class="highlight-font">Towing Troubles</h3>
-                <p>You know that sinking feeling when you realize your car's been towed? It's even worse not knowing
-                    where it's gone! Don't get left in the dark – stay in control of your wheels</p>
-            </div>
-        </div>
 
 
-    </section>
-
+        </section>
+    </div>
     <section class="flex eq wrap between middle center gap-2" id="About">
         <div class="flex column gap-1" style="min-width: 300px;">
             <div class="section-title" style="text-align: start;"><span class="highlight-text"> Benifits</span> of Car
@@ -280,7 +290,8 @@
                     incorrectly or in case of any issue with your car. Get alerts on your mobile and solve the issue
                     immediately</p>
             </div>
-            <button class="button store-button" style="width: fit-content;">Get CarConnect and park worry-free!"</button>
+            <button class="button store-button" style="width: fit-content;">Get CarConnect and park
+                worry-free!"</button>
         </div>
         <div class="flex middle center" style="min-width: 300px;">
             <img src="/assets/svg/benifits.png" alt="" style="max-width: 50%;">
@@ -315,7 +326,8 @@
                 <p>With CarConnect, safety is not just a feature; it's our promise. Activate your Emergency SOS Contact
                     today and drive with confidence.</p>
             </div>
-            <button class="button store-button" style="width: fit-content;">Get CarConnect and park worry-free!"</button>
+            <button class="button store-button" style="width: fit-content;">Get CarConnect and park
+                worry-free!"</button>
         </div>
     </section>
 
