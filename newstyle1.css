@@ -305,9 +305,14 @@ video {
     left: 0;
     z-index: -1;
 }
+@media  screen and (max-width:1250px) {
+    .section-title{
+        font-size: 36px;
+    }
+}
 @media screen and (max-width: 768px) {
     .section-title{
-        font-size: 30px;
+        font-size: 24px;
     }
     #hero-title .title-1{
         font-size: 30px;
@@ -322,6 +327,7 @@ video {
     background: url('/assets/svg/worried-bg.svg') no-repeat;
 background-size: cover;
 }
+
 .cards {
     display: flex;
     gap: 2em;
@@ -364,8 +370,9 @@ background-size: cover;
 }
 
 .features p {
+    margin-top: 2.5em;
     line-height: 160%;
-    max-width: 544px;
+    max-width: 938px;
     font-size: 20px;
 }
 
@@ -378,7 +385,31 @@ background-size: cover;
         order: 0;
     }
 }
+/* --no more section---- */
+#no-app-bg{
+    background: transparent;
+    background: url('/assets/svg/no-more-app-bg.svg') no-repeat;
+background-size: cover;
+}
+.no-more-img{
+    max-width: 30%;
+    margin: auto;;
+}
 
+@media screen and (max-width:768px) {
+    .no-more-img{
+        max-width: 100%;
+    }
+}
+
+/* -----automatic section ----*/
+
+.bg-class{
+    background: transparent;
+    background: url('/assets/svg/automatic-call-bg.svg') no-repeat;
+background-size: cover;
+border-radius: 1em;
+}
 
 /* -----------review cards -----------*/
 .review-cards {
@@ -419,6 +450,40 @@ background-size: cover;
 
 }
 
+/* --------emergency----------- */
+.emergency{
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    border-radius: 1.2em;
+}
+.emergency img{
+    width: 624px;height: 560px;
+ 
+}
+@media screen and (max-width:1200px) {
+.emergency{
+    flex-wrap: nowrap;
+    
+}
+}
+@media screen and (max-width:768px) {
+    .emergency img{
+        border-top-right-radius: 1.2em;
+
+    }
+    .emergency img{
+        width: auto;
+        height: auto;
+     
+    }
+    
+}
+/* ---assign to driver */
+.assign-driver{
+    background: #FAFAFA;
+    border: 1px solid #DCDCDC;
+    border-radius: 1.2em;
+}
 
 /* -------------faq-------------- */
 .question-box {
@@ -483,10 +548,11 @@ background-size: cover;
 /* -----download section-------- */
 
 .download-section{
-    padding: 100px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    border-radius: 1em;
     color: #ffffff;
     font-family: "Bricolage Grotesque", sans-serif;
-
 }
 .download-section h2{
     font-size: 56px;
