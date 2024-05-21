@@ -109,7 +109,38 @@ button {
 }
 
 /* -----------common css end----------------- */
-
+.text-gradient {
+    background: linear-gradient(
+        to right, 
+        #8437F9 0%, 
+        #8437F9 6%, 
+        #8437F9 31%, 
+        #FF488B 55%, 
+        #FF488B 70%, 
+        #FF488B 83%, 
+        #FF7135 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
+.text-gradient2{
+    background: linear-gradient(
+        to left, 
+        #8437F9 0%, 
+        #8437F9 6%, 
+        #8437F9 31%, 
+        #FF488B 55%, 
+        #FF488B 70%, 
+        #FF488B 83%, 
+        #FF7135 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+}
 
 .logo {
     font-family: "Montserrat Alternates", sans-serif;
@@ -193,8 +224,9 @@ button {
 /* ----------------swiper hero section--------------- */
 
 #hero-title .title-1{
-    font-size: 40px;
+    font-size: 64px;
     font-weight: 700;
+    line-height: 104%;
     font-family: "Bricolage Grotesque", sans-serif;
 
 }
@@ -249,7 +281,7 @@ video {
 /* ----------------------------section title-------------- */
 .section-title {
     font-family: "Bricolage Grotesque", sans-serif;
-    font-size: 40px;
+    font-size: 54px;
     font-weight: bold;
     text-align: center;
 }
@@ -296,6 +328,7 @@ background-size: cover;
 
 .cards .card {
     width: 350px;
+ 
     display: flex;
     flex-direction: column;
     justify-content: center;
