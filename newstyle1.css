@@ -306,7 +306,10 @@ video {
 }
 @media screen and (max-width: 768px) {
     .section-title{
-        font-size: 28px;
+        font-size: 30px;
+    }
+    #hero-title .title-1{
+        font-size: 30px;
     }
 }
 /* ----------------------------section title end-------------- */
