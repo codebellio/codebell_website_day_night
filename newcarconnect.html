@@ -34,13 +34,13 @@
 <body>
     <div class="nav-container">
         <nav class="flex between middle navbar">
-            <div class="flex center middle menu">
+            <div class="flex center middle menu" >
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M12 17V15H30V17H12ZM12 22H30V20H12V22ZM12 27H30V25H12V27Z" fill="currentColor" />
                 </svg>
             </div>
-            <div class="flex middle center logo logo-nav">
+            <div class="flex middle center logo logo-nav logo-mobile">
                 <img src="/assets/svg/logo-main.svg" alt="">
             </div>
             <div class="flex middle">
@@ -49,6 +49,7 @@
                     <li>Features</li>
                     <li>Products</li>
                     <li>Contact Us</li>
+                    <li>Home Link Store</li>
                 </ul>
                 <div class="flex middle gap" id="desktop-icons">
                     <img src="/assets/svg/user.svg" alt="">
@@ -129,22 +130,22 @@
         }
     </style>
     <div id="hero-bg">
-        <section style="padding-top: 140px; ">
+        <section id="hero-padding">
             <div class="flex eq wrap gap-2 ">
                 <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
                     <div class="swiper-wrapper main-wrapper">
                         <div class="swiper-slide main-img">
-                            <img src="/assets/newimage/doorbell_global1.png" alt="" style="max-width: 100%;height:auto">
+                            <img src="/assets/newimage/doorbell_global1.png" alt="" >
                         </div>
                         <div class="swiper-slide main-img main-video flex middle center">
                             <video autoplay loop muted controls src="/assets/img/sample.mp4"></video>
                         </div>
                         <div class="swiper-slide main-img">
-                            <img src="/assets/img/codebell_standard.webp" alt="" style="max-width: 100%;height:auto">
+                            <img src="/assets/img/codebell_standard.webp" alt="" >
                         </div>
                         <div class="swiper-slide main-img">
                             <img src="/assets/newimage/car_connect_world1.png" alt=""
-                                style="max-width: 100%;height:auto">
+                                >
                         </div>
                     </div>
                     <div class="flex between">
@@ -474,7 +475,7 @@
         </div>
     </section>
     <section>
-        <div class="section-title"><span class="highlight-text"> Frequently </span>asked questions</div>
+        <div class="section-title">Frequently asked questions</div>
         <p class="text-center" style="margin-top: 1em;">Discover Valuable Insights in Our FAQs - Your Common Questions,
             Expertly Answered.</p>
         <div class="flex column gap" style="margin-top: 3.5em;">

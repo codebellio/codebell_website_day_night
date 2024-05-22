@@ -62,7 +62,7 @@ button {
     background-color: transparent;
     outline: none;
     padding: 16px 24px;
-    background-color: var(--primary-color);
+    background-color: #8437F9;
     color: #FFFFFF;
     font-size: 1em;
     font-weight: 700;
@@ -214,6 +214,10 @@ button {
         padding: 0.5em;
         width: calc(100% - 1em);
     }
+    .logo-mobile img{
+height: 16px;
+margin-left: 1.2em;
+    }
 }
 
 .card-unique p{
@@ -273,9 +277,23 @@ video {
 #buy-now{
     max-width: 65%;
 }
+.main-img img{
+    max-width: 100%;
+    height: auto;
+}
+#hero-padding{
+    padding-top: 140px;
+}
 @media  screen and (max-width:990px) {
     #buy-now{
         max-width: 100%;
+    }
+    #hero-padding{
+        padding-top: 80px;
+    }
+    .main-img img{
+        max-width: 80%;
+        height: auto;
     }
 }
 
