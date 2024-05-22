@@ -619,10 +619,16 @@ video {
 .automatic-code{
     height: 504px;
 }
+.automatic-code.special-order2{
+    height: 456px;
+}
 @media screen and (max-width:768px) {
     .automatic-code{
         height: auto;
      
+    }
+    .automatic-code.special-order2{
+        height: auto;
     }
     #automatic-section .special-order1{
         order: 0;
