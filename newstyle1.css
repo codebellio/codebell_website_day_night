@@ -75,18 +75,21 @@ button {
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 600;
 }
-.highlight-font{
+
+.highlight-font {
     font-family: "Bricolage Grotesque", sans-serif;
 
 }
+
 .outline {
     background-color: white;
     border: 2px solid black;
     color: #000000;
 
 }
-.outline.fill{
-    background-color:#030319;
+
+.outline.fill {
+    background-color: #030319;
     border: none;
     color: #ffffff;
 }
@@ -95,6 +98,7 @@ button {
 .btn-mobile button {
     display: none;
 }
+
 @media screen and (max-width: 768px) {
     .btn-desktop button {
         display: none;
@@ -110,32 +114,29 @@ button {
 
 /* -----------common css end----------------- */
 .text-gradient {
-    background: linear-gradient(
-        to right, 
-        #8437F9 0%, 
-        #8437F9 6%, 
-        #8437F9 31%, 
-        #FF488B 55%, 
-        #FF488B 70%, 
-        #FF488B 83%, 
-        #FF7135 100%
-    );
+    background: linear-gradient(to right,
+            #8437F9 0%,
+            #8437F9 6%,
+            #8437F9 31%,
+            #FF488B 55%,
+            #FF488B 70%,
+            #FF488B 83%,
+            #FF7135 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
     color: transparent;
 }
-.text-gradient2{
-    background: linear-gradient(
-        to left, 
-        #8437F9 0%, 
-        #8437F9 6%, 
-        #8437F9 31%, 
-        #FF488B 55%, 
-        #FF488B 70%, 
-        #FF488B 83%, 
-        #FF7135 100%
-    );
+
+.text-gradient2 {
+    background: linear-gradient(to left,
+            #8437F9 0%,
+            #8437F9 6%,
+            #8437F9 31%,
+            #FF488B 55%,
+            #FF488B 70%,
+            #FF488B 83%,
+            #FF7135 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -153,16 +154,18 @@ button {
     position: fixed;
     width: 100%;
     z-index: 100;
-    
+
 }
 
 .navbar {
     padding: 1.5em;
 }
-.navbar li{
+
+.navbar li {
     font-weight: 500;
     font-size: 16px;
 }
+
 .nav-container .menu {
     display: none;
 }
@@ -171,16 +174,20 @@ button {
     color: var(--primary-color);
     font-size: 38px;
 }
-#desktop-icons{
+
+#desktop-icons {
     display: none;
 }
-#mobile-icons{
+
+#mobile-icons {
     display: flex;
 }
-.nav-container.scrolled{
+
+.nav-container.scrolled {
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     background: var(--bg-color);
 }
+
 @media screen and (max-width: 990px) {
     .nav-container .menu {
         display: flex;
@@ -190,16 +197,19 @@ button {
     .nav-container .download-text {
         display: none;
     }
-    #desktop-icons{
+
+    #desktop-icons {
         display: flex;
     }
-    #mobile-icons{
+
+    #mobile-icons {
         display: none;
     }
+
     button {
         padding: 12px;
     }
-   
+
 
 }
 
@@ -219,31 +229,34 @@ button {
         padding: 0.5em;
         width: calc(100% - 1em);
     }
-    .logo-mobile img{
-height: 16px;
-margin-left: 1.2em;
+
+    .logo-mobile img {
+        height: 16px;
+        margin-left: 1.2em;
     }
 }
 
-.card-unique p{
+.card-unique p {
     font-size: 20px;
     line-height: 160%;
 }
 
 /* ----------------swiper hero section--------------- */
 
-#hero-title .title-1{
+#hero-title .title-1 {
     font-size: 64px;
     font-weight: 800;
     line-height: 104%;
     font-family: "Bricolage Grotesque", sans-serif;
 
 }
-#hero-bg{
+
+#hero-bg {
     background: transparent;
     background: url('/assets/svg/hero-bg.svg') no-repeat;
-background-size: cover;
+    background-size: cover;
 }
+
 video {
     max-width: 100%;
     max-height: 100%;
@@ -279,26 +292,62 @@ video {
     background-color: var(--primary-color) !important;
 }
 
-#buy-now{
+#buy-now {
     max-width: 65%;
 }
-.main-img img{
+
+.main-img img {
     max-width: 100%;
     height: auto;
 }
-#hero-padding{
+
+#hero-padding {
     padding-top: 140px;
 }
-@media  screen and (max-width:990px) {
-    #buy-now{
+
+.arrow1 {
+    position: absolute;
+    top: 15.5em;
+    left: 0;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.3em;
+    background: var(--primary-color);
+    border-radius: 50%;
+    color: #ffffff
+}
+
+.arrow2 {
+    position: absolute;
+    top: 15.5em;
+    right: 0;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.3em;
+    background: var(--primary-color);
+    border-radius: 50%;
+    color: #ffffff
+}
+
+@media screen and (max-width:990px) {
+    #buy-now {
         max-width: 100%;
     }
-    #hero-padding{
+
+    #hero-padding {
         padding-top: 80px;
     }
-    .main-img img{
+
+    .main-img img {
         max-width: 80%;
         height: auto;
+    }
+    
+}
+@media screen and (max-width:990px) {
+    .arrow1, .arrow2{
+        top: 10em;
+        top: 10em;
     }
 }
 
@@ -328,27 +377,31 @@ video {
     left: 0;
     z-index: -1;
 }
-@media  screen and (max-width:1250px) {
-    .section-title{
+
+@media screen and (max-width:1250px) {
+    .section-title {
         font-size: 36px;
     }
 }
+
 @media screen and (max-width: 768px) {
-    .section-title{
+    .section-title {
         font-size: 24px;
     }
-    #hero-title .title-1{
+
+    #hero-title .title-1 {
         font-size: 30px;
     }
 }
+
 /* ----------------------------section title end-------------- */
 
 
 /* -------worried section--------- */
-#blur-bg{
+#blur-bg {
     background: transparent;
     background: url('/assets/svg/worried-bg.svg') no-repeat;
-background-size: cover;
+    background-size: cover;
 }
 
 .cards {
@@ -361,18 +414,23 @@ background-size: cover;
 
 .cards .card {
     width: 350px;
- 
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     border-radius: 12px;
     padding: 25px;
     min-width: 300px;
-    background: rgba(255, 255, 255, 0.2); /* semi-transparent background */
-    backdrop-filter: blur(10px); /* blur effect */
-    -webkit-backdrop-filter: blur(10px); /* Safari support */
-    border: 1px solid rgba(255, 255, 255, 0.3); /* optional: border to enhance the glass effect */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* optional: subtle shadow for depth */
+    background: rgba(255, 255, 255, 0.2);
+    /* semi-transparent background */
+    backdrop-filter: blur(10px);
+    /* blur effect */
+    -webkit-backdrop-filter: blur(10px);
+    /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    /* optional: border to enhance the glass effect */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    /* optional: subtle shadow for depth */
 }
 
 
@@ -408,30 +466,33 @@ background-size: cover;
         order: 0;
     }
 }
+
 /* --no more section---- */
-#no-app-bg{
+#no-app-bg {
     background: transparent;
     background: url('/assets/svg/no-more-app-bg.svg') no-repeat;
-background-size: cover;
+    background-size: cover;
 }
-.no-more-img{
+
+.no-more-img {
     max-width: 30%;
-    margin: auto;;
+    margin: auto;
+    ;
 }
 
 @media screen and (max-width:768px) {
-    .no-more-img{
+    .no-more-img {
         max-width: 100%;
     }
 }
 
 /* -----automatic section ----*/
 
-.bg-class{
+.bg-class {
     background: transparent;
     background: url('/assets/svg/automatic-call-bg.svg') no-repeat;
-background-size: cover;
-border-radius: 1em;
+    background-size: cover;
+    border-radius: 1em;
 }
 
 /* -----------review cards -----------*/
@@ -448,25 +509,30 @@ border-radius: 1em;
 .review-cards .review-card {
     width: 290px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-    padding: 30px;    
+    padding: 30px;
     border-radius: 20px;
 }
+
 .review-cards .review-card h2 {
     font-size: 21px;
-    font-weight:500;
+    font-weight: 500;
 }
+
 .review-cards .review-card p {
     font-size: 16px;
     line-height: 150%;
 }
-.review-cards .review-card .review-star{
+
+.review-cards .review-card .review-star {
     margin-top: 1em;
 }
-.review-cards .review-card .review-profile img{
+
+.review-cards .review-card .review-profile img {
     width: 56px;
     height: 56px;
     border-radius: 50%;
 }
+
 .review-cards .review-card .review-star img {
     width: 24px;
     height: 24px;
@@ -474,35 +540,41 @@ border-radius: 1em;
 }
 
 /* --------emergency----------- */
-.emergency{
+.emergency {
     background: #FAFAFA;
     border: 1px solid #DCDCDC;
     border-radius: 1.2em;
 }
-.emergency img{
-    width: 624px;height: 560px;
- 
+
+.emergency img {
+    width: 624px;
+    height: 560px;
+
 }
+
 @media screen and (max-width:1200px) {
-.emergency{
-    flex-wrap: nowrap;
-    
+    .emergency {
+        flex-wrap: nowrap;
+
+    }
 }
-}
+
 @media screen and (max-width:768px) {
-    .emergency img{
+    .emergency img {
         border-top-right-radius: 1.2em;
 
     }
-    .emergency img{
+
+    .emergency img {
         width: auto;
         height: auto;
-     
+
     }
-    
+
 }
+
 /* ---assign to driver */
-.assign-driver{
+.assign-driver {
     background: #FAFAFA;
     border: 1px solid #DCDCDC;
     border-radius: 1.2em;
@@ -548,7 +620,7 @@ border-radius: 1em;
     padding: 0em 1.5em 1.5em 1.5em;
     width: calc(100% - 3em);
     font-weight: 400;
-    
+
 }
 
 .question-box .minus {
@@ -570,43 +642,48 @@ border-radius: 1em;
 
 /* -----download section-------- */
 
-.download-section{
+.download-section {
     padding-top: 100px;
     padding-bottom: 100px;
     border-radius: 1em;
     color: #ffffff;
     font-family: "Bricolage Grotesque", sans-serif;
 }
-.download-section h2{
+
+.download-section h2 {
     font-size: 56px;
 }
-.download-section p{
+
+.download-section p {
     font-size: 18px;
     line-height: 110%;
     max-width: 60%;
     margin-top: -0.8em;
     margin-bottom: 1.5em;
 }
-.download-section button{
+
+.download-section button {
     background-color: white;
     color: #000000;
 }
 
 @media screen and (max-width: 768px) {
-    .section-title{
+    .section-title {
         text-align: center;
     }
-    
-    .download-section{
+
+    .download-section {
         padding: 1em;
     }
-    .download-section h2{
+
+    .download-section h2 {
         font-size: 28px;
     }
-    .download-section p{
+
+    .download-section p {
         max-width: 100%;
         font-size: 16px;
-      
+
     }
 }
 
@@ -616,9 +693,11 @@ border-radius: 1em;
     padding-top: 70px;
     padding-bottom: 35px;
 }
-.footer h3{
+
+.footer h3 {
     font-weight: 600;
 }
+
 .footer img {
     max-width: 70%;
 }
@@ -660,9 +739,11 @@ border-radius: 1em;
 .social-links-company svg {
     color: var(--primary-color);
 }
-a{
+
+a {
     color: var(--text-color);
 }
+
 .footer-bottom p,
 .footer-bottom a {
     font-size: 0.8em;
