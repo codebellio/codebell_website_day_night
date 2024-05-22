@@ -77,6 +77,7 @@ button {
     text-align: center;
     font-family: "Bricolage Grotesque", sans-serif;
     font-weight: 600;
+    height: 56px;
 }
 
 .highlight-font {
@@ -108,11 +109,18 @@ button {
     }
 
     .btn-mobile button {
+      
         display: flex;
         height: 56px;
-        padding: 0.35em 2em;
+   
         border-radius: 0.5em !important;
     }
+    .center-text-mobile{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+    }
+    
 }
 
 /* -----------common css end----------------- */
@@ -243,6 +251,13 @@ button {
     font-size: 20px;
     line-height: 160%;
 }
+@media screen and (max-width:768px) {
+    
+    
+.card-unique p {
+    font-size: 16px;
+}
+}
 
 /* ----------------swiper hero section--------------- */
 
@@ -315,7 +330,7 @@ video {
     cursor: pointer;
     z-index: 10;
     padding: 0.3em;
-    background: var(--primary-color);
+    background: #8437F9;
     border-radius: 50%;
     color: #ffffff
 }
@@ -327,7 +342,7 @@ video {
     cursor: pointer;
     z-index: 10;
     padding: 0.3em;
-    background: var(--primary-color);
+    background:#8437F9;
     border-radius: 50%;
     color: #ffffff
 }
@@ -389,7 +404,7 @@ video {
 
 @media screen and (max-width: 768px) {
     .section-title {
-        font-size: 24px;
+        font-size: 32px;
     }
 
     #hero-title .title-1 {
@@ -399,6 +414,18 @@ video {
 
 /* ----------------------------section title end-------------- */
 
+/* --------------benifit section---------- */
+.mobile-show{
+    display: none;
+}
+@media  screen and (max-width: 768px) {
+    .mobile-show{
+        display: block;
+    }
+    .hide-mobile{
+        display: none !important;
+    }
+}
 
 /* -------worried section--------- */
 #blur-bg {
@@ -450,7 +477,7 @@ video {
 .cards .card p {
     margin-top: 16px;
     margin-bottom: 20px;
-    line-height: 130%;
+    line-height: 135%;
 }
 
 .features p {
@@ -468,6 +495,12 @@ video {
     .feature-order .feature-heading {
         order: 0;
     }
+    .cards .card h3 {
+        font-size: 24px;
+    }
+    .card-title{
+        font-size: 24px;
+    }
 }
 
 /* --no more section---- */
@@ -482,11 +515,13 @@ video {
     margin: auto;
     ;
 }
-
+.no-more-head{margin-bottom: -2.5em;padding-top:2em;}
 @media screen and (max-width:768px) {
     .no-more-img {
         max-width: 100%;
     }
+    .no-more-head{margin-bottom: 0em;padding-top:2em;}
+
 }
 
 /* -----automatic section ----*/
@@ -554,6 +589,10 @@ video {
     height: 560px;
 
 }
+.mobile-padding{
+    padding: 20px;
+    width: calc(100% - 48px);
+}
 
 @media screen and (max-width:1200px) {
     .emergency {
@@ -574,6 +613,26 @@ video {
 
     }
 
+}
+
+/* ---automatic=---- */
+.automatic-code{
+    height: 504px;
+}
+@media screen and (max-width:768px) {
+    .automatic-code{
+        height: auto;
+     
+    }
+    #automatic-section .special-order1{
+        order: 0;
+        padding: 24px !important;
+        padding-bottom: 0 !important;
+    }
+    #automatic-section .special-order2{
+        order: 1;
+        padding: 24px !important;
+    }
 }
 
 /* ---assign to driver */
@@ -662,13 +721,14 @@ video {
     line-height: 110%;
     max-width: 60%;
     margin-top: -0.8em;
-    margin-bottom: 1.5em;
+    margin-bottom: 0.5em;
+    font-family: "Roboto", sans-serif;
+
+}
+.download-section button{
+    padding: 0;
 }
 
-.download-section button {
-    background-color: white;
-    color: #000000;
-}
 
 @media screen and (max-width: 768px) {
     .section-title {
@@ -687,6 +747,11 @@ video {
         max-width: 100%;
         font-size: 16px;
 
+    }
+    .download-section button{
+        width: 100%;
+        background-color: black;
+        padding: 0;
     }
 }
 
