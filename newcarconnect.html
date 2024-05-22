@@ -62,6 +62,21 @@
             </div>
         </nav>
     </div>
+    <script>
+        // script.js
+document.addEventListener('DOMContentLoaded', () => {
+    const nav = document.querySelector('.nav-container');
+
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 0) {
+            nav.classList.add('scrolled');
+        } else {
+            nav.classList.remove('scrolled');
+        }
+    });
+});
+
+    </script>
     <style>
         .main-wrapper {
             height: 100%;
@@ -125,7 +140,7 @@
                 height: 60px;
                 margin: 0;
                 cursor: pointer;
-                z-index: 10000;
+                z-index: 10;
             }
         }
     </style>

@@ -152,9 +152,8 @@ button {
 .nav-container {
     position: fixed;
     width: 100%;
-    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
     z-index: 100;
-    background: var(--bg-color);
+    
 }
 
 .navbar {
@@ -178,6 +177,10 @@ button {
 #mobile-icons{
     display: flex;
 }
+.nav-container.scrolled{
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background: var(--bg-color);
+}
 @media screen and (max-width: 990px) {
     .nav-container .menu {
         display: flex;
@@ -196,6 +199,8 @@ button {
     button {
         padding: 12px;
     }
+   
+
 }
 
 @media screen and (max-width: 768px) {
