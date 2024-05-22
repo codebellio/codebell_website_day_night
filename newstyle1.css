@@ -555,7 +555,11 @@ video {
     padding: 30px;
     border-radius: 20px;
 }
-
+@media  screen and (max-width:380px) {
+    .review-cards .review-card {
+        width: 250px;
+    }
+}
 .review-cards .review-card h2 {
     font-size: 21px;
     font-weight: 500;
