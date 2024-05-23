@@ -34,22 +34,21 @@
 <body>
     <style>
         .sidebar {
-            height: 100%;
-            width: 0;
+            max-height: 0;
+            width: 100%;
             position: fixed;
-            top: 0;
+            top: 58px;
             left: 0;
             background-color: var(--bg-color);
-            overflow-x: hidden;
-            transition: 0.3s;
-            padding-top: 60px;
+            overflow-y: hidden;
+            transition: max-height 0.3s ease-out;
             z-index: 1000;
-            
         }
         
         .sidebar ul {
             list-style-type: none;
-            padding: 0;
+            padding: 20px;
+            margin: 0;
         }
         
         .sidebar ul li {
@@ -59,17 +58,26 @@
             color: var(--text-color);
         }
         
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+            cursor: pointer;
+        }
+        
         .overlay {
-            height: 100%;
+            height: calc(100% - 58px); /* Adjust overlay height to not cover the navigation bar */
             width: 100%;
             position: fixed;
-            top: 0;
+            top: 58px;
             left: 0;
             background-color: rgba(0, 0, 0, 0.5);
             z-index: 999;
             opacity: 0;
             visibility: hidden;
-            transition: 0.3s;
+            transition: opacity 0.3s ease-out;
         }
         
         .overlay.active {
@@ -80,15 +88,6 @@
         #menu-icon {
             cursor: pointer;
         }
-        .closebtn {
-            position: absolute;
-            top: 20px;
-            right: 25px;
-            font-size: 36px;
-            color: var(--text-color);
-            cursor: pointer;
-        }
-        
     </style>
     <div class="bg-default">
     <div class="nav-container">
@@ -104,7 +103,7 @@
             </div>
 
             <div id="sidebar" class="sidebar">
-                <span class="closebtn" id="close-btn">&times;</span>
+                <span class="closebtn" id="close-btn" style="color:var(--text-color)">&times;</span>
                 <ul>
                     <li>Home</li>
                     <li>Features</li>
@@ -378,7 +377,7 @@
                         <p>270+ Ratings & Reviews</p>
                     </div>
                     <div class="flex column gap" id="hero-title" >
-                        <div class="title-1 text-gradient" data-aos="fade-up">CarConnect Smart Car Intercom </div>
+                        <div class="title-1 text-gradient">CarConnect Smart Car Intercom </div>
                         <p class="title-2" style="font-size: 24px;">Stay in Touch with Your Vehicle from anywhere,
                             anytime.</p>
                     </div>
@@ -444,7 +443,7 @@
     </div>
 
         <section class="flex eq wrap between middle center gap-2 " id="About">
-            <div class="flex column gap-1 center-text-mobile" style="min-width: 300px;" data-aos="fade-right">
+            <div class="flex column gap-1 center-text-mobile" style="min-width: 300px;">
                 <div class="section-title text-start" ><span class="text-gradient"> Benifits</span> of Car
                     Connect</div>
                 <div class="mobile-show">
@@ -480,7 +479,7 @@
             <div class="flex middle center" style="min-width: 300px;">
                 <img src="/assets/svg/emergency-new.png" alt="">
             </div>
-            <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;" data-aos="fade-left">
+            <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;">
                 <div class="section-title  card-title" style="text-align: start;"> Emergency SOS
                     Contact
                 </div>
@@ -521,7 +520,7 @@
             <img src="/assets/svg/automatic-call.png" alt="" data-aos="fade-up" >
         </div>
         <div class="flex column gap-1 feature-heading automatic-code special-order2" style="min-width: 300px;background:var(--card-box);background-size: cover;
-        border-radius: 1em;padding:40px;" data-aos="fade-left" data-aos-duration="800">
+        border-radius: 1em;padding:40px;">
             <div class="section-title" style="text-align: start;">Automatic Call <br> Forwarding</div>
             <div class="card-unique" style=" line-height:160%;">
                 <p>Life doesn't stop when you're away from your phone. With CarConnect's call forwarding feature, you're
@@ -538,7 +537,7 @@
             <div class="flex middle center " style="min-width: 300px;">
                 <img src="/assets/svg/never-lose-new.png" alt="" style="height: auto;">
             </div>
-            <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;" data-aos="fade-up" >
+            <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;" >
                 <div class="section-title  card-title" style="text-align: start;"> Never Lose Your Car <br> Again
                 </div>
                 <div class="card-unique flex column " style=" line-height:160%;">
@@ -835,11 +834,11 @@
     </section>
 
     <section class="download-section text-center flex middle column gap top-padding" style="background: #8437F9;">
-        <h2 data-aos="fade-up">Download the Codebell App Now</h2>
-        <p data-aos="fade-up" style="color: #ffffff;">Elevate your communication with Codebell's QR-based calling solutions.
+        <h2 >Download the Codebell App Now</h2>
+        <p  style="color: #ffffff;">Elevate your communication with Codebell's QR-based calling solutions.
             Download now for secure, encrypted conversations on the go.</p>
         <div class="flex middle gap-2 btn-desktop">
-            <button class="flex middle gap" style="border-radius: 1.25em; " data-aos="fade-up"  data-aos-delay="100">
+            <button class="flex middle gap" style="border-radius: 1.25em; " >
                 <svg width="202" height="60" viewBox="0 0 202 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="202" height="60" rx="8" fill="#03031A" />
                     <path
@@ -854,7 +853,7 @@
                 </svg>
 
             </button>
-            <button class="flex middle gap" style="border-radius: 1.25em;"  data-aos="fade-up"  data-aos-delay="100">  
+            <button class="flex middle gap" style="border-radius: 1.25em;" >  
                 <svg width="202" height="60" viewBox="0 0 202 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="202" height="60" rx="8" fill="#03031A" />
                     <path
