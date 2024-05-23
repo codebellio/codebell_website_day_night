@@ -32,10 +32,68 @@
 </head>
 
 <body>
+    <style>
+        .sidebar {
+            height: 100%;
+            width: 0;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: var(--bg-color);
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            z-index: 1000;
+            
+        }
+        
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .sidebar ul li {
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 18px;
+            color: var(--text-color);
+        }
+        
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+        }
+        
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+        
+        #menu-icon {
+            cursor: pointer;
+        }
+        .closebtn {
+            position: absolute;
+            top: 20px;
+            right: 25px;
+            font-size: 36px;
+            color: var(--text-color);
+            cursor: pointer;
+        }
+        
+    </style>
     <div class="bg-default">
     <div class="nav-container">
         <nav class="flex between middle navbar">
-            <div class="flex center middle menu">
+            <div class="flex center middle menu" id="menu-icon">
                 <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path fill-rule="evenodd" clip-rule="evenodd"
                         d="M12 17V15H30V17H12ZM12 22H30V20H12V22ZM12 27H30V25H12V27Z" fill="currentColor" />
@@ -44,6 +102,19 @@
             <div class="flex middle center logo logo-nav logo-mobile">
                 <img src="/assets/svg/logo-main.svg" alt="">
             </div>
+
+            <div id="sidebar" class="sidebar">
+                <span class="closebtn" id="close-btn">&times;</span>
+                <ul>
+                    <li>Home</li>
+                    <li>Features</li>
+                    <li>Products</li>
+                    <li>Contact Us</li>
+                   <li>Home Link Store</li>
+                </ul>
+               
+            </div>
+            <div id="overlay" class="overlay"></div>
             <div class="flex middle">
                 <ul class="flex middle gap-2 nav-list" style="font-size: 1em;font-weight:600;">
                     <li>Home</li>
@@ -63,6 +134,24 @@
             </div>
         </nav>
     </div>
+    <script>
+        document.getElementById("menu-icon").addEventListener("click", function() {
+            document.getElementById("sidebar").style.width = "250px";
+            document.getElementById("overlay").classList.add("active");
+        });
+        
+        document.getElementById("overlay").addEventListener("click", function() {
+            document.getElementById("sidebar").style.width = "0";
+            this.classList.remove("active");
+        });
+        
+        document.getElementById("close-btn").addEventListener("click", function() {
+            document.getElementById("sidebar").style.width = "0";
+            document.getElementById("overlay").classList.remove("active");
+        });
+        
+        
+    </script>
     <script>
         // script.js
         document.addEventListener('DOMContentLoaded', () => {
