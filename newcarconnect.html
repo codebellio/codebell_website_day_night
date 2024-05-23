@@ -144,9 +144,105 @@
                 z-index: 10;
             }
         }
+
+        
+
+        .blur-container{
+            
+            height: 100%;
+            width: 100%;
+          
+        }
+        .blur1{
+            position: absolute;
+            width: 87px;
+            height: 87px;
+            background: #FF488B;
+            filter: blur(60px);
+            border-radius: 50%;
+            top: 15%;
+            left: 1%;
+        }
+        .blur2{
+            position: absolute;
+            width: 124px;
+            height: 124px;
+            background: #8437F9;
+            filter: blur(70px);
+            border-radius: 50%;
+            top: 30%;
+            left: -3%;
+        }
+        .blur3{
+            position: absolute;
+            width: 165px;
+            height: 165px;
+            background: #8437F9;
+            filter: blur(80px);
+            border-radius: 50%;
+            right: -6%;
+            bottom: 50%;
+        }
+        .blur4{
+            position: absolute;
+            width: 241px;
+            height: 241px;
+            background: #FF7236;
+            filter: blur(110px);
+            border-radius: 50%;
+            right: -6%;
+            bottom: 0;
+          
+        }
+        @media  screen and (max-width:768px) {
+            .blur1{
+                position: absolute;
+                width: 57px;
+                height: 57px;
+                background: #FF488B;
+                filter: blur(60px);
+                border-radius: 50%;
+                top: 15%;
+                left: 1%;
+            }
+            .blur2{
+                position: absolute;
+                width: 124px;
+                height: 124px;
+                background: #8437F9;
+                filter: blur(70px);
+                border-radius: 50%;
+                top: 30%;
+                left: -3%;
+            }
+            .blur3{
+                width: 165px;
+                height: 165px;
+                border-radius: 50%;
+                right: -50%;
+                bottom: 50%;
+            }
+            .blur4{
+               display: none;
+              
+            }
+        }
     </style>
-    <div id="hero-bg">
-        <section id="hero-padding">
+    <div id="hero-bg" style="overflow: hidden;">
+        <div class="blur-container flex between">
+            <div class="left-blurs">
+                <div class="blur1"></div>
+                <div class="blur2"></div>
+            </div>
+            <div class="right-blurs">
+
+                <div class="blur3"></div>
+                <div class="blur4"></div>
+            </div>
+
+
+        </div>
+        <section id="hero-padding" style="z-index: 10;">
             <div class="flex eq wrap gap-2 ">
                 <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
                     <div class="swiper-wrapper main-wrapper">
@@ -259,7 +355,7 @@
             </div>
         </section>
     </div>
-    <div id="blur-bg" style="color:#000000">
+    <div id="blur-bg" style="color:#000000; ">
         <section>
             <div class="section-title" style="padding-bottom: 1em;"> Wooried about
                 your Car</div>

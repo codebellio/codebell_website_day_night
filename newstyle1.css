@@ -11,7 +11,7 @@
     --text-color: RGB(3, 21, 33);
     --sub-text-color: RGB(107, 107, 132);
     --bg-color: #FFFFFF;
-    --card-box:rgba(250, 250, 250, 0.1);
+    --card-box:rgba(250, 250, 250);
     --card-border:#DCDCDC;
 }
 
@@ -20,6 +20,7 @@
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
     --card-border:rgba(250, 250, 250, 0.1);
+    --card-box:rgba(250, 250, 250,0.1);
 }
 
 html,
@@ -269,9 +270,9 @@ button {
 }
 
 #hero-bg {
+    position: relative;
     background: transparent;
-    background: url('/assets/svg/hero-bg.svg') no-repeat;
-    background-size: cover;
+ 
 }
 @media  screen and (max-width: 768px) {
     #hero-bg {
