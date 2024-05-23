@@ -1,6 +1,14 @@
 "use strict";
 
-// ---------------------FAQ----------------------------
+AOS.init({
+  offset: 50,
+  // offset (in px) from the original trigger point
+  delay: 0,
+  // values from 0 to 3000, with step 50ms
+  duration: 500 // values from 0 to 3000, with step 50ms
+
+}); // ---------------------FAQ----------------------------
+
 document.addEventListener("DOMContentLoaded", function () {
   var questionBoxes = document.querySelectorAll(".question-box");
   questionBoxes.forEach(function (box) {
@@ -60,4 +68,41 @@ arrow1.addEventListener('click', function () {
 });
 arrow2.addEventListener('click', function () {
   mainSwiper.slideNext();
+}); //--- --english hindi button selection --------------------------------
+
+var englishBtn = document.getElementById('english-btn');
+var hindiBtn = document.getElementById('hindi-btn');
+
+function toggleOutline(event) {
+  var clickedButton = event.target;
+  englishBtn.classList.remove('fill');
+  hindiBtn.classList.remove('fill');
+  clickedButton.classList.add('fill');
+}
+
+englishBtn.addEventListener('click', toggleOutline);
+hindiBtn.addEventListener('click', toggleOutline); // -----sidebar------
+
+document.getElementById("menu-icon").addEventListener("click", function () {
+  document.getElementById("sidebar").style.width = "250px";
+  document.getElementById("overlay").classList.add("active");
+});
+document.getElementById("overlay").addEventListener("click", function () {
+  document.getElementById("sidebar").style.width = "0";
+  this.classList.remove("active");
+});
+document.getElementById("close-btn").addEventListener("click", function () {
+  document.getElementById("sidebar").style.width = "0";
+  document.getElementById("overlay").classList.remove("active");
+}); // -----------on scroll navbar --------------------------------
+
+document.addEventListener('DOMContentLoaded', function () {
+  var nav = document.querySelector('.nav-container');
+  window.addEventListener('scroll', function () {
+    if (window.scrollY > 0) {
+      nav.classList.add('scrolled');
+    } else {
+      nav.classList.remove('scrolled');
+    }
+  });
 });

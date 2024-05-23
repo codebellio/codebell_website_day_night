@@ -134,39 +134,7 @@
             </div>
         </nav>
     </div>
-    <script>
-        document.getElementById("menu-icon").addEventListener("click", function() {
-            document.getElementById("sidebar").style.width = "250px";
-            document.getElementById("overlay").classList.add("active");
-        });
-        
-        document.getElementById("overlay").addEventListener("click", function() {
-            document.getElementById("sidebar").style.width = "0";
-            this.classList.remove("active");
-        });
-        
-        document.getElementById("close-btn").addEventListener("click", function() {
-            document.getElementById("sidebar").style.width = "0";
-            document.getElementById("overlay").classList.remove("active");
-        });
-        
-        
-    </script>
-    <script>
-        // script.js
-        document.addEventListener('DOMContentLoaded', () => {
-            const nav = document.querySelector('.nav-container');
-
-            window.addEventListener('scroll', () => {
-                if (window.scrollY > 0) {
-                    nav.classList.add('scrolled');
-                } else {
-                    nav.classList.remove('scrolled');
-                }
-            });
-        });
-
-    </script>
+  
     <style>
         .main-wrapper {
             height: 100%;
@@ -409,8 +377,8 @@
                         </div>
                         <p>270+ Ratings & Reviews</p>
                     </div>
-                    <div class="flex column gap" id="hero-title">
-                        <div class="title-1 text-gradient">CarConnect Smart Car Intercom </div>
+                    <div class="flex column gap" id="hero-title" >
+                        <div class="title-1 text-gradient" data-aos="fade-up">CarConnect Smart Car Intercom </div>
                         <p class="title-2" style="font-size: 24px;">Stay in Touch with Your Vehicle from anywhere,
                             anytime.</p>
                     </div>
@@ -436,12 +404,12 @@
             </div>
         </section>
     </div>
-    <div id="blur-bg" style="color:#000000; ">
+    <div id="blur-bg" style="color:#000000; " >
         <section>
             <div class="section-title" style="padding-bottom: 1em;"> Wooried about
                 your Car</div>
             <div class="cards">
-                <div class="card">
+                <div class="card" data-aos="fade-up">
                     <h3 class="highlight-font">Car Damage</h3>
                     <p style="color:#000000">Parking in the wrong spot can lead to nasty surprises like flat tires, scratches, and broken
                         mirrors. Don't let a simple mistake end up costing you big time.</p>
@@ -450,7 +418,7 @@
                     </div>
 
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
                     <h3 class="highlight-font">Road Rage Drama</h3>
                     <p style="color:#000000">Ever had a parking mishap turn into a shouting match? It happens more often than you'd think.
                         Avoid
@@ -460,7 +428,7 @@
                     </div>
 
                 </div>
-                <div class="card">
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
                     <h3 class="highlight-font">Towing Troubles</h3>
                     <p style="color:#000000">You know that sinking feeling when you realize your car's been towed? It's even worse not knowing
                         where it's gone! Don't get left in the dark – stay in control of your wheels</p>
@@ -476,8 +444,8 @@
     </div>
 
         <section class="flex eq wrap between middle center gap-2 " id="About">
-            <div class="flex column gap-1 center-text-mobile" style="min-width: 300px;">
-                <div class="section-title text-start"><span class="text-gradient"> Benifits</span> of Car
+            <div class="flex column gap-1 center-text-mobile" style="min-width: 300px;" data-aos="fade-right">
+                <div class="section-title text-start" ><span class="text-gradient"> Benifits</span> of Car
                     Connect</div>
                 <div class="mobile-show">
                     <img src="/assets/svg/benifits.png" alt="" style="max-width: 50%;">
@@ -512,7 +480,7 @@
             <div class="flex middle center" style="min-width: 300px;">
                 <img src="/assets/svg/emergency-new.png" alt="">
             </div>
-            <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;">
+            <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;" data-aos="fade-left">
                 <div class="section-title  card-title" style="text-align: start;"> Emergency SOS
                     Contact
                 </div>
@@ -540,7 +508,7 @@
             <p class="text-center" style="margin-top: 2em;margin:auto;color:#000000">Forget about downloading yet another app. With
                 CarConnect, simplicity is key. Visitors can use any QR
                 scanner or camera to access the features, making it hassle-free and accessible for everyone.</p>
-            <div class="flex center  middle no-more-img">
+            <div class="flex center  middle no-more-img" data-aos="fade-up" data-aos-duration="1000">
                 <img src="/assets/svg/no-app-new.png" alt="">
             </div>
         </section>
@@ -550,10 +518,10 @@
         style="padding-top: 4.5em;">
         <div class="flex middle end feature-img bg-class automatic-code special-order1"
             style="min-width: 300px;padding-top:2em;">
-            <img src="/assets/svg/automatic-call.png" alt="">
+            <img src="/assets/svg/automatic-call.png" alt="" data-aos="fade-up" data-aos-duration="1000">
         </div>
         <div class="flex column gap-1 feature-heading automatic-code special-order2" style="min-width: 300px;background:var(--card-box);background-size: cover;
-        border-radius: 1em;padding:40px;">
+        border-radius: 1em;padding:40px;" data-aos="fade-left" data-aos-duration="800">
             <div class="section-title" style="text-align: start;">Automatic Call <br> Forwarding</div>
             <div class="card-unique" style=" line-height:160%;">
                 <p>Life doesn't stop when you're away from your phone. With CarConnect's call forwarding feature, you're
@@ -867,11 +835,11 @@
     </section>
 
     <section class="download-section text-center flex middle column gap top-padding" style="background: #8437F9;">
-        <h2>Download the Codebell App Now</h2>
-        <p style="color: #ffffff;">Elevate your communication with Codebell's QR-based calling solutions.
+        <h2 data-aos="fade-up">Download the Codebell App Now</h2>
+        <p data-aos="fade-up" style="color: #ffffff;">Elevate your communication with Codebell's QR-based calling solutions.
             Download now for secure, encrypted conversations on the go.</p>
         <div class="flex middle gap-2 btn-desktop">
-            <button class="flex middle gap" style="border-radius: 1.25em; ">
+            <button class="flex middle gap" style="border-radius: 1.25em; " data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
                 <svg width="202" height="60" viewBox="0 0 202 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="202" height="60" rx="8" fill="#03031A" />
                     <path
@@ -886,7 +854,7 @@
                 </svg>
 
             </button>
-            <button class="flex middle gap" style="border-radius: 1.25em;">
+            <button class="flex middle gap" style="border-radius: 1.25em;"  data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">  
                 <svg width="202" height="60" viewBox="0 0 202 60" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect width="202" height="60" rx="8" fill="#03031A" />
                     <path
@@ -1017,20 +985,7 @@
 
     </div>
     </div>
-    <script>
-        const englishBtn = document.getElementById('english-btn');
-        const hindiBtn = document.getElementById('hindi-btn');
-        function toggleOutline(event) {
-            const clickedButton = event.target;
-
-            englishBtn.classList.remove('fill');
-            hindiBtn.classList.remove('fill');
-
-            clickedButton.classList.add('fill');
-        }
-        englishBtn.addEventListener('click', toggleOutline);
-        hindiBtn.addEventListener('click', toggleOutline);
-    </script>
+  
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="darkmode.js"></script>
     <script src="newscript1.js"></script>
