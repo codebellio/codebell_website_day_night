@@ -32,6 +32,7 @@
 </head>
 
 <body>
+    <div class="bg-default">
     <div class="nav-container">
         <nav class="flex between middle navbar">
             <div class="flex center middle menu">
@@ -51,7 +52,7 @@
                     <li>Contact Us</li>
                     <li>Home Link Store</li>
                 </ul>
-                <div class="flex middle gap" id="desktop-icons">
+                <div class="flex middle gap" id="desktop-icons" >
                     <img src="/assets/svg/user.svg" alt="">
                     <img src="/assets/svg/store.svg" alt="">
                 </div>
@@ -258,14 +259,14 @@
             </div>
         </section>
     </div>
-    <div id="blur-bg">
+    <div id="blur-bg" style="color:#000000">
         <section>
             <div class="section-title" style="padding-bottom: 1em;"> Wooried about
                 your Car</div>
             <div class="cards">
                 <div class="card">
                     <h3 class="highlight-font">Car Damage</h3>
-                    <p>Parking in the wrong spot can lead to nasty surprises like flat tires, scratches, and broken
+                    <p style="color:#000000">Parking in the wrong spot can lead to nasty surprises like flat tires, scratches, and broken
                         mirrors. Don't let a simple mistake end up costing you big time.</p>
                     <div class="img-card">
                         <img src="/assets/svg/worriednew1.png" alt="">
@@ -274,7 +275,7 @@
                 </div>
                 <div class="card">
                     <h3 class="highlight-font">Road Rage Drama</h3>
-                    <p>Ever had a parking mishap turn into a shouting match? It happens more often than you'd think.
+                    <p style="color:#000000">Ever had a parking mishap turn into a shouting match? It happens more often than you'd think.
                         Avoid
                         unnecessary stress and keep the peace by parking right.</p>
                     <div class="img-card">
@@ -284,7 +285,7 @@
                 </div>
                 <div class="card">
                     <h3 class="highlight-font">Towing Troubles</h3>
-                    <p>You know that sinking feeling when you realize your car's been towed? It's even worse not knowing
+                    <p style="color:#000000">You know that sinking feeling when you realize your car's been towed? It's even worse not knowing
                         where it's gone! Don't get left in the dark – stay in control of your wheels</p>
                     <div class="img-card">
                         <img src="/assets/svg/worriednew3.png" alt="">
@@ -296,28 +297,29 @@
 
         </section>
     </div>
-    <section class="flex eq wrap between middle center gap-2 " id="About">
-        <div class="flex column gap-1 center-text-mobile" style="min-width: 300px;">
-            <div class="section-title text-start"><span class="text-gradient"> Benifits</span> of Car
-                Connect</div>
-            <div class="mobile-show">
+
+        <section class="flex eq wrap between middle center gap-2 " id="About">
+            <div class="flex column gap-1 center-text-mobile" style="min-width: 300px;">
+                <div class="section-title text-start"><span class="text-gradient"> Benifits</span> of Car
+                    Connect</div>
+                <div class="mobile-show">
+                    <img src="/assets/svg/benifits.png" alt="" style="max-width: 50%;">
+                </div>
+                <div class="card-unique" style=" line-height:160%;">
+                    <p> With CarConnect QR, passersby can send you a direct call or message if your car is parked
+                        incorrectly or in case of any issue with your car. Get alerts on your mobile and solve the issue
+                        immediately</p>
+                </div>
+                <button class="button store-button" style="width: fit-content;">Get CarConnect and park
+                    worry-free!"</button>
+            </div>
+            <div class="flex middle center hide-mobile" style="min-width: 300px;">
                 <img src="/assets/svg/benifits.png" alt="" style="max-width: 50%;">
             </div>
-            <div class="card-unique" style=" line-height:160%;">
-                <p> With CarConnect QR, passersby can send you a direct call or message if your car is parked
-                    incorrectly or in case of any issue with your car. Get alerts on your mobile and solve the issue
-                    immediately</p>
-            </div>
-            <button class="button store-button" style="width: fit-content;">Get CarConnect and park
-                worry-free!"</button>
-        </div>
-        <div class="flex middle center hide-mobile" style="min-width: 300px;">
-            <img src="/assets/svg/benifits.png" alt="" style="max-width: 50%;">
-        </div>
-    </section>
+        </section>
 
 
-    <div class="flex column gap-2" style="padding-bottom: 1.5em;">
+    <div class="flex column gap-2 bg-default" style="padding-bottom: 1.5em; background:var(--card-box)">
         <div class="section-title no-more-head"> No More Numbers
             Just <span class="text-gradient2">Privacy</span></div>
         <div class="hide-mobile">
@@ -327,7 +329,7 @@
             <img src="/assets/svg/no-more-mob.png" alt="">
         </div>
     </div>
-
+   
     <section id="About" style="padding-top: 4.5em;">
         <div class="flex eq wrap between middle center gap emergency">
             <div class="flex middle center" style="min-width: 300px;">
@@ -356,9 +358,9 @@
 
     <!-- -no more app section -->
     <div id="no-app-bg" style="margin-top: 2.5em;">
-        <section class="features" style="padding-bottom: 0;">
+        <section class="features" style="padding-bottom: 0;color:#000000">
             <div class="section-title"> No App required by visitors</div>
-            <p class="text-center" style="margin-top: 2em;margin:auto;">Forget about downloading yet another app. With
+            <p class="text-center" style="margin-top: 2em;margin:auto;color:#000000">Forget about downloading yet another app. With
                 CarConnect, simplicity is key. Visitors can use any QR
                 scanner or camera to access the features, making it hassle-free and accessible for everyone.</p>
             <div class="flex center  middle no-more-img">
@@ -367,14 +369,13 @@
         </section>
     </div>
 
-
     <section class="flex eq wrap between middle center gap feature-order" id="automatic-section"
         style="padding-top: 4.5em;">
         <div class="flex middle end feature-img bg-class automatic-code special-order1"
             style="min-width: 300px;padding-top:2em;">
             <img src="/assets/svg/automatic-call.png" alt="">
         </div>
-        <div class="flex column gap-1 feature-heading automatic-code special-order2" style="min-width: 300px;background:#FAFAFA;background-size: cover;
+        <div class="flex column gap-1 feature-heading automatic-code special-order2" style="min-width: 300px;background:var(--card-box);background-size: cover;
         border-radius: 1em;padding:40px;">
             <div class="section-title" style="text-align: start;">Automatic Call <br> Forwarding</div>
             <div class="card-unique" style=" line-height:160%;">
@@ -407,7 +408,7 @@
     </section>
 
 
-    <section id="About" >
+    <section id="About">
         <div class="flex eq wrap between middle center gap emergency">
             <div class="flex middle center" style="min-width: 300px;">
                 <img src="/assets/svg/assign.png" alt="" style="height: auto;">
@@ -433,7 +434,7 @@
         <video src="/assets/svg/Codebell-CarConnect.mp4" autoplay muted loop controls></video>
     </section>
 
-    <section  style="padding-top: 20px; ">
+    <section style="padding-top: 20px; ">
         <div class="section-title"> See What Car owners have to Say</div>
         <p class="text-center" style="margin-top: 1em;">Insightful Customer Feedback: Your Thoughts Matter to Us</p>
         <div class="swiper-review" style="padding-bottom: 2em;overflow:hidden;padding-top:2.5em;">
@@ -570,31 +571,31 @@
             centeredSlides: true,
             loop: true,
             speed: 2000,  // Speed of the transition (in ms)
-        autoplay: {
-            delay: 1,  // Delay between slides (in ms)
-          
-              disableOnInteraction: false,
+            autoplay: {
+                delay: 1,  // Delay between slides (in ms)
+
+                disableOnInteraction: false,
             },
             pagination: {
-              el: ".swiper-pagination",
-              clickable: true,
-          
+                el: ".swiper-pagination",
+                clickable: true,
+
             },
             breakpoints: {
-              768: {
-                slidesPerView: 1,
-                spaceBetween: 1,
-              },
-              1200: {
-                slidesPerView: 3,
-                spaceBetween: 10,
-              },
-              0: {
-                slidesPerView: 1,
-                spaceBetween: 10,
-              },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 1,
+                },
+                1200: {
+                    slidesPerView: 3,
+                    spaceBetween: 10,
+                },
+                0: {
+                    slidesPerView: 1,
+                    spaceBetween: 10,
+                },
             },
-           
+
         });
     </script>
     <section>
@@ -690,7 +691,7 @@
 
     <section class="download-section text-center flex middle column gap top-padding" style="background: #8437F9;">
         <h2>Download the Codebell App Now</h2>
-        <p>Elevate your communication with Codebell's QR-based calling solutions.
+        <p style="color: #ffffff;">Elevate your communication with Codebell's QR-based calling solutions.
             Download now for secure, encrypted conversations on the go.</p>
         <div class="flex middle gap-2 btn-desktop">
             <button class="flex middle gap" style="border-radius: 1.25em; ">
@@ -837,6 +838,7 @@
             <a href="shipping_policy.html">Shipping policy </a>
         </div>
 
+    </div>
     </div>
     <script>
         const englishBtn = document.getElementById('english-btn');

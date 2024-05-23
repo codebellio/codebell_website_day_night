@@ -11,12 +11,15 @@
     --text-color: RGB(3, 21, 33);
     --sub-text-color: RGB(107, 107, 132);
     --bg-color: #FFFFFF;
+    --card-box:rgba(250, 250, 250, 0.1);
+    --card-border:#DCDCDC;
 }
 
 .dark {
     --bg-color: #000000;
     --text-color: #ffffff;
     --sub-text-color: #cfcfcf;
+    --card-border:rgba(250, 250, 250, 0.1);
 }
 
 html,
@@ -28,7 +31,7 @@ body {
     font-style: normal;
     scroll-behavior: smooth;
     color: var(--text-color);
-    background-color: var(--bg-color);
+    background: var(--bg-color);
 }
 
 body {
@@ -36,6 +39,9 @@ body {
 }
 
 /* ----------------common  css----------------- */
+.bg-default{
+    background: var(--bg-color);
+}
 section,
 nav {
     width: 85%;
@@ -55,10 +61,8 @@ p{
 }
 section {
     padding-top: 3.5em;
-    padding-bottom: 3.5em;
-    
+    padding-bottom: 3.5em;   
 }
-
 button {
     display: flex;
     align-items: center;
@@ -92,7 +96,6 @@ button {
     background-color: white;
     border: 2px solid black;
     color: #000000;
-
 }
 
 .outline.fill {
@@ -100,22 +103,16 @@ button {
     border: none;
     color: #ffffff;
 }
-
-
 .btn-mobile button {
     display: none;
 }
-
 @media screen and (max-width: 768px) {
     .btn-desktop button {
         display: none;
     }
-
     .btn-mobile button {
-      
         display: flex;
         height: 56px;
-   
         border-radius: 0.5em !important;
     }
     .center-text-mobile{
@@ -123,7 +120,6 @@ button {
         justify-content: center;
         align-items: center;
     }
-    
 }
 
 /* -----------common css end----------------- */
@@ -588,8 +584,8 @@ video {
 
 /* --------emergency----------- */
 .emergency {
-    background: #FAFAFA;
-    border: 1px solid #DCDCDC;
+    background: var(--card-box); /* Adjust transparency for glass effect */
+    border: 1px solid var(--card-border);
     border-radius: 1.2em;
     overflow: hidden;
     
