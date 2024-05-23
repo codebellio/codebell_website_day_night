@@ -144,14 +144,9 @@
                 z-index: 10;
             }
         }
-
-        
-
         .blur-container{
-            
             height: 100%;
             width: 100%;
-          
         }
         .blur1{
             position: absolute;
@@ -212,14 +207,14 @@
                 background: #8437F9;
                 filter: blur(70px);
                 border-radius: 50%;
-                top: 30%;
-                left: -3%;
+                top: 10%;
+                left: -30%;
             }
             .blur3{
                 width: 165px;
                 height: 165px;
                 border-radius: 50%;
-                right: -50%;
+                right: -30%;
                 bottom: 50%;
             }
             .blur4{
@@ -229,18 +224,15 @@
         }
     </style>
     <div id="hero-bg" style="overflow: hidden;">
-        <div class="blur-container flex between">
+        <div class="blur-container flex eq between">
             <div class="left-blurs">
                 <div class="blur1"></div>
                 <div class="blur2"></div>
             </div>
             <div class="right-blurs">
-
                 <div class="blur3"></div>
                 <div class="blur4"></div>
             </div>
-
-
         </div>
         <section id="hero-padding" style="z-index: 10;">
             <div class="flex eq wrap gap-2 ">
