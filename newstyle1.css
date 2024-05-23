@@ -379,6 +379,7 @@ video {
     font-size: 54px;
     font-weight: bold;
     text-align: center;
+    z-index:1;
 }
 
 .highlight-text {
