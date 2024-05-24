@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,800;1,900&display=swap');
 
 * {
     margin: 0;
@@ -13,11 +14,13 @@
     --bg-color: #FFFFFF;
     --card-box:rgba(250, 250, 250);
     --card-border:#DCDCDC;
+    --logo-color:#1111AD;
 }
 
 .dark {
     --bg-color: #000000;
     --text-color: #ffffff;
+    --logo-color:#ffffff;
     --sub-text-color: #cfcfcf;
     --card-border:rgba(250, 250, 250, 0.1);
     --card-box:rgba(250, 250, 250,0.1);
@@ -182,14 +185,19 @@ button {
 }
 
 .logo-nav {
-    color: var(--primary-color);
+    
     font-size: 38px;
+    font-family: "Montserrat Alternates", sans-serif;
+    font-weight: 700;
+    color: var(--logo-color);
 }
 
 #desktop-icons {
     display: none;
 }
-
+#desktop-icons svg, #mobile-icons svg{
+    color: var(--text-color);
+}
 #mobile-icons {
     display: flex;
 }
@@ -241,7 +249,7 @@ button {
         width: calc(100% - 1em);
     }
 
-    .logo-mobile img {
+    .logo-mobile{
         height: 16px;
         margin-left: 1.2em;
     }
@@ -445,13 +453,13 @@ video {
     background-size: cover;
 }
 
-.cards {
+/* .cards {
     display: flex;
     gap: 2em;
     flex-wrap: wrap;
     justify-content: center;
     text-align: left;
-}
+} */
 
 .cards .card {
     width: 350px;
@@ -473,7 +481,12 @@ video {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* optional: subtle shadow for depth */
 }
-
+@media screen and (max-width: 768px){
+    
+.cards .card {
+    width: 280px;
+}
+}
 
 
 .cards .card img {
@@ -588,7 +601,19 @@ video {
     height: 24px;
 
 }
-
+@media  screen and (max-width:768px) {
+    .review-cards .review-card {
+        width: 276px;
+        padding: 25px;
+    }
+    .review-cards .review-card h2 {
+        font-size: 19px;
+        font-weight: 500;
+    }
+    .review-cards .review-card p{ 
+        font-size: 14px;
+    }
+}
 /* --------emergency----------- */
 .emergency {
     background: var(--card-box); /* Adjust transparency for glass effect */
@@ -995,5 +1020,30 @@ a {
     .blur4{
        display: none;
       
+    }
+}
+
+/* --------price-- */
+.price{
+    font-size: 40px;
+    font-family: "Bricolage Grotesque", sans-serif;
+font-weight: 700;
+display: flex;
+align-items: center;
+gap: 0.5em;
+}
+.price .original-price{
+    font-size: 20px;
+    font-weight: 400;
+    text-decoration:line-through;
+    margin-top: 0.5em;
+    text-decoration-color: red;
+}
+@media  screen and (max-width:768px){
+    .price{
+        font-size: 30px;
+    }
+    .price .original-price{
+        font-size: 18px;
     }
 }
