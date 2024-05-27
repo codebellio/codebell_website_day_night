@@ -12,21 +12,21 @@
     --text-color: RGB(3, 21, 33);
     --sub-text-color: RGB(107, 107, 132);
     --bg-color: #FFFFFF;
-    --card-box:rgba(250, 250, 250);
-    --card-border:#DCDCDC;
-    --logo-color:#1111AD;
-    --button:#030319;
+    --card-box: rgba(250, 250, 250);
+    --card-border: #DCDCDC;
+    --logo-color: #1111AD;
+    --button: #030319;
 
 }
 
 .dark {
     --bg-color: #000000;
     --text-color: #ffffff;
-    --logo-color:#ffffff;
+    --logo-color: #ffffff;
     --sub-text-color: #cfcfcf;
-    --card-border:rgba(250, 250, 250, 0.1);
-    --card-box:rgba(250, 250, 250,0.1);
-    --button:#8437F9;
+    --card-border: rgba(250, 250, 250, 0.1);
+    --card-box: rgba(250, 250, 250, 0.1);
+    --button: #8437F9;
 }
 
 html,
@@ -46,9 +46,10 @@ body {
 }
 
 /* ----------------common  css----------------- */
-.bg-default{
+.bg-default {
     background: var(--bg-color);
 }
+
 section,
 nav {
     width: 85%;
@@ -63,13 +64,16 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
-p{
+
+p {
     color: var(--text-color);
 }
+
 section {
     padding-top: 3.5em;
-    padding-bottom: 3.5em;   
+    padding-bottom: 3.5em;
 }
+
 button {
     display: flex;
     align-items: center;
@@ -110,19 +114,23 @@ button {
     border: none;
     color: #ffffff;
 }
+
 .btn-mobile button {
     display: none;
 }
+
 @media screen and (max-width: 768px) {
     .btn-desktop button {
         display: none;
     }
+
     .btn-mobile button {
         display: flex;
         height: 56px;
         border-radius: 0.5em !important;
     }
-    .center-text-mobile{
+
+    .center-text-mobile {
         text-align: center;
         justify-content: center;
         align-items: center;
@@ -166,9 +174,10 @@ button {
     color: var(--primary-color);
 }
 
-.img-card img{
+.img-card img {
     border-radius: 12px;
 }
+
 .nav-container {
     position: fixed;
     width: 100%;
@@ -190,7 +199,7 @@ button {
 }
 
 .logo-nav {
-    
+
     font-size: 38px;
     font-family: "Montserrat Alternates", sans-serif;
     font-weight: 700;
@@ -200,9 +209,12 @@ button {
 #desktop-icons {
     display: none;
 }
-#desktop-icons svg, #mobile-icons svg{
+
+#desktop-icons svg,
+#mobile-icons svg {
     color: var(--text-color);
 }
+
 #mobile-icons {
     display: flex;
 }
@@ -254,7 +266,7 @@ button {
         width: calc(100% - 1em);
     }
 
-    .logo-mobile{
+    .logo-mobile {
         height: 16px;
         margin-left: 1.2em;
     }
@@ -264,12 +276,13 @@ button {
     font-size: 20px;
     line-height: 160%;
 }
+
 @media screen and (max-width:768px) {
-    
-    
-.card-unique p {
-    font-size: 16px;
-}
+
+
+    .card-unique p {
+        font-size: 16px;
+    }
 }
 
 /* ----------------swiper hero section--------------- */
@@ -285,13 +298,15 @@ button {
 #hero-bg {
     position: relative;
     background: transparent;
- 
+
 }
-@media  screen and (max-width: 768px) {
+
+@media screen and (max-width: 768px) {
     #hero-bg {
         background: none;
     }
 }
+
 video {
     max-width: 100%;
     max-height: 100%;
@@ -356,7 +371,7 @@ video {
     cursor: pointer;
     z-index: 10;
     padding: 0.3em;
-    background:#8437F9;
+    background: #8437F9;
     border-radius: 50%;
     color: #ffffff
 }
@@ -374,10 +389,13 @@ video {
         /* max-width: 80%; */
         height: auto;
     }
-    
+
 }
+
 @media screen and (max-width:990px) {
-    .arrow1, .arrow2{
+
+    .arrow1,
+    .arrow2 {
         top: 10em;
         top: 10em;
     }
@@ -389,7 +407,7 @@ video {
     font-size: 54px;
     font-weight: bold;
     text-align: center;
-    z-index:1;
+    z-index: 1;
 }
 
 .highlight-text {
@@ -430,20 +448,24 @@ video {
 /* ----------------------------section title end-------------- */
 
 /* --------------benifit section---------- */
-.mobile-show{
+.mobile-show {
     display: none;
 }
-.text-start{
+
+.text-start {
     text-align: start;
 }
-@media  screen and (max-width: 768px) {
-    .mobile-show{
+
+@media screen and (max-width: 768px) {
+    .mobile-show {
         display: block;
     }
-    .hide-mobile{
+
+    .hide-mobile {
         display: none !important;
     }
-    .text-start{
+
+    .text-start {
         text-align: center;
     }
 }
@@ -483,11 +505,12 @@ video {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     /* optional: subtle shadow for depth */
 }
-@media screen and (max-width: 768px){
-    
-.cards .card {
-    width: 280px;
-}
+
+@media screen and (max-width: 768px) {
+
+    .cards .card {
+        width: 280px;
+    }
 }
 
 
@@ -521,10 +544,12 @@ video {
     .feature-order .feature-heading {
         order: 0;
     }
+
     .cards .card h3 {
         font-size: 24px;
     }
-    .card-title{
+
+    .card-title {
         font-size: 24px;
     }
 }
@@ -541,12 +566,21 @@ video {
     margin: auto;
     ;
 }
-.no-more-head{margin-bottom: -2.5em;padding-top:2em;}
+
+.no-more-head {
+    margin-bottom: -2.5em;
+    padding-top: 2em;
+}
+
 @media screen and (max-width:768px) {
     .no-more-img {
         max-width: 100%;
     }
-    .no-more-head{margin-bottom: 0em;padding-top:2em;}
+
+    .no-more-head {
+        margin-bottom: 0em;
+        padding-top: 2em;
+    }
 
 }
 
@@ -566,18 +600,20 @@ video {
     width: 290px;
     padding: 30px;
     border-radius: 20px;
-    background: rgba(250, 250, 250, 0.1); 
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px); 
-  -webkit-backdrop-filter: blur(10px); 
-  border: 1px solid rgba(255, 255, 255, 0.18); 
+    background: rgba(250, 250, 250, 0.1);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 }
-@media  screen and (max-width:380px) {
+
+@media screen and (max-width:380px) {
     .review-cards .review-card {
         width: 250px;
     }
 }
+
 .review-cards .review-card h2 {
     font-size: 21px;
     font-weight: 500;
@@ -603,39 +639,47 @@ video {
     height: 24px;
 
 }
-@media  screen and (max-width:768px) {
+
+@media screen and (max-width:768px) {
     .review-cards .review-card {
         width: 276px;
         padding: 25px;
     }
+
     .review-cards .review-card h2 {
         font-size: 19px;
         font-weight: 500;
     }
-    .review-cards .review-card p{ 
+
+    .review-cards .review-card p {
         font-size: 14px;
     }
 }
+
 /* --------emergency----------- */
 .emergency {
-    background: var(--card-box); /* Adjust transparency for glass effect */
+    background: var(--card-box);
+    /* Adjust transparency for glass effect */
     border: 1px solid var(--card-border);
     border-radius: 1.2em;
     overflow: hidden;
-    
+
 }
 
 .emergency img {
     width: 624px;
     height: 560px;
 }
-.mobile-padding{
+
+.mobile-padding {
     padding: 20px;
     width: calc(100% - 48px);
 }
-.emergency button{
+
+.emergency button {
     font-size: 14px;
 }
+
 @media screen and (max-width:1200px) {
     .emergency {
         flex-wrap: nowrap;
@@ -643,13 +687,13 @@ video {
 }
 
 @media screen and (max-width:768px) {
-   
+
     .emergency img {
         width: auto;
         height: auto;
     }
-    
-    .emergency button{
+
+    .emergency button {
         display: flex;
         justify-content: center;
         align-self: center;
@@ -658,26 +702,31 @@ video {
 }
 
 /* ---automatic=---- */
-.automatic-code{
+.automatic-code {
     height: 504px;
 }
-.automatic-code.special-order2{
+
+.automatic-code.special-order2 {
     height: 456px;
 }
+
 @media screen and (max-width:768px) {
-    .automatic-code{
+    .automatic-code {
         height: auto;
-     
+
     }
-    .automatic-code.special-order2{
+
+    .automatic-code.special-order2 {
         height: auto;
     }
-    #automatic-section .special-order1{
+
+    #automatic-section .special-order1 {
         order: 0;
         padding: 24px !important;
         padding-bottom: 0 !important;
     }
-    #automatic-section .special-order2{
+
+    #automatic-section .special-order2 {
         order: 1;
         padding: 24px !important;
     }
@@ -697,12 +746,12 @@ video {
     border-radius: 10px;
     cursor: pointer;
     transition: var(--transition);
-    background: rgba(250, 250, 250, 0.1); 
+    background: rgba(250, 250, 250, 0.1);
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px); 
-    border: 1px solid rgba(255, 255, 255, 0.18); 
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
 
 }
 
@@ -778,7 +827,8 @@ video {
     font-family: "Roboto", sans-serif;
 
 }
-.download-section button{
+
+.download-section button {
     padding: 0;
 }
 
@@ -801,7 +851,8 @@ video {
         font-size: 16px;
 
     }
-    .download-section button{
+
+    .download-section button {
         width: 100%;
         background-color: black;
         padding: 0;
@@ -883,26 +934,78 @@ a {
 
 
 /* --------price-- */
-.price{
+.price {
     font-size: 40px;
     font-family: "Bricolage Grotesque", sans-serif;
-font-weight: 700;
-display: flex;
-align-items: center;
-gap: 0.5em;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
-.price .original-price{
+
+.price .original-price {
     font-size: 20px;
     font-weight: 400;
-    text-decoration:line-through;
+    text-decoration: line-through;
     margin-top: 0.5em;
     text-decoration-color: red;
 }
-@media  screen and (max-width:768px){
-    .price{
+
+@media screen and (max-width:768px) {
+    .price {
         font-size: 30px;
     }
-    .price .original-price{
+
+    .price .original-price {
         font-size: 18px;
+    }
+}
+
+/* -------home link page--------- */
+.home-second-fold-wrapper {
+
+}
+
+.home-second-fold {
+    height: 80vh;
+}
+
+.home-second-fold h1 {
+    font-size: 66px;
+    font-family: "Montserrat Alternates", sans-serif;
+    color: var(--logo-color);
+  
+}
+
+.home-second-fold p {
+    line-height: 160%;
+    font-size: 24px;
+    max-width: 1063px;
+    text-align: center;
+}
+
+.home-second-fold h3 {
+    font-size: 24px;
+}
+
+@media screen and (max-width: 768px) {
+    .home-second-fold {
+        height: 50vh;
+
+    }
+
+    .home-second-fold h1 {
+        font-size: 32px;
+
+    }
+
+    .home-second-fold p {
+
+        font-size: 18px;
+        max-width: 100%;
+    }
+
+    .home-second-fold h3 {
+        font-size: 20px;
     }
 }

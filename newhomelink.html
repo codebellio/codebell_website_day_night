@@ -177,12 +177,13 @@
             }
 
             .main-img {
-               
+
                 max-width: 50%;
                 display: flex;
                 align-self: center;
             }
-            .main-video{
+
+            .main-video {
                 margin: auto;
             }
 
@@ -206,7 +207,7 @@
 
             .mini-img.mini-video video {
                 border-radius: 0.5em;
-              
+
 
             }
 
@@ -339,7 +340,7 @@
                     <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
                         <div class="swiper-wrapper main-wrapper">
                             <div class="swiper-slide main-img" style="max-width: 50%;">
-                                <img src="/assets/newimage/doorbell_global1.png" alt="" >
+                                <img src="/assets/newimage/doorbell_global1.png" alt="">
                             </div>
                             <div class="swiper-slide main-video flex middle center" style="width: 80%;display:flex;">
                                 <video autoplay loop muted controls src="/assets/svg/Codebell-CarConnect.mp4"></video>
@@ -421,9 +422,12 @@
                             <p>270+ Ratings & Reviews</p>
                         </div>
                         <div class="flex column gap" id="hero-title">
-                            <div class="title-1 text-gradient" data-aos="fade-up" data-aos-delay="0">HomeLink Smart Video Doorbell</div>
-                            <p class="title-2" style="font-size: 24px;" data-aos="fade-up" data-aos-delay="50">Stay connected to your home, even when you're away.</p>
-                            <p class="price" data-aos="fade-up" data-aos-delay="100">₹310/- <span class="original-price">MRP 499/-</span></p>
+                            <div class="title-1 text-gradient" data-aos="fade-up" data-aos-delay="0">HomeLink Smart
+                                Video Doorbell</div>
+                            <p class="title-2" style="font-size: 24px;" data-aos="fade-up" data-aos-delay="50">Stay
+                                connected to your home, even when you're away.</p>
+                            <p class="price" data-aos="fade-up" data-aos-delay="100">₹310/- <span
+                                    class="original-price">MRP 499/-</span></p>
                         </div>
                         <ul class="flex column gap" style="margin-left: 1em;">
                             <li style="list-style:disc;">Never miss a visitor to home when you are away</li>
@@ -432,18 +436,20 @@
                             <li style="list-style:disc;">One Time Payment, No Subscription required</li>
                             <li style="list-style:disc;">Zero Hardware and wiring free; No Wi-fi</li>
                         </ul>
-                        <h4 class="highlight-font" style="border-top:1px solid var(--text-color);padding-top:1.5em;">Select Language:</h4>
+                        <h4 class="highlight-font" style="border-top:1px solid var(--text-color);padding-top:1.5em;">
+                            Select Language:</h4>
                         <div class="flex column gap" id="buy-now">
                             <div class="flex middle gap-1 eq">
                                 <button id="english-btn" class="outline" style="height: 48px;">English</button>
                                 <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
                             </div>
                             <a href="https://amzn.in/d/97zNU94" target="_blank">
-                                <button class="highlight-font" style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
+                                <button class="highlight-font"
+                                    style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
                                     <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
                                     Buy On Amazon
                                 </button>
-                            </a> 
+                            </a>
                         </div>
 
 
@@ -451,6 +457,87 @@
                 </div>
             </section>
         </div>
+
+        <style>
+            .lines {
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                margin: auto;
+                width: 90vw;
+              }
+              
+              .line {
+                position: absolute;
+                width: 1px;
+                height: 100%;
+                top: 0;
+                left: 50%;
+                background: rgba(255, 255, 255, 0.1);
+                overflow: hidden;
+              }
+              
+              .line::after {
+                content: '';
+                display: block;
+                position: absolute;
+                height: 15vh;
+                width: 100%;
+                top: -50%;
+                left: 0;
+                background: linear-gradient(to bottom, var(--text-color) 0%, var(--text-color) 75%, var(--text-color) 100%);
+                animation: drop 7s 0s infinite;
+                animation-fill-mode: forwards;
+                animation-timing-function: cubic-bezier(0.4, 0.26, 0, 0.97);
+              }
+              
+              .line:nth-child(1) {
+                margin-left: -25%;
+              }
+              
+              .line:nth-child(1)::after {
+                animation-delay: 2s;
+              }
+              
+              .line:nth-child(3) {
+                margin-left: 25%;
+              }
+              
+              .line:nth-child(3)::after {
+                animation-delay: 2.5s;
+              }
+              
+              @keyframes drop {
+                0% {
+                  top: -50%;
+                }
+                100% {
+                  top: 110%;
+                }
+              }
+              
+        </style>
+        <!--second fold--->
+        <div class="home-second-fold-wrapper" style="position: relative;">
+            <div class="lines">
+                <div class="line"></div>
+                <div class="line"></div>
+                <div class="line"></div>
+              </div>
+            <section class="flex column middle center gap home-second-fold">
+                <h1>codebell</h1>
+                <p>Introducing Home Link, a QR code-based video intercom system designed to that allows you to answer
+                    your door from anywhere, anytime, ensuring you never miss a visitor again. Guests, delivery
+                    personnel, or neighbors directly through a real-time video call, without the need for exchanging
+                    personal phone numbers.</p>
+                <h3 class="highlight-font" style="margin-top: 1.2em;margin-bottom:1.2em">"Make your home smarter"</h3>
+                <button>Get Homelink Today</button>
+            </section>
+        </div>
+
+
         <div id="blur-bg" style="color:#000000; ">
             <section id="features">
                 <div class="section-title" style="padding-bottom: 1.5em;"> Wooried about
@@ -644,7 +731,7 @@
 
         <section id="About">
             <div class="flex eq wrap between middle center gap emergency">
-                
+
                 <div class="flex column mobile-padding" style="min-width: 300px;max-height:80%;gap:1em;">
                     <div class="section-title  card-title" style="text-align: start;">Assign to Driver / <br> Family
                         Member
