@@ -84,17 +84,28 @@ let reviewCustomers = new Swiper(".swiper-container-store", {
   //--- --english hindi button selection --------------------------------
   const englishBtn = document.getElementById('english-btn');
   const hindiBtn = document.getElementById('hindi-btn');
+  const englishImg = document.getElementById('english-img');
+  const hindiImg = document.getElementById('hindi-img');
+  
   function toggleOutline(event) {
       const clickedButton = event.target;
-
+  
       englishBtn.classList.remove('fill');
       hindiBtn.classList.remove('fill');
-
+  
       clickedButton.classList.add('fill');
+  
+      if (clickedButton === englishBtn) {
+          englishImg.style.display = 'block';
+          hindiImg.style.display = 'none';
+      } else if (clickedButton === hindiBtn) {
+          englishImg.style.display = 'none';
+          hindiImg.style.display = 'block';
+      }
   }
+  
   englishBtn.addEventListener('click', toggleOutline);
   hindiBtn.addEventListener('click', toggleOutline);
-
 
 
 

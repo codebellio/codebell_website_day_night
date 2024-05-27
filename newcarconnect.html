@@ -181,9 +181,11 @@
                 max-width: 50%;
                 display: flex;
                 align-self: center;
+                
             }
             .main-video{
                 margin: auto;
+
             }
 
             .mini-img {
@@ -339,16 +341,18 @@
                     <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
                         <div class="swiper-wrapper main-wrapper">
                             <div class="swiper-slide main-img" style="max-width: 75%;">
-                                <img src="/assets/svg/car-connect.png" alt="" >
+                                <img src="/assets/svg/car-connect.png" alt="English Image" id="english-img">
+                                <img src="/assets/svg/hindi-img.png" alt="Hindi Image" id="hindi-img" style="display: none;">
+
                             </div>
                             <div class="swiper-slide main-video flex middle center" style="width: 80%;display:flex;">
                                 <video autoplay loop muted controls src="/assets/svg/Codebell-CarConnect.mp4"></video>
                             </div>
-                            <div class="swiper-slide main-img">
-                                <img src="/assets/img/codebell_standard.webp" alt="">
+                            <div class="swiper-slide main-img" style="max-width: 75%;">
+                                <img src="/assets/svg/third-slide-new.png" alt="" >
                             </div>
-                            <div class="swiper-slide main-img">
-                                <img src="/assets/newimage/car_connect_world1.png" alt="">
+                            <div class="swiper-slide main-img" style="max-width: 75%;">
+                                <img src="/assets/svg/forth-fold.png" alt="" >
                             </div>
                         </div>
                         <div class="flex between">
@@ -371,14 +375,14 @@
                             <div class="mini-img active-img" data-index="0">
                                 <img src="/assets/svg/car-connect.png" alt="">
                             </div>
-                            <div class="mini-img mini-video " data-index="1">
-                                <video src="/assets/img/sample.mp4"></video>
+                            <div class="mini-img" data-index="1">
+                                <img src="/assets/svg//mini-video.png" alt="">
                             </div>
                             <div class="mini-img" data-index="2">
-                                <img src="/assets/img/codebell_standard.webp" alt="">
+                                <img src="/assets/svg/third-slide-new.png" alt="">
                             </div>
                             <div class="mini-img" data-index="3">
-                                <img src="/assets/newimage/car_connect_world1.png" alt="">
+                                <img src="/assets/svg/forth-fold.png" alt="">
                             </div>
                         </div>
                     </div>
@@ -435,8 +439,8 @@
                           <h4 class="highlight-font" style="border-top:1px solid var(--text-color);padding-top:1.5em;">Select Language:</h4>
                           <div class="flex column gap" id="buy-now">
                             <div class="flex middle gap-1 eq">
-                              <button id="english-btn" class="outline" style="height: 48px;">English</button>
-                              <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
+                                <button id="english-btn" class="outline fill" style="height: 48px;">English</button>
+                                <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
                             </div>
                             <a href="https://amzn.in/d/iLqHZFM" target="_blank">
                               <button class="highlight-font" style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;" >
@@ -465,7 +469,7 @@
                                     scratches, and broken
                                     mirrors. Don't let a simple mistake end up costing you big time.</p>
                                 <div class="img-card">
-                                    <img src="/assets/svg/worriednew1.png" alt="">
+                                    <img src="/assets/svg/car-damage.png" alt="">
                                 </div>
                             </div>
                         </div>
@@ -492,33 +496,18 @@
                                     It's even worse not knowing
                                     where it's gone! Don't get left in the dark – stay in control of your wheels</p>
                                 <div class="img-card">
-                                    <img src="/assets/svg/worriednew3.png" alt="">
+                                    <img src="/assets/svg/towing.png" alt="">
                                 </div>
 
                             </div>
                         </div>
+                   
                         <div class="swiper-slide">
                             <div class="card">
-                                <h3 class="highlight-font">Towing Troubles</h3>
-                                <p style="color:#000000">You know that sinking feeling when you realize your car's been
-                                    towed?
-                                    It's even worse not knowing
-                                    where it's gone! Don't get left in the dark – stay in control of your wheels</p>
+                                <h3 class="highlight-font">Community Chaos</h3>
+                                <p style="color:#000000">Bad parking isn't just about you; it affects everyone around. Keep the streets flowing smoothly and neighbors happy by parking responsibly.</p>
                                 <div class="img-card">
-                                    <img src="/assets/svg/worriednew3.png" alt="">
-                                </div>
-
-                            </div>
-                        </div>
-                        <div class="swiper-slide">
-                            <div class="card">
-                                <h3 class="highlight-font">Towing Troubles</h3>
-                                <p style="color:#000000">You know that sinking feeling when you realize your car's been
-                                    towed?
-                                    It's even worse not knowing
-                                    where it's gone! Don't get left in the dark – stay in control of your wheels</p>
-                                <div class="img-card">
-                                    <img src="/assets/svg/worriednew3.png" alt="">
+                                    <img src="/assets/svg/community.png" alt="">
                                 </div>
 
                             </div>
@@ -804,22 +793,24 @@
         <script>
 
             const feature = new Swiper(".swiper-feature", {
-                spaceBetween: 5,
+                spaceBetween: 10,
                 grabCursor: true,
                 centeredSlides: true,
                 loop: true,
                 speed: 2000,  // Speed of the transition (in ms)
                 autoplay: {
-                    delay: 1,  // Delay between slides (in ms)
-
+                    delay: 0,  // No delay between slides for continuous effect
                     disableOnInteraction: false,
                 },
                 pagination: {
                     el: ".swiper-pagination",
                     clickable: true,
-
                 },
                 breakpoints: {
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                    },
                     768: {
                         slidesPerView: 1,
                         spaceBetween: 1,
@@ -828,13 +819,12 @@
                         slidesPerView: 3,
                         spaceBetween: 10,
                     },
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
                 },
-
+                loopAdditionalSlides: 3, 
+                freeMode: true,  
+                slidesPerView: 'auto',  
             });
+            
             const reviewCustomer = new Swiper(".swiper-review", {
                 spaceBetween: 5,
                 grabCursor: true,

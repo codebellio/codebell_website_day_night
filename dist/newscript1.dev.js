@@ -73,12 +73,22 @@ arrow2.addEventListener('click', function () {
 
 var englishBtn = document.getElementById('english-btn');
 var hindiBtn = document.getElementById('hindi-btn');
+var englishImg = document.getElementById('english-img');
+var hindiImg = document.getElementById('hindi-img');
 
 function toggleOutline(event) {
   var clickedButton = event.target;
   englishBtn.classList.remove('fill');
   hindiBtn.classList.remove('fill');
   clickedButton.classList.add('fill');
+
+  if (clickedButton === englishBtn) {
+    englishImg.style.display = 'block';
+    hindiImg.style.display = 'none';
+  } else if (clickedButton === hindiBtn) {
+    englishImg.style.display = 'none';
+    hindiImg.style.display = 'block';
+  }
 }
 
 englishBtn.addEventListener('click', toggleOutline);
