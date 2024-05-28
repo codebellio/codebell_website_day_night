@@ -963,7 +963,7 @@ a {
 
 /* -------home link page--------- */
 .home-second-fold-wrapper {
-
+z-index: 5;
 }
 
 .home-second-fold {
