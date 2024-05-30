@@ -595,7 +595,7 @@
                 position: relative;
                 overflow: hidden;
                 width: 100%; /* Ensure it takes the full width of its parent */
-                height: auto; /* Maintain aspect ratio based on width */
+                height: 100%; /* Maintain aspect ratio based on width */
               
             }
     
@@ -611,8 +611,8 @@
             .inner-img-frame {
                 position: relative;
                 z-index: 2;
-                width: 98%;
-                height: 100%;
+                width: 90%;
+                height: 90%;
                 margin: auto;
                 display: flex;
                 align-items: center;
@@ -624,7 +624,8 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 6em;
+                border-radius: 4em;
+                margin-top: 5px;
             }
         </style>
         <!-- -no more app section -->
@@ -638,7 +639,7 @@
                 <div class="flex center  middle no-more-img" data-aos="fade-up" style="margin-top:2.5em">
                     <!-- <img src="/assets/svg/no-app-new.png" alt=""> -->
                     <div class="frame-wrapper">
-                        <img src="/assets/svg/frame.png" alt="Frame">
+                        <img src="/assets/svg/frame-2.png" alt="Frame">
                         <div class="inner-img-frame">
                             <video autoplay muted loop src="/assets/svg/no-app-video.mp4"></video>
                         </div>
@@ -651,13 +652,15 @@
     .frame-wrapper1 {
         position: relative;
         overflow: hidden;
-        width: 40%; /* Ensure it takes the full width of its parent */
+        width: 236px; /* Ensure it takes the full width of its parent */
         height: 450px; /* Maintain aspect ratio based on width */
         margin: auto;
         
       
     }
-
+@media screen  {
+    
+}
     .frame-wrapper1 img {
         position: absolute;
         top: 0;
