@@ -722,8 +722,11 @@ video {
 
     #automatic-section .special-order1 {
         order: 0;
-        padding: 24px !important;
-        padding-bottom: 0 !important;
+       
+        padding-top: 2em;
+        padding-bottom: 2em;
+         /* padding: 24px !important;
+        padding-bottom: 0 !important; */
     }
 
     #automatic-section .special-order2 {
