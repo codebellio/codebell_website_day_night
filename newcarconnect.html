@@ -590,7 +590,43 @@
             </div>
         </section>
 
-
+        <style>
+            .frame-wrapper {
+                position: relative;
+                overflow: hidden;
+                width: 100%; /* Ensure it takes the full width of its parent */
+                height: auto; /* Maintain aspect ratio based on width */
+              
+            }
+    
+            .frame-wrapper img {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%; /* Ensure the image maintains its aspect ratio */
+                z-index: 10;
+            }
+    
+            .inner-img-frame {
+                position: relative;
+                z-index: 2;
+                width: 98%;
+                height: 100%;
+                margin: auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+            }
+    
+            .inner-img-frame video {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 6em;
+            }
+        </style>
         <!-- -no more app section -->
         <div id="no-app-bg" style="margin-top: 2.5em;">
             <section class="features" style="padding-bottom: 0;color:#000000" id="product">
@@ -600,25 +636,67 @@
                     CarConnect, simplicity is key. Visitors can use any QR
                     scanner or camera to access the features, making it hassle-free and accessible for everyone.</p>
                 <div class="flex center  middle no-more-img" data-aos="fade-up" style="margin-top:2.5em">
-                    <img src="/assets/svg/no-app-new.png" alt="">
-                    <div class="frame-wrapper" style="position: relative;overflow:hidden;">
-                        <!-- <img src="/assets/svg/frame.png" alt="" style="position: absolute;height:100%;width:100%;overflow:hidden; ">
+                    <!-- <img src="/assets/svg/no-app-new.png" alt=""> -->
+                    <div class="frame-wrapper">
+                        <img src="/assets/svg/frame.png" alt="Frame">
                         <div class="inner-img-frame">
-                            <img src="/assets/svg/inner-imgs.png" alt="">
+                            <video autoplay muted loop src="/assets/svg/no-app-video.mp4"></video>
                         </div>
-                       -->
-
                     </div>
 
                 </div>
             </section>
         </div>
+<style>
+    .frame-wrapper1 {
+        position: relative;
+        overflow: hidden;
+        width: 40%; /* Ensure it takes the full width of its parent */
+        height: 450px; /* Maintain aspect ratio based on width */
+        margin: auto;
+        
+      
+    }
 
+    .frame-wrapper1 img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%; /* Ensure the image maintains its aspect ratio */
+        z-index: 10;
+    }
+
+    .inner-img-frame1 {
+        position: relative;
+        z-index: 2;
+        width: 95%;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
+    .inner-img-frame1 video {
+        width: 100%;
+        height: 96%;
+        object-fit: cover;
+        border-radius: 2em;
+    }
+</style>
         <section class="flex eq wrap between middle center gap feature-order" id="automatic-section"
             style="padding-top: 4.5em;">
             <div class="flex middle end feature-img bg-class automatic-code special-order1"
-                style="min-width: 300px;padding-top:2em;">
-                <img src="/assets/svg/automatic-call.png" alt="" data-aos="fade-up">
+                style="min-width: 300px;padding-top:1em;padding-bottom:1em;overflow:hidden">
+                <!-- <img src="/assets/svg/automatic-call.png" alt="" data-aos="fade-up"> -->
+                <div class="frame-wrapper1">
+                    <img src="/assets/svg/frame-2.png" alt="Frame">
+                    <div class="inner-img-frame1">
+                        <video autoplay muted loop src="/assets/svg/call-forwarding.mp4"></video>
+                    </div>
+                </div>
             </div>
             <div class="flex column gap-1 feature-heading automatic-code special-order2" style="min-width: 300px;background:var(--card-box);background-size: cover;
         border-radius: 1em;padding:40px;">
