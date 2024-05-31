@@ -591,12 +591,17 @@
         </section>
 
         <style>
+
+            
             .frame-wrapper {
                 position: relative;
                 overflow: hidden;
                 width: 100%; /* Ensure it takes the full width of its parent */
                 height: 100%; /* Maintain aspect ratio based on width */
-              
+
+                width: 236px; /* Ensure it takes the full width of its parent */
+                height: 500px; /* Maintain aspect ratio based on width */
+              margin-bottom: 2.5em;
             }
     
             .frame-wrapper img {
@@ -611,8 +616,8 @@
             .inner-img-frame {
                 position: relative;
                 z-index: 2;
-                width: 90%;
-                height: 90%;
+                width: 95%;
+                height: 98%;
                 margin: auto;
                 display: flex;
                 align-items: center;
@@ -624,8 +629,9 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 4em;
-                margin-top: 5px;
+                border-radius: 2.5em;
+                margin-top: 1em;
+               
             }
         </style>
         <!-- -no more app section -->
@@ -639,7 +645,7 @@
                 <div class="flex center  middle no-more-img" data-aos="fade-up" style="margin-top:2.5em">
                     <!-- <img src="/assets/svg/no-app-new.png" alt=""> -->
                     <div class="frame-wrapper">
-                        <img src="/assets/svg/frame-2.png" alt="Frame">
+                        <img src="/assets/svg/frame.png" alt="Frame">
                         <div class="inner-img-frame">
                             <video autoplay muted loop src="/assets/svg/no-app-video.mp4"></video>
                         </div>
