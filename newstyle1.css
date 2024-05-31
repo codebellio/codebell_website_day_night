@@ -722,10 +722,10 @@ video {
 
     #automatic-section .special-order1 {
         order: 0;
-       
+
         padding-top: 2em;
         padding-bottom: 2em;
-         /* padding: 24px !important;
+        /* padding: 24px !important;
         padding-bottom: 0 !important; */
     }
 
@@ -740,6 +740,13 @@ video {
     background: #FAFAFA;
     border: 1px solid #DCDCDC;
     border-radius: 1.2em;
+}
+
+.assign {
+    background: linear-gradient(to bottom,
+            #A2CEFF 0%,
+            #FBDBFF 100%);
+   
 }
 
 /* -------------faq-------------- */
@@ -966,7 +973,7 @@ a {
 
 /* -------home link page--------- */
 .home-second-fold-wrapper {
-z-index: 5;
+    z-index: 5;
 }
 
 .home-second-fold {
@@ -977,7 +984,7 @@ z-index: 5;
     font-size: 66px;
     font-family: "Montserrat Alternates", sans-serif;
     color: var(--logo-color);
-  
+
 }
 
 .home-second-fold p {
