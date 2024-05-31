@@ -711,7 +711,7 @@ video {
 }
 
 @media screen and (max-width:768px) {
-    .automatic-code {
+    .automatic-code .special-order2 {
         height: auto;
 
     }
