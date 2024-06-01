@@ -70,8 +70,8 @@ p {
 }
 
 section {
-    padding-top: 3.5em;
-    padding-bottom: 3.5em;
+    padding-top: 3em;
+    padding-bottom: 3em;
 }
 
 button {
@@ -455,10 +455,12 @@ video {
 .text-start {
     text-align: start;
 }
-
+.hide-mobile{
+    display: flex;
+}
 @media screen and (max-width: 768px) {
     .mobile-show {
-        display: block;
+        display: flex;
     }
 
     .hide-mobile {
@@ -837,9 +839,10 @@ video {
 
 .download-section p {
     font-size: 18px;
-    line-height: 110%;
+    line-height: 160%;
+    margin-top: 1.2em;
     max-width: 60%;
-    margin-top: -0.8em;
+    margin-top: -0.5em;
     margin-bottom: 0.5em;
     font-family: "Roboto", sans-serif;
 
@@ -860,12 +863,13 @@ video {
     }
 
     .download-section h2 {
-        font-size: 28px;
+        font-size: 24px;
     }
 
     .download-section p {
-        max-width: 100%;
-        font-size: 16px;
+        max-width: 85%;
+        font-size: 14px;
+      
 
     }
 
@@ -879,12 +883,18 @@ video {
 /* ------------footer------------ */
 /* footer */
 .footer {
-    padding-top: 100px;
+    padding-top: 6em;
     padding-bottom: 35px;
 }
 
 .footer h3 {
     font-weight: 600;
+
+   
+}
+.footer h4{
+    font-size: 24px;
+    color: var(--logo-color);
 }
 
 .footer img {
@@ -999,6 +1009,7 @@ a {
     font-size: 24px;
     max-width: 1063px;
     text-align: center;
+    
 }
 
 .home-second-fold h3 {
