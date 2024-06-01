@@ -472,7 +472,7 @@
         <div id="blur-bg" style="color:#000000; ">
             <section id="features">
                 <div class="section-title" style="padding-bottom: 1.5em;"> Worried about
-                    your Car</div>
+                    your Car?</div>
                 <div class="swiper-feature" style="overflow: hidden;padding-bottom: 2em;">
                     <div class="cards swiper-wrapper">
                         <div class="swiper-slide">
@@ -786,7 +786,11 @@
                 </div>
             </div>
         </section> -->
-
+<style>
+    .assign-wrapper{
+        margin-top: 5em;
+    }
+</style>
         <section class="flex eq wrap between middle center gap feature-order " id="automatic-section"
             style="padding-top: 4.5em;">
 
@@ -806,7 +810,7 @@
             <div class="flex middle end feature-img bg-class automatic-code special-order1 assign"
                 style="min-width: 300px;padding-top:1em;padding-bottom:1.2em;overflow:hidden">
                 <!-- <img src="/assets/svg/automatic-call.png" alt="" data-aos="fade-up"> -->
-                <div class="frame-wrapper1">
+                <div class="frame-wrapper1 assign-wrapper">
                     <img src="/assets/svg/frame.png" alt="Frame">
                     <div class="inner-img-frame1">
                         <video autoplay muted loop src="/assets/svg/assign-driver.mp4"></video>
@@ -831,7 +835,7 @@
                         <div class="review-card">
                             <div class="flex column gap middle">
                                 <div class="review-profile">
-                                    <img src="/assets/svg/review-1.jpg" alt="">
+                                    <img src="/assets/svg/default.jpg" alt="">
                                 </div>
                                 <h2>Vatsal Chauhan</h2>
                                 <p style=" font-size: 14px;font-weight:300;margin-top:-0.5rem">From India</p>
@@ -941,9 +945,9 @@
                 grabCursor: true,
                 centeredSlides: true,
                 loop: true,
-                speed: 2000,  // Speed of the transition (in ms)
+                speed: 2500,  // Speed of the transition (in ms)
                 autoplay: {
-                    delay: 0,  // No delay between slides for continuous effect
+                    delay: 1000,  // No delay between slides for continuous effect
                     disableOnInteraction: false,
                 },
                 pagination: {
@@ -957,16 +961,14 @@
                     },
                     768: {
                         slidesPerView: 1,
-                        spaceBetween: 1,
+                        spaceBetween: 3,
                     },
                     1200: {
                         slidesPerView: 3,
                         spaceBetween: 10,
                     },
                 },
-                loopAdditionalSlides: 3,
-                freeMode: true,
-                slidesPerView: 'auto',
+
             });
 
             const reviewCustomer = new Swiper(".swiper-review", {
