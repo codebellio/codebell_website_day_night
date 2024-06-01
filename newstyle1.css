@@ -824,7 +824,12 @@ video {
     color: #ffffff;
     font-family: "Bricolage Grotesque", sans-serif;
 }
-
+@media screen and (max-width: 768px) {
+  
+    .download-wrapper{
+        background: #8437F9;
+    }
+}
 .download-section h2 {
     font-size: 56px;
 }
