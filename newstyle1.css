@@ -16,6 +16,7 @@
     --card-border: #DCDCDC;
     --logo-color: #1111AD;
     --button: #030319;
+    --table:#E8E8F7;
 
 }
 
@@ -26,6 +27,7 @@
     --sub-text-color: #cfcfcf;
     --card-border: rgba(250, 250, 250, 0.1);
     --card-box: rgba(250, 250, 250, 0.1);
+    --table:#191919;
     --button: #8437F9;
 }
 
