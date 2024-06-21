@@ -534,7 +534,7 @@ video {
     line-height: 135%;
 }
 
-.features p {
+.features p, .section-sub-title  {
     margin-top: 2.5em;
     line-height: 160%;
     max-width: 938px;
