@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,800;1,900&display=swap');
-
 * {
     margin: 0;
     padding: 0;
@@ -317,7 +316,7 @@ video {
     border-radius: 1em;
 }
 
-
+/* 
 .swiper-button-next,
 .swiper-button-prev {
     background-color: var(--primary-color);
@@ -342,7 +341,7 @@ video {
 
 .swiper-pagination-bullet-active {
     background-color: var(--primary-color) !important;
-}
+} */
 
 #buy-now {
     max-width: 65%;
@@ -490,8 +489,9 @@ video {
 } */
 
 .cards .card {
+    flex: 0 0 auto;
     width: 350px;
-
+    margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -516,6 +516,7 @@ video {
         width: 180px;
         height: 430px;
     }
+   
 }
 
 
@@ -600,8 +601,15 @@ video {
 
 /* -----------review cards -----------*/
 
-
+.review-cards,.cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 10px; 
+    overflow: hidden; 
+}
 .review-cards .review-card {
+ 
+    flex: 0 0 auto;
     width: 290px;
     height: 350px;
     padding: 30px;
@@ -613,7 +621,21 @@ video {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
+/* Keyframes for continuous scroll animation */
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
 
+/* Animation class for continuous scroll */
+.continuous-scroll {
+    display: flex;
+    animation: scroll linear infinite;
+}
 @media screen and (max-width:380px) {
     .review-cards .review-card {
         width: 250px;

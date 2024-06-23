@@ -17,7 +17,6 @@
     <link rel="stylesheet" href="newstyle1.css">
     <link rel="stylesheet" href="layout.css">
     <link rel="stylesheet" href="/assets/swiper-bundle.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="/assets/swiper-bundle.min.js"></script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
@@ -422,12 +421,11 @@
                             <p>270+ Ratings & Reviews</p>
                         </div>
                         <div class="flex column gap" id="hero-title">
-                            <div class="title-1 text-gradient" data-aos="fade-up" data-aos-delay="0">HomeLink Smart
+                            <div class="title-1 text-gradient">HomeLink Smart
                                 Video Doorbell</div>
-                            <p class="title-2" style="font-size: 24px;" data-aos="fade-up" data-aos-delay="50">Stay
+                            <p class="title-2" style="font-size: 24px;">Stay
                                 connected to your home, even when you're away.</p>
-                            <p class="price" data-aos="fade-up" data-aos-delay="100">₹310/- <span
-                                    class="original-price">MRP 499/-</span></p>
+                            <p class="price">₹310/- <span class="original-price">MRP 499/-</span></p>
                         </div>
                         <ul class="flex column gap" style="margin-left: 1em;">
                             <li style="list-style:disc;">Never miss a visitor to home when you are away</li>
@@ -549,9 +547,7 @@
                     community spirit, all with a simple, user-friendly solution. Welcome to a smarter, more connected
                     home. Welcome to HomeLink.</p>
                 <div class="swiper-feature" style="overflow: hidden;padding-bottom: 2em;margin-top:2em;">
-                    <div class="cards swiper-wrapper">
-
-                        <div class="swiper-slide">
+                    <div class="cards">
                             <div class="card">
                                 <h3 class="highlight-font">Seamless Visitors Management</h3>
                                 <p style="color:#000000">HomeLink connects you to visitors without sharing your number,
@@ -560,8 +556,7 @@
                                     <img src="/assets/homelink/visitor-management.png" alt="">
                                 </div>
                             </div>
-                        </div>
-                        <div class="swiper-slide">
+                
                             <div class="card">
                                 <h3 class="highlight-font">Say Goodbye to Missed Deliveries</h3>
                                 <p style="color:#000000">Whether you're at work, on vacation, or running errands, with
@@ -572,8 +567,7 @@
                                 </div>
 
                             </div>
-                        </div>
-                        <div class="swiper-slide">
+                        
                             <div class="card">
                                 <h3 class="highlight-font">Connect with Your Neighborhood</h3>
                                 <p style="color:#000000">Whether it’s a gas leak alert or planning a community event,
@@ -584,11 +578,6 @@
                                 </div>
 
                             </div>
-                        </div>
-
-
-
-
 
                     </div>
                 </div>
@@ -601,36 +590,44 @@
                 justify-content: center;
                 flex-wrap: wrap;
                 padding-top: 0;
-             
+
             }
-            .left-container, .right-wrapper {
+
+            .left-container,
+            .right-wrapper {
                 flex: 1;
                 min-width: 300px;
                 overflow-y: hidden;
             }
+
             .left-wrapper {
                 display: flex;
                 justify-content: center;
                 height: 100vh;
                 align-items: center;
             }
+
             .txt-app-wrapper {
                 margin: 20px 0;
             }
+
             .txt-app-wrapper h3 {
                 font-size: 42px;
             }
+
             .txt-app-wrapper span {
                 color: var(--primary-color);
             }
+
             .right-wrapper {
                 position: sticky;
                 top: 15%;
                 display: flex;
                 justify-content: center;
                 align-items: center;
-               height: 100%;
+                height: 100%;
             }
+
             .iphone-wrapper {
                 position: sticky;
                 top: 25%;
@@ -638,59 +635,69 @@
                 justify-content: center;
                 align-items: center;
                 width: 100%;
-              
+
             }
+
             .iphone {
-                
+
                 z-index: 100;
                 height: auto;
                 max-height: 580px;
                 max-width: 100%;
             }
+
             .img-wrapper {
                 position: absolute;
                 z-index: 2;
-                width:260px;
-                height:555px;
+                width: 260px;
+                height: 555px;
                 overflow: hidden;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 border-radius: 2em;
             }
+
             .img-wrapper video {
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
                 border-radius: 2.5em;
             }
+
             @media screen and (max-width: 768px) {
                 .container-lens {
                     flex-direction: column;
                     height: auto;
                 }
-                .left-container{
+
+                .left-container {
                     order: 1;
                 }
-                .left-wrapper { 
+
+                .left-wrapper {
                     height: 50vh;
                 }
+
                 .right-wrapper {
                     padding-top: 5em;
                     top: 5%;
                     order: 0;
-                    height: auto;    
-                    background: var(--bg-color);  
+                    height: auto;
+                    background: var(--bg-color);
                 }
+
                 .iphone {
                     max-height: 430px;
                     max-width: 250px;
                 }
+
                 .img-wrapper {
-                    width:200px;
-                    height:415px;
+                    width: 200px;
+                    height: 415px;
                     border-radius: 1em;
                 }
+
                 .txt-app-wrapper h3 {
                     font-size: 24px;
                     text-align: center;
@@ -702,7 +709,8 @@
             <div class="left-container">
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3>Share your <span><span class="logo">Codebell</span> ID</span> or <span>show your QR code</span> to connect instantly.</h3>
+                        <h3>Share your <span><span class="logo">Codebell</span> ID</span> or <span>show your QR
+                                code</span> to connect instantly.</h3>
                     </div>
                 </div>
                 <div class="left-wrapper">
@@ -720,30 +728,30 @@
                 <div class="iphone-wrapper">
                     <img loading="lazy" alt="iPhone frame" class="iphone">
                     <div class="img-wrapper">
-                        <video  muted autoplay loop class="inner-image"></video>
+                        <video muted autoplay loop class="inner-image"></video>
                     </div>
                 </div>
-              
+
             </div>
             <div class="blur-fold"></div>
         </section>
 
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 const sections = document.querySelectorAll('.left-wrapper');
-               const imgSources = [
-               '/assets/homelink/frame.png',
-               '/assets/svg/frame-2.png',
-               '/assets/homelink/frame.png'
-               ];
+                const imgSources = [
+                    '/assets/homelink/frame.png',
+                    '/assets/svg/frame-2.png',
+                    '/assets/homelink/frame.png'
+                ];
 
                 const videoSources = [
-                '/assets/homelink/instant-new.mp4',
-                '/assets/svg/assign-driver.mp4',
-                '/assets/svg/call-forwarding.mp4'
+                    '/assets/homelink/instant-new.mp4',
+                    '/assets/svg/assign-driver.mp4',
+                    '/assets/svg/call-forwarding.mp4'
                 ]; // Replace with your actual video sources
-            
+
                 // Function to update video based on scroll position
                 function updateVideo(scrollTop, viewportHeight) {
                     sections.forEach((section, index) => {
@@ -757,20 +765,20 @@
                         }
                     });
                 }
-            
+
                 // Scroll event listener
-                window.addEventListener('scroll', function() {
+                window.addEventListener('scroll', function () {
                     const scrollTop = window.scrollY;
                     const viewportHeight = window.innerHeight;
-            
+
                     // Update video based on scroll position
                     updateVideo(scrollTop, viewportHeight);
                 });
-            
+
                 // Initial update when page loads
                 updateVideo(window.scrollY, window.innerHeight);
             });
-            
+
 
 
 
@@ -782,120 +790,185 @@
         </section>
 
 
-
-        <section style="padding-top: 3em; ">
-            <div class="section-title"> See What Car owners have to Say</div>
+        <section id="reviewSection" style="padding-top: 3em;">
+            <div class="section-title">See What Car Owners Have to Say</div>
             <p class="text-center" style="margin-top: 1em;">Insightful Customer Feedback: Your Thoughts Matter to Us</p>
-            <div class="swiper-review" style="padding-bottom: 2em;overflow:hidden;padding-top:2.5em;">
-                <div class="review-cards swiper-wrapper p-1">
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="flex column gap middle">
-                                <div class="review-profile">
-                                    <img src="/assets/svg/default.jpg" alt="">
-                                </div>
-                                <h2>Vatsal Chauhan</h2>
-                                <p style=" font-size: 14px;font-weight:300;margin-top:-0.5rem">From India</p>
-                            </div>
-                            <p style="margin-top: 2em;">"This is one of the best ease of life product i have used. Now i
-                                don't need to think twice before parking my car on roads. The calling works effortlessly
-                                on my android phone."</p>
-                            <div class="review-star">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/black-star.png" alt="">
-                            </div>
+            <div class="review-cards" id="reviewCards" style="margin-top: 2.5em;">
+                <div class="review-card">
+                    <div class="flex column gap middle">
+                        <div class="review-profile">
+                            <img src="/assets/svg/default.jpg" alt="">
                         </div>
+                        <h2>Vatsal Chauhan</h2>
+                        <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="flex column gap middle">
-                                <div class="review-profile">
-                                    <img src="/assets/svg/default.jpg" alt="">
-                                </div>
-                                <h2>Harishchand</h2>
-                                <p style=" font-size: 14px;font-weight:300;margin-top:-0.5rem">From Gurugram, India</p>
-                            </div>
-                            <p style="margin-top: 2em;">"This product is very helpful in cities like Gurugram, we have a
-                                problem with parking space here and this has helped me to sleep a little better knowing
-                                someone will call me up before towing my car for illegal parking, thanks."</p>
-                            <div class="review-star">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                            </div>
+                    <p style="margin-top: 2em;">"This is one of the best ease of life product I have used. Now I don't need to think twice before parking my car on roads. The calling works effortlessly on my android phone."</p>
+                    <div class="review-star">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/black-star.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="review-card">
+                    <div class="flex column gap middle">
+                        <div class="review-profile">
+                            <img src="/assets/svg/default.jpg" alt="">
                         </div>
+                        <h2>Harishchand</h2>
+                        <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From Gurugram, India</p>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="flex column gap middle">
-                                <div class="review-profile">
-                                    <img src="/assets/svg/default.jpg" alt="">
-                                </div>
-                                <h2>Rohan Mujumdar</h2>
-                                <p style=" font-size: 14px;font-weight:300;margin-top:-0.5rem">From India</p>
-                            </div>
-                            <p style="margin-top: 2em;">"Very useful for contacting the owner of the vehicle."</p>
-                            <div class="review-star">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/black-star.png" alt="">
-                            </div>
+                    <p style="margin-top: 2em;">"This product is very helpful in cities like Gurugram, we have a problem with parking space here and this has helped me to sleep a little better knowing someone will call me up before towing my car for illegal parking, thanks."</p>
+                    <div class="review-star">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="review-card">
+                    <div class="flex column gap middle">
+                        <div class="review-profile">
+                            <img src="/assets/svg/default.jpg" alt="">
                         </div>
+                        <h2>Rohan Mujumdar</h2>
+                        <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="flex column gap middle">
-                                <div class="review-profile">
-                                    <img src="/assets/svg/default.jpg" alt="">
-                                </div>
-                                <h2>Suraj</h2>
-                                <p style=" font-size: 14px;font-weight:300;margin-top:-0.5rem">From India</p>
-                            </div>
-                            <p style="margin-top: 2em;">"My car is totally safe with Codebell. I'm happy to stick their
-                                QR on my car."</p>
-                            <div class="review-star">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                            </div>
+                    <p style="margin-top: 2em;">"Very useful for contacting the owner of the vehicle."</p>
+                    <div class="review-star">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/black-star.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="review-card">
+                    <div class="flex column gap middle">
+                        <div class="review-profile">
+                            <img src="/assets/svg/default.jpg" alt="">
                         </div>
+                        <h2>Rohan Mujumdar</h2>
+                        <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-                    <div class="swiper-slide">
-                        <div class="review-card">
-                            <div class="flex column gap middle">
-                                <div class="review-profile">
-                                    <img src="/assets/svg/default.jpg" alt="">
-                                </div>
-                                <h2>Vikram Mali</h2>
-                                <p style=" font-size: 14px;font-weight:300;margin-top:-0.5rem">From Pune, India</p>
-                            </div>
-                            <p style="margin-top: 2em;">"It’s great that any one can call me by scanning this QR code in
-                                case of wrong parking or any accident incidents. Just it could be more great if you
-                                could make it in hindi so any one can understand it"</p>
-                            <div class="review-star">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                                <img src="/assets/svg/star.png" alt="">
-                            </div>
+                    <p style="margin-top: 2em;">"Very useful for contacting the owner of the vehicle."</p>
+                    <div class="review-star">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/black-star.png" alt="">
+                    </div>
+                </div>
+    
+                <div class="review-card">
+                    <div class="flex column gap middle">
+                        <div class="review-profile">
+                            <img src="/assets/svg/default.jpg" alt="">
                         </div>
+                        <h2>Rohan Mujumdar</h2>
+                        <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-
+                    <p style="margin-top: 2em;">"Very useful for contacting the owner of the vehicle."</p>
+                    <div class="review-star">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/star.png" alt="">
+                        <img src="/assets/svg/black-star.png" alt="">
+                    </div>
                 </div>
             </div>
         </section>
+    
 
         <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const reviewContainer = document.querySelector('.cards');
+                const reviews = document.querySelectorAll('.card');
+                const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+                let index = 0;
+            
+                // Clone the reviews to create a seamless loop
+                reviews.forEach(review => {
+                    const clone = review.cloneNode(true);
+                    reviewContainer.appendChild(clone);
+                });
+            
+                // Function to scroll to the next review
+                function scrollToNextReview() {
+                    reviewContainer.scrollBy({ 
+                        left: reviewWidth, 
+                        behavior: 'smooth' 
+                    });
+            
+                    index++;
+            
+                    // Reset the scroll position if at the end
+                    if (index >= reviews.length) {
+                        setTimeout(() => {
+                            reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
+                            index = 0;
+                        }, 2000); // Delay to allow smooth scrolling before reset
+                    }
+                }
+            
+                // Start the auto-scroll with a 2-second interval
+                setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+            });
+            
+            
+
+        </script>
+        <script>
+      
+                document.addEventListener('DOMContentLoaded', function() {
+                    const reviewContainer = document.querySelector('.review-cards');
+                    const reviews = document.querySelectorAll('.review-card');
+                    const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+                    let index = 0;
+                
+                    // Clone the reviews to create a seamless loop
+                    reviews.forEach(review => {
+                        const clone = review.cloneNode(true);
+                        reviewContainer.appendChild(clone);
+                    });
+                
+                    // Function to scroll to the next review
+                    function scrollToNextReview() {
+                        reviewContainer.scrollBy({ 
+                            left: reviewWidth, 
+                            behavior: 'smooth' 
+                        });
+                
+                        index++;
+                
+                        // Reset the scroll position if at the end
+                        if (index >= reviews.length) {
+                            setTimeout(() => {
+                                reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
+                                index = 0;
+                            }, 2000); // Delay to allow smooth scrolling before reset
+                        }
+                    }
+                
+                    // Start the auto-scroll with a 2-second interval
+                    setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+                });
+                
+    
+        </script>
+
+        
+
+
+
+        <!-- <script>
             // Function to determine if the device is mobile
             // Function to initialize Swiper
 
@@ -928,38 +1001,7 @@
 
 
 
-            const reviewCustomer = new Swiper(".swiper-review", {
-                spaceBetween: 5,
-                grabCursor: true,
-                centeredSlides: true,
-                loop: true,
-                speed: 2000,  // Speed of the transition (in ms)
-                autoplay: {
-                    delay: 1,  // Delay between slides (in ms)
-                    disableOnInteraction: false,
-                },
-                pagination: {
-                    el: ".swiper-pagination",
-                    clickable: true,
-
-                },
-                breakpoints: {
-                    768: {
-                        slidesPerView: 1,
-                        spaceBetween: 1,
-                    },
-                    1200: {
-                        slidesPerView: 3,
-                        spaceBetween: 10,
-                    },
-                    0: {
-                        slidesPerView: 1,
-                        spaceBetween: 10,
-                    },
-                },
-
-            });
-        </script>
+        </script> -->
         <div style="background: var(--card-box);">
 
             <section>
