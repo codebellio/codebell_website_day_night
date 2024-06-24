@@ -455,10 +455,10 @@
                 </div>
             </section>
         </div>
-      
+
         <!--second fold--->
         <div class="home-second-fold-wrapper" style="position: relative;">
-            
+
             <section class="flex column middle center gap home-second-fold">
                 <h1>codebell</h1>
                 <p>Introducing Home Link, a QR code-based video intercom system designed to that allows you to answer
@@ -482,36 +482,36 @@
                     home. Welcome to HomeLink.</p>
                 <div class="swiper-feature" style="overflow: hidden;padding-bottom: 2em;margin-top:2em;">
                     <div class="cards">
-                            <div class="card">
-                                <h3 class="highlight-font">Seamless Visitors Management</h3>
-                                <p style="color:#000000">HomeLink connects you to visitors without sharing your number,
-                                    ensuring no missed visits or communications, even when you're unavailable.</p>
-                                <div class="img-card">
-                                    <img src="/assets/homelink/visitor-management.png" alt="">
-                                </div>
+                        <div class="card">
+                            <h3 class="highlight-font">Seamless Visitors Management</h3>
+                            <p style="color:#000000">HomeLink connects you to visitors without sharing your number,
+                                ensuring no missed visits or communications, even when you're unavailable.</p>
+                            <div class="img-card">
+                                <img src="/assets/homelink/visitor-management.png" alt="">
                             </div>
-                
-                            <div class="card">
-                                <h3 class="highlight-font">Say Goodbye to Missed Deliveries</h3>
-                                <p style="color:#000000">Whether you're at work, on vacation, or running errands, with
-                                    HomeLink, coordinate with delivery personnel in real-time, directing them from
-                                    anywhere, anytime.</p>
-                                <div class="img-card">
-                                    <img src="/assets/homelink/missed-delivery.png" alt="">
-                                </div>
+                        </div>
 
+                        <div class="card">
+                            <h3 class="highlight-font">Say Goodbye to Missed Deliveries</h3>
+                            <p style="color:#000000">Whether you're at work, on vacation, or running errands, with
+                                HomeLink, coordinate with delivery personnel in real-time, directing them from
+                                anywhere, anytime.</p>
+                            <div class="img-card">
+                                <img src="/assets/homelink/missed-delivery.png" alt="">
                             </div>
-                        
-                            <div class="card">
-                                <h3 class="highlight-font">Connect with Your Neighborhood</h3>
-                                <p style="color:#000000">Whether it’s a gas leak alert or planning a community event,
-                                    HomeLink provides a seamless way to connect with neighbors, without compromising
-                                    your privacy.</p>
-                                <div class="img-card">
-                                    <img src="/assets/homelink/neighbhourhood.png" alt="">
-                                </div>
 
+                        </div>
+
+                        <div class="card">
+                            <h3 class="highlight-font">Connect with Your Neighborhood</h3>
+                            <p style="color:#000000">Whether it’s a gas leak alert or planning a community event,
+                                HomeLink provides a seamless way to connect with neighbors, without compromising
+                                your privacy.</p>
+                            <div class="img-card">
+                                <img src="/assets/homelink/neighbhourhood.png" alt="">
                             </div>
+
+                        </div>
 
                     </div>
                 </div>
@@ -596,7 +596,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
-                border-radius: 2.5em;
+                border-radius: 2em;
             }
 
             @media screen and (max-width: 768px) {
@@ -639,22 +639,47 @@
                 }
             }
         </style>
+        <section>
+            <div class="flex column center" style="margin-top: 3.5em;">
+                <div class="section-title" style="padding-bottom: 0.5em;">Features</div>
+                <p class="text-center section-sub-title" style="margin-top: 2em;margin:auto;color:var(--text-color)"
+                    style="padding-bottom:0.5em;">Codebell HomeLink enhances your existing doorbell by adding smart
+                    features, allowing you to stay connected to your home, even when you're away, without spending a lot
+                    of money. It complements your traditional doorbell, not replacing it.</p>
+            </div>
+        </section>
         <section class="container-lens" style="margin-top: 5em;">
+
+
             <div class="left-container">
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3>Share your <span><span class="logo">Codebell</span> ID</span> or <span>show your QR
-                                code</span> to connect instantly.</h3>
+                        <h3> <span><span class="highlight-font" style="font-size: 48px;color:var(--logo-color) ">Instant
+                                    Alerts</span></h3>
+                        <p style="line-height: 160%;margin-top:1em;font-size:20px">When anyone at your door scans the
+                            HomeLink QR code, you'll instantly receive a video or audio call or real time text message
+                            on your smartphone, ensuring you're just a moment away from greeting them, no matter where
+                            you are.</p>
                     </div>
                 </div>
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3>No <span>personal numbers</span>, just easy, secure communication.</h3>
+                        <h3> <span><span class="highlight-font" style="font-size: 48px;color:var(--logo-color) ">Full
+                                    privacy</span></h3>
+                        <p style="line-height: 160%;margin-top:1em;font-size:20px">Connect with visitors without
+                            revealing your phone number. HomeLink's QR code technology bridges you and your visitors
+                            securely, ensuring privacy in every interaction.</p>
+
                     </div>
                 </div>
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3>Your <span>connection</span>, your control.</h3>
+                        <h3> <span><span class="highlight-font" style="font-size: 48px;color:var(--logo-color) ">No App
+                                    required by visitors</span></h3>
+                        <p style="line-height: 160%;margin-top:1em;font-size:20px">Forget about downloading yet another
+                            app. With HomeLink, simplicity is key. Visitors can use any QR scanner or camera to access
+                            the features, making it hassle-free and accessible for everyone.</p>
+
                     </div>
                 </div>
             </div>
@@ -676,14 +701,14 @@
                 const sections = document.querySelectorAll('.left-wrapper');
                 const imgSources = [
                     '/assets/homelink/frame.png',
-                    '/assets/svg/frame-2.png',
-                    '/assets/homelink/frame.png'
+                    '/assets/homelink/frame-1.png',
+                    '/assets/homelink/frame-1.png'
                 ];
 
                 const videoSources = [
                     '/assets/homelink/instant-new.mp4',
                     '/assets/homelink/video2.mp4',
-                    '/assets/svg/call-forwarding.mp4'
+                    '/assets/homelink/no-app.mp4',
                 ]; // Replace with your actual video sources
 
                 // Function to update video based on scroll position
@@ -718,6 +743,8 @@
 
         </script>
 
+        
+
         <section class="flex column center gap-2" style="margin-top:10.5em;">
             <div class="section-title" style="padding-bottom: 0.5em;"> How it works?</div>
             <video src="/assets/svg/Codebell-CarConnect-new.mp4" autoplay muted loop controls></video>
@@ -736,7 +763,9 @@
                         <h2>Vatsal Chauhan</h2>
                         <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-                    <p style="margin-top: 2em;">"This is one of the best ease of life product I have used. Now I don't need to think twice before parking my car on roads. The calling works effortlessly on my android phone."</p>
+                    <p style="margin-top: 2em;">"This is one of the best ease of life product I have used. Now I don't
+                        need to think twice before parking my car on roads. The calling works effortlessly on my android
+                        phone."</p>
                     <div class="review-star">
                         <img src="/assets/svg/star.png" alt="">
                         <img src="/assets/svg/star.png" alt="">
@@ -745,7 +774,7 @@
                         <img src="/assets/svg/black-star.png" alt="">
                     </div>
                 </div>
-    
+
                 <div class="review-card">
                     <div class="flex column gap middle">
                         <div class="review-profile">
@@ -754,7 +783,9 @@
                         <h2>Harishchand</h2>
                         <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From Gurugram, India</p>
                     </div>
-                    <p style="margin-top: 2em;">"This product is very helpful in cities like Gurugram, we have a problem with parking space here and this has helped me to sleep a little better knowing someone will call me up before towing my car for illegal parking, thanks."</p>
+                    <p style="margin-top: 2em;">"This product is very helpful in cities like Gurugram, we have a problem
+                        with parking space here and this has helped me to sleep a little better knowing someone will
+                        call me up before towing my car for illegal parking, thanks."</p>
                     <div class="review-star">
                         <img src="/assets/svg/star.png" alt="">
                         <img src="/assets/svg/star.png" alt="">
@@ -763,7 +794,7 @@
                         <img src="/assets/svg/star.png" alt="">
                     </div>
                 </div>
-    
+
                 <div class="review-card">
                     <div class="flex column gap middle">
                         <div class="review-profile">
@@ -781,7 +812,7 @@
                         <img src="/assets/svg/black-star.png" alt="">
                     </div>
                 </div>
-    
+
                 <div class="review-card">
                     <div class="flex column gap middle">
                         <div class="review-profile">
@@ -799,7 +830,7 @@
                         <img src="/assets/svg/black-star.png" alt="">
                     </div>
                 </div>
-    
+
                 <div class="review-card">
                     <div class="flex column gap middle">
                         <div class="review-profile">
@@ -819,30 +850,30 @@
                 </div>
             </div>
         </section>
-    
+
 
         <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            document.addEventListener('DOMContentLoaded', function () {
                 const reviewContainer = document.querySelector('.cards');
                 const reviews = document.querySelectorAll('.card');
                 const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
                 let index = 0;
-            
+
                 // Clone the reviews to create a seamless loop
                 reviews.forEach(review => {
                     const clone = review.cloneNode(true);
                     reviewContainer.appendChild(clone);
                 });
-            
+
                 // Function to scroll to the next review
                 function scrollToNextReview() {
-                    reviewContainer.scrollBy({ 
-                        left: reviewWidth, 
-                        behavior: 'smooth' 
+                    reviewContainer.scrollBy({
+                        left: reviewWidth,
+                        behavior: 'smooth'
                     });
-            
+
                     index++;
-            
+
                     // Reset the scroll position if at the end
                     if (index >= reviews.length) {
                         setTimeout(() => {
@@ -851,54 +882,54 @@
                         }, 2000); // Delay to allow smooth scrolling before reset
                     }
                 }
-            
+
                 // Start the auto-scroll with a 2-second interval
                 setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
             });
-            
-            
+
+
 
         </script>
         <script>
-      
-                document.addEventListener('DOMContentLoaded', function() {
-                    const reviewContainer = document.querySelector('.review-cards');
-                    const reviews = document.querySelectorAll('.review-card');
-                    const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
-                    let index = 0;
-                
-                    // Clone the reviews to create a seamless loop
-                    reviews.forEach(review => {
-                        const clone = review.cloneNode(true);
-                        reviewContainer.appendChild(clone);
-                    });
-                
-                    // Function to scroll to the next review
-                    function scrollToNextReview() {
-                        reviewContainer.scrollBy({ 
-                            left: reviewWidth, 
-                            behavior: 'smooth' 
-                        });
-                
-                        index++;
-                
-                        // Reset the scroll position if at the end
-                        if (index >= reviews.length) {
-                            setTimeout(() => {
-                                reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
-                                index = 0;
-                            }, 2000); // Delay to allow smooth scrolling before reset
-                        }
-                    }
-                
-                    // Start the auto-scroll with a 2-second interval
-                    setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+
+            document.addEventListener('DOMContentLoaded', function () {
+                const reviewContainer = document.querySelector('.review-cards');
+                const reviews = document.querySelectorAll('.review-card');
+                const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+                let index = 0;
+
+                // Clone the reviews to create a seamless loop
+                reviews.forEach(review => {
+                    const clone = review.cloneNode(true);
+                    reviewContainer.appendChild(clone);
                 });
-                
-    
+
+                // Function to scroll to the next review
+                function scrollToNextReview() {
+                    reviewContainer.scrollBy({
+                        left: reviewWidth,
+                        behavior: 'smooth'
+                    });
+
+                    index++;
+
+                    // Reset the scroll position if at the end
+                    if (index >= reviews.length) {
+                        setTimeout(() => {
+                            reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
+                            index = 0;
+                        }, 2000); // Delay to allow smooth scrolling before reset
+                    }
+                }
+
+                // Start the auto-scroll with a 2-second interval
+                setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+            });
+
+
         </script>
 
-        
+
 
 
 
