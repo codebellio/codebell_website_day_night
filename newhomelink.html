@@ -690,9 +690,9 @@
         <section class="container-lens" style="margin-top: 5em;">
             <div class="right-wrapper">
                 <div class="iphone-wrapper">
-                    <img loading="lazy" alt="iPhone frame" class="iphone" src="/assets/homelink/frame.png">
+                    <img loading="lazy" alt="iPhone frame" class="iphone">
                     <div class="img-wrapper">
-                        <video muted autoplay loop class="inner-image" src="/assets/homelink/instant-new.mp4"></video>
+                        <video muted autoplay loop class="inner-image"></video>
                     </div>
                 </div>
             </div>
@@ -718,6 +718,13 @@
                             Missed a call? HomeLink makes it easy to get back in touch. Send a text or call back missed visitors directly to find out the purpose of their visit, ensuring you never miss out on important interactions.                        </p>
                     </div>
                 </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Live Preview</span></h3>
+                        <p style="line-height: 160%; margin-top:1em; font-size:20px">
+                            Allows you to see who is at your door before you decide to engage. Enhances security and gives you control over your interactions, offering peace of mind and convenience that traditional doorbells cannot provide.            </p>
+                    </div>
+                </div>
             </div>
             <div class="blur-fold"></div>
         </section>
@@ -731,11 +738,11 @@
                     const sections = sectionPair.querySelectorAll('.left-wrapper');
                     const imgSources = [
                         ['/assets/homelink/frame.png', '/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png'],
-                        ['/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png']
+                        ['/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png']
                     ];
                     const videoSources = [
                         ['/assets/homelink/instant-new.mp4', '/assets/homelink/video2.mp4', '/assets/homelink/no-app.mp4'],
-                        ['/assets/homelink/geo-fencing.mp4', '/assets/svg/call-forwarding.mp4', '/assets/homelink/reconnect.mp4']
+                        ['/assets/homelink/geo-fencing.mp4', '/assets/svg/call-forwarding.mp4', '/assets/homelink/reconnect.mp4','/assets/homelink/live-preview.mp4']
                     ];
     
                     function updateVideo(scrollTop, viewportHeight) {
