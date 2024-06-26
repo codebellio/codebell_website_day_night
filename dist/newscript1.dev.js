@@ -1,15 +1,6 @@
 "use strict";
 
-AOS.init({
-  offset: 50,
-  // offset (in px) from the original trigger point
-  delay: 0,
-  // values from 0 to 3000, with step 50ms
-  duration: 500,
-  // values from 0 to 3000, with step 50ms
-  easing: 'ease-out'
-}); // ---------------------FAQ----------------------------
-
+// ---------------------FAQ----------------------------
 document.addEventListener("DOMContentLoaded", function () {
   var questionBoxes = document.querySelectorAll(".question-box");
   questionBoxes.forEach(function (box) {
@@ -17,58 +8,47 @@ document.addEventListener("DOMContentLoaded", function () {
       this.classList.toggle("active");
     });
   });
-});
-var reviewCustomers = new Swiper(".swiper-container-store", {
-  spaceBetween: 5,
-  grabCursor: true,
-  slidesPerView: 1,
-  overflow: 'hidden',
-  loop: true,
-  autoplay: {
-    delay: 2500,
-    disableOnInteraction: false
-  },
-  pagination: {
-    el: ".swiper-pagination",
-    clickable: true
-  },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev"
-  }
-});
-var mainSwiper = new Swiper('.store-swiper', {
-  slidesPerView: 'auto',
-  spaceBetween: 200,
-  centeredSlides: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true
-  }
-});
-var miniImgs = document.querySelectorAll('.mini-img');
-miniImgs.forEach(function (miniImg, index) {
-  miniImg.addEventListener('click', function () {
-    mainSwiper.slideTo(index);
-  });
-});
-mainSwiper.on('slideChange', function () {
-  var activeIndex = mainSwiper.activeIndex;
-  miniImgs.forEach(function (miniImg, index) {
-    if (index === activeIndex) {
+}); // first section----------------
+
+document.addEventListener('DOMContentLoaded', function () {
+  var mainImageStore = document.querySelector('.main-img-store');
+  var miniImages = document.querySelectorAll('.mini-img');
+  miniImages.forEach(function (miniImg, index) {
+    miniImg.addEventListener('click', function () {
+      console.log("Clicked mini image at index: ".concat(index)); // Remove active class from all mini images
+
+      miniImages.forEach(function (img) {
+        return img.classList.remove('active-img');
+      }); // Add active class to the clicked mini image
+
       miniImg.classList.add('active-img');
-    } else {
-      miniImg.classList.remove('active-img');
-    }
+      console.log('Active class added to clicked mini image'); // Get the corresponding image or video source
+
+      var imgElement = miniImg.querySelector('img');
+      var videoElement = miniImg.querySelector('video');
+      console.log('imgElement:', imgElement);
+      console.log('videoElement:', videoElement); // Clear the main image store
+
+      mainImageStore.innerHTML = '';
+      console.log('Cleared main image store'); // Update the main image store with the clicked image or video
+
+      if (imgElement) {
+        var newMainImg = document.createElement('img');
+        newMainImg.src = imgElement.src;
+        mainImageStore.appendChild(newMainImg);
+        console.log('Updated main image store with new image');
+      } else if (videoElement) {
+        var newMainVideo = document.createElement('video');
+        newMainVideo.src = videoElement.src;
+        newMainVideo.autoplay = true;
+        newMainVideo.loop = true;
+        newMainVideo.controls = true; // Optional: add controls for video
+
+        mainImageStore.appendChild(newMainVideo);
+        console.log('Updated main image store with new video');
+      }
+    });
   });
-});
-var arrow1 = document.querySelector('.arrow1');
-var arrow2 = document.querySelector('.arrow2');
-arrow1.addEventListener('click', function () {
-  mainSwiper.slidePrev();
-});
-arrow2.addEventListener('click', function () {
-  mainSwiper.slideNext();
 }); //--- --english hindi button selection --------------------------------
 
 var englishBtn = document.getElementById('english-btn');
@@ -117,4 +97,70 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.remove('scrolled');
     }
   });
+});
+document.addEventListener('DOMContentLoaded', function () {
+  var reviewContainer = document.querySelector('.cards');
+  var reviews = document.querySelectorAll('.card');
+  var reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+
+  var index = 0; // Clone the reviews to create a seamless loop
+
+  reviews.forEach(function (review) {
+    var clone = review.cloneNode(true);
+    reviewContainer.appendChild(clone);
+  }); // Function to scroll to the next review
+
+  function scrollToNextReview() {
+    reviewContainer.scrollBy({
+      left: reviewWidth,
+      behavior: 'smooth'
+    });
+    index++; // Reset the scroll position if at the end
+
+    if (index >= reviews.length) {
+      setTimeout(function () {
+        reviewContainer.scrollTo({
+          left: 0,
+          behavior: 'instant'
+        });
+        index = 0;
+      }, 2000); // Delay to allow smooth scrolling before reset
+    }
+  } // Start the auto-scroll with a 2-second interval
+
+
+  setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+});
+document.addEventListener('DOMContentLoaded', function () {
+  var reviewContainer = document.querySelector('.review-cards');
+  var reviews = document.querySelectorAll('.review-card');
+  var reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+
+  var index = 0; // Clone the reviews to create a seamless loop
+
+  reviews.forEach(function (review) {
+    var clone = review.cloneNode(true);
+    reviewContainer.appendChild(clone);
+  }); // Function to scroll to the next review
+
+  function scrollToNextReview() {
+    reviewContainer.scrollBy({
+      left: reviewWidth,
+      behavior: 'smooth'
+    });
+    index++; // Reset the scroll position if at the end
+
+    if (index >= reviews.length) {
+      setTimeout(function () {
+        reviewContainer.scrollTo({
+          left: 0,
+          behavior: 'instant'
+        });
+        index = 0;
+      }, 2000); // Delay to allow smooth scrolling before reset
+    }
+  } // Start the auto-scroll with a 2-second interval
+
+
+  setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
 });

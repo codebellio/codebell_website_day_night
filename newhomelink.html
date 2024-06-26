@@ -16,8 +16,6 @@
     <title>Codebell - New-age Communication with QR Code Calling Solutions</title>
     <link rel="stylesheet" href="newstyle1.css">
     <link rel="stylesheet" href="layout.css">
-    <link rel="stylesheet" href="/assets/swiper-bundle.css">
-    <script src="/assets/swiper-bundle.min.js"></script>
     <!-- Google Tag Manager -->
     <script>(function (w, d, s, l, i) {
             w[l] = w[l] || []; w[l].push({
@@ -174,10 +172,14 @@
             .main-wrapper {
                 height: 100%;
             }
+            .main-img-store img{
+                max-width: 60%;
+                display: flex;
+                align-self: center;
+            }
 
             .main-img {
-
-                max-width: 50%;
+                max-width: 80%;
                 display: flex;
                 align-self: center;
             }
@@ -336,37 +338,10 @@
             </div>
             <section id="hero-padding" style="z-index: 10;">
                 <div class="flex eq wrap gap-2 ">
-                    <div style="min-width: 320px;overflow:hidden;position:relative;" class="store-swiper flex column ">
-                        <div class="swiper-wrapper main-wrapper">
-                            <div class="swiper-slide main-img" style="max-width: 50%;">
-                                <img src="/assets/newimage/doorbell_global1.png" alt="">
+                    <div style="min-width: 320px;overflow:hidden;position:relative;" class="flex column ">
+                            <div class="flex center middle main-img-store">
+                                <img src="/assets/newimage/doorbell_global1.png" alt="" >
                             </div>
-                            <div class="swiper-slide main-video flex middle center" style="width: 80%;display:flex;">
-                                <video autoplay loop muted controls src="/assets/svg/Codebell-CarConnect.mp4"></video>
-                            </div>
-                            <div class="swiper-slide main-img">
-                                <img src="/assets/img/codebell_standard.webp" alt="">
-                            </div>
-                            <div class="swiper-slide main-img">
-                                <img src="/assets/newimage/car_connect_world1.png" alt="">
-                            </div>
-                        </div>
-                        <div class="flex between">
-                            <div class="arrow1 flex middle center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chevron-left" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M11.354 1.646a.5.5 0 0 1 0 .708L5.707 8l5.647 5.646a.5.5 0 0 1-.708.708l-6-6a.5.5 0 0 1 0-.708l6-6a.5.5 0 0 1 .708 0" />
-                                </svg>
-                            </div>
-                            <div class="arrow2 flex middle center">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                                    class="bi bi-chevron-right" viewBox="0 0 16 16">
-                                    <path fill-rule="evenodd"
-                                        d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708" />
-                                </svg>
-                            </div>
-                        </div>
                         <div class="flex gap-1" style="margin-top: 1.5em;">
                             <div class="mini-img active-img" data-index="0">
                                 <img src="/assets/svg/car-connect.png" alt="">
@@ -382,7 +357,6 @@
                             </div>
                         </div>
                     </div>
-
 
                     <div class="flex column gap " style="min-width: 320px; ">
                         <div class="flex middle gap">
@@ -696,60 +670,104 @@
         </section>
 
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const sections = document.querySelectorAll('.left-wrapper');
-                const imgSources = [
-                    '/assets/homelink/frame.png',
-                    '/assets/homelink/frame-1.png',
-                    '/assets/homelink/frame-1.png'
-                ];
-
-                const videoSources = [
-                    '/assets/homelink/instant-new.mp4',
-                    '/assets/homelink/video2.mp4',
-                    '/assets/homelink/no-app.mp4',
-                ]; // Replace with your actual video sources
-
-                // Function to update video based on scroll position
-                function updateVideo(scrollTop, viewportHeight) {
-                    sections.forEach((section, index) => {
-                        const rect = section.getBoundingClientRect();
-                        if (rect.top >= 0 && rect.top <= viewportHeight) {
-                            const video = document.querySelector('.img-wrapper video');
-                            video.src = videoSources[index];
-                            const newFrame = document.querySelector('.iphone-wrapper img');
-                            newFrame.src = imgSources[index];
-                            video.load();
-                        }
-                    });
-                }
-
-                // Scroll event listener
-                window.addEventListener('scroll', function () {
-                    const scrollTop = window.scrollY;
-                    const viewportHeight = window.innerHeight;
-
-                    // Update video based on scroll position
-                    updateVideo(scrollTop, viewportHeight);
-                });
-
-                // Initial update when page loads
-                updateVideo(window.scrollY, window.innerHeight);
-            });
-
-
-
-
-        </script>
-
-        
-
+       
         <section class="flex column center gap-2" style="margin-top:10.5em;">
             <div class="section-title" style="padding-bottom: 0.5em;"> How it works?</div>
             <video src="/assets/svg/Codebell-CarConnect-new.mp4" autoplay muted loop controls></video>
         </section>
 
+        
+
+
+        <section>
+            <div class="flex column center" style="margin-top: 3.5em;">
+                <div class="section-title" style="padding-bottom: 0.5em;">Key Features</div>
+                <p class="text-center section-sub-title" style="margin-top: 2em; margin:auto; color:var(--text-color); padding-bottom:0.5em;">
+                    Codebell HomeLink enhances your existing doorbell by adding smart features, allowing you to stay connected to your home, even when you're away, without spending a lot of money. It complements your traditional doorbell, not replacing it.
+                </p>
+            </div>
+        </section>
+        <section class="container-lens" style="margin-top: 5em;">
+            <div class="right-wrapper">
+                <div class="iphone-wrapper">
+                    <img loading="lazy" alt="iPhone frame" class="iphone" src="/assets/homelink/frame.png">
+                    <div class="img-wrapper">
+                        <video muted autoplay loop class="inner-image" src="/assets/homelink/instant-new.mp4"></video>
+                    </div>
+                </div>
+            </div>
+            <div class="left-container">
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Geo-Fencing for Enhanced Security</span></h3>
+                        <p style="line-height: 160%; margin-top:1em; font-size:20px">
+                            HomeLink's advanced geo-fencing ensures that video alerts are sent only when a visitor is physically at your doorstep, safeguarding your privacy and security with precision.                        </p>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Call Forwarding</span></h3>
+                        <p style="line-height: 160%; margin-top:1em; font-size:20px">
+                            HomeLink introduces the first-of-its-kind smart video doorbell with call forwarding. Busy or can't answer? No problem. Calls are automatically forwarded to a family member you've shared the HomeLink QR with, ensuring every visitor is greeted, no matter what. Stay connected, always.                        </p>
+                    </div>
+                </div>
+                <div class="left-wrapper">
+                    <div class="txt-app-wrapper">
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Reconnect with Missed Visitors</span></h3>
+                        <p style="line-height: 160%; margin-top:1em; font-size:20px">
+                            Missed a call? HomeLink makes it easy to get back in touch. Send a text or call back missed visitors directly to find out the purpose of their visit, ensuring you never miss out on important interactions.                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="blur-fold"></div>
+        </section>
+    
+    
+    
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                const sectionPairs = document.querySelectorAll('.container-lens');
+                sectionPairs.forEach((sectionPair, pairIndex) => {
+                    const sections = sectionPair.querySelectorAll('.left-wrapper');
+                    const imgSources = [
+                        ['/assets/homelink/frame.png', '/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png'],
+                        ['/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png', '/assets/homelink/frame-1.png']
+                    ];
+                    const videoSources = [
+                        ['/assets/homelink/instant-new.mp4', '/assets/homelink/video2.mp4', '/assets/homelink/no-app.mp4'],
+                        ['/assets/homelink/geo-fencing.mp4', '/assets/svg/call-forwarding.mp4', '/assets/homelink/reconnect.mp4']
+                    ];
+    
+                    function updateVideo(scrollTop, viewportHeight) {
+                        sections.forEach((section, index) => {
+                            const rect = section.getBoundingClientRect();
+                            console.log(`Pair ${pairIndex}, Section ${index} - Top: ${rect.top}, Height: ${viewportHeight}`);
+                            if (rect.top >= 0 && rect.top <= viewportHeight) {
+                                const video = sectionPair.querySelector('.img-wrapper video');
+                                const newFrame = sectionPair.querySelector('.iphone-wrapper img');
+                                video.src = videoSources[pairIndex][index];
+                                newFrame.src = imgSources[pairIndex][index];
+                                video.load();
+                                console.log(`Updated video for pair ${pairIndex}, section ${index}`);
+                            }
+                        });
+                    }
+    
+                    window.addEventListener('scroll', function () {
+                        const scrollTop = window.scrollY;
+                        const viewportHeight = window.innerHeight;
+                        console.log(`Scroll Top: ${scrollTop}, Viewport Height: ${viewportHeight}`);
+                        updateVideo(scrollTop, viewportHeight);
+                    });
+    
+                    updateVideo(window.scrollY, window.innerHeight);
+                });
+            });
+        </script>
+
+
+
+   
 
         <section id="reviewSection" style="padding-top: 3em;">
             <div class="section-title">See What Car Owners Have to Say</div>
@@ -852,121 +870,6 @@
         </section>
 
 
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-                const reviewContainer = document.querySelector('.cards');
-                const reviews = document.querySelectorAll('.card');
-                const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
-                let index = 0;
-
-                // Clone the reviews to create a seamless loop
-                reviews.forEach(review => {
-                    const clone = review.cloneNode(true);
-                    reviewContainer.appendChild(clone);
-                });
-
-                // Function to scroll to the next review
-                function scrollToNextReview() {
-                    reviewContainer.scrollBy({
-                        left: reviewWidth,
-                        behavior: 'smooth'
-                    });
-
-                    index++;
-
-                    // Reset the scroll position if at the end
-                    if (index >= reviews.length) {
-                        setTimeout(() => {
-                            reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
-                            index = 0;
-                        }, 2000); // Delay to allow smooth scrolling before reset
-                    }
-                }
-
-                // Start the auto-scroll with a 2-second interval
-                setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
-            });
-
-
-
-        </script>
-        <script>
-
-            document.addEventListener('DOMContentLoaded', function () {
-                const reviewContainer = document.querySelector('.review-cards');
-                const reviews = document.querySelectorAll('.review-card');
-                const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
-                let index = 0;
-
-                // Clone the reviews to create a seamless loop
-                reviews.forEach(review => {
-                    const clone = review.cloneNode(true);
-                    reviewContainer.appendChild(clone);
-                });
-
-                // Function to scroll to the next review
-                function scrollToNextReview() {
-                    reviewContainer.scrollBy({
-                        left: reviewWidth,
-                        behavior: 'smooth'
-                    });
-
-                    index++;
-
-                    // Reset the scroll position if at the end
-                    if (index >= reviews.length) {
-                        setTimeout(() => {
-                            reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
-                            index = 0;
-                        }, 2000); // Delay to allow smooth scrolling before reset
-                    }
-                }
-
-                // Start the auto-scroll with a 2-second interval
-                setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
-            });
-
-
-        </script>
-
-
-
-
-
-        <!-- <script>
-            // Function to determine if the device is mobile
-            // Function to initialize Swiper
-
-            const feature = new Swiper(".swiper-feature", {
-                slidesPerView: 3,
-                breakpoints: {
-                    // When window width is >= 0px (mobile devices)
-                    0: {
-                        slidesPerView: 1,
-                        autoplay: {
-                            delay: 2500, // Adjust the delay as needed
-                            disableOnInteraction: false
-                        },
-                        loop: true,
-                        speed: 2500,
-                    },
-                    // When window width is >= 768px (larger screens)
-                    768: {
-                        slidesPerView: 3,
-                        autoplay: {
-                            delay: 2500, // Adjust the delay as needed
-                            disableOnInteraction: false
-                        },
-                        loop: true,
-                        speed: 2500,
-                    }
-                }
-            });
-
-
-
-
-        </script> -->
         <div style="background: var(--card-box);">
 
             <section>
@@ -1327,25 +1230,12 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="darkmode.js"></script>
     <script src="newscript1.js"></script>
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGCL4TN4" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <script type="text/javascript">
-        var Tawk_API = Tawk_API || {}, Tawk_LoadStart = new Date();
-        (function () {
-            var s1 = document.createElement("script"), s0 = document.getElementsByTagName("script")[0];
-            s1.async = true;
-            s1.src = 'https://embed.tawk.to/64a904f8cc26a871b0271637/1h4q3mr9m';
-            s1.charset = 'UTF-8';
-            s1.setAttribute('crossorigin', '*');
-            s0.parentNode.insertBefore(s1, s0);
-        })();
-    </script>
-    <script src="lazysizes.min.js" async=""></script>
 </body>
 
 </html>
