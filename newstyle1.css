@@ -607,6 +607,7 @@ video {
     overflow-x: auto;
     gap: 10px; 
     overflow: hidden; 
+    padding: 2em;
 }
 .review-cards .review-card {
  

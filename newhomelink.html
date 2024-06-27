@@ -14,6 +14,15 @@
     <meta property="og:image" content="https://codebell.io/assets/products/Live_home.webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Codebell - New-age Communication with QR Code Calling Solutions</title>
+    <!-- Prefetch video resources -->
+    <link rel="prefetch" href="/assets/homelink/instant-new.mp4" as="video">
+    <link rel="prefetch" href="/assets/homelink/video2.mp4" as="video">
+    <link rel="prefetch" href="/assets/homelink/no-app.mp4" as="video">
+    <link rel="prefetch" href="/assets/homelink/geo-fencing.mp4" as="video">
+    <link rel="prefetch" href="/assets/svg/call-forwarding.mp4" as="video">
+    <link rel="prefetch" href="/assets/homelink/reconnect.mp4" as="video">
+    <link rel="prefetch" href="/assets/homelink/live-preview.mp4" as="video">
+
     <link rel="stylesheet" href="newstyle1.css">
     <link rel="stylesheet" href="layout.css">
     <!-- Google Tag Manager -->
@@ -172,14 +181,14 @@
             .main-wrapper {
                 height: 100%;
             }
-            .main-img-store img{
-                max-width: 60%;
-                display: flex;
-                align-self: center;
+
+
+            .main-img-store {
+                height: calc(500px - 79.2px);
             }
 
-            .main-img {
-                max-width: 80%;
+            .main-img-store img {
+                max-height: 100%;
                 display: flex;
                 align-self: center;
             }
@@ -231,7 +240,7 @@
                 .mini-img {
                     border-radius: 0.5em;
                     width: 60px;
-                    height: 60px;
+                    height: 50px;
                     margin: 0;
                     cursor: pointer;
                     z-index: 10;
@@ -339,9 +348,10 @@
             <section id="hero-padding" style="z-index: 10;">
                 <div class="flex eq wrap gap-2 ">
                     <div style="min-width: 320px;overflow:hidden;position:relative;" class="flex column ">
-                            <div class="flex center middle main-img-store">
+                        <div class="flex center middle main-img-store">
                                 <img src="/assets/newimage/doorbell_global1.png" alt="" >
-                            </div>
+                         
+                        </div>
                         <div class="flex gap-1" style="margin-top: 1.5em;">
                             <div class="mini-img active-img" data-index="0">
                                 <img src="/assets/svg/car-connect.png" alt="">
@@ -670,20 +680,23 @@
         </section>
 
 
-       
+
         <section class="flex column center gap-2" style="margin-top:10.5em;">
             <div class="section-title" style="padding-bottom: 0.5em;"> How it works?</div>
             <video src="/assets/svg/Codebell-CarConnect-new.mp4" autoplay muted loop controls></video>
         </section>
 
-        
+
 
 
         <section>
             <div class="flex column center" style="margin-top: 3.5em;">
                 <div class="section-title" style="padding-bottom: 0.5em;">Key Features</div>
-                <p class="text-center section-sub-title" style="margin-top: 2em; margin:auto; color:var(--text-color); padding-bottom:0.5em;">
-                    Codebell HomeLink enhances your existing doorbell by adding smart features, allowing you to stay connected to your home, even when you're away, without spending a lot of money. It complements your traditional doorbell, not replacing it.
+                <p class="text-center section-sub-title"
+                    style="margin-top: 2em; margin:auto; color:var(--text-color); padding-bottom:0.5em;">
+                    Codebell HomeLink enhances your existing doorbell by adding smart features, allowing you to stay
+                    connected to your home, even when you're away, without spending a lot of money. It complements your
+                    traditional doorbell, not replacing it.
                 </p>
             </div>
         </section>
@@ -699,38 +712,50 @@
             <div class="left-container">
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Geo-Fencing for Enhanced Security</span></h3>
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Geo-Fencing
+                                for Enhanced Security</span></h3>
                         <p style="line-height: 160%; margin-top:1em; font-size:20px">
-                            HomeLink's advanced geo-fencing ensures that video alerts are sent only when a visitor is physically at your doorstep, safeguarding your privacy and security with precision.                        </p>
+                            HomeLink's advanced geo-fencing ensures that video alerts are sent only when a visitor is
+                            physically at your doorstep, safeguarding your privacy and security with precision. </p>
                     </div>
                 </div>
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Call Forwarding</span></h3>
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Call
+                                Forwarding</span></h3>
                         <p style="line-height: 160%; margin-top:1em; font-size:20px">
-                            HomeLink introduces the first-of-its-kind smart video doorbell with call forwarding. Busy or can't answer? No problem. Calls are automatically forwarded to a family member you've shared the HomeLink QR with, ensuring every visitor is greeted, no matter what. Stay connected, always.                        </p>
+                            HomeLink introduces the first-of-its-kind smart video doorbell with call forwarding. Busy or
+                            can't answer? No problem. Calls are automatically forwarded to a family member you've shared
+                            the HomeLink QR with, ensuring every visitor is greeted, no matter what. Stay connected,
+                            always. </p>
                     </div>
                 </div>
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Reconnect with Missed Visitors</span></h3>
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Reconnect with
+                                Missed Visitors</span></h3>
                         <p style="line-height: 160%; margin-top:1em; font-size:20px">
-                            Missed a call? HomeLink makes it easy to get back in touch. Send a text or call back missed visitors directly to find out the purpose of their visit, ensuring you never miss out on important interactions.                        </p>
+                            Missed a call? HomeLink makes it easy to get back in touch. Send a text or call back missed
+                            visitors directly to find out the purpose of their visit, ensuring you never miss out on
+                            important interactions. </p>
                     </div>
                 </div>
                 <div class="left-wrapper">
                     <div class="txt-app-wrapper">
-                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Live Preview</span></h3>
+                        <h3><span class="highlight-font" style="font-size: 48px; color:var(--logo-color)">Live
+                                Preview</span></h3>
                         <p style="line-height: 160%; margin-top:1em; font-size:20px">
-                            Allows you to see who is at your door before you decide to engage. Enhances security and gives you control over your interactions, offering peace of mind and convenience that traditional doorbells cannot provide.            </p>
+                            Allows you to see who is at your door before you decide to engage. Enhances security and
+                            gives you control over your interactions, offering peace of mind and convenience that
+                            traditional doorbells cannot provide. </p>
                     </div>
                 </div>
             </div>
             <div class="blur-fold"></div>
         </section>
-    
-    
-    
+
+
+
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const sectionPairs = document.querySelectorAll('.container-lens');
@@ -742,9 +767,9 @@
                     ];
                     const videoSources = [
                         ['/assets/homelink/instant-new.mp4', '/assets/homelink/video2.mp4', '/assets/homelink/no-app.mp4'],
-                        ['/assets/homelink/geo-fencing.mp4', '/assets/svg/call-forwarding.mp4', '/assets/homelink/reconnect.mp4','/assets/homelink/live-preview.mp4']
+                        ['/assets/homelink/geo-fencing.mp4', '/assets/svg/call-forwarding.mp4', '/assets/homelink/reconnect.mp4', '/assets/homelink/live-preview.mp4']
                     ];
-    
+
                     function updateVideo(scrollTop, viewportHeight) {
                         sections.forEach((section, index) => {
                             const rect = section.getBoundingClientRect();
@@ -759,14 +784,14 @@
                             }
                         });
                     }
-    
+
                     window.addEventListener('scroll', function () {
                         const scrollTop = window.scrollY;
                         const viewportHeight = window.innerHeight;
                         console.log(`Scroll Top: ${scrollTop}, Viewport Height: ${viewportHeight}`);
                         updateVideo(scrollTop, viewportHeight);
                     });
-    
+
                     updateVideo(window.scrollY, window.innerHeight);
                 });
             });
@@ -774,7 +799,7 @@
 
 
 
-   
+
 
         <section id="reviewSection" style="padding-top: 3em;">
             <div class="section-title">See What Car Owners Have to Say</div>
