@@ -818,34 +818,37 @@
                         ['/assets/homelink/instant-new.mp4', '/assets/homelink/video2.mp4', '/assets/homelink/no-app.mp4'],
                         ['/assets/homelink/geo-fencing.mp4', '/assets/svg/call-forwarding.mp4', '/assets/homelink/reconnect.mp4', '/assets/homelink/live-preview.mp4']
                     ];
-
+        
+                    let currentVideoSource = '';
+        
                     function updateVideo(scrollTop, viewportHeight) {
+                        const triggerHeight = viewportHeight * 0.5;
                         sections.forEach((section, index) => {
                             const rect = section.getBoundingClientRect();
-                            console.log(`Pair ${pairIndex}, Section ${index} - Top: ${rect.top}, Height: ${viewportHeight}`);
-                            if (rect.top >= 0 && rect.top <= viewportHeight) {
+                            if (rect.top <= triggerHeight && rect.bottom > triggerHeight) {
                                 const video = sectionPair.querySelector('.img-wrapper video');
                                 const newFrame = sectionPair.querySelector('.iphone-wrapper img');
-                                video.src = videoSources[pairIndex][index];
-                                newFrame.src = imgSources[pairIndex][index];
-                                video.load();
-                                console.log(`Updated video for pair ${pairIndex}, section ${index}`);
+                                const newVideoSource = videoSources[pairIndex][index];
+                                if (currentVideoSource !== newVideoSource) {
+                                    currentVideoSource = newVideoSource;
+                                    video.src = newVideoSource;
+                                    newFrame.src = imgSources[pairIndex][index];
+                                    video.load();
+                                }
                             }
                         });
                     }
-
+        
                     window.addEventListener('scroll', function () {
                         const scrollTop = window.scrollY;
                         const viewportHeight = window.innerHeight;
-                        console.log(`Scroll Top: ${scrollTop}, Viewport Height: ${viewportHeight}`);
                         updateVideo(scrollTop, viewportHeight);
                     });
-
+        
                     updateVideo(window.scrollY, window.innerHeight);
                 });
             });
         </script>
-
 
 
 
