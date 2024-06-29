@@ -556,7 +556,7 @@
                 height: 100%;
                 /* Maintain aspect ratio based on width */
 
-                width: 327px;
+                min-width: 327px;
                 /* Ensure it takes the full width of its parent */
                 height: 680px;
                 /* Maintain aspect ratio based on width */
@@ -871,68 +871,7 @@
     </div>
     </section>
 
-    <script>
-        const feature = new Swiper(".swiper-feature", {
-            spaceBetween: 16,
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-            speed: 2500,  // Speed of the transition (in ms)
-            autoplay: {
-                delay: 1000,  // No delay between slides for continuous effect
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
-            breakpoints: {
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 16,
-                },
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 3,
-                },
-                1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 16,
-                },
-            },
-        });
-        const reviewCustomer = new Swiper(".swiper-review", {
-            spaceBetween: 5,
-            grabCursor: true,
-            centeredSlides: true,
-            loop: true,
-            speed: 2000,  // Speed of the transition (in ms)
-            autoplay: {
-                delay: 1,  // Delay between slides (in ms)
-                disableOnInteraction: false,
-            },
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-
-            },
-            breakpoints: {
-                768: {
-                    slidesPerView: 1,
-                    spaceBetween: 1,
-                },
-                1200: {
-                    slidesPerView: 3,
-                    spaceBetween: 10,
-                },
-                0: {
-                    slidesPerView: 1,
-                    spaceBetween: 10,
-                },
-            },
-
-        });
-    </script>
+    
     <section>
         <div class="section-title">Frequently asked questions</div>
         <p class="text-center" style="margin-top: 1em;">Discover Valuable Insights in Our FAQs - Your Common

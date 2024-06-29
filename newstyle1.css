@@ -49,6 +49,8 @@
     --table:#191919;
     --button: #8437F9;
 }
+/* scroll bar css */
+
 
 html,
 body {
@@ -718,6 +720,7 @@ video {
 .emergency img {
     width: 624px;
     height: 560px;
+    object-fit: cover;
 }
 
 .mobile-padding {
