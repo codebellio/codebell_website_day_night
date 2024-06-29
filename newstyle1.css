@@ -1089,3 +1089,26 @@ a {
         font-size: 20px;
     }
 }
+
+
+  /* scroll show on hover*/
+  .mini-scroll {
+    overflow: hidden;
+    cursor: pointer;
+}
+.mini-scroll:hover {
+    overflow-x: auto;
+}
+.mini-scroll::-webkit-scrollbar {
+  
+    height: 5px;
+}
+.mini-scroll::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+}
+.mini-scroll::-webkit-scrollbar-thumb:hover {
+    background-color: var(--primary-color);
+}
+.mini-scroll::-webkit-scrollbar-track {
+    background-color: var(--bg-color);
+}
