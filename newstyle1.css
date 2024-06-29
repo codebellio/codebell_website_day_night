@@ -628,7 +628,13 @@ video {
     overflow-x: auto;
     gap: 10px; 
     overflow: hidden; 
-    padding: 2em;
+    padding: 3em;
+}
+@media screen and (max-width: 767px) {
+    .cards{
+        padding: 0;
+    }
+    
 }
 .review-cards .review-card {
  

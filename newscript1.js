@@ -116,39 +116,83 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+// document.addEventListener('DOMContentLoaded', function () {
+//   const reviewContainer = document.querySelector('.cards');
+//   const reviews = document.querySelectorAll('.card');
+//   const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+//   let index = 0;
+
+//   // Clone the reviews to create a seamless loop
+//   reviews.forEach(review => {
+//       const clone = review.cloneNode(true);
+//       reviewContainer.appendChild(clone);
+//   });
+
+//   // Function to scroll to the next review
+//   function scrollToNextReview() {
+//       reviewContainer.scrollBy({
+//           left: reviewWidth,
+//           behavior: 'smooth'
+//       });
+
+//       index++;
+
+//       // Reset the scroll position if at the end
+//       if (index >= reviews.length) {
+//           setTimeout(() => {
+//               reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
+//               index = 0;
+//           }, 2000); // Delay to allow smooth scrolling before reset
+//       }
+//   }
+
+//   // Start the auto-scroll with a 2-second interval
+//   setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+// });
+
+
 document.addEventListener('DOMContentLoaded', function () {
-  const reviewContainer = document.querySelector('.cards');
-  const reviews = document.querySelectorAll('.card');
-  const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
-  let index = 0;
-
-  // Clone the reviews to create a seamless loop
-  reviews.forEach(review => {
-      const clone = review.cloneNode(true);
-      reviewContainer.appendChild(clone);
+    const reviewContainer = document.querySelector('.cards');
+    const reviews = document.querySelectorAll('.card');
+    const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+    const containerWidth = reviewContainer.offsetWidth;
+    const visibleCardsCount = Math.floor(containerWidth / reviewWidth);
+    const totalCards = reviews.length;
+    let index = 0;
+  
+    // Clone the reviews to create a seamless loop
+    reviews.forEach(review => {
+        const clone = review.cloneNode(true);
+        reviewContainer.appendChild(clone);
+    });
+  
+    // Function to scroll to the next review
+    function scrollToNextReview() {
+        reviewContainer.scrollBy({
+            left: reviewWidth,
+            behavior: 'smooth'
+        });
+  
+        index++;
+  
+        // Reset the scroll position if at the end
+        if (index >= totalCards) {
+            setTimeout(() => {
+                reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
+                index = 0;
+            }, 2000); // Delay to allow smooth scrolling before reset
+        }
+    }
+  
+    // Check the visible cards and decide whether to start auto-scrolling
+    if ((window.innerWidth < 768 && visibleCardsCount <= 1) || (window.innerWidth >= 768 && visibleCardsCount < totalCards)) {
+        setInterval(scrollToNextReview, 2000); // Adjust interval (in milliseconds) for the auto scroll
+    }
   });
+  
 
-  // Function to scroll to the next review
-  function scrollToNextReview() {
-      reviewContainer.scrollBy({
-          left: reviewWidth,
-          behavior: 'smooth'
-      });
 
-      index++;
 
-      // Reset the scroll position if at the end
-      if (index >= reviews.length) {
-          setTimeout(() => {
-              reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
-              index = 0;
-          }, 2000); // Delay to allow smooth scrolling before reset
-      }
-  }
-
-  // Start the auto-scroll with a 2-second interval
-  setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
-});
 
 
 document.addEventListener('DOMContentLoaded', function () {

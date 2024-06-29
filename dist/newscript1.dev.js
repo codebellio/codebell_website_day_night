@@ -97,12 +97,43 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.remove('scrolled');
     }
   });
-});
+}); // document.addEventListener('DOMContentLoaded', function () {
+//   const reviewContainer = document.querySelector('.cards');
+//   const reviews = document.querySelectorAll('.card');
+//   const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
+//   let index = 0;
+//   // Clone the reviews to create a seamless loop
+//   reviews.forEach(review => {
+//       const clone = review.cloneNode(true);
+//       reviewContainer.appendChild(clone);
+//   });
+//   // Function to scroll to the next review
+//   function scrollToNextReview() {
+//       reviewContainer.scrollBy({
+//           left: reviewWidth,
+//           behavior: 'smooth'
+//       });
+//       index++;
+//       // Reset the scroll position if at the end
+//       if (index >= reviews.length) {
+//           setTimeout(() => {
+//               reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
+//               index = 0;
+//           }, 2000); // Delay to allow smooth scrolling before reset
+//       }
+//   }
+//   // Start the auto-scroll with a 2-second interval
+//   setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+// });
+
 document.addEventListener('DOMContentLoaded', function () {
   var reviewContainer = document.querySelector('.cards');
   var reviews = document.querySelectorAll('.card');
   var reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
 
+  var containerWidth = reviewContainer.offsetWidth;
+  var visibleCardsCount = Math.floor(containerWidth / reviewWidth);
+  var totalCards = reviews.length;
   var index = 0; // Clone the reviews to create a seamless loop
 
   reviews.forEach(function (review) {
@@ -117,7 +148,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     index++; // Reset the scroll position if at the end
 
-    if (index >= reviews.length) {
+    if (index >= totalCards) {
       setTimeout(function () {
         reviewContainer.scrollTo({
           left: 0,
@@ -126,10 +157,12 @@ document.addEventListener('DOMContentLoaded', function () {
         index = 0;
       }, 2000); // Delay to allow smooth scrolling before reset
     }
-  } // Start the auto-scroll with a 2-second interval
+  } // Check the visible cards and decide whether to start auto-scrolling
 
 
-  setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
+  if (window.innerWidth < 768 && visibleCardsCount <= 1 || window.innerWidth >= 768 && visibleCardsCount < totalCards) {
+    setInterval(scrollToNextReview, 2000); // Adjust interval (in milliseconds) for the auto scroll
+  }
 });
 document.addEventListener('DOMContentLoaded', function () {
   var reviewContainer = document.querySelector('.review-cards');
