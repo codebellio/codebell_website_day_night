@@ -13,6 +13,16 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener('DOMContentLoaded', function () {
   var mainImageStore = document.querySelector('.main-img-store');
   var miniImages = document.querySelectorAll('.mini-img');
+  var englishImg = document.getElementById('english-img');
+  var hindiImg = document.getElementById('hindi-img');
+  englishImg.addEventListener('click', function () {
+    englishImg.style.display = 'none';
+    hindiImg.style.display = 'block';
+  });
+  hindiImg.addEventListener('click', function () {
+    hindiImg.style.display = 'none';
+    englishImg.style.display = 'block';
+  });
   miniImages.forEach(function (miniImg, index) {
     miniImg.addEventListener('click', function () {
       console.log("Clicked mini image at index: ".concat(index)); // Remove active class from all mini images

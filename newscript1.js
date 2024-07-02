@@ -15,6 +15,18 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainImageStore = document.querySelector('.main-img-store');
     const miniImages = document.querySelectorAll('.mini-img');
 
+    const englishImg = document.getElementById('english-img');
+    const hindiImg = document.getElementById('hindi-img');
+    englishImg.addEventListener('click', function() {
+        englishImg.style.display = 'none';
+        hindiImg.style.display = 'block';
+    });
+
+    hindiImg.addEventListener('click', function() {
+        hindiImg.style.display = 'none';
+        englishImg.style.display = 'block';
+    });
+    
     miniImages.forEach((miniImg, index) => {
         miniImg.addEventListener('click', function() {
             console.log(`Clicked mini image at index: ${index}`);
