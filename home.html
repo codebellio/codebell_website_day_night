@@ -382,14 +382,14 @@
                 <div class="flex eq wrap gap-2 ">
                     <div style="min-width: 320px;position:relative;" class="flex column ">
                         <div class="flex center middle main-img-store">
-                            <img src="/assets/homelink/slide-img1.webp" alt="" id="english-img">
+                            <img src="/assets/homelink/doorbell_india1.png" alt="" id="english-img">
                             <img src="/assets/homelink/doorbell_india1.png" alt="Hindi Image" id="hindi-img"
                             style="display: none;">
                         </div>
 
                         <div class="flex gap-1 mini-scroll" style="margin-top: 1.5em;">
                             <div class="mini-img active-img" data-index="0">
-                                <img src="/assets/homelink/slide-img1.webp" alt="">
+                                <img src="/assets/homelink/doorbell_india1.png" alt="">
                             </div>
                             <!-- <div class="mini-img mini-video " data-index="1">
                                 <video src="/assets/img/sample.mp4"></video>
@@ -631,6 +631,14 @@
                 justify-content: center;
                 align-items: center;
                 border-radius: 2em;
+                
+            }
+            .img-wrapper .inner-image-placeholder{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 2em;
+              
             }
 
             .img-wrapper video {
@@ -638,6 +646,7 @@
                 height: 100%;
                 object-fit: cover;
                 border-radius: 2em;
+                
             }
 
             @media screen and (max-width: 768px) {
@@ -754,14 +763,6 @@
             <video src="/assets/svg/Codebell-CarConnect-new.mp4" autoplay muted loop controls></video>
         </section>
 
-<style>
-    .img-wrapper .inner-image-placeholder{
-        width: 100%;
-                height: 100%;
-                object-fit: cover;
-                border-radius: 2em;
-    }
-</style>
 
 
         <section>
@@ -904,7 +905,7 @@
                     sectionPair.querySelector('.img-wrapper video').addEventListener('waiting', function () {
                         const placeholderImage = this.parentElement.querySelector('.inner-image-placeholder');
                         if (placeholderImage) {
-                            placeholderImage.style.display = 'block';
+                            placeholderImage.style.display = 'flex';
                         }
                     });
         
