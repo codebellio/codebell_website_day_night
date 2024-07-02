@@ -371,7 +371,7 @@
                                         fill="#FFBC00" />
                                 </svg>
                             </div>
-                            <p>270+ Ratings & Reviews</p>
+                            <p>34+ Ratings & Reviews</p>
                         </div>
                         <div class="flex column gap" id="hero-title">
                             <div class="title-1 text-gradient">CarConnect Smart
@@ -408,6 +408,35 @@
                 </div>
             </section>
         </div>
+        <script>
+            const englishBtn = document.getElementById('english-btn');
+            const hindiBtn = document.getElementById('hindi-btn');
+            const englishImg = document.getElementById('english-img');
+            const hindiImg = document.getElementById('hindi-img');
+            
+            function toggleOutline(event) {
+                const clickedButton = event.target;
+            
+                englishBtn.classList.remove('fill');
+                hindiBtn.classList.remove('fill');
+            
+                clickedButton.classList.add('fill');
+            
+                if (clickedButton === englishBtn) {
+                    englishImg.style.display = 'block';
+                    hindiImg.style.display = 'none';
+                } else if (clickedButton === hindiBtn) {
+                    englishImg.style.display = 'none';
+                    hindiImg.style.display = 'block';
+                }
+            }
+            
+            englishBtn.addEventListener('click', toggleOutline);
+            hindiBtn.addEventListener('click', toggleOutline);
+          
+          
+          
+        </script>
         <div id="blur-bg" style="color:#000000; ">
             <section id="features">
                 <div class="section-title" style="padding-bottom: 1.5em;"> Worried about

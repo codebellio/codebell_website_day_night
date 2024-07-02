@@ -15,17 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainImageStore = document.querySelector('.main-img-store');
     const miniImages = document.querySelectorAll('.mini-img');
 
-    const englishImg = document.getElementById('english-img');
-    const hindiImg = document.getElementById('hindi-img');
-    englishImg.addEventListener('click', function() {
-        englishImg.style.display = 'none';
-        hindiImg.style.display = 'block';
-    });
+    // const englishImg = document.getElementById('english-img');
+    // const hindiImg = document.getElementById('hindi-img');
+    // englishImg.addEventListener('click', function() {
+    //     englishImg.style.display = 'none';
+    //     hindiImg.style.display = 'block';
+    // });
 
-    hindiImg.addEventListener('click', function() {
-        hindiImg.style.display = 'none';
-        englishImg.style.display = 'block';
-    });
+    // hindiImg.addEventListener('click', function() {
+    //     hindiImg.style.display = 'none';
+    //     englishImg.style.display = 'block';
+    // });
     
     miniImages.forEach((miniImg, index) => {
         miniImg.addEventListener('click', function() {
@@ -69,31 +69,6 @@ document.addEventListener("DOMContentLoaded", function () {
   
 
 
-  //--- --english hindi button selection --------------------------------
-  const englishBtn = document.getElementById('english-btn');
-  const hindiBtn = document.getElementById('hindi-btn');
-  const englishImg = document.getElementById('english-img');
-  const hindiImg = document.getElementById('hindi-img');
-  
-  function toggleOutline(event) {
-      const clickedButton = event.target;
-  
-      englishBtn.classList.remove('fill');
-      hindiBtn.classList.remove('fill');
-  
-      clickedButton.classList.add('fill');
-  
-      if (clickedButton === englishBtn) {
-          englishImg.style.display = 'block';
-          hindiImg.style.display = 'none';
-      } else if (clickedButton === hindiBtn) {
-          englishImg.style.display = 'none';
-          hindiImg.style.display = 'block';
-      }
-  }
-  
-  englishBtn.addEventListener('click', toggleOutline);
-  hindiBtn.addEventListener('click', toggleOutline);
 
 
 
@@ -128,39 +103,11 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
-// document.addEventListener('DOMContentLoaded', function () {
-//   const reviewContainer = document.querySelector('.cards');
-//   const reviews = document.querySelectorAll('.card');
-//   const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
-//   let index = 0;
 
-//   // Clone the reviews to create a seamless loop
-//   reviews.forEach(review => {
-//       const clone = review.cloneNode(true);
-//       reviewContainer.appendChild(clone);
-//   });
+  //--- --english hindi button selection --------------------------------
 
-//   // Function to scroll to the next review
-//   function scrollToNextReview() {
-//       reviewContainer.scrollBy({
-//           left: reviewWidth,
-//           behavior: 'smooth'
-//       });
 
-//       index++;
 
-//       // Reset the scroll position if at the end
-//       if (index >= reviews.length) {
-//           setTimeout(() => {
-//               reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
-//               index = 0;
-//           }, 2000); // Delay to allow smooth scrolling before reset
-//       }
-//   }
-
-//   // Start the auto-scroll with a 2-second interval
-//   setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
-// });
 
 
 document.addEventListener('DOMContentLoaded', function () {

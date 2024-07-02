@@ -12,17 +12,17 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var mainImageStore = document.querySelector('.main-img-store');
-  var miniImages = document.querySelectorAll('.mini-img');
-  var englishImg = document.getElementById('english-img');
-  var hindiImg = document.getElementById('hindi-img');
-  englishImg.addEventListener('click', function () {
-    englishImg.style.display = 'none';
-    hindiImg.style.display = 'block';
-  });
-  hindiImg.addEventListener('click', function () {
-    hindiImg.style.display = 'none';
-    englishImg.style.display = 'block';
-  });
+  var miniImages = document.querySelectorAll('.mini-img'); // const englishImg = document.getElementById('english-img');
+  // const hindiImg = document.getElementById('hindi-img');
+  // englishImg.addEventListener('click', function() {
+  //     englishImg.style.display = 'none';
+  //     hindiImg.style.display = 'block';
+  // });
+  // hindiImg.addEventListener('click', function() {
+  //     hindiImg.style.display = 'none';
+  //     englishImg.style.display = 'block';
+  // });
+
   miniImages.forEach(function (miniImg, index) {
     miniImg.addEventListener('click', function () {
       console.log("Clicked mini image at index: ".concat(index)); // Remove active class from all mini images
@@ -59,30 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-}); //--- --english hindi button selection --------------------------------
-
-var englishBtn = document.getElementById('english-btn');
-var hindiBtn = document.getElementById('hindi-btn');
-var englishImg = document.getElementById('english-img');
-var hindiImg = document.getElementById('hindi-img');
-
-function toggleOutline(event) {
-  var clickedButton = event.target;
-  englishBtn.classList.remove('fill');
-  hindiBtn.classList.remove('fill');
-  clickedButton.classList.add('fill');
-
-  if (clickedButton === englishBtn) {
-    englishImg.style.display = 'block';
-    hindiImg.style.display = 'none';
-  } else if (clickedButton === hindiBtn) {
-    englishImg.style.display = 'none';
-    hindiImg.style.display = 'block';
-  }
-}
-
-englishBtn.addEventListener('click', toggleOutline);
-hindiBtn.addEventListener('click', toggleOutline); // -----sidebar------
+}); // -----sidebar------
 
 document.getElementById("menu-icon").addEventListener("click", function () {
   var sidebar = document.getElementById("sidebar");
@@ -107,34 +84,7 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.remove('scrolled');
     }
   });
-}); // document.addEventListener('DOMContentLoaded', function () {
-//   const reviewContainer = document.querySelector('.cards');
-//   const reviews = document.querySelectorAll('.card');
-//   const reviewWidth = reviews[0].offsetWidth + parseInt(getComputedStyle(reviews[0]).marginRight); // Calculate width including margin
-//   let index = 0;
-//   // Clone the reviews to create a seamless loop
-//   reviews.forEach(review => {
-//       const clone = review.cloneNode(true);
-//       reviewContainer.appendChild(clone);
-//   });
-//   // Function to scroll to the next review
-//   function scrollToNextReview() {
-//       reviewContainer.scrollBy({
-//           left: reviewWidth,
-//           behavior: 'smooth'
-//       });
-//       index++;
-//       // Reset the scroll position if at the end
-//       if (index >= reviews.length) {
-//           setTimeout(() => {
-//               reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
-//               index = 0;
-//           }, 2000); // Delay to allow smooth scrolling before reset
-//       }
-//   }
-//   // Start the auto-scroll with a 2-second interval
-//   setInterval(scrollToNextReview, 3000); // Adjust interval (in milliseconds) for the auto scroll
-// });
+}); //--- --english hindi button selection --------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {
   var reviewContainer = document.querySelector('.cards');
