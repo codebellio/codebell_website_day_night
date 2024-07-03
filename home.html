@@ -572,34 +572,27 @@
                 flex: 1;
                 min-width: 300px;
                 overflow-y: hidden;
+               
             }
-        
+            .left-container {
+                overflow-y: scroll; 
+                scroll-snap-type: y proximity;
+                -ms-overflow-style: none;  
+                scrollbar-width: none; 
+           
+            }
             .left-wrapper {
                 display: flex;
                 justify-content: center;
                 height: 100vh;
                 align-items: center;
+                scroll-snap-align: center;
             }
-
-            .left-container {
-              
-                overflow-y: scroll; 
-                scroll-snap-type: y proximity;
-                -ms-overflow-style: none;  
-                scrollbar-width: none; 
-             
-            }
-            
             .left-container::-webkit-scrollbar {
                 display: none; 
             }
             
-            .left-wrapper {
-             
-                scroll-snap-align: center;
-                display: flex;
-                align-items: center;
-            }
+          
             .txt-app-wrapper {
                 margin: 20px 0;
             }
