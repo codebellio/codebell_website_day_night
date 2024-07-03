@@ -867,7 +867,7 @@
                                     // Set frame image
                                     newFrame.src = imgSources[pairIndex][index];
         
-                                    // Create and set placeholder image
+                                    // Set placeholder image
                                     let placeholderImage = sectionPair.querySelector('.img-wrapper .inner-image-placeholder');
                                     if (!placeholderImage) {
                                         placeholderImage = document.createElement('img');
@@ -891,19 +891,21 @@
                         updateVideo(scrollTop, viewportHeight);
                     });
         
-                    // Hide placeholder image when video can play
+                    // Ensure placeholder image stays visible and is overlapped by video
                     sectionPair.querySelector('.img-wrapper video').addEventListener('canplay', function () {
                         const placeholderImage = this.parentElement.querySelector('.inner-image-placeholder');
                         if (placeholderImage) {
-                            placeholderImage.style.opacity = '0';
+                            placeholderImage.style.zIndex = '1';
+                            this.style.zIndex = '2';
                         }
                     });
         
-                    // Show placeholder image when video is waiting
+                    // Ensure placeholder image stays visible and is overlapped by video when video is waiting
                     sectionPair.querySelector('.img-wrapper video').addEventListener('waiting', function () {
                         const placeholderImage = this.parentElement.querySelector('.inner-image-placeholder');
                         if (placeholderImage) {
-                            placeholderImage.style.opacity = '1';
+                            placeholderImage.style.zIndex = '1';
+                            this.style.zIndex = '2';
                         }
                     });
         
