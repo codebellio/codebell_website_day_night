@@ -12,17 +12,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener('DOMContentLoaded', function () {
   var mainImageStore = document.querySelector('.main-img-store');
-  var miniImages = document.querySelectorAll('.mini-img'); // const englishImg = document.getElementById('english-img');
-  // const hindiImg = document.getElementById('hindi-img');
-  // englishImg.addEventListener('click', function() {
-  //     englishImg.style.display = 'none';
-  //     hindiImg.style.display = 'block';
-  // });
-  // hindiImg.addEventListener('click', function() {
-  //     hindiImg.style.display = 'none';
-  //     englishImg.style.display = 'block';
-  // });
-
+  var miniImages = document.querySelectorAll('.mini-img');
   miniImages.forEach(function (miniImg, index) {
     miniImg.addEventListener('click', function () {
       console.log("Clicked mini image at index: ".concat(index)); // Remove active class from all mini images
@@ -42,7 +32,7 @@ document.addEventListener('DOMContentLoaded', function () {
       mainImageStore.innerHTML = '';
       console.log('Cleared main image store'); // Update the main image store with the clicked image or video
 
-      if (imgElement) {
+      if (imgElement && !videoElement) {
         var newMainImg = document.createElement('img');
         newMainImg.src = imgElement.src;
         mainImageStore.appendChild(newMainImg);
@@ -50,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
       } else if (videoElement) {
         var newMainVideo = document.createElement('video');
         newMainVideo.src = videoElement.src;
-        newMainVideo.autoplay = true;
+        newMainVideo.autoplay = false;
         newMainVideo.loop = true;
         newMainVideo.controls = true; // Optional: add controls for video
 

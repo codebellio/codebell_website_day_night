@@ -15,25 +15,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const mainImageStore = document.querySelector('.main-img-store');
     const miniImages = document.querySelectorAll('.mini-img');
 
-    // const englishImg = document.getElementById('english-img');
-    // const hindiImg = document.getElementById('hindi-img');
-    // englishImg.addEventListener('click', function() {
-    //     englishImg.style.display = 'none';
-    //     hindiImg.style.display = 'block';
-    // });
-
-    // hindiImg.addEventListener('click', function() {
-    //     hindiImg.style.display = 'none';
-    //     englishImg.style.display = 'block';
-    // });
-    
     miniImages.forEach((miniImg, index) => {
         miniImg.addEventListener('click', function() {
             console.log(`Clicked mini image at index: ${index}`);
 
             // Remove active class from all mini images
             miniImages.forEach(img => img.classList.remove('active-img'));
-            
+
             // Add active class to the clicked mini image
             miniImg.classList.add('active-img');
             console.log('Active class added to clicked mini image');
@@ -49,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
             console.log('Cleared main image store');
 
             // Update the main image store with the clicked image or video
-            if (imgElement) {
+            if (imgElement && !videoElement) {
                 const newMainImg = document.createElement('img');
                 newMainImg.src = imgElement.src;
                 mainImageStore.appendChild(newMainImg);
@@ -57,7 +45,7 @@ document.addEventListener("DOMContentLoaded", function () {
             } else if (videoElement) {
                 const newMainVideo = document.createElement('video');
                 newMainVideo.src = videoElement.src;
-                newMainVideo.autoplay = true;
+                newMainVideo.autoplay =false;
                 newMainVideo.loop = true;
                 newMainVideo.controls = true; // Optional: add controls for video
                 mainImageStore.appendChild(newMainVideo);
@@ -66,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
-  
 
 
 
