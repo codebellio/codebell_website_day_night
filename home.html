@@ -580,7 +580,26 @@
                 height: 100vh;
                 align-items: center;
             }
-        
+
+            .left-container {
+              
+                overflow-y: scroll; 
+                scroll-snap-type: y proximity;
+                -ms-overflow-style: none;  
+                scrollbar-width: none; 
+                height: 100vh;
+            }
+            
+            .left-container::-webkit-scrollbar {
+                display: none; 
+            }
+            
+            .left-wrapper {
+             
+                scroll-snap-align: center;
+                display: flex;
+                align-items: center;
+            }
             .txt-app-wrapper {
                 margin: 20px 0;
             }
@@ -697,6 +716,7 @@
                     }
                 }
             }
+         
         </style>
         
         <section>
@@ -756,11 +776,12 @@
         </section>
 
 
-
         <section class="flex column center gap-2" style="margin-top:10.5em;">
             <div class="section-title" style="padding-bottom: 0.5em;"> How it works?</div>
-            <video src="/assets/svg/Codebell-CarConnect-new.mp4" autoplay muted loop controls></video>
+            <video id="homelinkVideo" src="/assets/homelink/homelink.mp4" muted loop controls></video>
         </section>
+        
+
 
 
 
@@ -829,7 +850,8 @@
             </div>
             <div class="blur-fold"></div>
         </section>
-
+   
+        
       
         <script>
             document.addEventListener('DOMContentLoaded', function () {
