@@ -155,13 +155,13 @@
                         <li><a href="car.html">Car Connect Store</a></li>
                     </ul>
                     <div class="flex middle gap" id="desktop-icons">
-                    
+
 
                     </div>
                 </div>
 
                 <div class="flex middle gap" id="mobile-icons">
-                
+
                 </div>
             </nav>
         </div>
@@ -348,11 +348,11 @@
                         <div class="flex center middle main-img-store">
                             <img src="/assets/homelink/slide-img2.webp" alt="" id="english-img">
                             <img src="/assets/homelink/doorbell_india1.png" alt="Hindi Image" id="hindi-img"
-                            style="display: none;">
+                                style="display: none;">
                         </div>
 
                         <div class="flex gap-1 mini-scroll" style="margin-top: 1.5em;">
-                           
+
                             <!-- <div class="mini-img mini-video " data-index="1">
                                 <video src="/assets/img/sample.mp4"></video>
                             </div> -->
@@ -364,7 +364,7 @@
                             </div> -->
                             <div class="mini-img" data-index="1">
                                 <img src="/assets/homelink/mini-home.webp" alt="">
-                <video src="/assets/homelink/homelink.mp4" style="display: none;"></video>
+                                <video src="/assets/homelink/homelink.mp4" style="display: none;"></video>
                             </div>
                             <div class="mini-img" data-index="3">
                                 <img src="/assets/homelink/slide-img3.webp" alt="">
@@ -535,20 +535,23 @@
                 flex-wrap: wrap;
                 padding-top: 0;
             }
-        
-            .left-container, .right-wrapper {
+
+            .left-container,
+            .right-wrapper {
                 flex: 1;
                 min-width: 300px;
                 overflow-y: hidden;
-               
+
             }
+
             .left-container {
-                overflow-y: scroll; 
+                overflow-y: scroll;
                 scroll-snap-type: y proximity;
-                -ms-overflow-style: none;  
-                scrollbar-width: none; 
-           
+                -ms-overflow-style: none;
+                scrollbar-width: none;
+
             }
+
             .left-wrapper {
                 display: flex;
                 justify-content: center;
@@ -556,23 +559,24 @@
                 align-items: center;
                 scroll-snap-align: center;
             }
+
             .left-container::-webkit-scrollbar {
-                display: none; 
+                display: none;
             }
-            
-          
+
+
             .txt-app-wrapper {
                 margin: 20px 0;
             }
-        
+
             .txt-app-wrapper h3 {
                 font-size: 42px;
             }
-        
+
             .txt-app-wrapper span {
                 color: var(--primary-color);
             }
-        
+
             .right-wrapper {
                 position: sticky;
                 top: 15%;
@@ -581,7 +585,7 @@
                 align-items: center;
                 height: 100%;
             }
-        
+
             .iphone-wrapper {
                 position: sticky;
                 top: 25%;
@@ -590,14 +594,14 @@
                 align-items: center;
                 width: 100%;
             }
-        
+
             .iphone {
                 z-index: 100;
                 height: auto;
                 max-height: 580px;
                 max-width: 100%;
             }
-        
+
             .img-wrapper {
                 position: absolute;
                 z-index: 2;
@@ -606,7 +610,7 @@
                 overflow: hidden;
                 border-radius: 2em;
             }
-        
+
             .img-wrapper .inner-image-placeholder {
                 width: 100%;
                 height: 100%;
@@ -615,7 +619,7 @@
                 z-index: 1;
                 transition: opacity 0.3s ease-in-out;
             }
-        
+
             .img-wrapper video {
                 width: 100%;
                 height: 100%;
@@ -627,21 +631,21 @@
                 left: 0;
                 transition: opacity 0.3s ease-in-out;
             }
-        
+
             @media screen and (max-width: 768px) {
                 .container-lens {
                     flex-direction: column;
                     height: auto;
                 }
-        
+
                 .left-container {
                     order: 1;
                 }
-        
+
                 .left-wrapper {
                     height: 50vh;
                 }
-        
+
                 .right-wrapper {
                     padding-top: 2em;
                     top: 5%;
@@ -649,37 +653,36 @@
                     height: auto;
                     background: var(--bg-color);
                 }
-        
+
                 .iphone {
                     max-height: 430px;
                     max-width: 250px;
                 }
-        
+
                 .img-wrapper {
                     width: 200px;
                     height: 415px;
                     border-radius: 1em;
                 }
-        
+
                 .txt-app-wrapper h3 {
                     font-size: 48px;
                     text-align: center;
                     color: var(--text-color);
                 }
-        
+
                 @media screen and (max-width: 768px) {
                     .txt-app-wrapper h3 {
                         font-size: 32px;
                     }
-        
+
                     .txt-app-wrapper {
                         text-align: center;
                     }
                 }
             }
-         
         </style>
-        
+
         <section>
             <div class="flex column center" style="margin-top: 3.5em;">
                 <div class="section-title" style="padding-bottom: 0.5em;">Features</div>
@@ -741,7 +744,7 @@
             <div class="section-title" style="padding-bottom: 0.5em;"> How it works?</div>
             <video id="homelinkVideo" src="/assets/homelink/homelink.mp4" controls></video>
         </section>
-        
+
 
 
 
@@ -811,9 +814,9 @@
             </div>
             <div class="blur-fold"></div>
         </section>
-   
-        
-      
+
+
+
         <script>
             document.addEventListener('DOMContentLoaded', function () {
                 const sectionPairs = document.querySelectorAll('.container-lens');
@@ -831,9 +834,9 @@
                         ['/assets/homelink/pre1.webp', '/assets/homelink/pre2.webp', '/assets/homelink/pre4.webp'],
                         ['/assets/homelink/load1.webp', '/assets/homelink/load3.webp', '/assets/homelink/load2.webp', '/assets/homelink/load4.webp']
                     ];
-        
+
                     let currentVideoSource = '';
-        
+
                     function updateVideo(scrollTop, viewportHeight) {
                         const triggerHeight = viewportHeight * 0.6;
                         sections.forEach((section, index) => {
@@ -843,13 +846,13 @@
                                 const newFrame = sectionPair.querySelector('.iphone-wrapper img');
                                 const newVideoSource = videoSources[pairIndex][index];
                                 const newPlaceholderSource = placeholderImages[pairIndex][index];
-        
+
                                 if (currentVideoSource !== newVideoSource) {
                                     currentVideoSource = newVideoSource;
-        
+
                                     // Set frame image
                                     newFrame.src = imgSources[pairIndex][index];
-        
+
                                     // Set placeholder image
                                     let placeholderImage = sectionPair.querySelector('.img-wrapper .inner-image-placeholder');
                                     if (!placeholderImage) {
@@ -859,7 +862,7 @@
                                         video.parentElement.insertBefore(placeholderImage, video);
                                     }
                                     placeholderImage.src = newPlaceholderSource;
-        
+
                                     // Set video source and load
                                     video.src = newVideoSource;
                                     video.load();
@@ -867,13 +870,13 @@
                             }
                         });
                     }
-        
+
                     window.addEventListener('scroll', function () {
                         const scrollTop = window.scrollY;
                         const viewportHeight = window.innerHeight;
                         updateVideo(scrollTop, viewportHeight);
                     });
-        
+
                     // Ensure placeholder image stays visible and is overlapped by video
                     sectionPair.querySelector('.img-wrapper video').addEventListener('canplay', function () {
                         const placeholderImage = this.parentElement.querySelector('.inner-image-placeholder');
@@ -882,7 +885,7 @@
                             this.style.zIndex = '2';
                         }
                     });
-        
+
                     // Ensure placeholder image stays visible and is overlapped by video when video is waiting
                     sectionPair.querySelector('.img-wrapper video').addEventListener('waiting', function () {
                         const placeholderImage = this.parentElement.querySelector('.inner-image-placeholder');
@@ -891,12 +894,12 @@
                             this.style.zIndex = '2';
                         }
                     });
-        
+
                     updateVideo(window.scrollY, window.innerHeight);
                 });
             });
         </script>
-        
+
 
 
 
@@ -1291,8 +1294,19 @@
 
                         </h4>
                     </div>
-                    <p>QR Communication, intercom & tracking
+                     <p>QR Communication, intercom & tracking
                         technology.</p>
+                    <div class="flex middle gap-s">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg>
+
+                        <p>34 2nd floor Malviya Nagar New Delhi</p>
+                    </div>
+                
                     <div class="social-links-company">
                         <a href="https://www.facebook.com/codebell.io"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
