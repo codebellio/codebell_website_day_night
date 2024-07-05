@@ -74,6 +74,18 @@ document.addEventListener('DOMContentLoaded', function () {
       nav.classList.remove('scrolled');
     }
   });
+});
+document.addEventListener('scroll', function () {
+  var firstSection = document.getElementById('hero-bg');
+  var button = document.getElementById('show-on-scroll'); // Get the position where we want to show the button
+
+  var scrollPosition = firstSection.offsetHeight;
+
+  if (window.scrollY >= scrollPosition) {
+    button.style.opacity = '1';
+  } else {
+    button.style.opacity = '0';
+  }
 }); //--- --english hindi button selection --------------------------------
 
 document.addEventListener('DOMContentLoaded', function () {

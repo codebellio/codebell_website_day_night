@@ -120,6 +120,24 @@
         #menu-icon {
             cursor: pointer;
         }
+        #show-on-scroll {
+            transition: opacity 0.5s ease-in-out;
+        }
+        
+        @media screen and (max-width: 768px) {
+            #show-on-scroll button{
+                padding: 0.5em;
+            }
+            #show-on-scroll p {
+                font-size: 14px;
+                
+            }
+            #show-on-scroll img{
+                display: none;
+                height: 30px;
+            }
+        }
+       
     </style>
     <div class="bg-default">
         <div class="nav-container">
@@ -159,9 +177,15 @@
 
                     </div>
                 </div>
-
-                <div class="flex middle gap" id="mobile-icons">
-
+             
+                <div class="flex middle gap" >
+                    <a href="https://amzn.in/d/97zNU94" target="_blank" id="show-on-scroll">
+                        <button class="highlight-font"
+                            style="height: 50px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
+                            <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
+                            <p style="color: #000000;">Buy Now</p>
+                        </button>
+                    </a>
                 </div>
             </nav>
         </div>

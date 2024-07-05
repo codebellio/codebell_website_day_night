@@ -89,6 +89,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+document.addEventListener('scroll', function() {
+    const firstSection = document.getElementById('hero-bg');
+    const button = document.getElementById('show-on-scroll');
+    
+    // Get the position where we want to show the button
+    const scrollPosition = firstSection.offsetHeight ;
+    
+    if (window.scrollY >= scrollPosition) {
+        button.style.opacity = '1';
+    } else {
+        button.style.opacity = '0';
+    }
+});
 
 
   //--- --english hindi button selection --------------------------------
