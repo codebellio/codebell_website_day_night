@@ -526,20 +526,21 @@
                             <li style="list-style:disc;">One Time Payment, No Subscription required</li>
                             <li style="list-style:disc;">Zero Hardware and wiring free; No Wi-fi</li>
                         </ul>
-                        <a target="_blank" id="buy-now" >
-                            <button class="highlight-font" id="pay-now"
+                        <a target="_blank" id="buy-now"  class="flex gap middle">
+                            <button class="highlight-font" data-payment_button_id="pl_OVbuPPSEX81q7Y"
                                 style="height: 56px; display:flex; gap:0.5em; align-items:center; background:#FF9900; color:#000000; font-size:20px; width:100%;">
                                 <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
                                 Buy On Amazon
                             </button>
+                            <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OVbuPPSEX81q7Y" async> </script> </form>
+
                         </a>
                     </div>
                 </div>
             </section>
         </div>
-        
-        
-    <div id="overlay1">
+
+    <!-- <div id="overlay1">
         <div id="modal">
             <h2>Enter Your Details</h2>
             <label for="name">Name</label>
@@ -565,7 +566,7 @@
             const email = document.getElementById('email').value;
             const phone = document.getElementById('phone').value;
 
-            if (name === "" || email === "" || phone === "") {
+            if (name === "" || email === "" || phone === "") 
                 alert("Please fill in all the details");
                 return;
             }
@@ -606,7 +607,7 @@
             document.getElementById('overlay1').style.display = 'none';
         }
     </script>
-       
+        -->
 
 
         <div class="grey-section flex column middle gap-2">
