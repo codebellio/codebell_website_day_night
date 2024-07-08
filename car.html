@@ -26,10 +26,10 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
         rel="stylesheet">
-        
-        <link rel="preload" href="/assets/compressed-img/car/car-connect.webp" as="image">
-        <link rel="preload" href="/assets/compressed-img/car/hindi-img.webp" as="image">
-        
+
+    <link rel="preload" href="/assets/compressed-img/car/car-connect.webp" as="image">
+    <link rel="preload" href="/assets/compressed-img/car/hindi-img.webp" as="image">
+
 
     <link rel="stylesheet" href="newstyle1.css">
     <link rel="stylesheet" href="layout.css">
@@ -104,20 +104,23 @@
         #menu-icon {
             cursor: pointer;
         }
+
         #show-on-scroll {
             transition: opacity 0.5s ease-in-out;
             opacity: 0;
         }
-        
+
         @media screen and (max-width: 768px) {
-            #show-on-scroll button{
+            #show-on-scroll button {
                 padding: 0.5em;
             }
+
             #show-on-scroll p {
                 font-size: 14px;
-                
+
             }
-            #show-on-scroll img{
+
+            #show-on-scroll img {
                 display: none;
                 height: 30px;
             }
@@ -159,14 +162,17 @@
                     <div class="flex middle gap" id="desktop-icons">
                     </div>
                 </div>
-                <div class="flex middle gap" >
-                    <a href="https://amzn.in/d/iLqHZFM" target="_blank" id="show-on-scroll">
+                <div class="flex middle gap"  id="show-on-scroll">
+                    <!-- <a href="https://amzn.in/d/iLqHZFM" target="_blank">
                         <button class="highlight-font"
                             style="height: 50px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
                             <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
                             <p style="color: #000000;">Buy Now</p>
                         </button>
-                    </a>
+                    </a> -->
+
+                    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OW2TE3LhsYZYxV" async> </script> </form>
+
                 </div>
             </nav>
         </div>
@@ -422,13 +428,16 @@
                                 <button id="english-btn" class="outline fill" style="height: 48px;">English</button>
                                 <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
                             </div>
-                            <a href="https://amzn.in/d/iLqHZFM" target="_blank">
-                                <button class="highlight-font"
-                                    style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
-                                    <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
-                                    Buy On Amazon
-                                </button>
-                            </a>
+                            <div class="flex middle gap " style="width: 100%;">
+                                <a href="https://amzn.in/d/iLqHZFM" target="_blank">
+                                    <button class="highlight-font"
+                                        style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;width:100%;">
+                                        <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
+                                        Buy On Amazon
+                                    </button>
+                                </a>
+                                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OW2TE3LhsYZYxV" async> </script> </form>
+                            </div>
                         </div>
 
 
@@ -1120,7 +1129,7 @@
 
                         </h4>
                     </div>
-                     <p>QR Communication, intercom & tracking
+                    <p>QR Communication, intercom & tracking
                         technology.</p>
                     <div class="flex middle gap-s">
                         <div>
