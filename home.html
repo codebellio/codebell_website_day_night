@@ -146,8 +146,9 @@
         }
         
         .razorpay-payment-button  a{
-            background: #8437F9 !important;
+            background: #FF9900 !important;
             margin-top: 0.5em;
+            color: #000000 !important;
         }
         .PaymentButton.svelte-ekc7fv.svelte-ekc7fv{
             display: flex !important;
@@ -155,10 +156,10 @@
             justify-content: center;
             font-style: normal;
             height: 56px;
-            border-radius: 1em;
+            border-radius: 12px;
             margin: 0;
-            min-width: fit-content;
-            padding: 0.5em 2em;
+            width: 200px;
+           
             
         }
         .PaymentButton-text.svelte-ekc7fv.svelte-ekc7fv {
@@ -167,6 +168,7 @@
             justify-content: center;
             font-size: 16px;
             font-weight: 600;
+            white-space: nowrap;
             
         }
         .PaymentButton-contents.svelte-ekc7fv.svelte-ekc7fv{
@@ -178,6 +180,29 @@
         }
         .PaymentButton-securedBy.svelte-ekc7fv.svelte-ekc7fv {
            display: none;
+        }
+        #buy-now{
+            width: 240px;
+        }
+        .PaymentButton.svelte-ekc7fv.svelte-ekc7fv:not(.PaymentButton--rzpTheme):not(.PaymentButton--noRzpLogo)::before {
+            background: none;
+        }
+        @media screen and ( max-width: 768px ) {
+            #buy-now{
+                width: 150px;
+                
+                
+            }
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv{
+                width: 140px;
+
+}
+            #buy-now button {
+                white-space: wrap !important;
+            }
+            #btn-parent{
+                justify-content: center;
+            }
         }
     </style>
     <div class="bg-default">
@@ -503,12 +528,12 @@
                             <li style="list-style:disc;">One Time Payment, No Subscription required</li>
                             <li style="list-style:disc;">Zero Hardware and wiring free; No Wi-fi</li>
                         </ul>
-                        <div class="flex middle gap " style="width: 100%;">
+                        <div class="flex middle gap " style="width: 100%;" id="btn-parent">
                         
                         <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OWRACiRvAQPzxr" async> </script> </form>
                         <a href="https://amzn.in/d/97zNU94" target="_blank" id="buy-now" class="flex gap middle " >
                             <button class="highlight-font"
-                                style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;width:100%;">
+                                style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;">
                                 <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
                                 Buy On Amazon
                             </button>
