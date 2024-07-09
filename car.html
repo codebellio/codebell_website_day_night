@@ -162,7 +162,7 @@
                     <div class="flex middle gap" id="desktop-icons">
                     </div>
                 </div>
-                <div class="flex middle gap"  id="show-on-scroll">
+                <div class="flex middle gap" id="show-on-scroll">
                     <!-- <a href="https://amzn.in/d/iLqHZFM" target="_blank">
                         <button class="highlight-font"
                             style="height: 50px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
@@ -171,7 +171,10 @@
                         </button>
                     </a> -->
 
-                    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OWSAUgfiCVImuT" async> </script> </form>
+                    <form>
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                            data-payment_button_id="pl_OWSAUgfiCVImuT" async> </script>
+                    </form>
                 </div>
             </nav>
         </div>
@@ -324,6 +327,85 @@
                 }
 
             }
+
+
+            svg.svelte-ekc7fv.svelte-ekc7fv {
+                z-index: -1;
+            }
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                font-family: "Bricolage Grotesque", sans-serif;
+            }
+
+            .razorpay-payment-button a {
+                background: #FF9900 !important;
+                margin-top: 0.5em;
+                color: #000000 !important;
+            }
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                display: flex !important;
+                align-self: center;
+                justify-content: center;
+                font-style: normal;
+                height: 56px;
+                border-radius: 12px;
+                margin: 0;
+                width: 190px;
+
+
+            }
+
+            .PaymentButton-text.svelte-ekc7fv.svelte-ekc7fv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 600;
+                white-space: nowrap;
+
+            }
+
+            .PaymentButton-contents.svelte-ekc7fv.svelte-ekc7fv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+            }
+
+            .PaymentButton-securedBy.svelte-ekc7fv.svelte-ekc7fv {
+                display: none;
+            }
+
+            #buy-now {
+                width: 240px;
+            }
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv:not(.PaymentButton--rzpTheme):not(.PaymentButton--noRzpLogo)::before {
+                background: none;
+            }
+
+            @media screen and (max-width: 768px) {
+                #buy-now {
+                    width: 170px;
+
+
+                }
+
+                .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                    width: 170px;
+
+                }
+
+                #buy-now button {
+                    white-space: wrap !important;
+                }
+
+                #btn-parent {
+                    justify-content: center;
+                }
+            }
         </style>
         <div id="hero-bg" style="overflow: hidden;">
             <div class="blur-container flex eq between">
@@ -422,20 +504,25 @@
                         </ul>
                         <h4 class="highlight-font" style="border-top:1px solid var(--text-color);padding-top:1.5em;">
                             Select Language:</h4>
-                        <div class="flex column gap" id="buy-now">
+                        <div class="flex column gap" id="eng-hind">
                             <div class="flex middle gap-1 eq">
                                 <button id="english-btn" class="outline fill" style="height: 48px;">English</button>
                                 <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
                             </div>
-                            <div class="flex middle gap " style="width: 100%;">
-                                <a href="https://amzn.in/d/iLqHZFM" target="_blank">
+                            <div class="flex middle gap-1 " style="width: 100%;" id="btn-parent">
+                                <form>
+                                    <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                                        data-payment_button_id="pl_OWSAUgfiCVImuT" async> </script>
+                                </form>
+                                <a href="https://amzn.in/d/iLqHZFM" target="_blank" id="buy-now">
                                     <button class="highlight-font"
                                         style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;width:100%;">
                                         <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
                                         Buy On Amazon
                                     </button>
                                 </a>
-                                <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OWSAUgfiCVImuT" async> </script> </form>                            </div>
+                               
+                            </div>
                         </div>
 
 

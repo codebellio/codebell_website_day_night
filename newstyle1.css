@@ -368,7 +368,10 @@ video {
 #buy-now {
     max-width: 65%;
 }
+#eng-hind{
+    max-width: 65%;
 
+}
 
 
 #hero-padding {
@@ -400,7 +403,7 @@ video {
 }
 
 @media screen and (max-width:990px) {
-    #buy-now {
+    #buy-now,#eng-hind {
         max-width: 100%;
     }
 
