@@ -120,37 +120,43 @@
         #menu-icon {
             cursor: pointer;
         }
+
         #show-on-scroll {
             transition: opacity 0.5s ease-in-out;
             opacity: 0;
         }
-        
+
         @media screen and (max-width: 768px) {
-            #show-on-scroll button{
+            #show-on-scroll button {
                 padding: 0.5em;
             }
+
             #show-on-scroll p {
                 font-size: 14px;
-                
+
             }
-            #show-on-scroll img{
+
+            #show-on-scroll img {
                 display: none;
                 height: 30px;
             }
         }
+
         svg.svelte-ekc7fv.svelte-ekc7fv {
             z-index: -1;
         }
+
         .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
             font-family: "Bricolage Grotesque", sans-serif;
         }
-        
-        .razorpay-payment-button  a{
+
+        .razorpay-payment-button a {
             background: #FF9900 !important;
             margin-top: 0.5em;
             color: #000000 !important;
         }
-        .PaymentButton.svelte-ekc7fv.svelte-ekc7fv{
+
+        .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
             display: flex !important;
             align-self: center;
             justify-content: center;
@@ -159,9 +165,10 @@
             border-radius: 12px;
             margin: 0;
             width: 200px;
-           
-            
+
+
         }
+
         .PaymentButton-text.svelte-ekc7fv.svelte-ekc7fv {
             display: flex;
             align-items: center;
@@ -169,39 +176,105 @@
             font-size: 16px;
             font-weight: 600;
             white-space: nowrap;
-            
+
         }
-        .PaymentButton-contents.svelte-ekc7fv.svelte-ekc7fv{
+
+        .PaymentButton-contents.svelte-ekc7fv.svelte-ekc7fv {
             display: flex;
             align-items: center;
             justify-content: center;
             padding: 0;
-          
+
         }
+
         .PaymentButton-securedBy.svelte-ekc7fv.svelte-ekc7fv {
-           display: none;
+            display: none;
         }
-        #buy-now{
+
+        #buy-now {
             width: 240px;
         }
+
         .PaymentButton.svelte-ekc7fv.svelte-ekc7fv:not(.PaymentButton--rzpTheme):not(.PaymentButton--noRzpLogo)::before {
             background: none;
         }
-        @media screen and ( max-width: 768px ) {
-            #buy-now{
+
+        @media screen and (max-width: 768px) {
+            #buy-now {
                 width: 150px;
-                
-                
+
+
             }
-            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv{
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
                 width: 140px;
 
-}
+            }
+
             #buy-now button {
                 white-space: wrap !important;
             }
-            #btn-parent{
+
+            #btn-parent {
                 justify-content: center;
+            }
+        }
+
+
+        /* Styles for the overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            display: none;
+            /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure it is on top of other elements */
+        }
+
+        /* Styles for the pop-up content */
+        .popup-content {
+            background: var(--bg-color);
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+
+        }
+
+
+        /* Close button inside the pop-up */
+        .close-popup-button {
+            background: var(--button);
+            color: white;
+            padding: 0.5em 1em;
+            height: auto;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        @media (max-width: 600px) {
+            .popup-content {
+                padding: 1em;
+                max-width: 95%;
+                /* Make it slightly wider on very small screens */
+                max-height: 95%;
+                /* Make it slightly taller on very small screens */
+            }
+
+            .close-popup-button {
+                padding: 0.4em 0.8em;
+                font-size: 0.9em;
+                /* Adjust font size for smaller screens */
             }
         }
     </style>
@@ -222,8 +295,23 @@
                     <span class="closebtn" id="close-btn" style="color:var(--text-color)">&times;</span>
                     <ul>
                         <li><a href="#">Home</a> </li>
-                        <li><a href="contact.html" target="_blank"> Contact Us</a> </li>
+                        <li><a href="https://device.codebell.io/v/s01459651205792010496" target="_blank"> Contact Us</a>
+                        </li>
                         <li><a href="car.html">Car Connect Store</a></li>
+                        <li>
+                            <button class="fab shiny-button openPopupButton"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                Try Now
+                            </button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <button class="fab shiny-button"
+                                    style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                    Click to scan
+                                </button>
+                            </a>
+                        </li>
                     </ul>
 
                 </div>
@@ -231,17 +319,32 @@
                 <div class="flex middle">
                     <ul class="flex middle gap-2 nav-list" style="font-size: 1em;font-weight:600;">
                         <li><a href="#">Home</a> </li>
-                        <li><a href="contact.html" target="_blank"> Contact Us</a> </li>
+                        <li><a href="https://device.codebell.io/v/s01459651205792010496" target="_blank"> Contact Us</a>
+                        </li>
                         <li><a href="car.html">Car Connect Store</a></li>
+                        <li>
+                            <button class="fab shiny-button openPopupButton"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                Try Now
+                            </button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <button class="fab shiny-button"
+                                    style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                    Click to scan
+                                </button>
+                            </a>
+                        </li>
                     </ul>
                     <div class="flex middle gap" id="desktop-icons">
 
 
                     </div>
                 </div>
-             
+
                 <div class="flex middle gap" id="show-on-scroll">
-                    <a href="https://amzn.in/d/97zNU94" target="_blank"  class="flex middle gap" >
+                    <a href="https://amzn.in/d/97zNU94" target="_blank" class="flex middle gap">
                         <!-- <button class="highlight-font"
                             style="height: 50px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:fit-content;">
                             <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
@@ -249,10 +352,50 @@
                         </button> -->
 
                     </a>
-                    <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OWRACiRvAQPzxr" async> </script> </form>
+                    <form>
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                            data-payment_button_id="pl_OWRACiRvAQPzxr" async> </script>
+                    </form>
                 </div>
             </nav>
         </div>
+
+        <div id="popupOverlay" class="popup-overlay">
+            <div id="popup" class="popup-content">
+                <div class="flex column gap-1">
+                    <div>
+                        <img src="/assets/homelink/home-try.jpg" alt="" style="border-radius: 0.5em;">
+                    </div>
+                </div>
+                <button id="closePopupButton" class="close-popup-button">Close</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const openPopupButtons = document.querySelectorAll(".openPopupButton");
+                const closePopupButton = document.getElementById("closePopupButton");
+                const popupOverlay = document.getElementById("popupOverlay");
+
+                // Open the pop-up for any of the buttons
+                openPopupButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        popupOverlay.style.display = "flex";
+                    });
+                });
+
+                // Close the pop-up when the close button is clicked
+                closePopupButton.addEventListener("click", function () {
+                    popupOverlay.style.display = "none";
+                });
+
+                // Close the pop-up when clicking outside of it
+                popupOverlay.addEventListener("click", function (event) {
+                    if (event.target === popupOverlay) {
+                        popupOverlay.style.display = "none";
+                    }
+                });
+            });
+        </script>
 
         <style>
             .main-wrapper {
@@ -508,7 +651,7 @@
                                         fill="#FFBC00" />
                                 </svg>
                             </div>
-                            <p>16+ Ratings & Reviews</p>
+                            <p>170+ Ratings & Reviews</p>
                         </div>
                         <div class="flex column gap" id="hero-title">
                             <div class="title-1 text-gradient">HomeLink Smart
@@ -524,17 +667,48 @@
                             <li style="list-style:disc;">One Time Payment, No Subscription required</li>
                             <li style="list-style:disc;">Zero Hardware and wiring free; No Wi-fi</li>
                         </ul>
+                        <div class="flex middle gap-1 shiny-button p-1 policy">
+                            <div class="flex middle gap-s">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-truck" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                                </svg>
+                                <p>Free Delivery
+                                </p>
+                            </div>
+                            <div class="flex middle gap-s">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cash" viewBox="0 0 16 16">
+                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                    <path
+                                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
+                                </svg>
+                                <p>COD Available </p>
+                            </div>
+                            <div class="flex middle gap-s">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-box2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3zM7.5 1H3.75L1.5 4h6zm1 0v3h6l-2.25-3zM15 5H1v10h14z" />
+                                </svg>
+                                <p>Return Policy</p>
+                            </div>
+                        </div>
                         <div class="flex middle gap " style="width: 100%;" id="btn-parent">
-                        
-                        <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_OWRACiRvAQPzxr" async> </script> </form>
-                        <a href="https://amzn.in/d/97zNU94" target="_blank" id="buy-now" class="flex gap middle " >
-                            <button class="highlight-font"
-                                style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;">
-                                <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
-                                Buy On Amazon
-                            </button>
-                        </a>
-                    </div>
+
+                            <form>
+                                <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                                    data-payment_button_id="pl_OWRACiRvAQPzxr" async> </script>
+                            </form>
+                            <a href="https://amzn.in/d/97zNU94" target="_blank" id="buy-now" class="flex gap middle ">
+                                <button class="highlight-font"
+                                    style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;">
+                                    <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
+                                    Buy On Amazon
+                                </button>
+                            </a>
+                        </div>
                         <!-- <h4 class="highlight-font" style="border-top:1px solid var(--text-color);padding-top:1.5em;">
                             Select Language:</h4>
                               <a href="https://amzn.in/d/97zNU94" target="_blank">
@@ -568,7 +742,7 @@
                     personnel, or neighbors directly through a real-time video call, without the need for exchanging
                     personal phone numbers.</p>
                 <h3 class="highlight-font" style="margin-top: 1.2em;margin-bottom:1.2em">"Make your home smarter"</h3>
-                <button>Get Homelink Today</button>
+                <a href="#hero-bg"><button>Get Homelink Today</button></a>
             </section>
         </div>
 
@@ -1066,7 +1240,9 @@
                         <h2>Prosenjit</h2>
                         <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-                    <p style="margin-top: 2em;">"Codebell is a easy to use and easy to fix digital calling bell. It provides safety and security from intruders. Helps in well being of family. Must for all families."</p>
+                    <p style="margin-top: 2em;">"Codebell is a easy to use and easy to fix digital calling bell. It
+                        provides safety and security from intruders. Helps in well being of family. Must for all
+                        families."</p>
                     <div class="review-star">
                         <img src="/assets/homelink/star.webp" alt="">
                         <img src="/assets/homelink/star.webp" alt="">
@@ -1084,7 +1260,8 @@
                         <h2>Arumugam M</h2>
                         <p style="font-size: 14px; font-weight: 300; margin-top: -0.5rem;">From India</p>
                     </div>
-                    <p style="margin-top: 2em;">"Clear video calls. Good design. Can be mounted on wall with screws due to strong construction. Geo fencing works."</p>
+                    <p style="margin-top: 2em;">"Clear video calls. Good design. Can be mounted on wall with screws due
+                        to strong construction. Geo fencing works."</p>
                     <div class="review-star">
                         <img src="/assets/homelink/star.webp" alt="">
                         <img src="/assets/homelink/star.webp" alt="">
@@ -1386,20 +1563,20 @@
 
                         </h4>
                     </div>
-                     <p>QR Communication, intercom & tracking
+                    <p>QR Communication, intercom & tracking
                         technology.</p>
                     <div class="flex middle gap-s">
                         <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                            class="bi bi-geo-alt" viewBox="0 0 16 16">
-                            <path
-                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                        </svg>
-                    </div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </div>
                         <p>34, 2nd Floor, Corner Market, Malviya Nagar, New Delhi-110017</p>
                     </div>
-                
+
                     <div class="social-links-company">
                         <a href="https://www.facebook.com/codebell.io"><svg xmlns="http://www.w3.org/2000/svg"
                                 width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">

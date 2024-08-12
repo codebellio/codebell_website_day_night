@@ -139,13 +139,13 @@ document.addEventListener('DOMContentLoaded', function () {
             setTimeout(() => {
                 reviewContainer.scrollTo({ left: 0, behavior: 'instant' });
                 index = 0;
-            }, 2000); // Delay to allow smooth scrolling before reset
+            }, 1500); // Delay to allow smooth scrolling before reset
         }
     }
   
     // Check the visible cards and decide whether to start auto-scrolling
     if ((window.innerWidth < 768 && visibleCardsCount <= 1) || (window.innerWidth >= 768 && visibleCardsCount < totalCards)) {
-        setInterval(scrollToNextReview, 2000); // Adjust interval (in milliseconds) for the auto scroll
+        setInterval(scrollToNextReview, 1500); // Adjust interval (in milliseconds) for the auto scroll
     }
   });
   

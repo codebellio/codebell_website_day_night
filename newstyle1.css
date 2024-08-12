@@ -35,7 +35,7 @@
     --card-border: #DCDCDC;
     --logo-color: #1111AD;
     --button: #030319;
-    --table:#E8E8F7;
+    --table: #E8E8F7;
 
 }
 
@@ -46,9 +46,10 @@
     --sub-text-color: #cfcfcf;
     --card-border: rgba(250, 250, 250, 0.1);
     --card-box: rgba(250, 250, 250, 0.1);
-    --table:#191919;
+    --table: #191919;
     --button: #8437F9;
 }
+
 /* scroll bar css */
 
 
@@ -368,14 +369,15 @@ video {
 #buy-now {
     max-width: 65%;
 }
-#eng-hind{
+
+#eng-hind {
     max-width: 65%;
 
 }
 
 
 #hero-padding {
-    padding-top: 140px;
+    padding-top: 110px;
 }
 
 .arrow1 {
@@ -403,7 +405,9 @@ video {
 }
 
 @media screen and (max-width:990px) {
-    #buy-now,#eng-hind {
+
+    #buy-now,
+    #eng-hind {
         max-width: 100%;
     }
 
@@ -481,9 +485,11 @@ video {
 .text-start {
     text-align: start;
 }
-.hide-mobile{
+
+.hide-mobile {
     display: flex;
 }
+
 @media screen and (max-width: 768px) {
     .mobile-show {
         display: flex;
@@ -541,7 +547,7 @@ video {
         width: 180px;
         height: 430px;
     }
-   
+
 }
 
 
@@ -560,7 +566,8 @@ video {
     line-height: 135%;
 }
 
-.features p, .section-sub-title  {
+.features p,
+.section-sub-title {
     margin-top: 2.5em;
     line-height: 160%;
     max-width: 938px;
@@ -626,21 +633,24 @@ video {
 
 /* -----------review cards -----------*/
 
-.review-cards,.cards {
+.review-cards,
+.cards {
     display: flex;
     overflow-x: auto;
-    gap: 10px; 
-    overflow: hidden; 
+    gap: 10px;
+    overflow: hidden;
     padding: 3em;
 }
+
 @media screen and (max-width: 767px) {
-    .cards{
+    .cards {
         padding: 0;
     }
-    
+
 }
+
 .review-cards .review-card {
- 
+
     flex: 0 0 auto;
     width: 290px;
     height: 350px;
@@ -653,11 +663,13 @@ video {
     -webkit-backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.18);
 }
+
 /* Keyframes for continuous scroll animation */
 @keyframes scroll {
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -668,6 +680,7 @@ video {
     display: flex;
     animation: scroll linear infinite;
 }
+
 @media screen and (max-width:380px) {
     .review-cards .review-card {
         width: 250px;
@@ -807,7 +820,7 @@ video {
     background: linear-gradient(to bottom,
             #A2CEFF 0%,
             #FBDBFF 100%);
-   
+
 }
 
 /* -------------faq-------------- */
@@ -884,12 +897,14 @@ video {
     color: #ffffff;
     font-family: "Bricolage Grotesque", sans-serif;
 }
+
 @media screen and (max-width: 768px) {
-  
-    .download-wrapper{
+
+    .download-wrapper {
         background: #8437F9;
     }
 }
+
 .download-section h2 {
     font-size: 56px;
 }
@@ -945,9 +960,10 @@ video {
 .footer h3 {
     font-weight: 600;
 
-   
+
 }
-.footer h4{
+
+.footer h4 {
     font-size: 24px;
     color: var(--logo-color);
 }
@@ -1064,7 +1080,7 @@ a {
     font-size: 24px;
     max-width: 1063px;
     text-align: center;
-    
+
 }
 
 .home-second-fold h3 {
@@ -1094,24 +1110,80 @@ a {
 }
 
 
-  /* scroll show on hover*/
-  .mini-scroll {
+/* scroll show on hover*/
+.mini-scroll {
     overflow: hidden;
     cursor: pointer;
 }
+
 .mini-scroll:hover {
     overflow-x: auto;
 }
+
 .mini-scroll::-webkit-scrollbar {
-  
+
     height: 5px;
 }
+
 .mini-scroll::-webkit-scrollbar-thumb {
     background: var(--primary-color);
 }
+
 .mini-scroll::-webkit-scrollbar-thumb:hover {
     background-color: var(--primary-color);
 }
+
 .mini-scroll::-webkit-scrollbar-track {
     background-color: var(--bg-color);
+}
+
+   /* button*/
+
+   .shiny-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.shiny-button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transform: skewX(-30deg);
+    animation: shiny-effect 3s infinite;
+}
+
+@keyframes shiny-effect {
+    0% {
+        left: -100%;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+/* policy */
+.policy {
+    border: 2px solid var(--text-color);
+    width: fit-content;
+    border-radius: 1em;
+    text-transform: uppercase;
+    border-radius: 1em;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    .policy {
+        font-size: 12px;
+        white-space: nowrap;
+
+    }
+
+    .policy svg {
+        display: none;
+    }
 }

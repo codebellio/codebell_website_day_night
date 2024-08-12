@@ -125,6 +125,64 @@
                 height: 30px;
             }
         }
+
+     
+        /* Styles for the overlay */
+        .popup-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            display: none;
+            /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure it is on top of other elements */
+        }
+
+        /* Styles for the pop-up content */
+        .popup-content {
+            background: var(--bg-color);
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+
+        }
+
+
+        /* Close button inside the pop-up */
+        .close-popup-button {
+            background: var(--button);
+            color: white;
+            padding: 0.5em 1em;
+            height: auto;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        @media (max-width: 600px) {
+            .popup-content {
+                padding: 1em;
+                max-width: 95%;
+                /* Make it slightly wider on very small screens */
+                max-height: 95%;
+                /* Make it slightly taller on very small screens */
+            }
+
+            .close-popup-button {
+                padding: 0.4em 0.8em;
+                font-size: 0.9em;
+                /* Adjust font size for smaller screens */
+            }
+        }
     </style>
     <div class="bg-default">
         <div class="nav-container">
@@ -143,8 +201,23 @@
                     <span class="closebtn" id="close-btn" style="color:var(--text-color)">&times;</span>
                     <ul>
                         <li><a href="#">Home</a> </li>
-                        <li><a href="contact.html" target="_blank"> Contact Us</a> </li>
+                        <li><a href="https://device.codebell.io/v/s01459651205792010496" target="_blank"> Contact Us</a>
+                        </li>
                         <li><a href="home.html">Home Link Store</a></li>
+                        <li>
+                            <button class="fab shiny-button openPopupButton"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                Try Now
+                            </button>
+                        </li>
+                        <li>
+                            <a href="">
+                                <button class="fab shiny-button"
+                                    style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                    Click to scan
+                                </button>
+                            </a>
+                        </li>
                     </ul>
 
                 </div>
@@ -152,8 +225,27 @@
                 <div class="flex middle">
                     <ul class="flex middle gap-2 nav-list" style="font-size: 1em;font-weight:600;">
                         <li><a href="#"> Home</a> </li>
-                        <li><a href="contact.html" target="_blank"> Contact Us</a> </li>
+                        <li><a href="https://device.codebell.io/v/s01459651205792010496" target="_blank"> Contact Us</a>
+                        </li>
                         <li><a href="home.html">Home Link Store</a></li>
+                        <li>
+                            <button class="fab shiny-button openPopupButton"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                Try Now
+                            </button>
+                        </li>
+
+
+
+                        <li>
+                            <a href="">
+                                <button class="fab shiny-button"
+                                    style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                    Click to scan
+                                </button>
+                            </a>
+                        </li>
+
                     </ul>
                     <div class="flex middle gap" id="desktop-icons">
                     </div>
@@ -174,6 +266,42 @@
                 </div>
             </nav>
         </div>
+        <div id="popupOverlay" class="popup-overlay">
+            <div id="popup" class="popup-content">
+                <div class="flex column gap-1">
+                    <div>
+                        <img src="/assets/compressed-img/car/car-try.jpg" alt="" style="border-radius: 0.5em;">
+                    </div>
+                </div>
+                <button id="closePopupButton" class="close-popup-button">Close</button>
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const openPopupButtons = document.querySelectorAll(".openPopupButton");
+                const closePopupButton = document.getElementById("closePopupButton");
+                const popupOverlay = document.getElementById("popupOverlay");
+
+                // Open the pop-up for any of the buttons
+                openPopupButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        popupOverlay.style.display = "flex";
+                    });
+                });
+
+                // Close the pop-up when the close button is clicked
+                closePopupButton.addEventListener("click", function () {
+                    popupOverlay.style.display = "none";
+                });
+
+                // Close the pop-up when clicking outside of it
+                popupOverlay.addEventListener("click", function (event) {
+                    if (event.target === popupOverlay) {
+                        popupOverlay.style.display = "none";
+                    }
+                });
+            });
+        </script>
 
         <style>
             .main-wrapper {
@@ -402,6 +530,8 @@
                     justify-content: center;
                 }
             }
+
+         
         </style>
         <div id="hero-bg" style="overflow: hidden;">
             <div class="blur-container flex eq between">
@@ -418,30 +548,29 @@
                 <div class="flex eq wrap gap-2 ">
                     <div style="min-width: 320px;overflow:hidden;position:relative;" class="flex column ">
                         <div class="flex center middle main-img-store">
+                            <img src="/assets/compressed-img/car/fifth-fold.webp" alt="">
 
-                            <img src="/assets/compressed-img/car/car-connect.webp" alt="English Image" id="english-img">
-                            <img src="/assets/compressed-img/car/hindi-img.webp" alt="Hindi Image" id="hindi-img"
-                                style="display: none;">
 
 
                         </div>
                         <div class="flex gap-1 mini-scroll" style="margin-top: 1.5em;">
                             <div class="mini-img active-img" data-index="0">
+                                <img src="/assets/compressed-img/car/fifth-fold.webp" alt="">
+                            </div>
+                            <div class="mini-img " data-index="1">
                                 <img src="/assets/compressed-img/car/car-connect.webp" alt="">
                             </div>
-                            <div class="mini-img" data-index="1">
+                            <div class="mini-img" data-index="2">
                                 <img src="/assets/compressed-img/car/mini-video.webp" alt="">
                                 <video src="/assets/svg/Codebell-CarConnect-new.mp4" style="display: none;"></video>
                             </div>
-                            <div class="mini-img" data-index="2">
+                            <div class="mini-img" data-index="3">
                                 <img src="/assets/compressed-img/car/third-slide-new.webp" alt="">
                             </div>
-                            <div class="mini-img" data-index="3">
+                            <div class="mini-img" data-index="4">
                                 <img src="/assets/compressed-img/car/forth-fold.webp" alt="">
                             </div>
-                            <div class="mini-img" data-index="4">
-                                <img src="/assets/compressed-img/car/fifth-fold.webp" alt="">
-                            </div>
+
                         </div>
 
                     </div>
@@ -482,7 +611,7 @@
                                         fill="#FFBC00" />
                                 </svg>
                             </div>
-                            <p>34+ Ratings & Reviews</p>
+                            <p>340+ Ratings & Reviews</p>
                         </div>
                         <div class="flex column gap" id="hero-title">
                             <div class="title-1 text-gradient">CarConnect Smart
@@ -498,13 +627,39 @@
                             <li style="list-style:disc;">Protects your car from unnecessary damages</li>
                             <li style="list-style:disc;">Contribute to more organized, safer streets</li>
                         </ul>
-                        <h4 class="highlight-font" style="border-top:1px solid var(--text-color);padding-top:1.5em;">
-                            Select Language:</h4>
+                        <div class="flex middle gap-1 shiny-button p-1 policy">
+                            <div class="flex middle gap-s">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-truck" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                                </svg>
+                                <p>Free Delivery
+                                </p>
+                            </div>
+                            <div class="flex middle gap-s">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-cash" viewBox="0 0 16 16">
+                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                    <path
+                                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
+                                </svg>
+                                <p>COD Available </p>
+                            </div>
+                            <div class="flex middle gap-s">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                    class="bi bi-box2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3zM7.5 1H3.75L1.5 4h6zm1 0v3h6l-2.25-3zM15 5H1v10h14z" />
+                                </svg>
+                                <p>Return Policy</p>
+                            </div>
+                        </div>
                         <div class="flex column gap" id="eng-hind">
-                            <div class="flex middle gap-1 eq">
+                            <!-- <div class="flex middle gap-1 eq">
                                 <button id="english-btn" class="outline fill" style="height: 48px;">English</button>
                                 <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
-                            </div>
+                            </div> -->
                             <div class="flex middle gap-1 " style="width: 100%;" id="btn-parent">
                                 <form>
                                     <script src="https://checkout.razorpay.com/v1/payment-button.js"
@@ -517,7 +672,7 @@
                                         Buy On Amazon
                                     </button>
                                 </a>
-                               
+
                             </div>
                         </div>
 
@@ -627,8 +782,10 @@
                         incorrectly or in case of any issue with your car. Get alerts on your mobile and solve the issue
                         immediately</p>
                 </div>
-                <button class="button store-button" style="width: fit-content;">Get CarConnect and park
-                    worry-free!"</button>
+                <a href="#hero-bg"><button class="button store-button" style="width: fit-content;"> Get CarConnect and
+                        park
+                        worry-free!"</button>
+                </a>
             </div>
             <div class="flex middle center hide-mobile" style="min-width: 300px;">
                 <img src="/assets/compressed-img/car/benifits.webp" alt="" style="max-width: 50%;">
@@ -637,9 +794,22 @@
 
         <section class="flex column center gap-2">
             <div class="section-title" style="padding-bottom: 0.5em;"> How it works?</div>
-            <video src="/assets/svg/Codebell-CarConnect-new.mp4" controls></video>
+            <video id="myVideo" src="/assets/svg/Codebell-CarConnect-new.mp4" controls></video>
         </section>
+        <script>
+            const video = document.getElementById("myVideo");
 
+            // Start the video at 5 seconds and pause it
+            video.addEventListener('loadedmetadata', function () {
+                video.currentTime = 6;
+                video.pause();
+            });
+            video.addEventListener('play', function () {
+                if (video.currentTime < 6) {
+                    video.currentTime = 6;
+                }
+            });
+        </script>
 
 
         <div class="flex column gap-2 bg-default" style="padding-bottom: 1.5em; ">
@@ -692,18 +862,19 @@
                         Contact
                     </div>
                     <div class="card-unique flex column " style=" line-height:160%;">
-                        <p>Direct Emergency Connection: With CarConnect, choose your emergency contact in the app for
+                        <p>With CarConnect, choose your emergency contact in the app for
                             critical
                             situations. First Responders can call your emergency contact to inform them and mobilize the
                             exact
                             help you need without delay.</p>
-                        <p>Stay Safe, Stay Connected</p>
+
                         <p>With CarConnect, safety is not just a feature; it's our promise. Activate your Emergency SOS
                             Contact
                             today and drive with confidence.</p>
                     </div>
-                    <button class="button store-button" style="width: fit-content;">Get CarConnect and park
-                        worry-free!"</button>
+                    <a href="#hero-bg"><button class="button store-button" style="width: fit-content;">Get CarConnect
+                            and park
+                            worry-free!"</button></a>
                 </div>
             </div>
         </section>
@@ -862,7 +1033,7 @@
         </section>
 
 
-        <section id="About">
+        <!-- <section id="About">
             <div class="flex eq wrap between middle center gap emergency">
                 <div class="flex middle center image-container">
 
@@ -881,7 +1052,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- <section id="About">
