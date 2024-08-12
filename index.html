@@ -32,6 +32,35 @@
 </head>
 
 <body>
+
+    <style>
+        .shiny-button {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .shiny-button::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(120deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transform: skewX(-30deg);
+            animation: shiny-effect 3s infinite;
+        }
+
+        @keyframes shiny-effect {
+            0% {
+                left: -100%;
+            }
+
+            100% {
+                left: 100%;
+            }
+        }
+    </style>
     <div class="nav">
         <div class="nav-content flex between middle" data-aos="fade-down">
             <a href="#">
@@ -68,11 +97,19 @@
                 </div>
             </a>
             <div class="flex middle" style="gap: 3em;">
-                <div class="links flex" style="font-weight:600; gap:2em; ">
+                <div class="links flex middle" style="font-weight:600; gap:2em; ">
                     <a href="#Home">Home</a>
                     <a href="#Feature">Feature</a>
                     <a href="#Products">Products</a>
                     <a href="#Contact">Contact Us</a>
+
+                    <a href="https://device.codebell.io/home?scan=true" target="_blank" >
+                        <button class="fab shiny-button"
+                            style="font-size: 16px;    font-weight: 600;background: none; border: 2px solid var(--text-color); padding: 0.5em; height: auto; color: var(--button);border-radius:1em">
+                            Click to scan
+                        </button>
+                    </a>
+
                 </div>
                 <div class="social-links flex animate__animated animate__fadeInDown" style="gap: 1em;">
 
@@ -117,6 +154,14 @@
                     <li><a href="#Feature">Feature</a></li>
                     <li><a href="#Product">Product</a></li>
                     <li><a href="#Contact">Contact Us</a></li>
+                    <li>
+                        <a href="https://device.codebell.io/home?scan=true" target="_blank">
+                            <button class="fab shiny-button"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+                                Click to scan
+                            </button>
+                        </a>
+                    </li>
                 </ul>
                 <div class="links-mob flex middle gap" style="color: var(--text-color);">
 
@@ -158,9 +203,9 @@
                         style="margin-top: 1em;">Get Now</button></a>
 
             </div>
-            <div class="right" style="min-width: 300px;margin-bottom:7em;z-index:5" id="indexs-img" >
-                <img  src="/assets/img/index-img.png" alt=""  >
-                <img src="/assets/img/index-pipe.png" alt="" style="max-width: 80%;" >
+            <div class="right" style="min-width: 300px;margin-bottom:7em;z-index:5" id="indexs-img">
+                <img src="/assets/img/index-img.png" alt="">
+                <img src="/assets/img/index-pipe.png" alt="" style="max-width: 80%;">
                 <img src="/assets/img/index-img1.png" alt="" style="max-width: 30%;" data-aos="zoom-in"
                     data-aos-duration="300" data-aos-delay="300">
                 <img src="/assets/img/index-img2.png" alt="" style="max-width: 30%;" data-aos="zoom-in"
@@ -173,7 +218,8 @@
                     data-aos-duration="300" data-aos-delay="700">
             </div>
         </section>
-        <img class="circle" src="/assets/img/circle.png" alt="" data-aos="zoom-in" data-aos-duration="800"  data-aos-delay="800">
+        <img class="circle" src="/assets/img/circle.png" alt="" data-aos="zoom-in" data-aos-duration="800"
+            data-aos-delay="800">
 
     </div>
 
@@ -446,7 +492,7 @@
             <div class="products flex column gap ">
                 <a href="home.html">
                     <div class="image-product flex middle center">
-                        <img id="homeLinkImage"  alt="">
+                        <img id="homeLinkImage" alt="">
                     </div>
                 </a>
                 <a href="home.html" class="product-name">Home Link</a>
@@ -470,7 +516,7 @@
             <div class="products flex column gap ">
                 <a href="car.html">
                     <div class="image-product flex middle center">
-                        <img id="codebellCar"  alt="">
+                        <img id="codebellCar" alt="">
                     </div>
                 </a>
                 <a href="car.html" class="product-name">Codebell Car</a>
@@ -493,58 +539,58 @@
             </div>
         </div>
     </section>
-<script>
-      // Function to get visitor's country based on IP address
-      function getCountry(callback) {
-        fetch('https://ipapi.co/json/')
-            .then(response => response.json())
-            .then(data => {
-                callback(data.country);
-            })
-            .catch(error => {
-                console.error('Error fetching country:', error);
-                callback(null);
-            });
-    }
-  
-    // Function to load appropriate product images based on country
-    function loadCountryImages(countryCode) {
-        if (countryCode === 'IN') {
-            
-            document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_india1.png';
-            document.getElementById('codebellCar').src = '/assets/newimage/car_connect_india1.png';
-  
-  
-           //update more
-        } else {
-            
-            document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_global1.png';
-            document.getElementById('codebellCar').src = '/assets/newimage/car_connect_world1.png';
-            // Update image sources for others
+    <script>
+        // Function to get visitor's country based on IP address
+        function getCountry(callback) {
+            fetch('https://ipapi.co/json/')
+                .then(response => response.json())
+                .then(data => {
+                    callback(data.country);
+                })
+                .catch(error => {
+                    console.error('Error fetching country:', error);
+                    callback(null);
+                });
         }
-       
-        // we can update more here
-    }
-  
-  
-  // document.getElementById('codebellCarabout').src = '/assets/newimage/car_connect_world1.png';
-  
-    // When the page loads, get visitor's country and load appropriate product images
-    window.onload = function() {
-        getCountry(function(countryCode) {
-            if (countryCode) {
-                loadCountryImages(countryCode);
+
+        // Function to load appropriate product images based on country
+        function loadCountryImages(countryCode) {
+            if (countryCode === 'IN') {
+
+                document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_india1.png';
+                document.getElementById('codebellCar').src = '/assets/newimage/car_connect_india1.png';
+
+
+                //update more
             } else {
-                console.error('Unable to determine visitor\'s country.');
+
+                document.getElementById('homeLinkImage').src = '/assets/newimage/doorbell_global1.png';
+                document.getElementById('codebellCar').src = '/assets/newimage/car_connect_world1.png';
+                // Update image sources for others
             }
-        });
-    };
-  
-</script>
+
+            // we can update more here
+        }
+
+
+        // document.getElementById('codebellCarabout').src = '/assets/newimage/car_connect_world1.png';
+
+        // When the page loads, get visitor's country and load appropriate product images
+        window.onload = function () {
+            getCountry(function (countryCode) {
+                if (countryCode) {
+                    loadCountryImages(countryCode);
+                } else {
+                    console.error('Unable to determine visitor\'s country.');
+                }
+            });
+        };
+
+    </script>
 
     <!-- script for india, other countries -->
 
-  
+
 
 
 
@@ -1048,7 +1094,8 @@
 
                         </div>
                         <div class="post-detail">Why CCTV Isn’t Enough: The Case for HomeLink in Home Security</div>
-                        <p>In the era of advanced home security, many homeowners rely on Closed-Circuit Television (CCTV) systems .... <span style="color: var(--primary-color);">Read More</span></p>
+                        <p>In the era of advanced home security, many homeowners rely on Closed-Circuit Television
+                            (CCTV) systems .... <span style="color: var(--primary-color);">Read More</span></p>
                     </div>
                 </a>
             </div>
@@ -1174,7 +1221,7 @@
             </div>
             <div class="flex eq wrap gap-2">
                 <div class="get-in-touch-left" style="min-width: 300px;" data-aos="zoom-in">
-                    <img  src="/assets/img/contact.webp" alt="">
+                    <img src="/assets/img/contact.webp" alt="">
                 </div>
                 <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
                     <div class="name-email flex eq wrap middle gap">
@@ -1314,8 +1361,8 @@
                 </div>
                 <p>QR Communication, intercom & tracking
                     technology.</p>
-                     <div class="flex middle gap-s">
-                        <div>
+                <div class="flex middle gap-s">
+                    <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
                             class="bi bi-geo-alt" viewBox="0 0 16 16">
                             <path
@@ -1323,8 +1370,8 @@
                             <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
                         </svg>
                     </div>
-                        <p>34, 2nd Floor, Corner Market, Malviya Nagar, New Delhi-110017</p>
-                    </div>
+                    <p>34, 2nd Floor, Corner Market, Malviya Nagar, New Delhi-110017</p>
+                </div>
                 <div class="social-links-company">
                     <a href="https://www.facebook.com/codebell.io"><svg xmlns="http://www.w3.org/2000/svg" width="16"
                             height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
