@@ -1174,16 +1174,18 @@ a {
     text-transform: uppercase;
     border-radius: 1em;
     font-weight: 500;
+    width: calc(100% - 2em);
+    padding: 1em;
+    max-width: 520px;
 }
 
 @media screen and (max-width: 768px) {
     .policy {
-        font-size: 12px;
+        font-size: 9.5px;
         white-space: nowrap;
+        padding: 0.7em;
 
     }
 
-    .policy svg {
-        display: none;
-    }
+   
 }

@@ -141,28 +141,6 @@
             </div>
         </div>
     </div>
-
-    <style>
-        .iframe-container {
-            display: none;
-            width: 375px; /* Mobile screen width */
-            height: 667px; /* Mobile screen height */
-            position: fixed;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-            border-radius: 10px;
-            background: #fff; /* Background for the iframe */
-            z-index: 99999;
-        }
-
-        iframe {
-            width: 100%;
-            height: 100%;
-            border-radius: 10px;
-        }
-    </style>
     <section class="flex column" id="Contact">
         <div class="section-title">
             <div class="title-1">Get In Touch With Us</div>
@@ -173,39 +151,18 @@
                 <img src="/assets/img/contact.webp" alt="" >
             </div>
             <div class="contact-forms flex column middle gap" style="min-width: 300px;" id="contact_success">
-                <div style="max-width: 40%;">
-                    <img src="/assets/contact-qr.jpg" alt="">
+                <div class="name-email flex eq wrap middle gap">
+                    <input type="text" id="name" placeholder="Your Name" style="min-width: 200px;">
+                    <input type="email" id="email" placeholder="Your Email" style="min-width: 200px;">
                 </div>
-                <button id="contact-button" style="background:#8437F9; color:#fff; padding:1em; font-weight:500; font-size:18px; border-radius:1em;">
-                    Contact from this device
-                </button>
-            
-                <div class="iframe-container" id="iframe-container">
-                    <iframe id="contact-iframe" src="https://device.codebell.io/v/s01459651205792010496" frameborder="0"></iframe>
-                </div>
-            
-            
+                <input type="text" id="mobile" placeholder="Your Phone">
+                <input type="text" id="subject" placeholder="Your Subject">
+                <textarea id="msg"  name="message" cols="20" rows="10" placeholder="Your Message"></textarea>
+                <div class="submit-btn button" id="submitBtn">Submit</div>
+                <div id="contact_err"></div>
             </div>
         </div>
     </section>
-
-    <script>
-        // Show iframe on button click
-        document.getElementById("contact-button").addEventListener("click", function() {
-            document.getElementById("iframe-container").style.display = "block";
-        });
-
-        // Hide iframe when clicking outside of it
-        document.addEventListener("click", function(event) {
-            const iframeContainer = document.getElementById("iframe-container");
-            const contactButton = document.getElementById("contact-button");
-            
-            // Check if the click is outside the iframe and the button
-            if (!iframeContainer.contains(event.target) && event.target !== contactButton) {
-                iframeContainer.style.display = "none";
-            }
-        });
-    </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
             var data = {
