@@ -1137,11 +1137,13 @@ a {
     background-color: var(--bg-color);
 }
 
-   /* button*/
+/* button*/
 
-   .shiny-button {
+.shiny-button {
     position: relative;
     overflow: hidden;
+    font-size: 18px;
+    justify-content: center;
 }
 
 .shiny-button::before {
@@ -1168,24 +1170,33 @@ a {
 
 /* policy */
 .policy {
-    border: 2px solid var(--text-color);
+
     width: fit-content;
-    border-radius: 1em;
-    text-transform: uppercase;
-    border-radius: 1em;
-    font-weight: 500;
+
+
+    font-weight: 400;
     width: calc(100% - 2em);
     padding: 1em;
     max-width: 520px;
+    font-size: 15px;
+    letter-spacing: 0.5px;
+
 }
 
 @media screen and (max-width: 768px) {
     .policy {
-        font-size: 9.5px;
-        white-space: nowrap;
+        font-size: 12px;
         padding: 0.7em;
-
     }
-
-   
+    .policy-card {
+        width: 70px;
+        text-align: center;
+    }
+    .policy svg {
+        width: 30px;
+        height: 30px;
+    }
+    .shiny-button {
+        font-size: 16px;
+    }
 }

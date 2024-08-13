@@ -126,7 +126,7 @@
             }
         }
 
-     
+
         /* Styles for the overlay */
         .popup-overlay {
             position: fixed;
@@ -204,13 +204,10 @@
                         <li><a href="contact.html" target="_blank"> Contact Us</a>
                         </li>
                         <li><a href="home.html">Home Link Store</a></li>
-                        <li>
-                            <button class="fab shiny-button openPopupButton"
-                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
-                                Try Now
-                            </button>
-                        </li>
-                   
+
+
+
+
                     </ul>
 
                 </div>
@@ -221,16 +218,11 @@
                         <li><a href="contact.html" target="_blank"> Contact Us</a>
                         </li>
                         <li><a href="home.html">Home Link Store</a></li>
-                        <li>
-                            <button class="fab shiny-button openPopupButton"
-                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
-                                Try Now
-                            </button>
-                        </li>
 
 
 
-                     
+
+
                     </ul>
                     <div class="flex middle gap" id="desktop-icons">
                     </div>
@@ -255,16 +247,19 @@
             <div id="popup" class="popup-content">
                 <div class="flex between">
                     <div></div>
-                    <button id="closePopupButton" class="close-popup-button" style="margin: 0;margin-bottom: 0.5em;padding:0.5em"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                      </svg></button>
+                    <button id="closePopupButton" class="close-popup-button"
+                        style="margin: 0;margin-bottom: 0.5em;padding:0.5em"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg></button>
                 </div>
                 <div class="flex column gap-1">
                     <div>
                         <img src="/assets/compressed-img/car/car-try.jpg" alt="" style="border-radius: 0.5em;">
                     </div>
                 </div>
-               
+
             </div>
         </div>
         <script>
@@ -521,8 +516,6 @@
                     justify-content: center;
                 }
             }
-
-         
         </style>
         <div id="hero-bg" style="overflow: hidden;">
             <div class="blur-container flex eq between">
@@ -618,18 +611,36 @@
                             <li style="list-style:disc;">Protects your car from unnecessary damages</li>
                             <li style="list-style:disc;">Contribute to more organized, safer streets</li>
                         </ul>
-                        <div class="flex middle between shiny-button policy">
-                            <div class="flex middle gap-s">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+
+                        <div class="flex middle gap">
+
+                            <button class="fab shiny-button openPopupButton"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                    class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z" />
+                                    <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z" />
+                                    <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z" />
+                                    <path
+                                        d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z" />
+                                    <path d="M12 9h2V8h-2z" />
+                                </svg>
+                                Try Now Before You Buy
+                            </button>
+                        </div>
+                        <div class="flex middle between policy">
+                            <div class="flex column middle gap-s policy-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                     class="bi bi-truck" viewBox="0 0 16 16">
                                     <path
                                         d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
                                 </svg>
-                                <p>Free Delivery
-                                </p>
+                                <p>Free Delivery</p>
                             </div>
-                            <div class="flex middle gap-s">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <div class="flex column middle gap-s policy-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                     class="bi bi-cash" viewBox="0 0 16 16">
                                     <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
                                     <path
@@ -637,13 +648,13 @@
                                 </svg>
                                 <p>COD Available </p>
                             </div>
-                            <div class="flex middle gap-s">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            <div class="flex column middle gap-s policy-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
                                     class="bi bi-box2" viewBox="0 0 16 16">
                                     <path
                                         d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3zM7.5 1H3.75L1.5 4h6zm1 0v3h6l-2.25-3zM15 5H1v10h14z" />
                                 </svg>
-                                <p>7 Days free returns</p>
+                                <p>7 Day Easy Returns</p>
                             </div>
                         </div>
                         <div class="flex column gap" id="eng-hind">
