@@ -36,6 +36,7 @@
     --logo-color: #1111AD;
     --button: #030319;
     --table: #E8E8F7;
+    --sub-bg-color: #FFFFFF;
 
 }
 
@@ -48,6 +49,7 @@
     --card-box: rgba(250, 250, 250, 0.1);
     --table: #191919;
     --button: #8437F9;
+    --sub-bg-color: #151819;
 }
 
 /* scroll bar css */

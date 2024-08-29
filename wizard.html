@@ -1,0 +1,1225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta
+        content="Discover how QR code calling solutions streamline communication. Explore Codebell and unlock the benefits of QR calling for your business, home, cars, and pets."
+        name="description">
+    <meta content="Codebell - New-age Communication with QR Code Calling Solutions" property="og:title">
+    <meta
+        content="Discover how QR code calling solutions streamline communication. Explore Codebell and unlock the benefits of QR calling for your business, home, cars, and pets."
+        property="og:description">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://codebell.io/assets/compressed-img/car/forth-fold.webp">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Codebell - New-age Communication with QR Code Calling Solutions</title>
+    <!-- font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=Montserrat+Alternates:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="preload" href="/assets/compressed-img/car/car-connect.webp" as="image">
+    <link rel="preload" href="/assets/compressed-img/car/hindi-img.webp" as="image">
+
+
+    <link rel="stylesheet" href="newstyle1.css">
+    <link rel="stylesheet" href="layout.css">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MGCL4TN4');</script>
+    <!-- End Google Tag Manager -->
+</head>
+
+<body>
+    <style>
+        .sidebar {
+            max-height: 0;
+            width: 100%;
+            position: fixed;
+            top: 58px;
+            left: 0;
+            background-color: var(--bg-color);
+            overflow-y: hidden;
+            transition: max-height 0.3s ease-out;
+            z-index: 1000;
+        }
+
+        .sidebar ul {
+            list-style-type: none;
+            padding: 20px;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            padding: 10px 15px;
+            text-align: left;
+            font-size: 18px;
+            color: var(--text-color);
+        }
+
+        .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 25px;
+            font-size: 36px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .overlay {
+            height: calc(100% - 58px);
+            /* Adjust overlay height to not cover the navigation bar */
+            width: 100%;
+            position: fixed;
+            top: 58px;
+            left: 0;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease-out;
+        }
+
+        .overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        #menu-icon {
+            cursor: pointer;
+        }
+
+        #show-on-scroll {
+            transition: opacity 0.5s ease-in-out;
+            opacity: 0;
+        }
+
+        @media screen and (max-width: 768px) {
+            #show-on-scroll button {
+                padding: 0.5em;
+            }
+
+            #show-on-scroll p {
+                font-size: 14px;
+
+            }
+
+            #show-on-scroll img {
+                display: none;
+                height: 30px;
+            }
+        }
+
+
+        /* Styles for the overlay */
+        .popup-overlay,
+        .popup-overlay1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            /* Semi-transparent background */
+            display: none;
+            /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+            /* Ensure it is on top of other elements */
+        }
+
+        /* Styles for the pop-up content */
+        .popup-content,
+        .popup-content1 {
+            background: var(--bg-color);
+            padding: 1.5em;
+            border-radius: 8px;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+            position: relative;
+            text-align: center;
+
+        }
+
+
+        /* Close button inside the pop-up */
+        .close-popup-button,
+        .close-popup-button1 {
+            background: var(--button);
+            color: white;
+            padding: 0.5em 1em;
+            height: auto;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 1em;
+        }
+
+        @media (max-width: 600px) {
+
+            .popup-content,
+            .popup-content1 {
+                padding: 1em;
+                max-width: 95%;
+                /* Make it slightly wider on very small screens */
+                max-height: 95%;
+                /* Make it slightly taller on very small screens */
+            }
+
+            .close-popup-button,
+            .close-popup-button1 {
+                padding: 0.4em 0.8em;
+                font-size: 0.9em;
+                /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+    <div class="bg-default">
+        <div class="nav-container">
+            <nav class="flex between middle navbar">
+                <div class="flex center middle menu" id="menu-icon">
+                    <svg width="42" height="42" viewBox="0 0 42 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12 17V15H30V17H12ZM12 22H30V20H12V22ZM12 27H30V25H12V27Z" fill="currentColor" />
+                    </svg>
+                </div>
+                <div class="flex middle center logo logo-nav logo-mobile">
+                    codebell
+                </div>
+
+                <div id="sidebar" class="sidebar">
+                    <span class="closebtn" id="close-btn" style="color:var(--text-color)">&times;</span>
+                    <ul>
+                        <li><a href="#">Home</a> </li>
+                        <li><a href="contact.html" target="_blank"> Contact Us</a>
+                        </li>
+                        <li><a href="home.html">Home Link Store</a></li>
+
+
+
+
+                    </ul>
+
+                </div>
+                <div id="overlay" class="overlay"></div>
+                <div class="flex middle">
+                    <ul class="flex middle gap-2 nav-list" style="font-size: 1em;font-weight:600;">
+                        <li><a href="#"> Home</a> </li>
+                        <li><a href="contact.html" target="_blank"> Contact Us</a>
+                        </li>
+                        <li><a href="home.html">Home Link Store</a></li>
+
+
+
+
+
+                    </ul>
+                    <div class="flex middle gap" id="desktop-icons">
+                    </div>
+                </div>
+                <div class="flex middle gap" id="show-on-scroll">
+                    <!-- <a href="https://amzn.in/d/iLqHZFM" target="_blank">
+                        <button class="highlight-font"
+                            style="height: 50px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;font-size:20px;width:100%;">
+                            <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
+                            <p style="color: #000000;">Buy Now</p>
+                        </button>
+                    </a> -->
+
+                    <form>
+                        <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                            data-payment_button_id="pl_OWSAUgfiCVImuT" async> </script>
+                    </form>
+                </div>
+            </nav>
+        </div>
+        <div id="popupOverlay" class="popup-overlay">
+            <div id="popup" class="popup-content">
+                <div class="flex between">
+                    <div></div>
+                    <button id="closePopupButton" class="close-popup-button"
+                        style="margin: 0;margin-bottom: 0.5em;padding:0.5em"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="20" height="20" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg></button>
+                </div>
+                <div class="flex column gap-1">
+                    <div>
+                        <img src="/assets/compressed-img/car/car-try.jpg" alt="" style="border-radius: 0.5em;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const openPopupButtons = document.querySelectorAll(".openPopupButton");
+                const closePopupButton = document.getElementById("closePopupButton");
+                const popupOverlay = document.getElementById("popupOverlay");
+
+                // Open the pop-up for any of the buttons
+                openPopupButtons.forEach(button => {
+                    button.addEventListener("click", function () {
+                        popupOverlay.style.display = "flex";
+                    });
+                });
+
+                // Close the pop-up when the close button is clicked
+                closePopupButton.addEventListener("click", function () {
+                    popupOverlay.style.display = "none";
+                });
+
+                // Close the pop-up when clicking outside of it
+                popupOverlay.addEventListener("click", function (event) {
+                    if (event.target === popupOverlay) {
+                        popupOverlay.style.display = "none";
+                    }
+                });
+            });
+        </script>
+
+        <style>
+            .main-wrapper {
+                height: 100%;
+            }
+
+            .main-img-store {
+                height: calc(500px - 79.2px);
+            }
+
+            .main-img-store img {
+                max-height: 100%;
+                display: flex;
+                align-self: center;
+            }
+
+            .main-video {
+                margin: auto;
+
+            }
+
+            .mini-img.active-img {
+                border: 2px solid var(--primary-color);
+                opacity: 1;
+            }
+
+            .mini-img.mini-video video {
+                border-radius: 0.5em;
+
+
+            }
+
+
+            .blur-container {
+                height: 100%;
+                width: 100%;
+            }
+
+            .blur1 {
+                position: absolute;
+                width: 87px;
+                height: 87px;
+                background: #FF488B;
+                filter: blur(60px);
+                border-radius: 50%;
+                top: 15%;
+                left: 1%;
+            }
+
+            .blur2 {
+                position: absolute;
+                width: 124px;
+                height: 124px;
+                background: #8437F9;
+                filter: blur(70px);
+                border-radius: 50%;
+                top: 30%;
+                left: -3%;
+            }
+
+            .blur3 {
+                position: absolute;
+                width: 165px;
+                height: 165px;
+                background: #8437F9;
+                filter: blur(80px);
+                border-radius: 50%;
+                right: -6%;
+                bottom: 50%;
+            }
+
+            .blur4 {
+                position: absolute;
+                width: 241px;
+                height: 241px;
+                background: #FF7236;
+                filter: blur(110px);
+                border-radius: 50%;
+                right: -6%;
+                bottom: 0;
+
+            }
+
+            @media screen and (max-width:768px) {
+                .blur1 {
+                    position: absolute;
+                    width: 57px;
+                    height: 57px;
+                    background: #FF488B;
+                    filter: blur(60px);
+                    border-radius: 50%;
+                    top: 15%;
+                    left: 1%;
+                }
+
+                .blur2 {
+                    position: absolute;
+                    width: 124px;
+                    height: 124px;
+                    background: #8437F9;
+                    filter: blur(70px);
+                    border-radius: 50%;
+                    top: 10%;
+                    left: -30%;
+                }
+
+                .blur3 {
+                    width: 165px;
+                    height: 165px;
+                    border-radius: 50%;
+                    right: -30%;
+                    bottom: 50%;
+                }
+
+                .blur4 {
+                    display: none;
+
+                }
+            }
+
+
+
+
+
+            .mini-img {
+                width: 80px;
+                height: 80px;
+                margin: 0;
+                padding: 0.5em;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border: 1px solid var(--border-color);
+                border-radius: 0.5em;
+                opacity: 0.5;
+            }
+
+            @media screen and (max-width:768px) {
+
+                .mini-img {
+                    border-radius: 0.5em;
+                    width: 60px;
+                    height: 50px;
+                    margin: 0;
+                    cursor: pointer;
+                    z-index: 10;
+                }
+
+            }
+
+
+            svg.svelte-ekc7fv.svelte-ekc7fv {
+                z-index: -1;
+            }
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                font-family: "Bricolage Grotesque", sans-serif;
+            }
+
+            .razorpay-payment-button a {
+                background: #FF9900 !important;
+                margin-top: 0.5em;
+                color: #000000 !important;
+            }
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                display: flex !important;
+                align-self: center;
+                justify-content: center;
+                font-style: normal;
+                height: 56px;
+                border-radius: 12px;
+                margin: 0;
+                width: 190px;
+
+
+            }
+
+            .PaymentButton-text.svelte-ekc7fv.svelte-ekc7fv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 16px;
+                font-weight: 600;
+                white-space: nowrap;
+
+            }
+
+            .PaymentButton-contents.svelte-ekc7fv.svelte-ekc7fv {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 0;
+
+            }
+
+            .PaymentButton-securedBy.svelte-ekc7fv.svelte-ekc7fv {
+                display: none;
+            }
+
+            #buy-now {
+                width: 240px;
+            }
+
+            .PaymentButton.svelte-ekc7fv.svelte-ekc7fv:not(.PaymentButton--rzpTheme):not(.PaymentButton--noRzpLogo)::before {
+                background: none;
+            }
+
+            @media screen and (max-width: 768px) {
+                #buy-now {
+                    width: 170px;
+
+
+                }
+
+                .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                    width: 170px;
+
+                }
+
+                #show-on-scroll .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                    height: 40px;
+                    width: 100px;
+                }
+
+                #show-on-scroll .PaymentButton.svelte-ekc7fv.svelte-ekc7fv {
+                    min-width: 100px;
+                }
+
+                #buy-now button {
+                    white-space: wrap !important;
+                }
+
+                #btn-parent {
+                    justify-content: center;
+                }
+            }
+        </style>
+        <div id="hero-bg" style="overflow: hidden;">
+            <div class="blur-container flex eq between">
+                <div class="left-blurs">
+                    <div class="blur1"></div>
+                    <div class="blur2"></div>
+                </div>
+                <div class="right-blurs">
+                    <div class="blur3"></div>
+                    <div class="blur4"></div>
+                </div>
+            </div>
+            <section id="hero-padding" style="z-index: 10;">
+                <div class="flex eq wrap gap-2 ">
+                    <div style="min-width: 320px;overflow:hidden;position:relative;" class="flex column ">
+                        <div class="flex center middle main-img-store">
+                            <img src="/assets/compressed-img/car/fifth-fold.webp" alt="">
+
+
+
+                        </div>
+                        <div class="flex gap-1 mini-scroll" style="margin-top: 1.5em;">
+                            <div class="mini-img active-img" data-index="0">
+                                <img src="/assets/compressed-img/car/fifth-fold.webp" alt="">
+                            </div>
+                            <div class="mini-img " data-index="1">
+                                <img src="/assets/compressed-img/car/car-connect.webp" alt="">
+                            </div>
+                            <div class="mini-img" data-index="2">
+                                <img src="/assets/compressed-img/car/mini-video.webp" alt="">
+                                <video src="/assets/svg/Codebell-CarConnect-new.mp4" style="display: none;"></video>
+                            </div>
+                            <div class="mini-img" data-index="3">
+                                <img src="/assets/compressed-img/car/third-slide-new.webp" alt="">
+                            </div>
+                            <div class="mini-img" data-index="4">
+                                <img src="/assets/compressed-img/car/forth-fold.webp" alt="">
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <div class="flex column gap " style="min-width: 320px; ">
+                        <div class="flex middle gap">
+                            <div class="flex middle" style="gap: 0.1em;">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                        fill="#FFBC00" />
+                                </svg>
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                        fill="#FFBC00" />
+                                </svg>
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                        fill="#FFBC00" />
+                                </svg>
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                        fill="#FFBC00" />
+                                </svg>
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M4.71532 20C4.91532 20 5.11532 19.95 5.31532 19.85L9.99032 17.675C10.1237 17.6083 10.2903 17.575 10.4903 17.575C10.707 17.575 10.882 17.6083 11.0153 17.675L15.6403 19.85C16.257 20.1 16.7487 20.025 17.1153 19.625C17.3487 19.3583 17.4403 19.0083 17.3903 18.575L16.7653 13.475C16.7487 13.325 16.7737 13.1583 16.8403 12.975C16.907 12.7583 16.9903 12.6 17.0903 12.5L20.5903 8.775C20.957 8.35833 21.0737 7.94167 20.9403 7.525C20.7737 7.075 20.432 6.80833 19.9153 6.725L14.8653 5.75C14.7487 5.73333 14.6028 5.6625 14.4278 5.5375C14.2528 5.4125 14.1237 5.29167 14.0403 5.175L11.6903 0.875C11.607 0.708333 11.4903 0.541666 11.3403 0.375C11.0903 0.125 10.807 0 10.4903 0C10.007 0 9.62366 0.275 9.34032 0.825L6.91532 5.175C6.86532 5.29167 6.75282 5.4125 6.57782 5.5375C6.40282 5.6625 6.24032 5.73333 6.09032 5.75L1.06532 6.725C0.515323 6.80833 0.181989 7.075 0.0653226 7.525C-0.0846775 7.95833 0.0236561 8.375 0.390323 8.775L3.91532 12.5C3.99866 12.6167 4.07366 12.775 4.14032 12.975C4.22366 13.175 4.24866 13.3417 4.21532 13.475L3.56532 18.575C3.53199 19.0083 3.63199 19.3583 3.86532 19.625C4.08199 19.875 4.36532 20 4.71532 20Z"
+                                        fill="#FFBC00" />
+                                </svg>
+                            </div>
+                            <p>340+ Ratings & Reviews</p>
+                        </div>
+                        <div class="flex column gap" id="hero-title">
+                            <div class="title-1 text-gradient">CarConnect Smart
+                                Car Intercom</div>
+                            <p class="title-2" style="font-size: 24px;">Stay in
+                                Touch with Your Vehicle from anywhere, anytime.</p>
+                            <p class="price">₹399/- <span class="original-price">MRP 499/-</span></p>
+                        </div>
+                        <ul class="flex column gap" style="margin-left: 1em;">
+                            <li style="list-style:disc;">Receive Calls for your car related issues</li>
+                            <li style="list-style:disc;">Phone number not shared between parties</li>
+                            <li style="list-style:disc;">No App required by 3rd party for calling</li>
+                            <li style="list-style:disc;">Protects your car from unnecessary damages</li>
+                            <li style="list-style:disc;">Contribute to more organized, safer streets</li>
+                        </ul>
+
+                        <div class="flex middle gap">
+
+                            <button class="fab shiny-button openPopupButton"
+                                style="background: none; border: 2px solid var(--button); padding: 0.5em; height: auto; color: var(--button);">
+
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                    class="bi bi-qr-code-scan" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 .5A.5.5 0 0 1 .5 0h3a.5.5 0 0 1 0 1H1v2.5a.5.5 0 0 1-1 0zm12 0a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0V1h-2.5a.5.5 0 0 1-.5-.5M.5 12a.5.5 0 0 1 .5.5V15h2.5a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5m15 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1 0-1H15v-2.5a.5.5 0 0 1 .5-.5M4 4h1v1H4z" />
+                                    <path d="M7 2H2v5h5zM3 3h3v3H3zm2 8H4v1h1z" />
+                                    <path d="M7 9H2v5h5zm-4 1h3v3H3zm8-6h1v1h-1z" />
+                                    <path
+                                        d="M9 2h5v5H9zm1 1v3h3V3zM8 8v2h1v1H8v1h2v-2h1v2h1v-1h2v-1h-3V8zm2 2H9V9h1zm4 2h-1v1h-2v1h3zm-4 2v-1H8v1z" />
+                                    <path d="M12 9h2V8h-2z" />
+                                </svg>
+                                Try Now Before You Buy
+                            </button>
+                        </div>
+                        <div class="flex middle between policy">
+                            <div class="flex column middle gap-s policy-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-truck" viewBox="0 0 16 16">
+                                    <path
+                                        d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5zm1.294 7.456A2 2 0 0 1 4.732 11h5.536a2 2 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456M12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2m9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                                </svg>
+                                <p>Free Delivery</p>
+                            </div>
+                            <div class="flex column middle gap-s policy-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-cash" viewBox="0 0 16 16">
+                                    <path d="M8 10a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                    <path
+                                        d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V6a2 2 0 0 1-2-2z" />
+                                </svg>
+                                <p>COD Available </p>
+                            </div>
+                            <div class="flex column middle gap-s policy-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+                                    class="bi bi-box2" viewBox="0 0 16 16">
+                                    <path
+                                        d="M2.95.4a1 1 0 0 1 .8-.4h8.5a1 1 0 0 1 .8.4l2.85 3.8a.5.5 0 0 1 .1.3V15a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1V4.5a.5.5 0 0 1 .1-.3zM7.5 1H3.75L1.5 4h6zm1 0v3h6l-2.25-3zM15 5H1v10h14z" />
+                                </svg>
+                                <p>7 Day Easy Returns</p>
+                            </div>
+                        </div>
+                        <div class="flex column gap" id="eng-hind">
+                            <!-- <div class="flex middle gap-1 eq">
+                                <button id="english-btn" class="outline fill" style="height: 48px;">English</button>
+                                <button id="hindi-btn" class="outline" style="height: 48px;">Hindi</button>
+                            </div> -->
+                            <div class="flex middle gap-1 " style="width: 100%;" id="btn-parent">
+                                <button class="highlight-font openPopupButton1"
+                                    style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;width:100%;">
+                                    Buy Now
+                                </button>
+                                <!-- <form>
+                                    <script src="https://checkout.razorpay.com/v1/payment-button.js"
+                                        data-payment_button_id="pl_OWSAUgfiCVImuT" async> </script>
+                                </form> -->
+                                <a href="https://amzn.in/d/iLqHZFM" target="_blank" id="buy-now">
+                                    <button class="highlight-font"
+                                        style="height: 56px;display:flex;gap:0.5em;align-items:center;background:#FF9900;color:#000000;width:100%;">
+                                        <img src="/assets/svg/amazon.svg" alt="" style="margin: 0;">
+                                        Buy On Amazon
+                                    </button>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
+        </div>
+        <style>
+            .card {
+               
+                border-radius: .5rem;
+                padding: .5rem;
+                max-width: 300px;
+                margin: 0 auto;
+                animation: fade 250ms ease-in-out forwards;
+                width: 750px;
+                max-width: 100%;
+           
+            }
+
+            .form-group:last-child {
+                margin: 0;
+            }
+
+            
+            .step-title {
+                margin: 0;
+                margin-bottom: 1rem;
+                text-align: center;
+                font-size: 25px;
+                font-weight: 500;
+                text-align: start;
+            }
+
+            .card.active {
+                animation: slide 250ms 125ms ease-in-out both;
+            }
+
+            .multi-step-form {
+                overflow: hidden;
+                position: relative;
+            }
+
+            .hide {
+                display: none;
+            }
+
+            @keyframes slide {
+                0% {
+                    transform: translateX(200%);
+                    opacity: 0;
+                }
+
+                100% {
+                    transform: translateX(0);
+                    opacity: 1;
+                }
+            }
+
+            @keyframes fade {
+                0% {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+
+                50% {
+                    transform: scale(.75);
+                    opacity: 0;
+                }
+
+                100% {
+                    opacity: 0;
+                    transform: scale(0);
+                }
+            }
+
+            form {
+                display: flex;
+                justify-content: center;
+                width: 100%;
+            }
+
+            .form_container {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+                justify-content: center;
+             
+                margin-bottom: 1em;
+
+            }
+            .form_container button{
+                height: 45px;
+            }
+            .form_container input,
+            .form_container textarea {
+                width: 100%;
+                background-color: var(--table);
+                outline: none;
+                border: none;
+                border: 1px solid var(--card-border);
+                color: var(--text-color);
+                padding: 0.8em;
+                width: calc(100% - 2em);
+                border-radius: 0.5em;
+                font-size: 18px;
+                font-family: "Bricolage Grotesque", sans-serif;
+            }
+            .form_container input:focus-within,
+            .form_container textarea:focus-within {
+                border-color: #8437F9;
+                border-width: 2px;
+                box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);
+            }
+
+            /*radio*/
+            .radio-button-container {
+                display: flex;
+                align-items: center;
+                gap: 24px;
+                margin-top: 1em;
+                margin-bottom: 1em;
+            }
+
+            .radio-button {
+                display: inline-block;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .radio-button__input {
+                position: absolute;
+                opacity: 0;
+                width: 0;
+                height: 0;
+            }
+
+            .radio-button__label {
+                display: inline-block;
+                padding-left: 30px;
+                padding-top: 0.2em;
+                position: relative;
+                font-size: 15px;
+                color: #f2f2f2;
+                font-weight: 600;
+                cursor: pointer;
+                text-transform: uppercase;
+                transition: all 0.3s ease;
+            }
+
+            .radio-button__custom {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                border-radius: 50%;
+                border: 2px solid #555;
+                transition: all 0.3s ease;
+            }
+
+            .radio-button__input:checked+.radio-button__label .radio-button__custom {
+                background-color: #8437F9;
+                border-color: transparent;
+                transform: scale(0.8);
+                box-shadow: 0 0 20px #8437F980;
+            }
+
+            .radio-button__input:checked+.radio-button__label {
+                color: #8437F9;
+            }
+
+            .radio-button__label:hover .radio-button__custom {
+                transform: scale(1.2);
+                border-color: #8437F9;
+                box-shadow: 0 0 20px #8437F980;
+            }
+
+            #qrCodeContainer {
+                display: none;
+            }
+        </style>
+        <div id="popupOverlay1" class="popup-overlay1" style="display: flex;">
+            <div id="popup" class="popup-content1" style="background:var(--table);">
+                <form data-multi-step class="multi-step-form">
+                    <div class="card" data-step>
+                        <h3 class="step-title">Your Cart</h3>
+                        <div class="form_container">
+                            <div class="flex eq wrap" >
+                                <div class="flex middle center">
+                                    <img src="/assets/homelink/doorbell_india1.png" alt=""
+                                        style="width: 250px;">
+                                </div>
+                                <div class="flex column gap-s">
+
+                                    <div class="flex column gap-s" style="flex: 1;" id="quant_div">
+                                        <div class="prdouct_name"
+                                            style="text-align: start;font-size:26px;font-weight:700">
+                                            Home Link Smart Doorbell
+                                        </div>
+                                        <!-- <span style="text-align: start;font-size:14px">Stay connected to your home, even when you're away.</span> -->
+                                        <div class="flex middle between ">
+                                            <span>Quantity</span>
+                                            <div>
+                                                <div class="flex middle gap "
+                                                    style="border: 1px solid var(--sub-text-color); border-radius:0.5em">
+                                                    <div class="addOne flex middle center"
+                                                        style="padding:0.5em;cursor:pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor"
+                                                            class="bi bi-plus-lg" viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                                        </svg>
+                                                    </div>
+                                                    <span id="Quantity">1</span>
+                                                    <div class="minusOne flex middle center"
+                                                        style="padding:0.5em;cursor:pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                                                            height="16" fill="currentColor" class="bi bi-dash"
+                                                            viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="flex middle between "
+                                        style="padding: 1em;border-top:1px dotted var(--sub-text-color)">
+                                        <span>Total</span>
+                                        <p id="total">Rs. 399</p>
+                                    </div>
+                                    <button type="button" data-next>Next</button>
+                                </div>
+                             
+                            </div>
+                            
+                        </div>
+                    
+                    </div>
+                    <script>
+                        const quantityElement = document.querySelector("#Quantity");
+                        const totalElement = document.querySelector("#total");
+                        addButton = document.querySelector(".addOne");
+                        minusButton = document.querySelector(".minusOne");
+                        const totalPrice = 399;
+                        addButton.addEventListener("click", function () {
+                            debugger
+                            let currentQuantity = parseInt(quantityElement.innerText);
+                            if (currentQuantity < 5) {
+
+                                const warning = document.getElementById("quantity-warning");
+
+                                currentQuantity += 1;
+                                quantityElement.textContent = currentQuantity
+                                totalElement.textContent = `Rs ${totalPrice * currentQuantity}`
+                            }
+
+
+                        })
+                        minusButton.addEventListener("click", function () {
+                            let currentQuantity = parseInt(quantityElement.innerText);
+                            if (currentQuantity > 0) {
+                                currentQuantity -= 1;
+                                quantityElement.textContent = currentQuantity
+                                totalElement.textContent = `Rs ${totalPrice * currentQuantity}`
+                            }
+
+
+                        })
+                    </script>
+                    <div class="card" data-step>
+                        <h3 class="step-title">Shipping Details</h3>
+                        <div class="form_container">
+                            <div class="flex eq  wrap gap-1">
+                                <div class="flex column gap-s">
+                                    <label for="" style="text-align: start;">Name</label>
+                                    <input type="text" name="email" id="">
+                                </div>
+                                <div class="flex column gap-s">
+                                    <label for="" style="text-align: start;">Mobile</label>
+                                    <input type="text" name="email" id="">
+                                </div>
+                            </div>
+                            <div class="flex column gap-s">
+                                <label for="" style="text-align: start;">Email</label>
+                                <input type="text" name="email" id="">
+                            </div>
+                            <div class="flex column gap-s">
+                                <label for="" style="text-align: start;">Shipping Address</label>
+                                <textarea name="" id=""></textarea>
+                            </div>
+                            <div class="flex eq  wrap center gap-1">
+                                <div class="flex column gap-s">
+                                    <label for="" style="text-align: start;">City</label>
+                                    <input type="text" name="" id="">
+                                </div>
+                                <div class="flex column gap-s">
+                                    <label for="" style="text-align: start;">Pin Code</label>
+                                    <input type="pincode" name="" id="">
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex middle between">
+                            <button type="button" data-previous>Previous</button>
+                        <button type="button" data-next>Next</button>
+                        </div>
+                    </div>
+                    <div class="card" data-step>
+                        <h3 class="step-title">Payment Detail</h3>
+                        <div class="form_container">
+                            <div class="radio-button-container fle center ">
+                                <div class="radio-button">
+                                    <input type="radio" class="radio-button__input" id="radio1"
+                                        name="radio-group">
+                                    <label class="radio-button__label" for="radio1">
+                                        <span class="radio-button__custom"></span>
+                                        Cash On Delivery
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input type="radio" class="radio-button__input" id="radio2"
+                                        name="radio-group">
+                                    <label class="radio-button__label" for="radio2">
+                                        <span class="radio-button__custom"></span>
+                                        Using Razorpay
+                                    </label>
+                                </div>
+                                <div class="radio-button">
+                                    <input type="radio" class="radio-button__input" id="radio3"
+                                        name="radio-group">
+                                    <label class="radio-button__label" for="radio3">
+                                        <span class="radio-button__custom"></span>
+                                        Pay Now
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="flex middle between">
+                        <button type="button" data-previous>Previous</button>
+                        <button type="submit">Submit</button></div>
+                    </div>
+                </form>
+
+            </div>
+        </div>
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+        <script>
+            const multiStepForm = document.querySelector("[data-multi-step]")
+            const formSteps = [...multiStepForm.querySelectorAll("[data-step]")]
+            let currentStep = formSteps.findIndex(step => {
+                return step.classList.contains("active")
+            })
+
+            if (currentStep < 0) {
+                currentStep = 0
+                showCurrentStep()
+            }
+
+            multiStepForm.addEventListener("click", e => {
+                let incrementor
+                if (e.target.matches("[data-next]")) {
+                    incrementor = 1
+                } else if (e.target.matches("[data-previous]")) {
+                    incrementor = -1
+                }
+
+                if (incrementor == null) return
+
+                const inputs = [...formSteps[currentStep].querySelectorAll("input")]
+                const allValid = inputs.every(input => input.reportValidity())
+                if (allValid) {
+                    currentStep += incrementor
+                    showCurrentStep()
+                }
+            })
+
+            formSteps.forEach(step => {
+                step.addEventListener("animationend", e => {
+                    formSteps[currentStep].classList.remove("hide")
+                    e.target.classList.toggle("hide", !e.target.classList.contains("active"))
+                })
+            })
+
+            function showCurrentStep() {
+                formSteps.forEach((step, index) => {
+                    step.classList.toggle("active", index === currentStep)
+                })
+            }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                const openPopupButtons1 = document.querySelectorAll(".openPopupButton1");
+                const closePopupButton1 = document.getElementById("closePopupButton1");
+                const popupOverlay1 = document.getElementById("popupOverlay1");
+
+                // Open the pop-up for any of the buttons
+                openPopupButtons1.forEach(button => {
+                    button.addEventListener("click", function () {
+                        popupOverlay1.style.display = "flex";
+                    });
+                });
+
+                // Close the pop-up when the close button is clicked
+                closePopupButton1.addEventListener("click", function () {
+                    popupOverlay1.style.display = "none";
+                });
+
+                // Close the pop-up when clicking outside of it
+                popupOverlay1.addEventListener("click", function (event) {
+                    if (event.target === popupOverlay) {
+                        popupOverlay1.style.display = "none";
+                    }
+                });
+            });
+        </script>
+
+        <div class="grey-section flex column middle gap-2">
+            <section class="footer flex between gap-2 eq wrap">
+                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                    <div class="flex middle" style="gap: 0.2em;">
+                        <h4 class="logo">codebell
+
+                        </h4>
+                    </div>
+                    <p>QR Communication, intercom & tracking
+                        technology.</p>
+                    <div class="flex middle gap-s">
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                                class="bi bi-geo-alt" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                            </svg>
+                        </div>
+
+                        <p>34, 2nd Floor, Corner Market, Malviya Nagar, New Delhi-110017</p>
+                    </div>
+                    <div class="social-links-company">
+                        <a href="https://www.facebook.com/codebell.io"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                                <path
+                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                            </svg>
+                        </a>
+                        <a href="https://www.instagram.com/codebell.io/"> <svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                                <path
+                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                            </svg>
+                        </a>
+
+                        <a href="https://www.linkedin.com/company/codebell/"><svg xmlns="http://www.w3.org/2000/svg"
+                                width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                                <path
+                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                    <h3>Products</h3>
+                    <p><a href="index.html">Codebell Connect</a></p>
+                    <p><a href="home.html">Codebell Home</a></p>
+                    <p><a href="car.html">Codebell Car</a></p>
+                    <p><a href="codebell-sticker.html">Codebell Sticker</a></p>
+                </div>
+                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                    <h3>Pages</h3>
+                    <p><a href="blogs.html"> Blogs</a></p>
+                    <p><a href="about_us.html">About Us</a></p>
+                    <p><a href="user_gallery.html">Social Media</a></p>
+                    <p><a href="terms_of_service.html">Terms of service</a></p>
+
+                </div>
+                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                    <h3>Get in touch</h3>
+                    <p><a href="#" style="display: block;" id="supportLink">
+                            <img src="/assets/compressed-img/car/email_light.webp" alt="" style="height: 25px;">
+                        </a></p>
+                    <p><a href="#" id="businessLink" style="display: block;">
+                            <img src="/assets/compressed-img/car/phone_light.webp" alt="" style="height: 25px;">
+                        </a></p>
+                </div>
+
+            </section>
+
+
+            <div class="footer-bottom flex middle wrap "
+                style="color:var(--sub-text-color); padding-bottom:1em; gap:0.2em;max-width:90%">
+                <p>© 2023, Codebell proudly made in Bharat in (India) </p>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+                    viewBox="0 0 16 16">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                </svg>
+                <a href="refund_policy.html">Refund policy</a>
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+                    viewBox="0 0 16 16">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                </svg>
+                <a href="privacy.html">Privacy policy</a>
+
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+                    viewBox="0 0 16 16">
+                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                </svg>
+                <a href="shipping_policy.html">Shipping policy </a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="darkmode.js"></script>
+    <script src="newscript1.js"></script>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGCL4TN4" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</body>
+
+</html>
