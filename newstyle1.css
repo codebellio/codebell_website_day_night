@@ -37,6 +37,7 @@
     --button: #030319;
     --table: #E8E8F7;
     --sub-bg-color: #FFFFFF;
+    --wizard:#FFFFFF;
 
 }
 
@@ -50,6 +51,7 @@
     --table: #191919;
     --button: #8437F9;
     --sub-bg-color: #151819;
+    --wizard:#191919;
 }
 
 /* scroll bar css */

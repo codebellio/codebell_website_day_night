@@ -710,7 +710,7 @@
                 max-width: 100%;
                 background: var(--white);
                 border-radius: 5px;
-                height: 80vh;
+                height: auto;
             }
 
             .wrapper .header {
@@ -774,11 +774,12 @@
                 flex: 1;
             }
 
-            .wrapper .form_wrap h2 {
+            .wrapper .form_wrap h2,
+            .data_info h2 {
                 color: var(--header-clr);
                 text-align: center;
                 text-transform: capitalize;
-                margin-bottom: 20px;
+                margin-bottom: 1.5em;
             }
 
             .wrapper .form_wrap .input_wrap:last-child {
@@ -809,7 +810,7 @@
             .form_container input,
             .form_container textarea {
                 width: 100%;
-                background-color: var(--table);
+                background-color: var(--wizard);
                 outline: none;
                 border: none;
                 border: 1px solid var(--card-border);
@@ -828,12 +829,14 @@
                 box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);
             }
 
-            .wrapper .btns_wrap {}
+            .btns_wrap {
+                margin-top: 1em;
+            }
 
             .wrapper .btns_wrap .common_btns {
                 display: flex;
                 gap: 1em;
-                margin-top: 1em;
+
 
             }
 
@@ -843,7 +846,8 @@
 
             .wrapper .btns_wrap .common_btns button {
                 width: 50%;
-                height: 45px;
+                height: 40px;
+
             }
 
 
@@ -953,6 +957,7 @@
                 border-radius: 50%;
                 border: 2px solid #555;
                 transition: all 0.3s ease;
+
             }
 
             .radio-button__input:checked+.radio-button__label .radio-button__custom {
@@ -960,6 +965,7 @@
                 border-color: transparent;
                 transform: scale(0.8);
                 box-shadow: 0 0 20px #8437F980;
+
             }
 
             .radio-button__input:checked+.radio-button__label {
@@ -977,7 +983,7 @@
             }
         </style>
         <div id="popupOverlay1" class="popup-overlay1" style="display: flex;">
-            <div id="popup" class="popup-content1" style="background:var(--table);">
+            <div id="popup" class="popup-content1" style="background:var(--wizard);">
                 <div class="wrapper">
                     <div class="header">
                         <ul>
@@ -1000,383 +1006,479 @@
                     </div>
                     <div class="form_wrap">
                         <div class="form_1 data_info">
-                            <h2>Your Cart</h2>
+                            <h2 style="text-align: start;">Your Cart</h2>
                             <form>
-                                <div class="form_container">
-                                    <div class="flex eq wrap">
-                                        <div class="flex middle center">
+                                <div class="form_container" style="display: flex;">
+
+                                    <!-- <div class="flex middle center">
                                             <img src="/assets/homelink/doorbell_india1.png" alt=""
                                                 style="width: 250px;">
-                                        </div>
-                                        <div class="flex column gap-s">
+                                        </div> -->
+                                    <div class="flex column gap-s">
 
-                                            <div class="flex column gap-s" style="flex: 1;" id="quant_div">
-                                                <div class="prdouct_name"
-                                                    style="text-align: start;font-size:26px;font-weight:700">
-                                                    Home Link Smart Doorbell
-                                                </div>
-                                                <!-- <span style="text-align: start;font-size:14px">Stay connected to your home, even when you're away.</span> -->
-                                                <div class="flex middle between ">
-                                                    <span>Quantity</span>
+                                        <div class="flex column gap-s" style="flex: 1;" id="quant_div">
+
+                                            <div class="flex between">
+                                                <div class="flex gap-1 middle">
+
                                                     <div>
-                                                        <div class="flex middle gap "
-                                                            style="border: 1px solid var(--sub-text-color); border-radius:0.5em">
-                                                            <div class="addOne flex middle center"
-                                                                style="padding:0.5em;cursor:pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                    height="16" fill="currentColor"
-                                                                    class="bi bi-plus-lg" viewBox="0 0 16 16">
-                                                                    <path fill-rule="evenodd"
-                                                                        d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
-                                                                </svg>
-                                                            </div>
-                                                            <span id="Quantity">1</span>
-                                                            <div class="minusOne flex middle center"
-                                                                style="padding:0.5em;cursor:pointer">
-                                                                <svg xmlns="http://www.w3.org/2000/svg" width="16"
-                                                                    height="16" fill="currentColor" class="bi bi-dash"
-                                                                    viewBox="0 0 16 16">
-                                                                    <path
-                                                                        d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
-                                                                </svg>
-                                                            </div>
+                                                        <img src="/assets/homelink/doorbell_india1.png" alt=""
+                                                            style="width: 40px;">
+                                                    </div>
+                                                    <div class="flex column gap-s ">
+                                                        <div class="prdouct_name"
+                                                            style="text-align: start;font-size:26px;font-weight:700">
+                                                            Home Link Smart Doorbell
                                                         </div>
+                                                        <span style="text-align: start;">Quantity</span>
                                                     </div>
                                                 </div>
-
-                                            </div>
-                                            <div class="flex middle between "
-                                                style="padding: 1em;border-top:1px dotted var(--sub-text-color)">
-                                                <span>Total</span>
-                                                <p id="total">Rs. 399</p>
+                                                <div class="flex middle gap "
+                                                    style="border: 1px solid var(--sub-text-color); border-radius:0.5em;height:40px;">
+                                                    <div class="addOne flex middle center"
+                                                        style="padding:0.5em;cursor:pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-plus-lg"
+                                                            viewBox="0 0 16 16">
+                                                            <path fill-rule="evenodd"
+                                                                d="M8 2a.5.5 0 0 1 .5.5v5h5a.5.5 0 0 1 0 1h-5v5a.5.5 0 0 1-1 0v-5h-5a.5.5 0 0 1 0-1h5v-5A.5.5 0 0 1 8 2" />
+                                                        </svg>
+                                                    </div>
+                                                    <span id="Quantity">1</span>
+                                                    <div class="minusOne flex middle center"
+                                                        style="padding:0.5em;cursor:pointer">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                            fill="currentColor" class="bi bi-dash" viewBox="0 0 16 16">
+                                                            <path
+                                                                d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8" />
+                                                        </svg>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
+
+                                    </div>
+                                    <div class="flex middle between gap-s " style="padding:1em 0em;">
+
+                                        <input type="text" name="" id="" placeholder="Discount code"
+                                            style="border-radius:2em">
+                                        <button>Apply</button>
+                                    </div>
+                                    <div class="flex middle between " style="padding:1em 0em;">
+                                        <span>Subtotal</span>
+                                        <p class="total">Rs. 399</p>
+                                    </div>
+                                    <div class="flex middle between " style="padding:1em 0em;">
+                                        <span>Shipping Charge
+                                        </span>
+                                        <p>FREE</p>
+                                    </div>
+                                    <div class="flex middle between "
+                                        style="padding:1em 0em;border-top:1px dotted var(--sub-text-color)">
+                                        <span>Total</span>
+                                        <p class="total">Rs. 399</p>
                                     </div>
                                 </div>
                             </form>
                         </div>
-                        <script>
-                            const quantityElement = document.querySelector("#Quantity");
-                            const totalElement = document.querySelector("#total");
-                            addButton = document.querySelector(".addOne");
-                            minusButton = document.querySelector(".minusOne");
-                            const totalPrice = 399;
-                            addButton.addEventListener("click", function () {
-                                debugger
-                                let currentQuantity = parseInt(quantityElement.innerText);
-                                if (currentQuantity < 5) {
 
-                                    const warning = document.getElementById("quantity-warning");
+                    </div>
+                    <script>
+                        const quantityElement = document.querySelector("#Quantity");
+                        const totalElements = document.querySelectorAll(".total");
+                        const addButton = document.querySelector(".addOne");
+                        const minusButton = document.querySelector(".minusOne");
+                        const totalPrice = 399;
 
-                                    currentQuantity += 1;
-                                    quantityElement.textContent = currentQuantity
-                                    totalElement.textContent = `Rs ${totalPrice * currentQuantity}`
-                                }
+                        addButton.addEventListener("click", function () {
+                            let currentQuantity = parseInt(quantityElement.innerText);
+                            if (currentQuantity < 5) {
+                                currentQuantity += 1;
+                                quantityElement.textContent = currentQuantity;
+                                totalElements.forEach(function (totalElement) {
+                                    totalElement.textContent = `Rs ${totalPrice * currentQuantity}`;
+                                });
+                            }
+                        });
 
+                        minusButton.addEventListener("click", function () {
+                            let currentQuantity = parseInt(quantityElement.innerText);
+                            if (currentQuantity > 0) {
+                                currentQuantity -= 1;
+                                quantityElement.textContent = currentQuantity;
+                                totalElements.forEach(function (totalElement) {
+                                    totalElement.textContent = `Rs ${totalPrice * currentQuantity}`;
+                                });
+                            }
+                        });
 
-                            })
-                            minusButton.addEventListener("click", function () {
-                                let currentQuantity = parseInt(quantityElement.innerText);
-                                if (currentQuantity > 0) {
-                                    currentQuantity -= 1;
-                                    quantityElement.textContent = currentQuantity
-                                    totalElement.textContent = `Rs ${totalPrice * currentQuantity}`
-                                }
-
-
-                            })
-                        </script>
-                        <div class="form_2 data_info" style="display: none;">
-                            <h2>Shipping Details</h2>
-                            <form>
-                                <div class="form_container">
-                                    <div class="flex eq  wrap gap-1">
-                                        <div class="flex column gap-s">
-                                            <label for="" style="text-align: start;">Name</label>
-                                            <input type="text" name="email" id="">
-                                        </div>
-                                        <div class="flex column gap-s">
-                                            <label for="" style="text-align: start;">Mobile</label>
-                                            <input type="text" name="email" id="">
-                                        </div>
+                    </script>
+                    <div class="form_2 data_info" style="display: none;">
+                        <h2 style="text-align: start;">Shipping Details</h2>
+                        <form>
+                            <div class="form_container">
+                                <div class="flex eq  wrap gap-1">
+                                    <div class="flex column gap-s">
+                                        <label for="" style="text-align: start;">Name</label>
+                                        <input type="text" name="email" id="">
                                     </div>
+                                    <div class="flex column gap-s">
+                                        <label for="" style="text-align: start;">Mobile</label>
+                                        <input type="text" name="email" id="">
+                                    </div>
+                                </div>
+                                <div class="flex eq  wrap gap-1">
                                     <div class="flex column gap-s">
                                         <label for="" style="text-align: start;">Email</label>
                                         <input type="text" name="email" id="">
                                     </div>
                                     <div class="flex column gap-s">
-                                        <label for="" style="text-align: start;">Shipping Address</label>
-                                        <textarea name="" id=""></textarea>
-                                    </div>
-                                    <div class="flex eq  wrap center gap-1">
-                                        <div class="flex column gap-s">
-                                            <label for="" style="text-align: start;">City</label>
-                                            <input type="text" name="" id="">
-                                        </div>
-                                        <div class="flex column gap-s">
-                                            <label for="" style="text-align: start;">Pin Code</label>
-                                            <input type="pincode" name="" id="">
-                                        </div>
-
+                                        <label for="" style="text-align: start;">Pin Code</label>
+                                        <input type="pincode" name="" id="">
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                        <div class="form_3 data_info" style="display: none;">
-                            <h2>Payment Detail</h2>
-                            <form>
-                                <div class="form_container">
-                                    <div class="radio-button-container fle center ">
-                                        <div class="radio-button">
-                                            <input type="radio" class="radio-button__input" id="radio1"
-                                                name="radio-group">
-                                            <label class="radio-button__label" for="radio1">
-                                                <span class="radio-button__custom"></span>
-                                                Cash On Delivery
-                                            </label>
-                                        </div>
-                                        <div class="radio-button">
-                                            <input type="radio" class="radio-button__input" id="radio2"
-                                                name="radio-group">
-                                            <label class="radio-button__label" for="radio2">
-                                                <span class="radio-button__custom"></span>
-                                                Using Razorpay
-                                            </label>
-                                        </div>
-                                        <div class="radio-button">
-                                            <input type="radio" class="radio-button__input" id="radio3"
-                                                name="radio-group">
-                                            <label class="radio-button__label" for="radio3">
-                                                <span class="radio-button__custom"></span>
-                                                Pay Now
-                                            </label>
-                                        </div>
+                                <div class="flex column gap-s">
+                                    <label for="" style="text-align: start;">Shipping Address</label>
+                                    <textarea name="" id=""></textarea>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <style>
+                        .payment-card {
+                            display: flex;
+                            padding: 1em;
+                            border: 1px solid var(--card-border);
+                            width: 100%;
+                            justify-content: space-between;
+                            border-radius: 0.5em;
 
+                        }
+
+                        .payment-card:hover,
+                        .payment-card:focus-within {
+                            border-color: #8437F9;
+
+                        }
+                    </style>
+                    <div class="form_3 data_info" style="display: none;">
+                        <h2 style="text-align: start;">Payment Detail</h2>
+                        <form>
+                            <div class="form_container">
+                                <div class="radio-button-container  ">
+                                    <div class="flex column gap-1" style="width: calc(100% - 2em);">
+                                        <div class="payment-card">
+                                            <div class="radio-button">
+                                                <input type="radio" class="radio-button__input" id="radio1"
+                                                    name="radio-group">
+                                                <label class="radio-button__label" for="radio1"
+                                                    style="color: var(--text-color);">
+                                                    <span class="radio-button__custom"></span>
+                                                    Cash On Delivery
+                                                </label>
+                                            </div>
+                                            <div class="flex middle gap-s" style="max-width:10% ;">
+                                                <img src="/cards/cod.png" alt=""
+                                                    style="margin:0;border-radius:0.2em">
+                                            </div>
+
+                                        </div>
+                                        <div class="payment-card">
+                                            <div class="radio-button">
+                                                <input type="radio" class="radio-button__input" id="radio2"
+                                                    name="radio-group">
+                                                <label class="radio-button__label" for="radio2"
+                                                    style=" color: var(--text-color);">
+                                                    <span class="radio-button__custom"></span>
+                                                    Using Razorpay
+                                                </label>
+                                            </div>
+                                            <div class="flex middle gap-s" style="max-width:15% ;">
+                                                <img src="/cards/razorpay.png" alt=""
+                                                    style="margin:0;border-radius:0.2em">
+                                            </div>
+                                        </div>
+                                        <div class="payment-card">
+                                            <div class="radio-button">
+                                                <input type="radio" class="radio-button__input" id="radio3"
+                                                    name="radio-group">
+                                                <label class="radio-button__label" for="radio3"
+                                                    style=" color: var(--text-color);">
+                                                    <span class="radio-button__custom"></span>
+
+                                                    PhonePe Payment Gateway (UPI, Cards)
+                                                </label>
+                                            </div>
+                                            <div class="flex middle gap-s">
+                                                <img src="/cards/upi.svg" alt="">
+                                                <img src="/cards/visa.svg" alt="">
+                                                <img src="/cards/mastercard.svg" alt="">
+                                                <img src="/cards/rupay.svg" alt="">
+                                                <img src="/cards/american.svg" alt="">
+
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="btns_wrap">
-                        <div class="common_btns form_1_btns">
-                            <button type="button" class="btn_next">Next</button>
-                        </div>
-                        <div class="common_btns form_2_btns" style="display: none;">
-                            <button type="button" class="btn_back">Back</button>
-                            <button type="button" class="btn_next">Next</button>
-                        </div>
-                        <div class="common_btns form_3_btns" style="display: none;">
-                            <button type="button" class="btn_back">Back</button>
-                            <button type="button" class="btn_done">Done</button>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
-
-                <div class="modal_wrapper">
-                    <div class="shadow"></div>
-                    <div class="success_wrap">
-                        <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
-                        <p>You have successfully completed the process.</p>
+                <div class="btns_wrap">
+                    <div class="common_btns form_1_btns flex eq gap-2">
+                        <button type="button" id="closePopupButton1">Cancel</button>
+                        <button type="button" class="btn_next">Next</button>
+                    </div>
+                    <div class="common_btns form_2_btns flex eq gap-2" style="display: none;">
+                        <button type="button" class="btn_back">Back</button>
+                        <button type="button" class="btn_next">Next</button>
+                    </div>
+                    <div class="common_btns form_3_btns flex eq gap-2" style="display: none;">
+                        <button type="button" class="btn_back">Back</button>
+                        <button type="button" class="btn_done">Done</button>
                     </div>
                 </div>
-
             </div>
-        </div>
-        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-        <script>
-            var form_1 = document.querySelector(".form_1");
-            var form_2 = document.querySelector(".form_2");
-            var form_3 = document.querySelector(".form_3");
 
-
-            var form_1_btns = document.querySelector(".form_1_btns");
-            var form_2_btns = document.querySelector(".form_2_btns");
-            var form_3_btns = document.querySelector(".form_3_btns");
-
-
-            var form_1_next_btn = document.querySelector(".form_1_btns .btn_next");
-            var form_2_back_btn = document.querySelector(".form_2_btns .btn_back");
-            var form_2_next_btn = document.querySelector(".form_2_btns .btn_next");
-            var form_3_back_btn = document.querySelector(".form_3_btns .btn_back");
-
-            var form_2_progessbar = document.querySelector(".form_2_progessbar");
-            var form_3_progessbar = document.querySelector(".form_3_progessbar");
-
-            var btn_done = document.querySelector(".btn_done");
-            var modal_wrapper = document.querySelector(".modal_wrapper");
-            var shadow = document.querySelector(".shadow");
-
-            form_1_next_btn.addEventListener("click", function () {
-                form_1.style.display = "none";
-                form_2.style.display = "block";
-
-                form_1_btns.style.display = "none";
-                form_2_btns.style.display = "flex";
-
-                form_2_progessbar.classList.add("active");
-            });
-
-            form_2_back_btn.addEventListener("click", function () {
-                form_1.style.display = "block";
-                form_2.style.display = "none";
-
-                form_1_btns.style.display = "flex";
-                form_2_btns.style.display = "none";
-
-                form_2_progessbar.classList.remove("active");
-            });
-
-            form_2_next_btn.addEventListener("click", function () {
-                form_2.style.display = "none";
-                form_3.style.display = "block";
-
-                form_3_btns.style.display = "flex";
-                form_2_btns.style.display = "none";
-
-                form_3_progessbar.classList.add("active");
-            });
-
-            form_3_back_btn.addEventListener("click", function () {
-                form_2.style.display = "block";
-                form_3.style.display = "none";
-
-                form_3_btns.style.display = "none";
-                form_2_btns.style.display = "flex";
-
-                form_3_progessbar.classList.remove("active");
-            });
-
-            btn_done.addEventListener("click", function () {
-                modal_wrapper.classList.add("active");
-            })
-
-            shadow.addEventListener("click", function () {
-                modal_wrapper.classList.remove("active");
-            })
-        </script>
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const openPopupButtons1 = document.querySelectorAll(".openPopupButton1");
-                const closePopupButton1 = document.getElementById("closePopupButton1");
-                const popupOverlay1 = document.getElementById("popupOverlay1");
-
-                // Open the pop-up for any of the buttons
-                openPopupButtons1.forEach(button => {
-                    button.addEventListener("click", function () {
-                        popupOverlay1.style.display = "flex";
-                    });
-                });
-
-                // Close the pop-up when the close button is clicked
-                closePopupButton1.addEventListener("click", function () {
-                    popupOverlay1.style.display = "none";
-                });
-
-                // Close the pop-up when clicking outside of it
-                popupOverlay1.addEventListener("click", function (event) {
-                    if (event.target === popupOverlay) {
-                        popupOverlay1.style.display = "none";
-                    }
-                });
-            });
-        </script>
-
-        <div class="grey-section flex column middle gap-2">
-            <section class="footer flex between gap-2 eq wrap">
-                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
-                    <div class="flex middle" style="gap: 0.2em;">
-                        <h4 class="logo">codebell
-
-                        </h4>
-                    </div>
-                    <p>QR Communication, intercom & tracking
-                        technology.</p>
-                    <div class="flex middle gap-s">
-                        <div>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
-                                class="bi bi-geo-alt" viewBox="0 0 16 16">
-                                <path
-                                    d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
-                                <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
-                            </svg>
-                        </div>
-
-                        <p>34, 2nd Floor, Corner Market, Malviya Nagar, New Delhi-110017</p>
-                    </div>
-                    <div class="social-links-company">
-                        <a href="https://www.facebook.com/codebell.io"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
-                                <path
-                                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
-                            </svg>
-                        </a>
-                        <a href="https://www.instagram.com/codebell.io/"> <svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
-                                <path
-                                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
-                            </svg>
-                        </a>
-
-                        <a href="https://www.linkedin.com/company/codebell/"><svg xmlns="http://www.w3.org/2000/svg"
-                                width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
-                                <path
-                                    d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
-                            </svg>
-                        </a>
-                    </div>
+            <div class="modal_wrapper">
+                <div class="shadow"></div>
+                <div class="success_wrap">
+                    <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+                    <p>You have successfully completed the process.</p>
                 </div>
-                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
-                    <h3>Products</h3>
-                    <p><a href="index.html">Codebell Connect</a></p>
-                    <p><a href="home.html">Codebell Home</a></p>
-                    <p><a href="car.html">Codebell Car</a></p>
-                    <p><a href="codebell-sticker.html">Codebell Sticker</a></p>
-                </div>
-                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
-                    <h3>Pages</h3>
-                    <p><a href="blogs.html"> Blogs</a></p>
-                    <p><a href="about_us.html">About Us</a></p>
-                    <p><a href="user_gallery.html">Social Media</a></p>
-                    <p><a href="terms_of_service.html">Terms of service</a></p>
-
-                </div>
-                <div class="flex column gap" style="color: var(--text-color); min-width:250px">
-                    <h3>Get in touch</h3>
-                    <p><a href="#" style="display: block;" id="supportLink">
-                            <img src="/assets/compressed-img/car/email_light.webp" alt="" style="height: 25px;">
-                        </a></p>
-                    <p><a href="#" id="businessLink" style="display: block;">
-                            <img src="/assets/compressed-img/car/phone_light.webp" alt="" style="height: 25px;">
-                        </a></p>
-                </div>
-
-            </section>
-
-
-            <div class="footer-bottom flex middle wrap "
-                style="color:var(--sub-text-color); padding-bottom:1em; gap:0.2em;max-width:90%">
-                <p>© 2023, Codebell proudly made in Bharat in (India) </p>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                    viewBox="0 0 16 16">
-                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                </svg>
-                <a href="refund_policy.html">Refund policy</a>
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                    viewBox="0 0 16 16">
-                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                </svg>
-                <a href="privacy.html">Privacy policy</a>
-
-                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
-                    viewBox="0 0 16 16">
-                    <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
-                </svg>
-                <a href="shipping_policy.html">Shipping policy </a>
             </div>
 
         </div>
     </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script>
+        var form_1 = document.querySelector(".form_1");
+        var form_2 = document.querySelector(".form_2");
+        var form_3 = document.querySelector(".form_3");
 
+
+        var form_1_btns = document.querySelector(".form_1_btns");
+        var form_2_btns = document.querySelector(".form_2_btns");
+        var form_3_btns = document.querySelector(".form_3_btns");
+
+
+        var form_1_next_btn = document.querySelector(".form_1_btns .btn_next");
+        var form_2_back_btn = document.querySelector(".form_2_btns .btn_back");
+        var form_2_next_btn = document.querySelector(".form_2_btns .btn_next");
+        var form_3_back_btn = document.querySelector(".form_3_btns .btn_back");
+
+        var form_2_progessbar = document.querySelector(".form_2_progessbar");
+        var form_3_progessbar = document.querySelector(".form_3_progessbar");
+
+        var btn_done = document.querySelector(".btn_done");
+        var modal_wrapper = document.querySelector(".modal_wrapper");
+        var shadow = document.querySelector(".shadow");
+
+        form_1_next_btn.addEventListener("click", function () {
+            form_1.style.display = "none";
+            form_2.style.display = "block";
+
+            form_1_btns.style.display = "none";
+            form_2_btns.style.display = "flex";
+
+            form_2_progessbar.classList.add("active");
+        });
+
+        form_2_back_btn.addEventListener("click", function () {
+            form_1.style.display = "block";
+            form_2.style.display = "none";
+
+            form_1_btns.style.display = "flex";
+            form_2_btns.style.display = "none";
+
+            form_2_progessbar.classList.remove("active");
+        });
+
+        form_2_next_btn.addEventListener("click", function () {
+            form_2.style.display = "none";
+            form_3.style.display = "block";
+
+            form_3_btns.style.display = "flex";
+            form_2_btns.style.display = "none";
+
+            form_3_progessbar.classList.add("active");
+        });
+
+        form_3_back_btn.addEventListener("click", function () {
+            form_2.style.display = "block";
+            form_3.style.display = "none";
+
+            form_3_btns.style.display = "none";
+            form_2_btns.style.display = "flex";
+
+            form_3_progessbar.classList.remove("active");
+        });
+
+        btn_done.addEventListener("click", function () {
+            modal_wrapper.classList.add("active");
+        })
+
+        shadow.addEventListener("click", function () {
+            modal_wrapper.classList.remove("active");
+        })
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const openPopupButtons1 = document.querySelectorAll(".openPopupButton1");
+            const closePopupButton1 = document.getElementById("closePopupButton1");
+            const popupOverlay1 = document.getElementById("popupOverlay1");
+
+            // Open the pop-up for any of the buttons
+            openPopupButtons1.forEach(button => {
+                button.addEventListener("click", function () {
+                    popupOverlay1.style.display = "flex";
+                });
+            });
+
+            // Close the pop-up when the close button is clicked
+            closePopupButton1.addEventListener("click", function () {
+                popupOverlay1.style.display = "none";
+            });
+
+            // Close the pop-up when clicking outside of it
+            popupOverlay1.addEventListener("click", function (event) {
+                if (event.target === popupOverlay) {
+                    popupOverlay1.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <div class="grey-section flex column middle gap-2">
+        <section class="footer flex between gap-2 eq wrap">
+            <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                <div class="flex middle" style="gap: 0.2em;">
+                    <h4 class="logo">codebell
+
+                    </h4>
+                </div>
+                <p>QR Communication, intercom & tracking
+                    technology.</p>
+                <div class="flex middle gap-s">
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor"
+                            class="bi bi-geo-alt" viewBox="0 0 16 16">
+                            <path
+                                d="M12.166 8.94c-.524 1.062-1.234 2.12-1.96 3.07A32 32 0 0 1 8 14.58a32 32 0 0 1-2.206-2.57c-.726-.95-1.436-2.008-1.96-3.07C3.304 7.867 3 6.862 3 6a5 5 0 0 1 10 0c0 .862-.305 1.867-.834 2.94M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10" />
+                            <path d="M8 8a2 2 0 1 1 0-4 2 2 0 0 1 0 4m0 1a3 3 0 1 0 0-6 3 3 0 0 0 0 6" />
+                        </svg>
+                    </div>
+
+                    <p>34, 2nd Floor, Corner Market, Malviya Nagar, New Delhi-110017</p>
+                </div>
+                <div class="social-links-company">
+                    <a href="https://www.facebook.com/codebell.io"><svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/codebell.io/"> <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                            height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+                    </a>
+
+                    <a href="https://www.linkedin.com/company/codebell/"><svg xmlns="http://www.w3.org/2000/svg"
+                            width="16" height="16" fill="currentColor" class="bi bi-linkedin" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854V1.146zm4.943 12.248V6.169H2.542v7.225h2.401zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248-.822 0-1.359.54-1.359 1.248 0 .694.521 1.248 1.327 1.248h.016zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016a5.54 5.54 0 0 1 .016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225h2.4z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                <h3>Products</h3>
+                <p><a href="index.html">Codebell Connect</a></p>
+                <p><a href="home.html">Codebell Home</a></p>
+                <p><a href="car.html">Codebell Car</a></p>
+                <p><a href="codebell-sticker.html">Codebell Sticker</a></p>
+            </div>
+            <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                <h3>Pages</h3>
+                <p><a href="blogs.html"> Blogs</a></p>
+                <p><a href="about_us.html">About Us</a></p>
+                <p><a href="user_gallery.html">Social Media</a></p>
+                <p><a href="terms_of_service.html">Terms of service</a></p>
+
+            </div>
+            <div class="flex column gap" style="color: var(--text-color); min-width:250px">
+                <h3>Get in touch</h3>
+                <p><a href="#" style="display: block;" id="supportLink">
+                        <img src="/assets/compressed-img/car/email_light.webp" alt="" style="height: 25px;">
+                    </a></p>
+                <p><a href="#" id="businessLink" style="display: block;">
+                        <img src="/assets/compressed-img/car/phone_light.webp" alt="" style="height: 25px;">
+                    </a></p>
+            </div>
+
+        </section>
+
+
+        <div class="footer-bottom flex middle wrap "
+            style="color:var(--sub-text-color); padding-bottom:1em; gap:0.2em;max-width:90%">
+            <p>© 2023, Codebell proudly made in Bharat in (India) </p>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+                viewBox="0 0 16 16">
+                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            </svg>
+            <a href="refund_policy.html">Refund policy</a>
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+                viewBox="0 0 16 16">
+                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            </svg>
+            <a href="privacy.html">Privacy policy</a>
+
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-dot"
+                viewBox="0 0 16 16">
+                <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+            </svg>
+            <a href="shipping_policy.html">Shipping policy </a>
+        </div>
+
+    </div>
+    </div>
+    <script src="api.js"></script>
+    <script src="api.js"></script>
     <script src="darkmode.js"></script>
     <script src="newscript1.js"></script>
     <!-- Google Tag Manager (noscript) -->

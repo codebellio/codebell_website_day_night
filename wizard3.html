@@ -163,41 +163,40 @@
 
 
     <section>
-
+        <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
         <div class="flex gap-1 wrap">
             <div class="flex column gap-1" style="flex:1">
                 <div>
                     <h3>Delivery Information</h3>
-                    <form>
+                    <form id="payment-form">
                         <div class="form_container">
-                            <div class="flex eq  wrap gap-1">
+                            <div class="flex eq wrap gap-1">
                                 <div class="flex column gap-s">
-                                    <label for="" style="text-align: start;">Name</label>
-                                    <input type="text" name="email" id="">
+                                    <label for="name" style="text-align: start;">Name</label>
+                                    <input type="text" name="name" id="name">
                                 </div>
                                 <div class="flex column gap-s">
-                                    <label for="" style="text-align: start;">Mobile</label>
-                                    <input type="text" name="email" id="">
+                                    <label for="mobile" style="text-align: start;">Mobile</label>
+                                    <input type="text" name="mobile" id="mobile">
                                 </div>
                             </div>
                             <div class="flex column gap-s">
-                                <label for="" style="text-align: start;">Email</label>
-                                <input type="text" name="email" id="">
+                                <label for="email" style="text-align: start;">Email</label>
+                                <input type="text" name="email" id="email">
                             </div>
                             <div class="flex column gap-s">
-                                <label for="" style="text-align: start;">Shipping Address</label>
-                                <textarea name="" id=""></textarea>
+                                <label for="address" style="text-align: start;">Shipping Address</label>
+                                <textarea name="address" id="address"></textarea>
                             </div>
-                            <div class="flex eq  wrap center gap-1">
+                            <div class="flex eq wrap center gap-1">
                                 <div class="flex column gap-s">
-                                    <label for="" style="text-align: start;">City</label>
-                                    <input type="text" name="" id="">
+                                    <label for="city" style="text-align: start;">City</label>
+                                    <input type="text" name="city" id="city">
                                 </div>
                                 <div class="flex column gap-s">
-                                    <label for="" style="text-align: start;">Pin Code</label>
-                                    <input type="pincode" name="" id="">
+                                    <label for="pincode" style="text-align: start;">Pin Code</label>
+                                    <input type="text" name="pincode" id="pincode">
                                 </div>
-
                             </div>
                         </div>
                     </form>
@@ -234,9 +233,10 @@
                     </form>
                 </div>
             </div>
-            <div class="flex column " >
+            <div class="flex column ">
                 <h3>Payment Method</h3>
-                <div class="flex column gap-s" style="  padding: 2em;  border-radius: 0.5em;  background-color: var(--sub-bg-color);  margin-top: 1em;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);">
+                <div class="flex column gap-s"
+                    style="  padding: 2em;  border-radius: 0.5em;  background-color: var(--sub-bg-color);  margin-top: 1em;  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1), 0 4px 12px rgba(255, 255, 255, 0.1);">
                     <div class="flex middle center" style="flex: 1;">
                         <img src="/assets/homelink/doorbell_india1.png" alt="" style="width: 220px;">
                     </div>
@@ -273,15 +273,153 @@
                         <span>Total</span>
                         <p id="total">Rs. 399</p>
                     </div>
-                    <button style="margin-top: 1.5em;">Buy Now</button>
+                    <button style="margin-top: 1.5em;" id="rzp-button1">Buy Now</button>
                 </div>
-                
+
 
             </div>
         </div>
     </section>
 
     </div>
+    <script>
+        // Custom debounce function
+        function debounce(func, delay) {
+            let timer;
+            return function (...args) {
+                clearTimeout(timer);
+                timer = setTimeout(() => {
+                    func.apply(this, args);
+                }, delay);
+            };
+        }
+
+        // Function to call API and handle the response
+        // function saveRecord(request_data) {
+        //   debugger
+        //  if (!request_data || !request_data.record) return;
+
+        //   this.data = this.data || {};
+        //   this.data.loading = true;
+
+        //  window.call_api("order", request_data).then((data) => {
+        //      debugger
+        //      console.log(data);
+        //     if (data.Result.Order) {
+        //         if (this.data.order && !this.data.order.UUID) {
+        //             localStorage.removeItem("codebells");
+        //            localStorage.removeItem("plan");
+        //        }
+        //       this.data.order = data.Result.Order;
+        //
+        //       if (this.data.order.Items) {
+        //            var items = JSON.parse(this.data.order.Items);
+        //            this.data.codebells = items.codebells;
+        //           this.data.codebells_ids = Object.keys(this.data.codebells);
+        //           this.data.plan = items.plan;
+        //       }
+        //
+        //        if (this.data.order.UUID) {
+        //          if (!window.location.search) {
+        //                window.history.replaceState({}, "", "/order?id=" + this.data.order.UUID);
+        //          }
+        //
+        //        // Call Razorpay after successful order creation
+        //           triggerRazorpay(this.data.order.UUID);
+        //      }
+        //   } else {
+        //        this.updateTotal();
+        //   }
+
+        //    // Log success message
+        //     console.log("API called successfully with data:", data);
+        // }).catch((error) => {
+        //    console.error('Error:', error);
+        // }).finally(() => {
+        //    this.data.loading = false;
+        // });
+        //} 
+        function saveRecord(request_data) {
+            if (!request_data) request_data = {}
+            window.call_api("order", request_data).then((data) => {
+                if (data.Result && data.Result.Order) {
+                    this.data.Keys = Object.keys(data.Result.Order)
+                    this.data.order = data.Result.Order
+                }
+                console.log(data);
+                return data
+            }).catch((error) => {
+                console.error('Error:', error)
+            }).finally(() => {
+                this.data.loading = false
+            })
+        }
+
+        // Debounce the saveRecord function
+        const debouncedSaveRecord = debounce(saveRecord, 300);
+
+        // Triggered when the "Pay Now" button is clicked
+        document.getElementById('rzp-button1').addEventListener('click', function (e) {
+            debugger
+            e.preventDefault();
+
+            // Prepare request_data based on the form inputs
+            var request_data = {
+                record: {
+                    // Populate this with the necessary data
+                    //name: document.getElementById('name').value,
+                    // email: document.getElementById('email').value,
+                    //mobile: document.getElementById('mobile').value,
+                    //address: document.getElementById('address').value,
+                    //city: document.getElementById('city').value,
+                    //pincode: document.getElementById('pincode').value 
+                    name: "Bishnu",
+                    email: "vs510514@gmail.com",
+                    mobile: "8145764555",
+                    address: "andal",
+                    city: "Andal",
+                    pincode: "713321"
+                }
+            };
+
+            // Call the debounced function with the prepared data
+            debouncedSaveRecord(request_data);
+        });
+
+        // Function to trigger Razorpay
+        function triggerRazorpay(order_id) {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var mobile = document.getElementById('mobile').value;
+            var address = document.getElementById('address').value;
+
+            var options = {
+                "key": "rzp_live_2AVRqVIBN2vAlG",
+                "amount": "300",
+                "currency": "INR",
+                "name": "Codebell",
+                "description": "Test Transaction",
+                "image": "https://example.com/your_logo",
+                "order_id": order_id,
+                "callback_url": "https://eneqd3r9zrjok.x.pipedream.net/",
+                "prefill": {
+                    "name": name,
+                    "email": email,
+                    "contact": mobile
+                },
+                "notes": {
+                    "address": address
+                },
+                "theme": {
+                    "color": "#3399cc"
+                }
+            };
+
+            var rzp1 = new Razorpay(options);
+            rzp1.open();
+        }
+    </script>
+
     <script>
         const quantityElement = document.querySelector("#Quantity");
         const totalElement = document.querySelector("#total");
@@ -313,8 +451,11 @@
 
         })
     </script>
+
+    <script src="api.js"></script>
+
     <script src="darkmode.js"></script>
-    <script src="newscript1.js"></script>
+
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MGCL4TN4" height="0" width="0"
             style="display:none;visibility:hidden"></iframe></noscript>
