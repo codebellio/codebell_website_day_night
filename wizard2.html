@@ -849,12 +849,13 @@
                 height: 40px;
 
             }
-          
+
 
             /*radio */
             .radio-button-container {
                 display: flex;
                 align-items: center;
+                justify-content: center;
                 gap: 24px;
                 margin-top: 1em;
                 margin-bottom: 1em;
@@ -919,12 +920,14 @@
             #qrCodeContainer {
                 display: none;
             }
-            .product_name{
-                font-size:26px;
+
+            .product_name {
+                font-size: 26px;
             }
-            @media screen and (max-width: 768px){
-                .product_name{
-                    font-size:16px;
+
+            @media screen and (max-width: 768px) {
+                .product_name {
+                    font-size: 16px;
                 }
             }
         </style>
@@ -932,9 +935,11 @@
             <div id="popup" class="popup-content1" style="background:var(--wizard);">
                 <div class="flex between" style="cursor: pointer;">
                     <div></div>
-                    <div class="closeWizard" style="display:none"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
-                        <path d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z"/>
-                      </svg> </div>
+                    <div class="closeWizard"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25"
+                            fill="currentColor" class="bi bi-x-lg" viewBox="0 0 16 16">
+                            <path
+                                d="M2.146 2.854a.5.5 0 1 1 .708-.708L8 7.293l5.146-5.147a.5.5 0 0 1 .708.708L8.707 8l5.147 5.146a.5.5 0 0 1-.708.708L8 8.707l-5.146 5.147a.5.5 0 0 1-.708-.708L7.293 8z" />
+                        </svg> </div>
                 </div>
                 <div class="wrapper">
                     <div class="header">
@@ -957,7 +962,7 @@
                         </ul>
                     </div>
                     <div class="form_wrap">
-                        <div class="form_1 data_info">
+                        <div class="form_1 data_info" >
                             <h2 style="text-align: start;">Your Cart</h2>
                             <form>
                                 <div class="form_container" style="display: flex;">
@@ -1099,9 +1104,10 @@
                     <style>
                         .payment-card {
                             display: flex;
+                            align-items: center;
                             padding: 1em;
                             border: 1px solid var(--card-border);
-                            width: 100%;
+                            width: calc(100% - 2em);
                             justify-content: space-between;
                             border-radius: 0.5em;
 
@@ -1114,49 +1120,45 @@
                         }
                     </style>
                     <div class="form_3 data_info" style="display: none;">
-                        <h2 style="text-align: start;">Payment Detail</h2>
+                        <h2 style="text-align: start; display:none">Payment Detail</h2>
                         <form>
                             <div class="form_container">
                                 <div class="radio-button-container  ">
                                     <div class="flex column gap-1" style="width: calc(100% - 2em);">
-                                        <div class="payment-card">
-                                            <div class="radio-button">
-                                                <input type="radio" class="radio-button__input" id="radio3"
-                                                    name="radio-group">
-                                                <label class="radio-button__label" for="radio3"
-                                                    style=" color: var(--text-color);">
-                                                    <span class="radio-button__custom"></span>
+                                        <div class="flex eq center gap-1 wrap">
+                                            <div class="payment-card " style="min-width:200px" >
+                                                <div class="radio-button">
+                                                    <input type="radio" class="radio-button__input" id="radio3"
+                                                        name="radio-group">
+                                                    <label class="radio-button__label" for="radio3"
+                                                        style=" color: var(--text-color);">
+                                                        <span class="radio-button__custom"></span>
 
-                                                    PhonePe Payment Gateway (UPI, Cards)
-                                                </label>
+                                                        UPI
+                                                    </label>
+                                                </div>
+                                               
+                                                    <div class="flex middle center gap-s" >
+                                                        <img src="/cards/upi3.png" alt="" style="border-radius:0.5em;max-width:90%">
+                                                    </div>
+                                               
                                             </div>
-                                            <div class="flex middle gap-s" style="max-width: 100%">
-                                                <div>
-                                                    <img src="/cards/upi.svg" alt="">
-                                                    <img src="/cards/visa.svg" alt="">
-                                                    <img src="/cards/mastercard.svg" alt="">
-                                                    <img src="/cards/rupay.svg" alt="">
-                                                    <img src="/cards/american.svg" alt="">
+                                            <div class="payment-card " style="min-width:200px" >
+                                                <div class="radio-button">
+                                                    <input type="radio" class="radio-button__input" id="radio2"
+                                                        name="radio-group">
+                                                    <label class="radio-button__label" for="radio2"
+                                                        style=" color: var(--text-color);">
+                                                        <span class="radio-button__custom"></span>
+                                                       Razorpay
+                                                    </label>
+                                                </div>
+                                                <div class="flex middle gap-s" >
+                                                    <img src="/cards/razorpay.png" alt=""
+                                                        style="border-radius:0.5em;max-width:90%">
                                                 </div>
                                             </div>
                                         </div>
-                                 
-                                        <div class="payment-card">
-                                            <div class="radio-button">
-                                                <input type="radio" class="radio-button__input" id="radio2"
-                                                    name="radio-group">
-                                                <label class="radio-button__label" for="radio2"
-                                                    style=" color: var(--text-color);">
-                                                    <span class="radio-button__custom"></span>
-                                                    Using Razorpay
-                                                </label>
-                                            </div>
-                                            <div class="flex middle gap-s" style="max-width:15% ;">
-                                                <img src="/cards/razorpay.png" alt=""
-                                                    style="margin:0;border-radius:0.2em">
-                                            </div>
-                                        </div>
-
                                         <div class="payment-card">
                                             <div class="radio-button">
                                                 <input type="radio" class="radio-button__input" id="radio1"
@@ -1167,21 +1169,21 @@
                                                     Cash On Delivery
                                                 </label>
                                             </div>
-                                            <div class="flex middle gap-s" style="max-width:10% ;">
+                                            <div class="flex middle gap-s" style="max-width:20% ;">
                                                 <img src="/cards/cod.png" alt="" style="margin:0;border-radius:0.2em">
                                             </div>
 
                                         </div>
-                                  
+
                                     </div>
                                 </div>
                             </div>
                         </form>
                     </div>
 
-                    <div class="form_4 data_info" style="display: none;">
-                        <div class="success_wrap">
-                            <span class="modal_icon"><ion-icon name="checkmark-sharp"></ion-icon></span>
+                    <div class="form_4 data_info flex middle center " style="display: none;min-height:50vh">
+                        <div class="success_wrap ">
+                        
                             <p>You have successfully completed the process.</p>
                         </div>
                     </div>
@@ -1201,7 +1203,7 @@
                     </div>
                 </div>
             </div>
-           
+
         </div>
     </div>
     <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
@@ -1272,16 +1274,16 @@
 
         btn_done.addEventListener("click", function () {
             form_3.style.display = "none";
-            form_4.style.display = "block";
+            form_4.style.display = "flex";
 
             form_3_btns.style.display = "none";
             steps.style.display = "none";
-            closeWizard.style.display ="block";
+            closeWizard.style.display = "block";
             form_4_progessbar.classList.remove("active");
-            
+
         })
 
-      
+
     </script>
     <script>
         document.addEventListener("DOMContentLoaded", function () {
@@ -1297,7 +1299,7 @@
             });
 
             // Close the pop-up when the close button is clicked
-            closeWizard.addEventListener("click", function (){
+            closeWizard.addEventListener("click", function () {
                 popupOverlay1.style.display = "none";
             })
             closePopupButton1.addEventListener("click", function () {
